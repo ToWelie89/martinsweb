@@ -1,5 +1,7 @@
 /* This is the standard stylings, used for large */
 
+@containerWidth: 1280px;
+
 @font-face
 {
     font-family: 'TestFont';
@@ -16,18 +18,47 @@ body{
     background-color: @black;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 div#main{
     margin: auto;
     width: @containerWidth;
+    background-color: gray;
+    min-height: 300px;
+    border-radius: 20px;
 }
 
 h1 {
     color: white;
+    margin-left: 50px;
+    padding-top: 25px;
 }
 
 #sizeIndicator:before{
     color: white;
     content: "LARGE";
+}
+
+#menu{
+    background-color: gainsboro;
+    float: left;
+    width: 100%;
+}
+
+.menuAlternative:first-child{
+    margin-left: 40px;
+}
+
+.menuAlternative{
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.menuAlternative:hover{
+    background-color: darkgray;
 }
