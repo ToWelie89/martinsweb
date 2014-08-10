@@ -1,0 +1,33 @@
+/*------------------------------------*\
+  COLORS
+\*------------------------------------*/
+
+@black: black;
+
+/*------------------------------------*\
+  VALUES
+\*------------------------------------*/
+
+@containerWidth: 1280px;
+
+/*------------------------------------*\
+  BREAKPOINTS
+\*------------------------------------*/
+
+// Major breakpoints
+@small  : 31em;    /* 500px / 16 */
+@medium : 44em;    /* 700px / 16 */
+@large  : 56em;    /* 900px / 16 */
+
+// To use as max-width values
+@lt-small  : (@small  - 0.01em); /* Lower than Small */
+@lt-medium : (@medium - 0.01em); /* Lower than Medium */
+@lt-large  : (@large  - 0.01em); /* Lower than Large */
+
+/**********************************************************/
+/**************************DESIGN**************************/
+/**********************************************************/
+
+@import "less/default";
+@media only screen and (min-width: 0em) and (max-width: @lt-medium) { @import "less/default-small"; }
+@media only screen and (min-width: @medium) and (max-width: @lt-large) { @import "less/default-medium"; }
