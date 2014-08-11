@@ -4,46 +4,113 @@
 
 @font-face
 {
-    font-family: 'TestFont';
-    src: url('../assets/fonts/TestFont.eot');
-        src: url('../assets/fonts/TestFont.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/TestFont.svg') format('svg'),
-        url('../assets/fonts/TestFont.woff') format('woff'),
-        url('../assets/fonts/TestFont.ttf') format('truetype');
+    font-family: 'ProxiBold';
+    src: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-bold/ProximaNova-Bold.eot');
+        src: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-bold/ProximaNova-Bold.svg') format('svg'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-bold/ProximaNova-Bold.woff') format('woff'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-bold/ProximaNova-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face
+{
+    font-family: 'ProxiSemiBold';
+    src: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-semibold/ProximaNova-Semibold.eot');
+        src: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-semibold/ProximaNova-Semibold.svg') format('svg'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-semibold/ProximaNova-Semibold.woff') format('woff'),
+        url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/fonts/proximanova-semibold/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body{
-    background-color: @black;
+    background: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/img/bg3.png');
     width: 100%;
     height: 100%;
     overflow-x: hidden;
 }
 
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
 div#main{
     margin: auto;
     width: @containerWidth;
-    background-color: gray;
-    min-height: 300px;
-    border-radius: 20px;
+}
+
+div#topBar{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 0;
+    margin: 0;
+    background: url('file:///E:/Hemsidor och programmering/martins-web/new/martinsweb/img/bg2.png');
+    box-shadow: 10px 10px 5px #888888;
+    border: 2px solid black;
+}
+
+div#contentBar{
+    margin: 0;
+    padding: 20px 40px 20px 40px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #628cc3;
+    min-height: 600px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 h1 {
+    padding: 0px;
+    margin: 0px;
     color: white;
     margin-left: 50px;
-    padding-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: ProxiBold;
+    font-size: 4em;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 }
 
 #sizeIndicator:before{
     color: white;
     content: "LARGE";
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #menu{
-    background-color: gainsboro;
-    float: left;
-    width: 100%;
+    background: rgb(238,238,238); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    width: 98%;
+    padding: 0;
+    margin: 0;
+    margin-left: 1%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#menu:after{
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
 }
 
 .menuAlternative:first-child{
@@ -51,14 +118,80 @@ h1 {
 }
 
 .menuAlternative{
-    float: left;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     cursor: pointer;
+    float: left;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    -webkit-transition: border-right 1s, border-left 1s; /* For Safari 3.1 to 6.0 */
+    transition: border-right 1s, border-left 1s;
+    p {
+        font-family: ProxiSemiBold;
+        font-size: 1em;
+    }
 }
 
 .menuAlternative:hover{
-    background-color: darkgray;
+    border-right: 2px solid #aed7ef;
+    border-left: 2px solid #aed7ef;
+    p {
+    }
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1.35em;
+}
+
+
+.cl-effect-1 a{
+    cursor: pointer;
+    font-family: ProxiSemiBold;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
 }
