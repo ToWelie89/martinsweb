@@ -2,13 +2,11 @@
   COLORS
 \*------------------------------------*/
 
-@black: black;
+@niceBlue: #457bc3;
 
 /*------------------------------------*\
   VALUES
 \*------------------------------------*/
-
-@base-url: "http://assets.fnord.com";
 
 /*------------------------------------*\
   BREAKPOINTS
@@ -29,5 +27,8 @@
 /**********************************************************/
 
 @import "less/default";
-@media only screen and (min-width: 0em) and (max-width: @lt-medium) { @import "less/default-small"; }
-@media only screen and (min-width: @medium) and (max-width: @lt-large) { @import "less/default-medium"; }
+@import "less/fonts";
+
+@media only screen and (min-width: 0em) and (max-width: @lt-medium) { @import "less/default-small"; } // Phones
+@media only screen and (min-width: @medium) and (max-width: @lt-large) { @import "less/default-medium"; } // Tablets
+@media only screen and (min-width: @large) { @import "less/mainMenuLinks"; } // Stuff for large only
