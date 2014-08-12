@@ -1,6 +1,7 @@
 require(['jquery', 'constants', 'helpers'], function($, constants, helpers) {
     /**************INITIALIZATION****************/
     $(document).ready(function(){
-        // Do something
+    	// Initialize menu scripts
+        require(['menu']);
     });
 });

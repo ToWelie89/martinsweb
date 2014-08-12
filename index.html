@@ -6,7 +6,6 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/default.css">
         <script data-main="js/init" src="js/require.js"></script>
-        <script src="js/modernizr.custom.js"></script>
         <title>
             martins-web
         </title>
@@ -20,10 +19,21 @@
         </div>
         <div id="main">
             <div id="menu">
-                <a class="mainMenuLink"><span data-hover="START">START</span></a>
-                <a class="mainMenuLink"><span data-hover="PROFILE">PROFILE</span></a>
-                <a class="mainMenuLink"><span data-hover="PROJECTS">PROJECTS</span></a>
-                <a class="mainMenuLink"><span data-hover="MISC">MISC</span></a>
+                <a class="mainMenuLink" id="start"><span data-hover="START">START</span></a>
+                <a class="mainMenuLink" id="profile"><span data-hover="PROFILE">PROFILE</span></a>
+                <a class="mainMenuLink" id="projects"><span data-hover="PROJECTS">PROJECTS</span></a>
+                <a class="mainMenuLink" id="misc"><span data-hover="MISC">MISC</span></a>
+
+                <div class="subMenuBar" for="profile">
+                    <a href="http://www.google.se">BIO</a>
+                    <a href="http://www.google.se">CV</a>
+                </div>
+                <div class="subMenuBar" for="misc">
+                    <a href="http://www.google.se">BLOG</a>
+                    <a href="http://www.google.se">ART</a>
+                    <a href="http://www.google.se">VIDEOS</a>
+                    <a href="http://www.google.se">PHOTOS</a>
+                </div>
             </div>
             <div id="contentBar">
                 <p>

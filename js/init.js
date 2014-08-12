@@ -3,7 +3,9 @@ require.config({
     paths: {
         jquery: 'jquery-2.1.1.min',
         constants: 'constants',
-        helpers: 'helpers'
+        helpers: 'helpers',
+        modernizr: 'modernizr.custom',
+        menu: 'menu'
     }
 });
 
