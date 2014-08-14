@@ -3,21 +3,21 @@ $(document).ready(function(){
 });
 
 function mainMenuLinkClickHandler(){
+	$(".mainMenuLink").removeClass("active");
+	$(".subMenuBar").slideUp(150);
+
 	var id = $(this).attr("id");
 	var submenuElement = $(".subMenuBar[for='"+id+"']");
 	var displayStyle = submenuElement.css("display");
 
-	$(".subMenuBar").hide();
-
 	if (displayStyle == "none")
 	{
-		var xOffset = ($(this).offset().left - $("#menu").offset().left + 10);
-
-		submenuElement.css("margin-left", xOffset);
-		submenuElement.show();
+		$(this).addClass("active");
+		submenuElement.slideDown(150);
 	}
 	else
 	{
-		submenuElement.hide();
+		$(this).removeClass("active");
+		submenuElement.slideUp(150);
 	}
 }

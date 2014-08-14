@@ -12,11 +12,12 @@
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     perspective: 1000px;
+    padding: 0px;
 
     span {
         position: relative;
         display: inline-block;
-        padding: 0 14px;
+        padding: 0px 14px 0px 14px;
         background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -54,7 +55,7 @@
         }
     }
 
-    &:hover, &:focus{
+    &:hover, &:focus, + .active {
         span {
             -webkit-transform: rotateX(90deg) translateY(-22px);
             -moz-transform: rotateX(90deg) translateY(-22px);

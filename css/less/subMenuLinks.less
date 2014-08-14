@@ -1,15 +1,58 @@
 .subMenuBar {
 	display: none;
-	padding-bottom: 10px;
+	background-color: @niceBlue;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-top: -7px;
+
 	a {
-		font-family: ProxiRegular;
+		font-family: ProxiSemiBold;
 		text-decoration: none;
-		margin-right: 15px;
-		font-size: 1.1em;
-		color: black;
+		margin-right: 50px;
+		font-size: 1.15em;
+		color: @black;
+		transition: color 0.5s;
 
 		&:hover{
-			color: red;
+			color: @lighterBlack;
+		}
+
+		&:first-child{
+			margin-left: 45px;
+		}
+
+		&::before, &::after{
+			display: inline-block;
+			opacity: 0;
+			-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+			-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+			transition: transform 0.3s, opacity 0.2s;		
+		}
+
+		&::before{
+			margin-right: 10px;
+			content: '[';
+			-webkit-transform: translateX(20px);
+			-moz-transform: translateX(20px);
+			transform: translateX(20px);		
+		}
+
+		&::after{
+			margin-left: 10px;
+			content: ']';
+			-webkit-transform: translateX(-20px);
+			-moz-transform: translateX(-20px);
+			transform: translateX(-20px);
+		}
+
+		&:hover::before,
+		&:hover::after,
+		&:focus::before,
+		&:focus::after{
+			opacity: 1;
+			-webkit-transform: translateX(0px);
+			-moz-transform: translateX(0px);
+			transform: translateX(0px);
 		}
 	}
 }

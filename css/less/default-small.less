@@ -1,10 +1,32 @@
-@containerWidth: 480px;
+@containerWidth: 100%;
 
 #sizeIndicator:before{
     content: "SMALL";
 }
 
+body {
+	background: none;
+	background-color: black;
+}
+
 div#main{
     margin: auto;
     width: @containerWidth;
+}
+
+h1{
+	font-size: 2em;
+	margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#contentBar{
+	border: none;
+	border-radius: 0px;
+	padding: 10px;
+
+	p {
+        font-size: 1em;
+    }
 }

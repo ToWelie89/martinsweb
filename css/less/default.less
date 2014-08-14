@@ -8,6 +8,10 @@
 
 body{
     background: @bodyBackground;
+    background-position: 0px 0px;
+    background-repeat: repeat-y;
+    background-color: black;
+    background-size: 100%;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -37,7 +41,7 @@ div#main{
 
 div#topBar{
     background: @topBarBackground;
-    box-shadow: 0px 10px 5px #888888;
+    /*box-shadow: 0px 10px 5px #888888;*/
     border-bottom: 2px solid gainsboro;
 }
 
@@ -46,7 +50,7 @@ div#topBarInnerContainer{
     margin: auto;
 }
 
-#menu{
+#menu, #subMenuContainer{
     background: rgb(238,238,238); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
@@ -55,11 +59,17 @@ div#topBarInnerContainer{
     background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
-    width: 96%;
-    margin-left: 1.5%;
+    margin: auto;
+    width: 1200px;
     border-left: 2px solid gainsboro;
     border-right: 2px solid gainsboro;
     padding-left: 10px;
+}
+
+#subMenuContainer{
+    padding-left: 0px !important;
+    border: none;
+    width: 1214px;
 }
 
 div#contentBar{
@@ -70,10 +80,12 @@ div#contentBar{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #628cc3;
-    min-height: 600px;
-    box-shadow: 10px 10px 5px #888888;
+    height: 400px;
+    /*box-shadow: 10px 10px 5px #888888;*/
+    border: 2px solid gainsboro;
 
     p {
+        font-size: 1.3em;
         font-family: ProxiRegular;
     }
 }
