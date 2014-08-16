@@ -1,3 +1,15 @@
+.mainMenuLink.active{
+    span {
+        -webkit-transform: rotateX(90deg) translateY(-22px);
+        -moz-transform: rotateX(90deg) translateY(-22px);
+        transform: rotateX(90deg) translateY(-22px);
+
+        &::before {
+            background: @niceBlue;
+        }
+    }
+}
+
 .mainMenuLink {
     font-family: ProxiSemiBold;
     cursor: pointer;
@@ -55,15 +67,7 @@
         }
     }
 
-    &:hover, &:focus, + .active {
-        span {
-            -webkit-transform: rotateX(90deg) translateY(-22px);
-            -moz-transform: rotateX(90deg) translateY(-22px);
-            transform: rotateX(90deg) translateY(-22px);
-
-            &::before {
-                background: @niceBlue;
-            }
-        }
+    &:hover, &:focus, {
+        .mainMenuLink.active;
     }
 }

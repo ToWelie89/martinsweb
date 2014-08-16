@@ -17,6 +17,12 @@ body{
     overflow-x: hidden;
 }
 
+#twitter{
+    min-height: 450px;
+    float: right;
+    clear: none;
+}
+
 h1 {
     padding: 0px;
     margin: 0px;
@@ -80,14 +86,15 @@ div#contentBar{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #628cc3;
-    height: 400px;
+    min-height: 400px;
     /*box-shadow: 10px 10px 5px #888888;*/
     border: 2px solid gainsboro;
+}
 
-    p {
-        font-size: 1.3em;
-        font-family: ProxiRegular;
-    }
+#contentBar:after{
+    content: " ";
+    display: block;
+    clear: both;
 }
 
 #sizeIndicator:before{

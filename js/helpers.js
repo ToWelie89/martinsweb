@@ -1,10 +1,28 @@
 define(function() {
-	function blankHelper(x)
+
+	function getFileNameForPage()
 	{
-		return ("Blank " + x);
+		var currentPageFileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+		currentPageFileName = currentPageFileName.replace(".html", "");
+		currentPageFileName = currentPageFileName.replace(".php", "");
+		return currentPageFileName;
+	}
+
+	function getPageMappingFromFileName()
+	{
+		var fileName = getFileNameForPage();
+
+		switch (fileName){
+			case "":
+			case "index":
+				return "start";
+			default:
+				return fileName;
+		}
 	}
 	
 	return {
-		blankHelper: blankHelper
+		getFileNameForPage: getFileNameForPage,
+		getPageMappingFromFileName: getPageMappingFromFileName
 	}
 });
