@@ -1,5 +1,5 @@
 require(['jquery', 'helpers'], function($, helpers) {
-	var slideTime = 250;
+	var slideTime = 350;
 
     $(document).ready(function(){
     	$(".mainMenuLink").click(mainMenuLinkClickHandler);

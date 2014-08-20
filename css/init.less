@@ -38,12 +38,17 @@
 
 @import "less/default";
 @import "less/fonts";
+@import "less/mainContent";
 
-@media only screen and (min-width: 0em) and (max-width: @lt-medium) { @import "less/default-small"; } // Phones
-@media only screen and (min-width: @medium) and (max-width: @lt-large) { @import "less/default-medium"; } // Tablets
-@media only screen and (min-width: @large) { // Stuff for large only
+@media only screen and (min-width: 0em) and (max-width: @lt-medium) {
+	@import "less/default-small";
+	@import "less/mainContent-small";
+}
+@media only screen and (min-width: @medium) and (max-width: @lt-large) {
+	@import "less/default-medium";
+	@import "less/mainContent-medium";
+}
+@media only screen and (min-width: @large) {
 	@import "less/mainMenuLinks";
 	@import "less/subMenuLinks";
 }
-
-@import "less/newsItem";

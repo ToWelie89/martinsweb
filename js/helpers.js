@@ -16,6 +16,20 @@ define(function() {
 			case "":
 			case "index":
 				return "start";
+			case "profile":
+			case "bio":
+			case "cv":
+				return "profile";
+			case "personalProjects":
+			case "groupProjects":
+			case "projects":
+				return "projects";
+			case "misc":
+			case "blog":
+			case "art":
+			case "videos":
+			case "photos":
+				return "misc";
 			default:
 				return fileName;
 		}
