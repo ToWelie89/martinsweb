@@ -9,17 +9,46 @@
         <div id="main">
             <?php include("includes/menu.php"); ?>
             <div id="contentBar">
-                <div class="mainContentItem">
-                    <h2>
-                        BIO
-                    </h2>
-                    <p class="textBody">
-                        Greetings and welcome to my site. My name is Martin Sonesson and I'm a webdeveloper, programmer and software engineer. I intend to use this website as a portfolio and personal website. Here you will be able to find information about me and my resume. Under the projects section you will be able to find information and sources for different software projects I have personally developed or been a part of with others.<br>
-                        I might also upload some personal media like artwork, drawings, videos and other creative things that I have made.
-                    </p>
-                    <p class="signature">
-                        - Martin Sonesson
-                    </p>
+                <div id="socialMediaIconsContainer">
+                    <span id="previewTitle"></span>
+                    <div id="linksInnerContainer">
+                        <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="img/socialMediaIcons/LinkedIn.png"></a>
+                        <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="img/socialMediaIcons/GitHub.png"></a>
+                        <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="img/socialMediaIcons/Twitter.png"></a>
+                    </div>
+                </div>
+                <div class="mainContentItem" style="margin-top: 120px; width: 100%; padding: 20px 30px 20px 30px;">
+                    <img src="img/avatar.JPG" style="float: left; width: 15%;">
+                    <div style="float: left; width: 85%; text-align: center;">
+                       <div class="table center">
+                            <div class="tableRow">
+                                 <span class="tableRowCell">
+                                    <p class="rowKeySpan">
+                                        Age
+                                    </p>
+                                 </span>
+                                 <span class="tableRowCell">
+                                    <p class="rowValueSpan">
+                                        24
+                                    </p>
+                                 </span>
+                            </div>
+                            <div class="tableRow">
+                                 <span class="tableRowCell">
+                                    <p class="rowKeySpan">
+                                        Location
+                                    </p>
+                                 </span>
+                                 <span class="tableRowCell">
+                                    <p class="rowValueSpan">
+                                        <a href="https://www.google.se/maps/place/G%C3%B6teborg/@57.7019548,11.8936825,11z/" target="_blank">
+                                            Gothenburg, Sweden
+                                        </a>
+                                    </p>
+                                 </span>
+                            </div>
+                       </div>
+                    </div>
                 </div>
             </div>
        </div>
