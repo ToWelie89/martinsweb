@@ -47,6 +47,28 @@
                                     </p>
                                  </span>
                             </div>
+                            <div class="tableRow">
+                                 <span class="tableRowCell">
+                                    <p class="rowKeySpan">
+                                        Current employment
+                                    </p>
+                                 </span>
+                                 <span class="tableRowCell">
+                                    <p class="rowValueSpan">
+                                        IT-consultant, Knowit
+                                    </p>
+                                 </span>
+                            </div>
+                       </div>
+                       <div class="mainContentItem" style="text-align: center; padding: 20px 40px 20px 40px;">
+                           <p class="textBody">
+                               Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                           </p>
                        </div>
                     </div>
                 </div>
