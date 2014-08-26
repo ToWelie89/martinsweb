@@ -15,6 +15,7 @@
                         <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="img/socialMediaIcons/LinkedIn.png"></a>
                         <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="img/socialMediaIcons/GitHub.png"></a>
                         <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="img/socialMediaIcons/Twitter.png"></a>
+                        <a href="https://www.instagram.com/martinso89" target="_blank" displayText="Instagram"><img alt="Instagram" src="img/socialMediaIcons/Instagram.png"></a>
                     </div>
                 </div>
                 <div class="mainContentItem" style="margin-top: 120px; width: 100%; padding: 20px 30px 20px 30px;">
