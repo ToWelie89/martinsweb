@@ -8,16 +8,17 @@
 
 html, body {
     max-width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
 body{
     background: @bodyBackground;
     background-position: 0px 0px;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-color: black;
-    background-size: 100%;
-    background-position: 0px 90px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -58,6 +59,7 @@ a {
 div#main{
     margin: auto;
     width: @containerWidth;
+    padding-bottom: 40px;
 }
 
 div#topBar{
@@ -69,6 +71,30 @@ div#topBar{
 div#topBarInnerContainer{
     width: @containerWidth;
     margin: auto;
+    h1 {
+        display: table-cell;
+        width: (@containerWidth / 2);
+    }
+    #socialMedia {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        padding-right: 50px;
+        width: (@containerWidth / 2);
+
+        a {
+            padding-right: 5px;
+            img {
+                filter: url(../../filters.svg#grayscale); /* Firefox 3.5+ */
+                filter: gray; /* IE6-9 */
+                -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+                &:hover {
+                    filter: none;
+                    -webkit-filter: grayscale(0);
+                }
+            }
+        }
+    }
 }
 
 #menu, #subMenuContainer{
@@ -94,6 +120,7 @@ div#topBarInnerContainer{
 }
 
 div#contentBar{
+    height: 100%;
     margin: 0;
     padding: 20px 40px 20px 40px;
     //border-top-left-radius: 10px;
