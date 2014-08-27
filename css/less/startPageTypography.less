@@ -1,0 +1,77 @@
+.myNameIs {
+	font-size: 2.8em;
+	font-family: ProxiBold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: rgba(0,0,0,0.7) 3px 3px 3px;
+}
+
+#typoGraphyName{
+	color: @niceBlue;
+}
+
+.softwareEngineer {
+	font-size: 80px;
+	letter-spacing: 5px;
+	line-height: 1;
+	padding-left: 60px;
+	padding-right: 60px;
+	&:after {
+		content:"Software engineer"; margin-top: -80px; margin-left: 0px;
+	}
+}
+.andA {
+	font: italic 60px/0 ProxiRegular;
+	text-transform: lowercase;
+	margin-bottom: 12px;
+	margin-top:30px;
+}
+.programmer {
+	font-size: 80px;
+	letter-spacing: 5px;
+	line-height: 1;
+	margin-top: 35px;
+	padding-left: 60px;
+	padding-right: 60px;
+	&:after {
+		content:"programmer"; margin-top: -80px; margin-left: 0px;
+	}
+}
+
+.programmer, .softwareEngineer {
+	text-shadow: @niceBlue 3px 3px 0;
+	font-family: ProxiBold;
+	cursor: default;
+	transition: color 0.7s;
+	text-transform: uppercase;
+	&:hover {
+		color: #001358;
+	}
+}
+
+.softwareEngineer:after, .programmer:after {
+	background: @crosshatch repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display: block;
+	text-shadow: none;
+}
+
+.line-left, .line-right {
+	border-bottom: 2px solid darkgray;
+	width: 400px;
+	display: inline-block;
+	margin-bottom: -50px;
+}
+.line-left {
+	float: left;
+	margin-top: 30px;
+	margin-left: 35px;
+}
+.line-right {
+	float: right;
+	margin-top: -10px;
+	margin-right: 35px;
+}

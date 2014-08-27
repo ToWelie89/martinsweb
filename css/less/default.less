@@ -123,13 +123,22 @@ div#contentBar{
     height: 100%;
     margin: 0;
     padding: 20px 40px 20px 40px;
-    //border-top-left-radius: 10px;
-    //border-top-right-radius: 10px;
-    //border-bottom-left-radius: 20px;
-    //border-bottom-right-radius: 20px;
-    background-color: gainsboro;
-    min-height: 400px;
+    background: @mainContentBg;
+    min-height: @minHeightOfContent;
     border: 5px solid #628cc3;
+
+    .centeringBox {
+        display: table;
+        height: 400px;
+        width: 100%;
+        min-height: @minHeightOfContent;
+        .centeringInnerBox {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
 }
 
 #contentBar:after{

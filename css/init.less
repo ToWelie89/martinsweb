@@ -12,11 +12,15 @@
 
 /*@bodyBackground: url('../img/bg3.png');*/
 @bodyBackground: url('../img/12.jpg');
+@mainContentBg: url('../img/mainContentBg.png');
 @topBarBackground: url('../img/bg2.png');
+@crosshatch: url('../img/crosshatch.png');
 
 /*------------------------------------*\
   VALUES
 \*------------------------------------*/
+
+@minHeightOfContent: 400px;
 
 /*------------------------------------*\
   BREAKPOINTS
@@ -40,6 +44,7 @@
 @import "less/fonts";
 @import "less/mainContent";
 @import "less/table";
+@import "less/startPageTypography";
 
 @media only screen and (min-width: 0em) and (max-width: @lt-medium) {
 	@import "less/default-small";
