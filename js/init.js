@@ -5,7 +5,8 @@ require.config({
         constants: 'constants',
         helpers: 'helpers',
         modernizr: 'modernizr.custom',
-        menu: 'menu'
+        menu: 'menu',
+        main: 'main'
     }
 });
 

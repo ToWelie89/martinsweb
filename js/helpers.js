@@ -34,9 +34,18 @@ define(function() {
 				return fileName;
 		}
 	}
+
+	function loadContentSpecificScripts(){
+		if ($("#socialMediaIconsContainer").length > 0)
+		{
+			require(['socialMediaLinks']);
+		}
+	}
+
 	
 	return {
 		getFileNameForPage: getFileNameForPage,
-		getPageMappingFromFileName: getPageMappingFromFileName
+		getPageMappingFromFileName: getPageMappingFromFileName,
+		loadContentSpecificScripts: loadContentSpecificScripts
 	}
 });
