@@ -3,7 +3,8 @@ require(['jquery', 'constants', 'helpers'], function($, constants, helpers) {
     $(document).ready(function(){
     	// Scripts that will always be included
         require(['menu']);
-        
+        require(['contentLoader']);
+
         // Load in scripts that are specific for some modules
         if ($("#socialMediaIconsContainer").length > 0)
         {
