@@ -10,7 +10,7 @@
             <?php include("includes/menu.php"); ?>
             <div id="contentBar">
                 <?php include("includes/loadBox.php"); ?>
-                <div id="content" content="index"></div>
+                <div id="content" content="cv"></div>
             </div>
        </div>
     </body>
