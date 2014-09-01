@@ -1,11 +1,14 @@
 .table{
 	display: table;
+	vertical-align: top;
 
 	.tableRow {
 		display: table-row;
+		vertical-align: top;
 
 		.tableRowCell {
 			display: table-cell;
+			vertical-align: top;
 			padding: 10px;
 
 			.rowKeySpan, .rowValueSpan {
@@ -29,4 +32,58 @@
 
 .table.center{
 	margin: 0 auto;
+}
+
+.cvTable {
+	width: 100%;
+	height: 100%;
+
+	.columnContainer {
+		height: 100%;
+		width: 100%;
+		display: table;
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	.tableRow {
+		.tableRowCell {
+			/* JOB EXPERIENCE & EDUCATION */
+			&:first-child {
+				width: 65%;
+				.table {
+					width: 100%;
+					.tableRow {
+						.tableRowCell {
+							/* LEFT */
+							&:first-child {
+								width: 30%;
+							}
+							/* RIGHT */
+							&:last-child {
+								width: 70%;
+							}
+						}
+					}
+				}
+			}
+			/* TECHNICAL EXPERIENCE */
+			&:last-child {
+				width: 35%;
+			}
+		}
+	}
+
+	#leftColumn, #rightColumn {
+	}
+
+	#leftColumn .table .tableRow .tableRowCell,
+	#rightColumn .table .tableRow .tableRowCell
+	{
+		padding: 35px;
+	}
+
+	#rightColumn
+	{
+		padding-left: 0px;
+	}
 }

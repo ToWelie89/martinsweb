@@ -3,6 +3,13 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <script data-main="js/init" src="js/require.js"></script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&appId=689778051059856&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <title>
     martins-web
 </title>
