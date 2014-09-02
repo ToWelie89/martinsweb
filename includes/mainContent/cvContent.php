@@ -108,6 +108,7 @@
                                                     <li><p>php</p></li>
                                                     <li><p>JSP</p></li>
                                                     <li><p>lessc</p></li>
+                                                    <li><p>Magnolia CMS</p></li>
                                                 </ul>
                                             </p>
                                         </p>
