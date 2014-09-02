@@ -82,10 +82,10 @@
                                         </p>
                                         <p class="marginLeft paddingBottom">
                                             <ul class="marginLeft" style="list-style-type: none;">
-                                                <li><p>C#</p></li>
-                                                <li><p>Java</p></li>
-                                                <li><p>C</p></li>
-                                                <li><p>Python</p></li>
+                                                <li><p>C# <span class="knowledgeGrade" grade="5" /></p></li>
+                                                <li><p>Java <span class="knowledgeGrade" grade="4" /></p></li>
+                                                <li><p>C <span class="knowledgeGrade" grade="2" /></p></li>
+                                                <li><p>Python <span class="knowledgeGrade" grade="1" /></p></li>
                                             </ul>
                                         </p>
                                     </li>
@@ -98,17 +98,17 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>HTML5</p></li>
-                                                    <li><p>CSS3</p></li>
-                                                    <li><p>Javascript</p></li>
-                                                    <li><p>jQuery</p></li>
-                                                    <li><p>Angular</p></li>
-                                                    <li><p>requirejs</p></li>
-                                                    <li><p>AJAX</p></li>
-                                                    <li><p>php</p></li>
-                                                    <li><p>JSP</p></li>
-                                                    <li><p>lessc</p></li>
-                                                    <li><p>Magnolia CMS</p></li>
+                                                    <li><p>HTML5 <span class="knowledgeGrade" grade="5" /></p></li>
+                                                    <li><p>CSS3 <span class="knowledgeGrade" grade="5" /></p></li>
+                                                    <li><p>Javascript <span class="knowledgeGrade" grade="5" /></p></li>
+                                                    <li><p>jQuery <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>Angular <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>requirejs <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>AJAX <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>php <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>JSP <span class="knowledgeGrade" grade="2" /></p></li>
+                                                    <li><p>lessc <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>Magnolia CMS <span class="knowledgeGrade" grade="4" /></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -122,10 +122,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>TFS</p></li>
-                                                    <li><p>Git</p></li>
-                                                    <li><p>SVN</p></li>
-                                                    <li><p>Mercurial</p></li>
+                                                    <li><p>TFS <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>Git <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>SVN <span class="knowledgeGrade" grade="2" /></p></li>
+                                                    <li><p>Mercurial <span class="knowledgeGrade" grade="1" /></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -139,10 +139,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Visual Studio 2013</p></li>
-                                                    <li><p>Eclipse</p></li>
-                                                    <li><p>Netbeans</p></li>
-                                                    <li><p>Sublime Text 2</p></li>
+                                                    <li><p>Visual Studio 2013 <span class="knowledgeGrade" grade="5" /></p></li>
+                                                    <li><p>Eclipse <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>Netbeans <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>Sublime Text 2 <span class="knowledgeGrade" grade="5" /></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -156,8 +156,8 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Scrum</p></li>
-                                                    <li><p>Kanban</p></li>
+                                                    <li><p>Scrum <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>Kanban <span class="knowledgeGrade" grade="1" /></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -171,10 +171,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Ubuntu 14.04</p></li>
-                                                    <li><p>Windows Store SDK</p></li>
-                                                    <li><p>JIRA</p></li>
-                                                    <li><p>Photoshop CS5</p></li>                                                
+                                                    <li><p>Ubuntu 14.04 <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>Windows Store SDK <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>JIRA <span class="knowledgeGrade" grade="3" /></p></li>
+                                                    <li><p>Photoshop CS5 <span class="knowledgeGrade" grade="4" /></p></li>                                                
                                                 </ul>
                                             </p>
                                         </p>

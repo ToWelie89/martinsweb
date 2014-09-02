@@ -85,5 +85,35 @@
 	#rightColumn
 	{
 		padding-left: 0px;
+		li {
+			padding-bottom: 5px;
+		}
+	}
+
+	span.knowledgeGrade {
+		float: right;
+		padding-right: 50px;
+		text-shadow: 0px 2px 1px black;
+	}
+
+	.knowledgeGrade[grade='5']:after {
+		color: #00df0a;
+		content: '5';
+	}
+	.knowledgeGrade[grade='4']:after {
+		color: #0a9300;
+		content: '4';
+	}
+	.knowledgeGrade[grade='3']:after {
+		color: #d9e700;
+		content: '3';
+	}
+	.knowledgeGrade[grade='2']:after {
+		color: #e18400;
+		content: '2';
+	}
+	.knowledgeGrade[grade='1']:after {
+		color: #c82600;
+		content: '1';
 	}
 }
