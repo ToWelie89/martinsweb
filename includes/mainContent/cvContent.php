@@ -13,15 +13,27 @@
                                 <ul>
                                     <li class="paddingBottom">
                                         <p>
-                                            <a href="http://www.knowit.se" target="_blank">Knowit AB</a>, IT-consultant
+                                            <a href="http://www.knowit.se" target="_blank">Knowit AB</a>, IT-consultant <span class="fakeLink readMoreLabel" for="knowit" />
                                         </p>
                                     </li>
                                     <li class="paddinTop paddingBottom">
                                         <p>
-                                            <a href="http://www.cochlear.com" target="_blank">Cochlear Ltd</a>, Programmer
+                                            <a href="http://www.cochlear.com" target="_blank">Cochlear Ltd</a>, Programmer <span class="fakeLink readMoreLabel" for="cochlear" />
                                         </p>
                                     </li>
                                 </ul>
+                                <div class="showMoreBox" id="knowit">
+                                    <p>
+                                        (write a better description later)
+                                    </p>
+                                </div>
+                                <div class="showMoreBox" id="cochlear">
+                                    <p>
+                                        This was my first job as a software developer after my education at Chalmers. I worked at Cochlear Ltd, a company that develops 
+                                        hearing aid devices. My main area of work was on the frontend side of a Windows application coded in C# using the framework Windows 
+                                        Forms. (write a better description later)
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="tableRow">

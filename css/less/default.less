@@ -67,9 +67,13 @@ p {
 }
 
 a {
-    color: #0054a6;
     text-decoration: none;
     outline: none;
+}
+
+.fakeLink, a {
+    color: #0054a6;
+    cursor: pointer;
     &:hover {
         color: #001a64;
     }
@@ -147,4 +151,10 @@ div#contentBar{
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.showMoreBox {
+    display: none;
+    background-color: rgba(0,0,0,0.15);
+    padding: 20px;
 }

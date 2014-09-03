@@ -77,7 +77,11 @@
 		}
 	}
 
-	#leftColumn, #rightColumn {
+	.readMoreLabel {
+		margin-left: 15px;
+		&:after {
+			content: 'Read more >>';
+		}
 	}
 
 	#leftColumn .table .tableRow .tableRowCell,
@@ -107,12 +111,11 @@
 		}
 
 		span:first-child {
-			background-color: green;
 			border-top-left-radius: 3px;
 			border-bottom-left-radius: 3px;
 		}
 		span:last-child {
-			background-color: gray;
+			background-color: #818181;
 			border-top-right-radius: 3px;
 			border-bottom-right-radius: 3px;
 		}
@@ -120,6 +123,7 @@
 
 	span.knowledgeGrade[grade='5'] {
 		span:first-child {
+			background-color: #16be00;
 			width: ((5/5) * @gradeMeterMaxWidth);
 			border-top-right-radius: 3px;
 			border-bottom-right-radius: 3px;
@@ -130,6 +134,7 @@
 	}
 	span.knowledgeGrade[grade='4'] {
 		span:first-child {
+			background-color: #467200;
 			width: ((4/5) * @gradeMeterMaxWidth);
 		}
 		span:last-child {
@@ -138,6 +143,7 @@
 	}
 	span.knowledgeGrade[grade='3'] {
 		span:first-child {
+			background-color: #fce700;
 			width: ((3/5) * @gradeMeterMaxWidth);
 		}
 		span:last-child {
@@ -146,6 +152,7 @@
 	}
 	span.knowledgeGrade[grade='2'] {
 		span:first-child {
+			background-color: #ff7e00;
 			width: ((2/5) * @gradeMeterMaxWidth);
 		}
 		span:last-child {
@@ -154,6 +161,7 @@
 	}
 	span.knowledgeGrade[grade='1'] {
 		span:first-child {
+			background-color: #db0000;
 			width: ((1/5) * @gradeMeterMaxWidth);
 		}
 		span:last-child {
