@@ -1,5 +1,5 @@
 <div class="mainContentItem full">
-    <div class="table cvTable">
+    <div class="cvTable">
         <div class="tableRow">
             <div class="tableRowCell" id="leftColumn">
                 <!-- LEFT COLUMN -->
@@ -82,10 +82,10 @@
                                         </p>
                                         <p class="marginLeft paddingBottom">
                                             <ul class="marginLeft" style="list-style-type: none;">
-                                                <li><p>C# <span class="knowledgeGrade" grade="5" /></p></li>
-                                                <li><p>Java <span class="knowledgeGrade" grade="4" /></p></li>
-                                                <li><p>C <span class="knowledgeGrade" grade="2" /></p></li>
-                                                <li><p>Python <span class="knowledgeGrade" grade="1" /></p></li>
+                                                <li><p>C# <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
+                                                <li><p>Java <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                <li><p>C <span class="knowledgeGrade" grade="2"><span></span><span></span></span></p></li>
+                                                <li><p>Python <span class="knowledgeGrade" grade="1"><span></span><span></span></span></p></li>
                                             </ul>
                                         </p>
                                     </li>
@@ -98,17 +98,31 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>HTML5 <span class="knowledgeGrade" grade="5" /></p></li>
-                                                    <li><p>CSS3 <span class="knowledgeGrade" grade="5" /></p></li>
-                                                    <li><p>Javascript <span class="knowledgeGrade" grade="5" /></p></li>
-                                                    <li><p>jQuery <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>Angular <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>requirejs <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>AJAX <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>php <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>JSP <span class="knowledgeGrade" grade="2" /></p></li>
-                                                    <li><p>lessc <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>Magnolia CMS <span class="knowledgeGrade" grade="4" /></p></li>
+                                                    <li><p>HTML5 <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
+                                                    <li><p>CSS3 <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
+                                                    <li><p>Javascript <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
+                                                    <li><p>jQuery <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>Angular <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>requirejs <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>AJAX <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>php <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>JSP <span class="knowledgeGrade" grade="2"><span></span><span></span></span></p></li>
+                                                    <li><p>lessc <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>Magnolia CMS <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                </ul>
+                                            </p>
+                                        </p>
+                                    </li>
+                                    <li class="paddinTop paddingBottom">
+                                        <p>
+                                            <p>
+                                                <b>
+                                                    Databases
+                                                </b>
+                                            </p>
+                                            <p class="marginLeft paddingBottom">
+                                                <ul class="marginLeft" style="list-style-type: none;">
+                                                    <li><p>MySQL <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -122,10 +136,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>TFS <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>Git <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>SVN <span class="knowledgeGrade" grade="2" /></p></li>
-                                                    <li><p>Mercurial <span class="knowledgeGrade" grade="1" /></p></li>
+                                                    <li><p>TFS <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>Git <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>SVN <span class="knowledgeGrade" grade="2"><span></span><span></span></span></p></li>
+                                                    <li><p>Mercurial <span class="knowledgeGrade" grade="1"><span></span><span></span></span></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -139,10 +153,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Visual Studio 2013 <span class="knowledgeGrade" grade="5" /></p></li>
-                                                    <li><p>Eclipse <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>Netbeans <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>Sublime Text 2 <span class="knowledgeGrade" grade="5" /></p></li>
+                                                    <li><p>Visual Studio 2013 <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
+                                                    <li><p>Eclipse <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>Netbeans <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>Sublime Text 2 <span class="knowledgeGrade" grade="5"><span></span><span></span></span></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -156,8 +170,8 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Scrum <span class="knowledgeGrade" grade="4" /></p></li>
-                                                    <li><p>Kanban <span class="knowledgeGrade" grade="1" /></p></li>
+                                                    <li><p>Scrum <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>
+                                                    <li><p>Kanban <span class="knowledgeGrade" grade="1"><span></span><span></span></span></p></li>
                                                 </ul>
                                             </p>
                                         </p>
@@ -171,10 +185,10 @@
                                             </p>
                                             <p class="marginLeft paddingBottom">
                                                 <ul class="marginLeft" style="list-style-type: none;">
-                                                    <li><p>Ubuntu 14.04 <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>Windows Store SDK <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>JIRA <span class="knowledgeGrade" grade="3" /></p></li>
-                                                    <li><p>Photoshop CS5 <span class="knowledgeGrade" grade="4" /></p></li>                                                
+                                                    <li><p>Ubuntu 14.04 <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>Windows Store SDK <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>JIRA <span class="knowledgeGrade" grade="3"><span></span><span></span></span></p></li>
+                                                    <li><p>Photoshop CS5 <span class="knowledgeGrade" grade="4"><span></span><span></span></span></p></li>                                                
                                                 </ul>
                                             </p>
                                         </p>
