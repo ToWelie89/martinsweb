@@ -41,7 +41,7 @@ define(function() {
 			require(['socialMediaLinks']);
 		}
 
-		if ($(".readMoreLabel").length > 0)
+		if ($(".readMoreLink").length > 0)
 		{
 			require(['readMore']);
 		}

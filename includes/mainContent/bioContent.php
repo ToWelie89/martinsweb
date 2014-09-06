@@ -20,7 +20,7 @@
                  </span>
                  <span class="tableRowCell">
                     <p class="rowValueSpan">
-                        24
+                        25
                     </p>
                  </span>
             </div>
@@ -53,7 +53,7 @@
        </div>
        <div class="mainContentItem" style="text-align: center; padding: 20px 40px 20px 40px;">
            <p class="textBody">
-                My name is Martin Sonesson and I'm a 24 year old software developer from Gothenburg. I have always been interested in 
+                My name is Martin Sonesson and I'm a 25 year old software developer from Gothenburg. I have always been interested in 
                 computers, IT and software and I have been creating websites since the glorious days of Geocities and web 2.0. In 2009 
                 I started studying software engineering at Chalmers University of Technology. Three years later, in 2012, I did my 
                 bachelors thesis at ESAB. The thesis consisted of developing a tool for analyzing CAN- and Ethernet-data between 

@@ -1,9 +1,9 @@
 require(['jquery'], function($) {
     $(document).ready(function(){
-    	$(".readMoreLabel").click(readMoreLabelClickHandler);
+    	$(".readMoreLink").click(readMoreLinkClickHandler);
     });
 
-    function readMoreLabelClickHandler() {
+    function readMoreLinkClickHandler() {
         var id = $(this).attr("for");
 
         $(".showMoreBox").each(function(){
@@ -17,7 +17,7 @@ require(['jquery'], function($) {
                 }
             }
             else {
-                $(this).hide();
+                $(this).slideUp(300);
             }
         });
     }

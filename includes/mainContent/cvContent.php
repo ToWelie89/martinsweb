@@ -13,12 +13,12 @@
                                 <ul>
                                     <li class="paddingBottom">
                                         <p>
-                                            <a href="http://www.knowit.se" target="_blank">Knowit AB</a>, IT-consultant <span class="fakeLink readMoreLabel" for="knowit" />
+                                            <a href="http://www.knowit.se" target="_blank">Knowit AB</a>, IT-consultant <span style="margin-left: 15px;" class="fakeLink readMoreLink" for="knowit">Read more >></span>
                                         </p>
                                     </li>
                                     <li class="paddinTop paddingBottom">
                                         <p>
-                                            <a href="http://www.cochlear.com" target="_blank">Cochlear Ltd</a>, Programmer <span class="fakeLink readMoreLabel" for="cochlear" />
+                                            <a href="http://www.cochlear.com" target="_blank">Cochlear Ltd</a>, Programmer <span style="margin-left: 15px;" class="fakeLink readMoreLink" for="cochlear">Read more >></span>
                                         </p>
                                     </li>
                                 </ul>
