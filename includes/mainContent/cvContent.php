@@ -76,10 +76,10 @@
                             </div>
                         </div>
                     </div>
-                    <a style="width: 100%;" href="documents/CV-Martin.pdf" download="CV-Martin.pdf">
-                        <div style="display: table; height: 122px; background-color: #ea4c3a; width: 100%;">
-                            <div style="display: table-cell; font-family: 'ProxiSemiBold'; font-size: 2.6em; background: url('/img/pdf.png'); background-repeat: no-repeat; background-color: transparent; background-position: 90% 0; vertical-align: middle;">
-                                <p style="padding: 20px;">
+                    <a href="documents/CV-Martin.pdf" download="CV-Martin.pdf">
+                        <div class="pdfDownloadOuterContainer">
+                            <div class="pdfDownloadInnerContainer">
+                                <p>
                                     DOWNLOAD AS PDF
                                 </p>
                             </div>
