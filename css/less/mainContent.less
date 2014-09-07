@@ -62,10 +62,6 @@
 	}
 }
 
-.mainContentItem.startPage{
-	width: 650px;
-}
-
 .mainContentItem.full{
 	width: 100%;
 }
@@ -116,24 +112,49 @@
 	}
 }
 
+@boxLength: ((@containerWidth - 10) / 5);
+
 .projectsHeader {
-	height: 110px;
-	width: 100%;
-	display: table;
+	height: @boxLength;
+	width: @boxLength;
 	cursor: pointer;
+	display: table;
+	position: relative;
+	background-size: 100% 100% !important;
+
+	.projectOverlay {
+		background: black;
+		opacity: 0.5;
+		position: absolute;
+		width: @boxLength;
+		height: @boxLength;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index: 99;
+	}
 
 	&:hover {
-		opacity: 0.8;
+		h5 {
+			opacity: 1.0;
+		}
+		.projectOverlay {
+			opacity: 0.2;
+		}
 	}
 
 	h5 {
+		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
-		padding-left: 20px;
-		padding-top: 10px;
-		text-shadow: 2px 2px 2px black;
-		font-size: 2.5em;
-		font-family: ProxiBold;
+		text-shadow: -1px -1px 0 #000,
+				      1px -1px 0 #000,
+				     -1px 1px 0 #000,
+				      3px 3px 2px #000;
+		font-size: 1.6em;
+		font-family: ProxiBlack;
 		color: white;
+		opacity: 0;
 	}
 }

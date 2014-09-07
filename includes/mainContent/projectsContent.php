@@ -1,18 +1,20 @@
-<div class="mainContentItem" style="width: 100%;">
-	<div class="table" style="width: 100%;">
+<div class="mainContentItem full">
+	<div class="table center noPadding">
 		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
+			<div class="tableRowCell">
 				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="starapp">
-					<h5>StarManager</h5>
+					<div class="projectOverlay" />
+					<h5>Star Manager</h5>
 				</div>
 				<div class="showMoreBox" id="starapp">
 				    <p>
-				        Assdsdsdsd
+				        test
 				    </p>
 				</div>
 			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="portfolio">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/portfolio.png');" for="portfolio">
+					<div class="projectOverlay" />
 					<h5>Portfolio</h5>
 				</div>
 				<div class="showMoreBox" id="portfolio">
@@ -21,11 +23,9 @@
 				    </p>
 				</div>
 			</div>
-		</div>
-
-		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="sti">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/sti.png');" for="sti">
+					<div class="projectOverlay" />
 					<h5>sti-starcraft</h5>
 				</div>
 				<div class="showMoreBox" id="sti">
@@ -34,8 +34,9 @@
 				    </p>
 				</div>
 			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="exjobb">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/exjobb.png');" for="exjobb">
+					<div class="projectOverlay" />
 					<h5>Bachelors thesis</h5>
 				</div>
 				<div class="showMoreBox" id="exjobb">
@@ -44,11 +45,9 @@
 				    </p>
 				</div>
 			</div>
-		</div>
-
-		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="wcc">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/wcc.png');" for="wcc">
+					<div class="projectOverlay" />
 					<h5>World Cup Calculator</h5>
 				</div>
 				<div class="showMoreBox" id="wcc">
@@ -57,8 +56,11 @@
 				    </p>
 				</div>
 			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="flappyDoge">
+		</div>
+		<div class="tableRow">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/flappyDoge.png');" for="flappyDoge">
+					<div class="projectOverlay" />
 					<h5>FlappyDoge</h5>
 				</div>
 				<div class="showMoreBox" id="flappyDoge">
@@ -67,11 +69,9 @@
 				    </p>
 				</div>
 			</div>
-		</div>
-
-		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="snake">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/snake.png');" for="snake">
+					<div class="projectOverlay" />
 					<h5>Snake</h5>
 				</div>
 				<div class="showMoreBox" id="snake">
@@ -80,8 +80,9 @@
 				    </p>
 				</div>
 			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="mkp">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/mkp.png');" for="mkp">
+					<div class="projectOverlay" />
 					<h5>Mobile Keyring</h5>
 				</div>
 				<div class="showMoreBox" id="mkp">
@@ -90,11 +91,9 @@
 				    </p>
 				</div>
 			</div>
-		</div>
-
-		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="arduinorobot">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/arduinoRobot.png');" for="arduinorobot">
+					<div class="projectOverlay" />
 					<h5>Arduino robot</h5>
 				</div>
 				<div class="showMoreBox" id="arduinorobot">
@@ -103,8 +102,9 @@
 				    </p>
 				</div>
 			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="wh40k">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/wh40k.png');" for="wh40k">
+					<div class="projectOverlay" />
 					<h5>WH40k Simulator</h5>
 				</div>
 				<div class="showMoreBox" id="wh40k">
@@ -114,25 +114,15 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="tableRow">
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="flickrEditor">
+			<div class="tableRowCell">
+				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/flickrEditor.png');" for="flickrEditor">
+					<div class="projectOverlay" />
 					<h5>Flickr Editor</h5>
 				</div>
 				<div class="showMoreBox" id="flickrEditor">
 				    <p>
 				        Assdsdsdsd
-				    </p>
-				</div>
-			</div>
-			<div class="tableRowCell" style="width: 50%;">
-				<div class="projectsHeader readMoreLink" style="background: url('img/projectHeaders/starapp.png');" for="sudoku">
-					<h5>Sudoku solver</h5>
-				</div>
-				<div class="showMoreBox" id="sudoku">
-				    <p>
-				        test
 				    </p>
 				</div>
 			</div>
