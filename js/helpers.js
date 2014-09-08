@@ -40,10 +40,13 @@ define(function() {
 		{
 			require(['socialMediaLinks']);
 		}
-
 		if ($(".readMoreLink").length > 0)
 		{
 			require(['readMore']);
+		}
+		if ($(".projectsLink").length > 0)
+		{
+			require(['projectsLink']);
 		}
 	}
 
