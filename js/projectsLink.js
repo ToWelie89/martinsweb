@@ -5,11 +5,13 @@ require(['jquery'], function($) {
     });
 
     function projectsLinkClickHandler() {
-        $("#info").text($(this).attr("for"));
-        $("#projectsMenu").animate({
-            opacity: "0.0"
-        }, 300);
-        $("#projectInfo").fadeIn(300);
+        $("#projectInfo").load("../includes/projects/"+$(this).attr("for")+".php", function(){
+            $("#projectsMenu").animate({
+                opacity: "0.0"
+            }, 300);
+            $("#projectInfo").fadeIn(300);
+            $("#backLink").click(backLinkClickHandler);
+        });
     }
 
     function backLinkClickHandler() {
@@ -17,5 +19,6 @@ require(['jquery'], function($) {
             opacity: "1.0"
         }, 300);
         $("#projectInfo").fadeOut(300);
+        $("#projectInfo").html("");
     }
 });

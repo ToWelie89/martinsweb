@@ -1,7 +1,5 @@
 <div class="mainContentItem full" style="position: relative; height: 100%; width: 100%;">
 	<div id="projectInfo">
-		<span id="info"></span><br>
-		<span class="fakeLink" id="backLink"><strong>BACK</strong></span>
 	</div>
 	<div id="projectsMenu" style="position: relative;">
 		<div class="table noPadding">
@@ -44,7 +42,7 @@
 			<div class="tableRowCell floatLeft">
 				<div class="projectsHeader projectsLink" style="background: url('img/projectHeaders/snake.png');" for="snake">
 					<div class="projectOverlay" />
-					<h5>Snake</h5>
+					<h5>GyroSnake</h5>
 				</div>
 			</div>
 			<div class="tableRowCell floatLeft">

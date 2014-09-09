@@ -20,8 +20,6 @@ define(function() {
 			case "bio":
 			case "cv":
 				return "profile";
-			case "personalProjects":
-			case "groupProjects":
 			case "projects":
 				return "projects";
 			case "misc":
