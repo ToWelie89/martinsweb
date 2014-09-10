@@ -1,4 +1,4 @@
-<div id="backLink">< BACK</div>
+<div id="backLink"><span>X</span></div>
 <div class="marginTop paddingTop">
 	<div class="table center paddingTop">
 		<div class="tableRow">

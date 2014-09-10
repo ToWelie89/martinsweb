@@ -1,8 +1,9 @@
-<div id="backLink">< BACK</div>
-<div class="marginTop paddingTop">
-	<div class="table center paddingTop">
+<div id="backLink"><span>X</span></div>
+<div class="paddingTop">
+	<div class="table center">
 		<div class="tableRow">
-			<div class="tableRowCell projectsInfoFirstColumn"></div>
+			<div class="tableRowCell projectsInfoFirstColumn">
+			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
 				<h5>Star Manager</h5>
 			</div>

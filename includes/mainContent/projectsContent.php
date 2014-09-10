@@ -1,5 +1,6 @@
 <div class="mainContentItem full" style="position: relative; height: 100%; width: 100%;">
 	<div id="projectInfo">
+		<div id="projectInfoInner"></div>
 	</div>
 	<div id="projectsMenu" style="position: relative;">
 		<div class="table noPadding">

@@ -5,9 +5,10 @@ require(['jquery'], function($) {
     });
 
     function projectsLinkClickHandler() {
-        $("#projectInfo").load("../includes/projects/"+$(this).attr("for")+".php", function(){
+        console.log("tjaaaa");
+        $("#projectInfo div").load("../includes/projects/"+$(this).attr("for")+".php", function(){
             $("#projectsMenu").animate({
-                opacity: "0.0"
+                opacity: "0.5"
             }, 300);
             $("#projectInfo").fadeIn(300);
             $("#backLink").click(backLinkClickHandler);
@@ -15,10 +16,11 @@ require(['jquery'], function($) {
     }
 
     function backLinkClickHandler() {
+        $("#projectInfo").fadeOut(300);
         $("#projectsMenu").animate({
             opacity: "1.0"
-        }, 300);
-        $("#projectInfo").fadeOut(300);
-        $("#projectInfo").html("");
+        }, 300, function(){
+            $("#projectInfo div").html("");
+        });
     }
 });
