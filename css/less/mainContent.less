@@ -143,7 +143,7 @@
 
 	.projectOverlay {
 		background: black;
-		opacity: 0.5;
+		opacity: 0.7;
 		position: absolute;
 		width: @boxLength;
 		height: @boxLength;
@@ -155,7 +155,7 @@
 	}
 
 	&:hover {
-		h5 {
+		.projectsTextContainer {
 			opacity: 1.0;
 		}
 		.projectOverlay {
@@ -163,18 +163,35 @@
 		}
 	}
 
-	h5 {
+	.projectsTextContainer {
 		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
-		text-shadow: -1px -1px 0 #000,
-				      1px -1px 0 #000,
-				     -1px 1px 0 #000,
-				      3px 3px 2px #000;
-		font-size: 1.6em;
-		font-family: ProxiBlack;
-		color: white;
 		opacity: 0;
+
+		h5 {
+			text-shadow: -1px -1px 0 #000,
+					      1px -1px 0 #000,
+					     -1px 1px 0 #000,
+					      1px 1px 2px #000;
+			font-size: 1.6em;
+			font-family: ProxiBlack;
+			color: white;
+		}
+		
+		.description {
+			clear: left;
+			padding-left: 5px;
+			padding-right: 5px;
+			font-size: 1.0em !important;
+			text-shadow: -1px -1px 0 #000,
+					      1px -1px 0 #000,
+					     -1px 1px 0 #000,
+					      3px 3px 2px #000;
+			font-size: 0.6em;
+			font-family: ProxiRegularItalics;
+			color: white;
+		}
 	}
 }
 
