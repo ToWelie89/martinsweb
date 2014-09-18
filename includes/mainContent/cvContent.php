@@ -1,5 +1,5 @@
 <div style="padding: 20px 40px 20px 40px;">
-    <div class="mainContentItem full">
+    <div class="mainContentItem full paddingBottom">
         <div class="cvTable">
             <div class="tableRow">
                 <div class="tableRowCell" id="leftColumn">
