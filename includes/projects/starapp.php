@@ -13,24 +13,17 @@
 				<img src="img/projectHeaders/starapp.png" class="projectsInfoPicture">
 			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
-				<p class="bodyText">
-					bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 <br>
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+				<p class="bodyText" style="min-height: 180px;">
+					This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to 
+					Starcraft 2 account and it then loads information about the player using 
+					<a href="http://blizzard.github.io/api-sc2-docs/" target="_blank">Blizzards official SC2 API</a>. The purpose of the application is to let 
+					users track their progress and view statistics regarding their progress in the game.
+					<br><br>
+					The app supports the metro grid layout in Windows 8/RT, it can be added as a tile in start screen where it displays the current progress 
+					which updates automatically.
+					<br><br>
+					The application is written purely with standard web technologies, HTML5, CSS3 and Javascript. Libraries like jQuery and linq are also used. 
+					I version the code on my Github account which you can view by clicking the code-button below.
 				</p>
 				<div class="paddingTop floatRight">
 					<a class="button" href="http://apps.microsoft.com/windows/sv-se/app/star-manager/d22a689a-2350-4743-a840-0f5cf2690ef3" target="_blank">
