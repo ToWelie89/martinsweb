@@ -21,7 +21,12 @@
                      </span>
                      <span class="tableRowCell">
                         <p class="rowValueSpan">
-                            25
+                            <?php
+                                $birthdate = new DateTime("1989-09-06");
+                                $today     = new DateTime();
+                                $interval  = $today->diff($birthdate);
+                                echo $interval->format('%y');
+                            ?>
                         </p>
                      </span>
                 </div>
