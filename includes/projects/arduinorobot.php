@@ -13,29 +13,18 @@
 			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
 				<p class="bodyText">
-					bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 <br>
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-					 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+					This is currently a project under production. I am building a robot using a Arduino Uno Rev3 microprocessor. The robot has the 
+					form of a RC car. The Arduino card is connected to two DC motors, a ultrasonic detection component is used to detect if there are 
+					obstacles in front of the robot. Some logic is coded in C that handles the behaviour of the robot where it tries to run around 
+					without hitting anything.
+					<br><br>
+					I will upload the code and some more information about this project when it is complete.
 				</p>
 				<div class="paddingTop floatRight">
-					<a class="button" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
+					<a class="button disabled" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
 						<p text="Code"></p>
 					</a>
-					<a class="button" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
+					<a class="button disabled" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
 						<p text="Report"></p>
 					</a>
 				</div>
