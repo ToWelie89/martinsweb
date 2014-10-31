@@ -18,7 +18,7 @@
 					select a picture and then edit it in the DOM using Javascript. In the assignment I was supposed to writ
  				</p>
 				<div class="paddingTop floatRight">
-					<a class="button disabled" target="_blank">
+					<a class="button disabled">
 						<p text="Demo"></p>
 					</a>
 				</div>

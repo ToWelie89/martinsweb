@@ -21,10 +21,10 @@
 					I will upload the code and some more information about this project when it is complete.
 				</p>
 				<div class="paddingTop floatRight">
-					<a class="button disabled" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
+					<a class="button disabled">
 						<p text="Code"></p>
 					</a>
-					<a class="button disabled" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
+					<a class="button disabled">
 						<p text="Report"></p>
 					</a>
 				</div>

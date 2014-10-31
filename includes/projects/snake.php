@@ -39,10 +39,10 @@
 					<a class="button" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
 						<p text="v1.0 APK"></p>
 					</a>
-					<a class="button" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
+					<a class="button disabled">
 						<p text="v1.1 APK"></p>
 					</a>
-					<a class="button" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
+					<a class="button disabled">
 						<p text="Map Editor"></p>
 					</a>
 				</div>

@@ -23,7 +23,7 @@
 					<a class="button" href="https://github.com/ToWelie89/Warhammer-40k-Unit-Simulator" target="_blank">
 						<p text="Code"></p>
 					</a>
-					<a class="button disabled" href="" target="_blank">
+					<a class="button disabled">
 						<p text="Demo"></p>
 					</a>
 				</div>
