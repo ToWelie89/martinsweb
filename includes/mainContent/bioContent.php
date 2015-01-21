@@ -6,7 +6,6 @@
             <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="img/socialMediaIcons/GitHub.png"></a>
             <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="img/socialMediaIcons/Twitter.png"></a>
             <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank" displayText="Stack overflow"><img alt="Stack overflow" src="img/socialMediaIcons/stackoverflow.png"></a>
-            <a href="https://www.instagram.com/martinso89" target="_blank" displayText="Instagram"><img alt="Instagram" src="img/socialMediaIcons/Instagram.png"></a>
         </div>
     </div>
     <div class="mainContentItem" style="margin-top: 120px; width: 100%; padding: 20px 30px 20px 30px;">
@@ -21,7 +20,12 @@
                      </span>
                      <span class="tableRowCell">
                         <p class="rowValueSpan">
-                            25
+                            <?php
+                                $birthdate = new DateTime("1989-09-06");
+                                $today     = new DateTime();
+                                $interval  = $today->diff($birthdate);
+                                echo $interval->format('%y');
+                            ?>
                         </p>
                      </span>
                 </div>

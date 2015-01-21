@@ -4,7 +4,7 @@
     <a class="link mainMenuLink" id="projects" href="/projects.php"><span data-hover="PROJECTS">PROJECTS</span></a>
     <a class="link mainMenuLink" id="misc"><span data-hover="MISC">MISC</span></a>
 
-    <div class="fb-like" data-href="http://www.martinsonesson.se" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <!-- div class="fb-like" data-href="http://www.martinsonesson.se" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div-->
 </div>
 <div id="subMenuContainer">
     <div class="subMenuBar" for="profile">
