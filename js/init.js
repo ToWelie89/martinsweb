@@ -1,12 +1,13 @@
 require.config({
     baseUrl: 'js',
     paths: {
-        jquery: 'jquery-2.1.1.min',
+        jquery: 'libs/jquery-2.1.1.min',
         constants: 'constants',
         helpers: 'helpers',
-        modernizr: 'modernizr.custom',
+        modernizr: 'libs/modernizr.custom',
         menu: 'menu',
-        main: 'main'
+        main: 'main',
+        angularLib: 'libs/angular.min'
     }
 });
 

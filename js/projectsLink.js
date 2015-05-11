@@ -21,7 +21,6 @@ require(['jquery'], function($) {
     }
 
     function projectsLinkClickHandler() {
-        console.log("tjaaaa");
         $("#projectInfo div").load("../includes/projects/"+$(this).attr("for")+".php", function(){
             $("#projectsMenu").animate({
                 opacity: "0.5"

@@ -3,7 +3,7 @@
     <head>
         <?php include("includes/head.php"); ?>
     </head>
-    <body>
+        <body>
         <p id="sizeIndicator"></p>
         <?php include("includes/topBar.php"); ?>
         <div id="main">
