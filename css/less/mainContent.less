@@ -120,6 +120,7 @@
 }
 
 @boxLength: ((@containerWidth - 10) / 5);
+@doubleBoxLength: @boxLength*2;
 
 #projectInfo {
 	display: none;
@@ -196,6 +197,11 @@
 	position: relative;
 	background-size: 100% 100% !important;
 
+	.big {
+		height: @doubleBoxLength;
+		width: @doubleBoxLength;
+	}
+
 	.projectOverlay {
 		background: black;
 		opacity: 0.7;
@@ -233,7 +239,7 @@
 			font-family: ProxiBlack;
 			color: white;
 		}
-		
+
 		.description {
 			clear: left;
 			padding-left: 5px;

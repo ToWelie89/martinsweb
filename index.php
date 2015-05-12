@@ -3,14 +3,13 @@
     <head>
         <?php include("includes/head.php"); ?>
     </head>
-        <body>
+        <body ng-app="martinsWeb" data-ng-controller="mainController">
         <p id="sizeIndicator"></p>
         <?php include("includes/topBar.php"); ?>
         <div id="main">
             <?php include("includes/menu.php"); ?>
             <div id="contentBar">
-                <?php include("includes/loadBox.php"); ?>
-                <div id="content" content="index"></div>
+                <div data-ng-view></div>
             </div>
        </div>
     </body>

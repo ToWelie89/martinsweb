@@ -1,25 +1,34 @@
-/*'use strict';
-
-var app = angular.module("martinsWeb", ["ngRoute"]);
-app.config(function($routeProvider) {
-	$routeProvider
-		.when('/projects', {
-			controller: 'projectsController'
-		})
-		.otherwise({
-			redirectTo: "/"
-		});
-});*/
-
 (function() {
-	var app = angular.module("martinsWeb", ["ngRoute"]);
-	app.config(function($routeProvider) {
-		$routeProvider
-			.when('/projects', {
-				controller: 'projectsController'
-			})
-			.otherwise({
-				controller: 'projectsController'
-			});
-	});
+	var app = angular.module('martinsWeb', ['ngRoute']);
+
+	app.config(['$routeProvider', '$locationProvider',
+		function($routeProvider, $locationProvider) {
+			$routeProvider
+				.when('/', {
+					templateUrl: 'views/index.html'
+				})
+				.when('/projects', {
+					controller: 'projectsController',
+					templateUrl: 'views/projects.html'
+				})
+				.when('/cv', {
+					controller: 'cvController',
+					templateUrl: 'views/cv.html'
+				})
+				.when('/bio', {
+					controller: 'bioController',
+					templateUrl: 'views/bio.php'
+				})
+				.when('/404', {
+					templateUrl: 'views/404.html'
+				})
+				.when('/projects', {
+					controller: 'projectsController',
+					templateUrl: 'views/projects.html'
+				})
+				.otherwise({
+					templateUrl: 'views/404.html'
+				});
+		}
+	]);
 }());

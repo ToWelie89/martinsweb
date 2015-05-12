@@ -4,11 +4,17 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="css/default.css">
 
-<script data-main="js/init" src="js/libs/require.js"></script>
-
+<script src="js/libs/modernizr.custom.js"></script>
+<script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/angular.min.js"></script>
 <script src="js/libs/angular-route.min.js"></script>
 <script src="js/angular/config/app.js"></script>
+<script src="js/angular/controllers/menuController.js"></script>
+<script src="js/angular/controllers/mainController.js"></script>
+<script src="js/angular/controllers/projectsController.js"></script>
+<script src="js/angular/controllers/bioController.js"></script>
+<script src="js/angular/controllers/cvController.js"></script>
+<script src="js/angular/services/pageUrlService.js"></script>
 
 <script>
 (function(d, s, id) {
