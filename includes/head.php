@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="css/default.css">
 
+<script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/angular.min.js"></script>
@@ -15,6 +16,32 @@
 <script src="js/angular/controllers/bioController.js"></script>
 <script src="js/angular/controllers/cvController.js"></script>
 <script src="js/angular/services/pageUrlService.js"></script>
+
+<script>
+    window.onload = function() {
+        var pattern = Trianglify({
+	        width: 3840,
+	        height: 2160,
+	        variance: 1,
+	        seed: 'dont forget to bring a towel',
+	        cell_size: 120,
+	        x_colors: ['#000000', '#2e3192','#ffffff'],
+	        y_colors: ['#ffffff', '#1b1464','#000000']
+	    });
+	    $(".mainBg").html(pattern.canvas());
+
+	    $(".mainBg canvas").attr("id", "canvasBg");
+
+		//$(window).resize(resizeCanvas);
+		function resizeCanvas() {
+	        var pattern = Trianglify({
+		        width: window.innerWidth,
+		        height: window.innerHeight
+		    });
+		    $(".mainBg").html(pattern.canvas());
+		}
+      }
+</script>
 
 <script>
 (function(d, s, id) {

@@ -5,7 +5,7 @@
 	<div id="projectsMenu" style="position: relative;">
 		<div class="table noPadding">
 			<div class="tableRowCell floatLeft" data-ng-repeat="project in projects">
-				<div class="projectsHeader projectsLink" style="background: url({{project.img}});" for="{{project.id}}" data-ng-click="projectsLinkClickHandler(project.id)">
+				<div class="projectsHeader projectsLink" style="background: url({{project.img}});" for="{{project.id}}" data-ng-click="projectsLinkClickHandler(project.id)" data-ng-class="{large: project.showLarge}">
 					<div class="projectOverlay"></div>
 					<div class="projectsTextContainer">
 						<h5>
