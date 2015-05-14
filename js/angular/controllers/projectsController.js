@@ -54,20 +54,64 @@
                     project.showLarge = (false);
                 });
 
-                for (var i = 0; i < $scope.projects.length; i++)
+                while (numberOfProjectsToShowLarge > 0)
                 {
-                    if ((i + 1) % numberOfProjectsToShowLarge === 0)
+                    var randomIndex = Math.floor((Math.random() * $scope.projects.length) + 0);
+                    $scope.projects[randomIndex].showLarge = true;
+                    numberOfProjectsToShowLarge--;
+                }
+                //fixRowProblems();
+            }
+        }
+
+        function fixRowProblems(){
+            var minIndex = 0;
+            var maxIndex = 4;
+            var currentRowSize = 0;
+            for (var i = 0; i < $scope.projects.length; i++)
+            {
+                if (getTotalSize() % 5 !== 0)
+                {
+                    if ($scope.projects[i].showLarge)
                     {
-                        $scope.projects[i].showLarge = true;
+                        currentRowSize += 2;
+                    } else {
+                        currentRowSize++;
+                    }
+
+                    if (currentRowSize === 0)
+                    {
+                        minIndex = i;
+                    }
+                    if (currentRowSize === 5)
+                    {
+                        maxIndex = i;
+                        currentRowSize = 0;
+                    }
+
+                    if (currentRowSize === 4 && $scope.projects[i+1] && $scope.projects[i+1].showLarge){
+                        var randomIndex = Math.floor((Math.random() * maxIndex) + minIndex);
+                        $scope.projects[randomIndex].showLarge = true;
+                    } else if (currentRowSize === 4 && !$scope.projects[i+1]){
+                        var randomIndex = Math.floor((Math.random() * i) + minIndex);
+                        $scope.projects[randomIndex].showLarge = true;
                     }
                 }
-
-                /*for (var i = 0; i < numberOfRows; i++)
-                {
-                    var randomIndex = Math.floor((Math.random() * (4 * (i + 1))) + (i * 5));
-                    $scope.projects[randomIndex].showLarge = true;
-                }*/
             }
+        }
+
+        function getTotalSize(){
+            var totalRowSize = 0;
+            for (var i = 0; i < $scope.projects.length; i++)
+            {
+                if ($scope.projects[i].showLarge)
+                {
+                    totalRowSize += 2;
+                } else {
+                    totalRowSize++;
+                }
+            }
+            return totalRowSize;
         }
 
         function init() {
