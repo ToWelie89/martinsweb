@@ -138,7 +138,7 @@
 		margin: 0 auto;
 		background-color: red;
 		width: (@containerWidth * (2/3));
-		margin-top: 30px;
+		margin-top: 200px;
 		background: @mainContentBg;
 		border: 5px solid @borderColor;
 
@@ -196,11 +196,7 @@
 	display: table;
 	position: relative;
 	background-size: 100% 100% !important;
-
-	.big {
-		height: @doubleBoxLength;
-		width: @doubleBoxLength;
-	}
+	border-radius: 20px;
 
 	.projectOverlay {
 		background: black;
@@ -213,12 +209,11 @@
 		right: 0;
 		bottom: 0;
 		z-index: 99;
+		transition: opacity 0.4s;
+		border-radius: 20px;
 	}
 
 	&:hover {
-		.projectsTextContainer {
-			opacity: 1.0;
-		}
 		.projectOverlay {
 			opacity: 0.2;
 		}
@@ -228,7 +223,6 @@
 		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
-		opacity: 0;
 
 		h5 {
 			text-shadow: -1px -1px 0 #000,
@@ -254,6 +248,14 @@
 			color: white;
 		}
 	}
+}
+
+.projectsDesc {
+	.projectsHeader;
+	height: auto;
+	.marginTop;
+	.marginBottom;
+	cursor: default;
 }
 
 .projectsHeader.large {

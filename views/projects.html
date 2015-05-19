@@ -1,12 +1,14 @@
-<div class="mainContentItem full" style="position: relative; height: 100%; width: 100%;" data-ng-cloak>
+<div class="mainContentItem full" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
 	<div id="projectInfo">
 		<div id="projectInfoInner"></div>
 	</div>
-	<div id="projectsMenu" style="position: relative;">
-		<div class="table noPadding">
-			<div class="tableRowCell floatLeft" data-ng-repeat="project in projects">
-				<div class="projectsHeader projectsLink" style="background: url({{project.img}});" for="{{project.id}}" data-ng-click="projectsLinkClickHandler(project.id)" data-ng-class="{large: project.showLarge}">
+	<div id="projectsMenu" class="marginTop paddingTop">
+		<div data-ng-repeat="project in projects" data-ng-class="{clearLeft: $index % 4 == 0}" style="margin-left: 90px;">
+			<div class="floatLeft marginLeft marginRight">
+				<div class="projectsHeader projectsLink marginBottom" style="background: url({{project.img}});" for="{{project.id}}" data-ng-click="projectsLinkClickHandler(project.id)" data-ng-class="{large: project.showLarge}">
 					<div class="projectOverlay"></div>
+				</div>
+				<div class="projectsDesc">
 					<div class="projectsTextContainer">
 						<h5>
 							{{project.name}}
