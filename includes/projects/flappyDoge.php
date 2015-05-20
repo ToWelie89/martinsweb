@@ -23,7 +23,7 @@
 					<a class="button" href="https://github.com/ToWelie89/FlappyDoge" target="_blank">
 						<p text="Code"></p>
 					</a>
-					<a class="button" href="http://www.martinsonesson.se/#/flappyDoge" target="_blank">
+					<a class="button" href="#/flappyDoge" target="_blank">
 						<p text="Demo"></p>
 					</a>
 				</div>
