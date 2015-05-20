@@ -33,6 +33,18 @@
 				.when('/flappyDoge', {
 					templateUrl: 'views/flappyDoge.html'
 				})
+				.when('/blog', {
+					templateUrl: 'views/blog.html'
+				})
+				.when('/art', {
+					templateUrl: 'views/art.html'
+				})
+				.when('/videos', {
+					templateUrl: 'views/videos.html'
+				})
+				.when('/photos', {
+					templateUrl: 'views/photos.html'
+				})
 				.otherwise({
 					templateUrl: 'views/404.html'
 				});

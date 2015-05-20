@@ -13,10 +13,10 @@
             <a class="link subMenuLink" id="cv" href="#cv">CV</a>
         </div>
         <div class="subMenuBar" for="misc">
-            <a class="link subMenuLink" id="blog" href="http://www.google.se">BLOG</a>
-            <a class="link subMenuLink" id="art" href="http://www.google.se">ART</a>
-            <a class="link subMenuLink" id="videos" href="http://www.google.se">VIDEOS</a>
-            <a class="link subMenuLink" id="photos" href="http://www.google.se">PHOTOS</a>
+            <a class="link subMenuLink" id="blog" href="#blog">BLOG</a>
+            <a class="link subMenuLink" id="art" href="#art">ART</a>
+            <a class="link subMenuLink" id="videos" href="#videos">VIDEOS</a>
+            <a class="link subMenuLink" id="photos" href="#photos">PHOTOS</a>
         </div>
     </div>
 </div>
