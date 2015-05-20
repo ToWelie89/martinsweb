@@ -9,10 +9,12 @@
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/angular.min.js"></script>
 <script src="js/libs/angular-route.min.js"></script>
+<script src="js/MapEditor.js"></script>
 <script src="js/angular/config/app.js"></script>
 <script src="js/angular/controllers/menuController.js"></script>
 <script src="js/angular/controllers/mainController.js"></script>
 <script src="js/angular/controllers/projectsController.js"></script>
+<script src="js/angular/controllers/gyroSnakeEditorController.js"></script>
 <script src="js/angular/controllers/bioController.js"></script>
 <script src="js/angular/controllers/cvController.js"></script>
 <script src="js/angular/services/pageUrlService.js"></script>

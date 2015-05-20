@@ -26,6 +26,10 @@
 					controller: 'projectsController',
 					templateUrl: 'views/projects.html'
 				})
+				.when('/gyroSnakeEditor', {
+					controller: 'gyroSnakeEditorController',
+					templateUrl: 'views/gyroSnakeEditor.html'
+				})
 				.otherwise({
 					templateUrl: 'views/404.html'
 				});
