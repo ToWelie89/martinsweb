@@ -30,16 +30,16 @@
 		"description": "A calculator used to simulate potential World cup 2014 results"
 	},
 	{
-		"id": "flappyDoge",
-		"img": "img/projectHeaders/flappyDoge.png",
-		"name": "FlappyDoge",
-		"description": "My version of the popular game Flappy Bird"
-	},
-	{
 		"id": "snake",
 		"img": "img/projectHeaders/snake.png",
 		"name": "GyroSnake",
 		"description": "A Snake game for Android devices"
+	},
+	{
+		"id": "flappyDoge",
+		"img": "img/projectHeaders/flappyDoge.png",
+		"name": "FlappyDoge",
+		"description": "My version of the popular game Flappy Bird"
 	},
 	{
 		"id": "mkp",

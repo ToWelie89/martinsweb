@@ -12,7 +12,7 @@
 				<img src="img/projectHeaders/snake.png" class="projectsInfoPicture">
 			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
-				<p class="bodyText">
+				<p class="bodyText paddingBottom">
 					This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
 					project together with three other students. It is essentially a Android-version of the classic game Snake. The biggest difference
 					is that in our game the user uses the motion sensor of the phone to maneuver the snake, the snake can be steered in any angle and not
