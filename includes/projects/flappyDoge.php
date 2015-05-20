@@ -13,8 +13,8 @@
 			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
 				<p class="bodyText">
-					This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that 
-					of Flappy Bird. It is written in Javascript and I use the phaser framework, a good framework for creating games in Javascript. Thanks 
+					This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that
+					of Flappy Bird. It is written in Javascript and I use the phaser framework, a good framework for creating games in Javascript. Thanks
 					to Phaser the source code for the game itself is extremly minimalistic. Feel free to check it out!
 					<br><br>
 					I plan to make a port to iOS/Android as well and maybe add some more functionality to the game.
@@ -23,7 +23,7 @@
 					<a class="button" href="https://github.com/ToWelie89/FlappyDoge" target="_blank">
 						<p text="Code"></p>
 					</a>
-					<a class="button" href="http://www.martinsonesson.se/pi/game2" target="_blank">
+					<a class="button" href="http://www.martinsonesson.se/#/flappyDoge" target="_blank">
 						<p text="Demo"></p>
 					</a>
 				</div>

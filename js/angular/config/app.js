@@ -30,6 +30,9 @@
 					controller: 'gyroSnakeEditorController',
 					templateUrl: 'views/gyroSnakeEditor.html'
 				})
+				.when('/flappyDoge', {
+					templateUrl: 'views/flappyDoge.html'
+				})
 				.otherwise({
 					templateUrl: 'views/404.html'
 				});
