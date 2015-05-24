@@ -32,7 +32,7 @@
 // Major breakpoints
 @small  : 30em;    /* 480px / 16 */
 @medium : 48em;    /* 768px / 16 */
-@large  : 64em;    /* 1024px / 16 */
+@large  : 80em;    /* 1024px / 16 */
 
 // To use as max-width values
 @lt-small  : (@small  - 0.01em); /* Lower than Small */
@@ -51,6 +51,8 @@
 @import "less/startPageTypography";
 @import "less/spinnerBox";
 @import "less/buttons";
+@import "less/mainMenuLinks";
+@import "less/subMenuLinks";
 
 @media only screen and (min-width: 0em) and (max-width: @lt-medium) {
 	@import "less/default-small";
@@ -59,8 +61,8 @@
 @media only screen and (min-width: @medium) and (max-width: @lt-large) {
 	@import "less/default-medium";
 	@import "less/mainContent-medium";
+	@import "less/topBar-medium";
 }
 @media only screen and (min-width: @large) {
-	@import "less/mainMenuLinks";
-	@import "less/subMenuLinks";
+
 }

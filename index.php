@@ -9,7 +9,7 @@
             <?php include("includes/topBar.php"); ?>
             <div id="main">
                 <?php include("includes/menu.php"); ?>
-                <div id="contentBar" style="padding-bottom:50px;">
+                <div id="contentBar">
                     <div data-ng-view></div>
                 </div>
            </div>
