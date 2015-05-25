@@ -18,6 +18,7 @@
 <script src="js/angular/controllers/bioController.js"></script>
 <script src="js/angular/controllers/cvController.js"></script>
 <script src="js/angular/services/pageUrlService.js"></script>
+<script src="js/angular/services/mediaQueryService.js"></script>
 
 <script>
     window.onload = function() {

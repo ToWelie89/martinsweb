@@ -1,7 +1,6 @@
 .mainContentItem{
-
 	p.textBody {
-		font-size: 0.9em !important;
+		font-size: 1.3em !important;
 	}
 }
 
@@ -14,5 +13,51 @@
 	.projectOverlay {
 		width: @boxLength;
 		height: @boxLength;
+	}
+}
+
+#socialMediaIconsContainer{
+	width: 100%;
+	background-color: blue;
+	position: relative;
+
+	#linksInnerContainer, #previewTitle{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+
+	#previewTitle{
+	    z-index: 10;
+	    font-family: ProxiBlack;
+	    font-size: 3em;
+	    top: 20px;
+	    display: none;
+		text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	}
+
+	#linksInnerContainer{
+		width: 100%;
+		text-align: center;
+		border-bottom: 3px solid @borderColor;
+		padding-bottom: 10px;
+		a {
+			outline: 0;
+			img {
+				padding: 10px;
+				margin-left: 5px;
+				margin-right: 5px;
+				width: 59px;
+				height: 59px;
+				opacity: 1.0;
+				transition: opacity 0.6s, box-shadow 0.6s;
+				box-shadow: 0px 0px 15px transparent;
+
+				&:hover{
+					box-shadow: 0px 0px 15px darkgray;
+					opacity: 1.0;
+				}
+			}
+		}
 	}
 }

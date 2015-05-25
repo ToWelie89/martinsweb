@@ -1,17 +1,23 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var bioController = ['$scope', function($scope) {
+    var bioController = ['$scope', 'mediaQueryService', function($scope, mediaQueryService) {
 
         function mouseOver() {
-            $("#previewTitle").stop(true, true);
-            var text = $(this).attr("displayText");
-            $("#previewTitle").text(text);
-            $("#previewTitle").fadeIn(600);
+            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE')
+            {
+                $("#previewTitle").stop(true, true);
+                var text = $(this).attr("displayText");
+                $("#previewTitle").text(text);
+                $("#previewTitle").fadeIn(600);
+            }
         }
 
         function mouseOut() {
-            $("#previewTitle").fadeOut(300);
+            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE')
+            {
+                $("#previewTitle").fadeOut(300);
+            }
         }
 
         function init() {
