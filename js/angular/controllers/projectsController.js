@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var projectsController = function($scope, $log, $http) {
+    var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', function($scope, $log, $http, mediaQueryService) {
         $scope.projects;
 
         function clickOutsideHandler(e) {
@@ -40,6 +40,16 @@
             $(document).unbind();
         }
 
+        $scope.clearLeft = function(index) {
+            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE'){
+                return (index % 4 === 0);
+            } else if (mediaQueryService.getCurrentMediaQuery() === 'MEDIUM') {
+                return (index % 3 === 0);
+            } else if (mediaQueryService.getCurrentMediaQuery() === 'SMALL') {
+                return (index % 2 === 0);
+            }
+        }
+
         function init() {
             $http.get('json/projects.json').success(function(data) {
                 //shuffle(data);
@@ -56,7 +66,7 @@
         };
 
         init();
-    };
+    }];
 
     app.controller("projectsController", projectsController);
 }());

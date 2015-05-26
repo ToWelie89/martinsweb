@@ -194,7 +194,6 @@
 	height: @boxLength;
 	width: @boxLength;
 	cursor: pointer;
-	display: table;
 	position: relative;
 	background-size: 100% 100% !important;
 	border-radius: 20px;
@@ -222,8 +221,6 @@
 
 	.projectsTextContainer {
 		text-align: center;
-		display: table-cell;
-		vertical-align: middle;
 
 		h5 {
 			text-shadow: -1px -1px 0 #000,
@@ -264,5 +261,14 @@
 
 	.projectOverlay {
 		width: (@boxLength * 2);
+	}
+}
+
+#projectsMenu {
+	text-align: center;
+
+	.projectContainer {
+		display: inline-block;
+		vertical-align: top;
 	}
 }
