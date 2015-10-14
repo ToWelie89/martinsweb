@@ -1,6 +1,10 @@
 (function() {
 	var app = angular.module('martinsWeb', ['ngRoute']);
 
+	app.constants('config', {
+		useMocks: false
+	});
+
 	app.config(['$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 			$routeProvider
