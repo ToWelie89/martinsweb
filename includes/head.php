@@ -4,19 +4,26 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="css/default.css">
 
+<!-- Libs -->
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/angular.min.js"></script>
 <script src="js/libs/angular-route.min.js"></script>
 <script src="js/MapEditor.js"></script>
+
+<!-- Angular settings -->
 <script src="js/angular/config/app.js"></script>
+
+<!-- Angular controllers -->
 <script src="js/angular/controllers/menuController.js"></script>
 <script src="js/angular/controllers/mainController.js"></script>
 <script src="js/angular/controllers/projectsController.js"></script>
 <script src="js/angular/controllers/gyroSnakeEditorController.js"></script>
 <script src="js/angular/controllers/bioController.js"></script>
 <script src="js/angular/controllers/cvController.js"></script>
+
+<!-- Angular services -->
 <script src="js/angular/services/pageUrlService.js"></script>
 <script src="js/angular/services/mediaQueryService.js"></script>
 

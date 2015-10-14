@@ -1,31 +1,31 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     var bioController = ['$scope', 'mediaQueryService', function($scope, mediaQueryService) {
 
         function mouseOver() {
-            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE')
+            if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.LARGE)
             {
-                $("#previewTitle").stop(true, true);
-                var text = $(this).attr("displayText");
-                $("#previewTitle").text(text);
-                $("#previewTitle").fadeIn(600);
+                $('#previewTitle').stop(true, true);
+                var text = $(this).attr('displayText');
+                $('#previewTitle').text(text);
+                $('#previewTitle').fadeIn(600);
             }
         }
 
         function mouseOut() {
-            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE')
+            if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.LARGE)
             {
-                $("#previewTitle").fadeOut(300);
+                $('#previewTitle').fadeOut(300);
             }
         }
 
         function init() {
-            $("#linksInnerContainer a").hover(mouseOver, mouseOut);
+            $('#linksInnerContainer a').hover(mouseOver, mouseOut);
         }
 
         init();
     }];
 
-    app.controller("bioController", bioController);
+    app.controller('bioController', bioController);
 }());
