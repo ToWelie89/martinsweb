@@ -12,20 +12,8 @@
 <script src="js/libs/angular-route.min.js"></script>
 <script src="js/MapEditor.js"></script>
 
-<!-- Angular settings -->
-<script src="js/angular/config/app.js"></script>
-
-<!-- Angular controllers -->
-<script src="js/angular/controllers/menuController.js"></script>
-<script src="js/angular/controllers/mainController.js"></script>
-<script src="js/angular/controllers/projectsController.js"></script>
-<script src="js/angular/controllers/gyroSnakeEditorController.js"></script>
-<script src="js/angular/controllers/bioController.js"></script>
-<script src="js/angular/controllers/cvController.js"></script>
-
-<!-- Angular services -->
-<script src="js/angular/services/pageUrlService.js"></script>
-<script src="js/angular/services/mediaQueryService.js"></script>
+<!-- martins-web angular -->
+<script src="build/martins-web.min.js"></script>
 
 <script>
     window.onload = function() {

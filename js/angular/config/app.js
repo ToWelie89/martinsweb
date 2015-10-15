@@ -1,7 +1,7 @@
 (function() {
 	var app = angular.module('martinsWeb', ['ngRoute']);
 
-	app.constants('config', {
+	app.constant('config', {
 		useMocks: false
 	});
 
