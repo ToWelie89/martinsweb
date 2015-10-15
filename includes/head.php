@@ -2,15 +2,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="build/default.css">
 
-<!-- Libs -->
+<!-- Local libs -->
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
-<script src="js/libs/jquery-2.1.1.min.js"></script>
-<script src="js/libs/angular.min.js"></script>
-<script src="js/libs/angular-route.min.js"></script>
 <script src="js/MapEditor.js"></script>
+
+<!-- Node module libs -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
 
 <!-- martins-web angular -->
 <script src="build/martins-web.min.js"></script>

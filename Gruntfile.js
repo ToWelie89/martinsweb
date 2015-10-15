@@ -11,13 +11,28 @@ module.exports = function(grunt) {
                 src: 'js/angular/**/*.js',
                 dest: 'build/<%= pkg.name %>.min.js'
             }
+        },
+        less: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                cleancss: true
+            },
+
+            all: {
+                files: [{
+                    src: 'css/init.less',
+                    dest: 'build/default.css'
+                }]
+            },
         }
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    grunt.loadNpmTasks('grunt-contrib-less');
+
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['uglify', 'less']);
 
 };

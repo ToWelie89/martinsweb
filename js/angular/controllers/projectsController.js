@@ -20,7 +20,7 @@
         }
 
         $scope.projectsLinkClickHandler = function(id) {
-            $('#projectInfo div').load('/includes/projects/' + id + '.php', function() {
+            $('#projectInfo div').load('./includes/projects/' + id + '.php', function() {
                 $('#projectsMenu').animate({
                     opacity: '0.5'
                 }, 300);
