@@ -41,6 +41,7 @@
 					templateUrl: 'views/blog.html'
 				})
 				.when('/art', {
+					controller: 'artController',
 					templateUrl: 'views/art.html'
 				})
 				.when('/videos', {
