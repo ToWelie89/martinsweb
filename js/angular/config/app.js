@@ -1,8 +1,12 @@
 (function() {
 	var app = angular.module('martinsWeb', ['ngRoute']);
 
-	app.config(['$routeProvider', '$locationProvider',
-		function($routeProvider, $locationProvider) {
+	app.constant('config', {
+		useMocks: false
+	});
+
+	app.config(['$routeProvider', '$locationProvider', '$logProvider',
+		function($routeProvider, $locationProvider, $logProvider) {
 			$routeProvider
 				.when('/', {
 					templateUrl: 'views/index.html'
@@ -37,7 +41,8 @@
 					templateUrl: 'views/blog.html'
 				})
 				.when('/art', {
-					templateUrl: 'views/art.html'
+					controller: 'artController',
+					templateUrl: 'views/art.php'
 				})
 				.when('/videos', {
 					templateUrl: 'views/videos.html'
@@ -48,6 +53,7 @@
 				.otherwise({
 					templateUrl: 'views/404.html'
 				});
+			$logProvider.debugEnabled(true);
 		}
 	]);
 }());

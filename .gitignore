@@ -1,3 +1,5 @@
 /img/psd
 /pi
-plan.txt
+/node_modules
+/build
+/model/secret.php

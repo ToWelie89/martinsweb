@@ -2,23 +2,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="build/default.css">
 
+<!-- Local libs -->
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
-<script src="js/libs/jquery-2.1.1.min.js"></script>
-<script src="js/libs/angular.min.js"></script>
-<script src="js/libs/angular-route.min.js"></script>
 <script src="js/MapEditor.js"></script>
-<script src="js/angular/config/app.js"></script>
-<script src="js/angular/controllers/menuController.js"></script>
-<script src="js/angular/controllers/mainController.js"></script>
-<script src="js/angular/controllers/projectsController.js"></script>
-<script src="js/angular/controllers/gyroSnakeEditorController.js"></script>
-<script src="js/angular/controllers/bioController.js"></script>
-<script src="js/angular/controllers/cvController.js"></script>
-<script src="js/angular/services/pageUrlService.js"></script>
-<script src="js/angular/services/mediaQueryService.js"></script>
+
+<!-- Node module libs -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+
+<!-- martins-web angular -->
+<script src="build/martins-web.min.js"></script>
 
 <script>
     window.onload = function() {
@@ -55,6 +52,16 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68930281-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <title>
     martinsonesson.se
 </title>

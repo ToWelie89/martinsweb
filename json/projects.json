@@ -24,6 +24,12 @@
 		"description": "My Bachelors Thesis from my time at Chalmers"
 	},
 	{
+		"id": "instaanalytics",
+		"img": "img/projectHeaders/wcc.png",
+		"name": "Instagram Analyzer",
+		"description": "An app used for analyzing an Instagram account"
+	},
+	{
 		"id": "wcc",
 		"img": "img/projectHeaders/wcc.png",
 		"name": "World Cup Calculator",

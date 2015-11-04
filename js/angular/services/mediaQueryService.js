@@ -20,7 +20,8 @@
         }
 
         return {
-            getCurrentMediaQuery: getCurrentMediaQuery
+            getCurrentMediaQuery: getCurrentMediaQuery,
+            breakPoints: breakPoints
         };
     }];
 

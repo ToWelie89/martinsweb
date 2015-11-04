@@ -1,51 +1,51 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
-    var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', function($scope, $log, $http, mediaQueryService) {
+    var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', 'config', function($scope, $log, $http, mediaQueryService, config) {
         $scope.projects;
 
         function clickOutsideHandler(e) {
-            var container = $("#projectInfoInner");
+            var container = $('#projectInfoInner');
             if (!container.is(e.target) // if the target of the click isn't the container...
                 && container.has(e.target).length === 0) // ... nor a descendant of the container
             {
-                $("#projectInfo").fadeOut(300);
-                $("#projectsMenu").animate({
-                    opacity: "1.0"
+                $('#projectInfo').fadeOut(300);
+                $('#projectsMenu').animate({
+                    opacity: '1.0'
                 }, 300, function() {
-                    $("#projectInfo div").html("");
+                    $('#projectInfo div').html('');
                 });
                 $(document).unbind();
             }
         }
 
         $scope.projectsLinkClickHandler = function(id) {
-            $("#projectInfo div").load("/includes/projects/" + id + ".php", function() {
-                $("#projectsMenu").animate({
-                    opacity: "0.5"
+            $('#projectInfo div').load('./includes/projects/' + id + '.php', function() {
+                $('#projectsMenu').animate({
+                    opacity: '0.5'
                 }, 300);
-                $("#projectInfo").fadeIn(300);
-                $("#backLink").click(backLinkClickHandler);
+                $('#projectInfo').fadeIn(300);
+                $('#backLink').click(backLinkClickHandler);
                 $(document).mouseup(clickOutsideHandler);
             });
         }
 
         function backLinkClickHandler() {
-            $("#projectInfo").fadeOut(300);
-            $("#projectsMenu").animate({
-                opacity: "1.0"
+            $('#projectInfo').fadeOut(300);
+            $('#projectsMenu').animate({
+                opacity: '1.0'
             }, 300, function() {
-                $("#projectInfo div").html("");
+                $('#projectInfo div').html('');
             });
             $(document).unbind();
         }
 
         $scope.clearLeft = function(index) {
-            if (mediaQueryService.getCurrentMediaQuery() === 'LARGE'){
+            if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.LARGE){
                 return (index % 4 === 0);
-            } else if (mediaQueryService.getCurrentMediaQuery() === 'MEDIUM') {
+            } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.MEDIUM) {
                 return (index % 3 === 0);
-            } else if (mediaQueryService.getCurrentMediaQuery() === 'SMALL') {
+            } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.SMALL) {
                 return (index % 2 === 0);
             }
         }
@@ -57,7 +57,9 @@
                 $log.debug($scope.projects);
             });
 
-            $("#backLink").click(backLinkClickHandler);
+            $('#backLink').click(backLinkClickHandler);
+
+            console.log(config);
         }
 
         function shuffle(o) {
@@ -68,5 +70,5 @@
         init();
     }];
 
-    app.controller("projectsController", projectsController);
+    app.controller('projectsController', projectsController);
 }());
