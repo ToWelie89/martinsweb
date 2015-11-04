@@ -1,7 +1,9 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var cvController = ['$scope', function($scope) {
+    var cvController = ['$scope', '$log', '$http', function($scope, $log, $http) {
+
+        $scope.techCompetence;
 
         function readMoreLinkClickHandler() {
             var id = $(this).attr("for");
@@ -22,6 +24,11 @@
         function init() {
             $(document).ready(function() {
                 $(".readMoreLink").click(readMoreLinkClickHandler);
+            });
+
+            $http.get('json/techCompetence.json').success(function(data) {
+                $scope.techCompetence = data;
+                $log.debug($scope.techCompetence);
             });
         }
 

@@ -5,8 +5,8 @@
 		useMocks: false
 	});
 
-	app.config(['$routeProvider', '$locationProvider',
-		function($routeProvider, $locationProvider) {
+	app.config(['$routeProvider', '$locationProvider', '$logProvider',
+		function($routeProvider, $locationProvider, $logProvider) {
 			$routeProvider
 				.when('/', {
 					templateUrl: 'views/index.html'
@@ -42,7 +42,7 @@
 				})
 				.when('/art', {
 					controller: 'artController',
-					templateUrl: 'views/art.html'
+					templateUrl: 'views/art.php'
 				})
 				.when('/videos', {
 					templateUrl: 'views/videos.html'
@@ -53,6 +53,7 @@
 				.otherwise({
 					templateUrl: 'views/404.html'
 				});
+			$logProvider.debugEnabled(true);
 		}
 	]);
 }());

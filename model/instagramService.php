@@ -19,6 +19,23 @@
             $encodedResp = json_encode($resp);
             echo $encodedResp;
         }
+        else if ($_POST["action"] == "getMediaByTag")
+        {
+            $tag = $_POST["tag"];
+            $url = "https://api.instagram.com/v1/tags/" . $tag . "/media/recent?access_token=" . $accessToken;
+            $resp = file_get_contents($url);
+            $encodedResp = json_encode($resp);
+            echo $encodedResp;
+        }
+        else if ($_POST["action"] == "getMediaByTagWithMaxId")
+        {
+            $tag = $_POST["tag"];
+            $maxId = $_POST["maxId"];
+            $url = "https://api.instagram.com/v1/tags/" . $tag . "/media/recent?access_token=" . $accessToken . "&max_tag_id=" . $maxId;
+            $resp = file_get_contents($url);
+            $encodedResp = json_encode($resp);
+            echo $encodedResp;
+        }
     }
     else if (isset($_POST["maxId"]))
     {
