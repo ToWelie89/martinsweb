@@ -26,7 +26,7 @@
 					I version the code on my Github account which you can view by clicking the code-button below.
 				</p>
 				<div class="paddingTop floatRight">
-					<a class="button" href="http://apps.microsoft.com/windows/sv-se/app/star-manager/d22a689a-2350-4743-a840-0f5cf2690ef3" target="_blank">
+					<a class="button" href="https://www.microsoft.com/en-US/store/apps/Star-Manager/9WZDNCRDWZ3X" target="_blank">
 						<p text="Download"></p>
 					</a>
 					<a class="button" href="https://github.com/ToWelie89/StarApp" target="_blank">
