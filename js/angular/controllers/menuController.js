@@ -1,20 +1,24 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var menuController = ['$scope', '$location', 'pageUrlService', function($scope, $location, pageUrlService) {
+    var menuController = ['$scope', '$location', 'pageUrlService', '$http', function($scope, $location, pageUrlService, $http) {
         var slideTime = 350;
+        $scope.menu;
+        $scope.currentPage = '';
 
         function init() {
-            $(".mainMenuLink").click(mainMenuLinkClickHandler);
-            mainMenuLinkClickHandler();
+            $scope.currentPage = pageUrlService.getCurrentMainPage();
+            $http.get('json/menu.json').success(function(data) {
+                $scope.menu = data;
+            });
+
+            //$scope.mainMenuClickEvent(null);
         }
 
-        function mainMenuLinkClickHandler() {
-            var id = $(this).attr("id");
-
-            if (id === pageUrlService.getCurrentMainPage() || !id) {
+        $scope.mainMenuClickEvent = function(id) {
+            if (id === $scope.currentPage || !id) {
                 $(".subMenuBar").slideUp(slideTime);
-                $(".subMenuBar[for='" + pageUrlService.getCurrentMainPage() + "']").slideDown(slideTime);
+                $(".subMenuBar[for='" + $scope.currentPage + "']").slideDown(slideTime);
                 return;
             }
 
@@ -28,13 +32,13 @@
                     submenuElement.slideDown(slideTime);
                 } else {
                     submenuElement.slideUp(slideTime);
-                    var selectedSubmenuElement = $(".subMenuBar[for='" + pageUrlService.getCurrentMainPage() + "']");
+                    var selectedSubmenuElement = $(".subMenuBar[for='" + $scope.currentPage + "']");
                     if (selectedSubmenuElement.length > 0) {
                         selectedSubmenuElement.slideDown(slideTime);
                     }
                 }
             }
-        }
+        };
 
         init();
     }];
