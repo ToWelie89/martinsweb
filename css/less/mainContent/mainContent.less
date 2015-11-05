@@ -1,3 +1,11 @@
+.mainPadding {
+	padding: 20px 30px 20px 30px;
+}
+
+.marginTopLarge {
+	margin-top: 120px;
+}
+
 .mainContentItem{
 	float: left;
 
@@ -75,7 +83,6 @@
 
 #socialMediaIconsContainer{
 	width: 100%;
-	background-color: blue;
 	position: relative;
 
 	#linksInnerContainer, #previewTitle{
@@ -124,7 +131,7 @@
 
 #projectInfo {
 	display: none;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -132,16 +139,17 @@
 	right: 0;
 	bottom: 0;
 	z-index: 99;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(9, 6, 66, 0.83);
 
 	#projectInfoInner {
 		margin: 0 auto;
-		background-color: red;
 		width: (@containerWidth * (2/3));
-		margin-top: 200px;
 		background: @mainContentBg;
 		border: 5px solid @borderColor;
 		min-height: 330px;
+		position: relative;
+		top: 20%;
+		box-shadow: black 10px 10px 50px;
 
 		.projectsInfoFirstColumn {
 			text-align: center;
@@ -197,6 +205,7 @@
 	position: relative;
 	background-size: 100% 100% !important;
 	border-radius: 20px;
+	transition: background-size 0.4s;
 
 	.projectOverlay {
 		background: black;
@@ -214,6 +223,7 @@
 	}
 
 	&:hover {
+		background-size: (@boxLength + 30px) (@boxLength + 30px) !important;
 		.projectOverlay {
 			opacity: 0.2;
 		}

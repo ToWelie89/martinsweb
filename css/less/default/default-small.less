@@ -13,6 +13,8 @@ body {
 div#main{
     margin: auto;
     width: @containerWidth;
+    height: 100%;
+    padding-bottom: 0px;
 }
 
 h1{
@@ -23,11 +25,32 @@ h1{
 }
 
 div#contentBar{
-	border: none;
-	border-radius: 0px;
-	padding: 10px;
+    border: none;
+    border-radius: 0px;
+    padding-top: 10px;
+    height: auto;
 
-	p {
+    p {
         font-size: 1em;
     }
+    .centeringBox {
+        display: block;
+        height: auto;
+        .centeringInnerBox {
+        	display: block;
+        }
+    }
+}
+
+#menu {
+    padding-left: 0px;
+    width: auto;
+}
+
+#subMenuContainer {
+    width: auto;
+}
+
+.fb-like {
+    display: none !important;
 }

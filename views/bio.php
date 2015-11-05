@@ -1,4 +1,4 @@
-<div style="padding: 20px 40px 20px 40px;">
+<div class="mainPadding">
     <div id="socialMediaIconsContainer">
         <span id="previewTitle"></span>
         <div id="linksInnerContainer">
@@ -9,7 +9,7 @@
             <a href="http://www.instagram.com/martin.sonesson" target="_blank" displayText="Instagram"><img alt="Instagram" src="img/socialMediaIcons/Instagram.png"></a>
         </div>
     </div>
-    <div class="mainContentItem" style="margin-top: 120px; width: 100%; padding: 20px 30px 20px 30px;">
+    <div class="mainContentItem marginTopLarge" style="width: 100%;">
         <div style="float: left; width: 100%; text-align: center;">
             <div class="table center paddingBottom marginBottom">
                 <div class="tableRow">
