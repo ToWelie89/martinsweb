@@ -6,6 +6,11 @@
         $scope.art = [];
         $scope.loading = true;
 
+        var items = [];
+
+        // Public methods
+        $scope.openPhotoSwipe = openPhotoSwipe;
+
         function addToFlow(response) {
             for (var i = 0; i < response.data.length; i++) {
                 $scope.art.push({
@@ -14,7 +19,8 @@
                     link: response.data[i].link,
                     likes: response.data[i].likes.count,
                     type: response.data[i].type,
-                    video: (response.data[i].type === 'video' ? response.data[i].videos.standard_resolution : null)
+                    video: (response.data[i].type === 'video' ? response.data[i].videos.standard_resolution : null),
+                    index: $scope.art.length
                 });
             }
 
@@ -22,6 +28,22 @@
                 getNextPage(response.pagination.next_max_tag_id);
             } else {
                 $log.debug($scope.art);
+
+                for (var i = 0; i < $scope.art.length; i++) {
+                    if (!$scope.art[i].video) {
+                        items.push({
+                            src: $scope.art[i].bigImage.url,
+                            w: $scope.art[i].bigImage.width,
+                            h: $scope.art[i].bigImage.height
+                        });
+                    } else {
+                        items.push({
+                            html: '<div class="videoSlide"><video width="640" height="640" controls><source src="' +
+                                $scope.art[i].video.url + '" type="video/mp4" /></video></div>'
+                        });
+                    }
+                }
+
                 $scope.loading = false;
             }
         };
@@ -61,6 +83,24 @@
             var encodedResponse = JSON.parse(encodedResponse);
 
             return encodedResponse;
+        };
+
+        function openPhotoSwipe(artItem) {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // define options (if needed)
+            var options = {
+                // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+                index: artItem.index,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+            };
+
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
         };
 
         function init() {

@@ -4,6 +4,8 @@
         <?php include("includes/head.php"); ?>
     </head>
         <body ng-app="martinsWeb" data-ng-controller="mainController">
+            <?php include("includes/photoswipe.php"); ?>
+
             <div class="mainBg"></div>
             <p id="sizeIndicator"></p>
             <?php include("includes/topBar.php"); ?>

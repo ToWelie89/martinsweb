@@ -2,11 +2,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8"/>
+
+<!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="build/default.css">
+
+<!-- CSS libs -->
+<link rel="stylesheet" type="text/css" href="js/libs/photoswipe/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="js/libs/photoswipe/default-skin/default-skin.css">
 
 <!-- Local libs -->
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
+<script src="js/libs/photoswipe/photoswipe.min.js"></script>
+<script src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script src="js/MapEditor.js"></script>
 
 <!-- Node module libs -->
@@ -54,9 +62,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-
-
-
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
