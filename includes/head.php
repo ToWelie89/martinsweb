@@ -13,8 +13,8 @@
 <!-- Local libs -->
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
-<script src="js/libs/photoswipe/photoswipe.min.js"></script>
-<script src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
+<script src="js/libs/photoswipe/photoswipe.js"></script>
+<script src="js/libs/photoswipe/photoswipe-ui-default.js"></script>
 <script src="js/MapEditor.js"></script>
 
 <!-- Node module libs -->

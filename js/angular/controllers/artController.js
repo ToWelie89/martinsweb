@@ -34,12 +34,14 @@
                         items.push({
                             src: $scope.art[i].bigImage.url,
                             w: $scope.art[i].bigImage.width,
-                            h: $scope.art[i].bigImage.height
+                            h: $scope.art[i].bigImage.height,
+                            index: $scope.art[i].index
                         });
                     } else {
                         items.push({
-                            html: '<div class="videoSlide"><video width="640" height="640" controls><source src="' +
-                                $scope.art[i].video.url + '" type="video/mp4" /></video></div>'
+                            html: '<div class="videoSlide"><video width="640" height="640" id="videoPlayer' + $scope.art[i].index + '" controls><source src="' +
+                                $scope.art[i].video.url + '" type="video/mp4" /></video></div>',
+                            index: $scope.art[i].index
                         });
                     }
                 }

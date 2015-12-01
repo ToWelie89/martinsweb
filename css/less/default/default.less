@@ -196,18 +196,28 @@ div#contentBar{
 }
 
 .artGalleryImg {
-    padding: 5px;
+    margin: 5px;
     width: 150px;
     height: 150px;
     background-size: 150px 150px;
     background-repeat: no-repeat;
     background-position: center center;
+    opacity: 0.7;
+    transition: opacity 0.3s, background-size 0.3s;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 3px;
+
+    &:hover {
+        opacity: 1.0;
+        border: 3px solid #628cc3;
+    }
 }
 
 .videoSlide {
-  width: 100%;
-  max-width: 640px;
-  color: #FFF;
-  margin: 120px auto 0;
-  text-align: center;
+    width: 100%;
+    max-width: 640px;
+    color: #FFF;
+    margin: 120px auto 0;
+    text-align: center;
 }
