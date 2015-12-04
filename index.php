@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http:/www.w3.org/1999/xhtml" lang="sv">
     <head>
-        <?php include("includes/head.php"); ?>
+        <?php include("includes/build/head.php"); ?>
     </head>
         <body ng-app="martinsWeb" data-ng-controller="mainController">
             <?php include("includes/photoswipe.php"); ?>
