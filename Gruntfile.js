@@ -12,6 +12,12 @@ module.exports = function(grunt) {
                 dest: 'build/<%= pkg.name %>.min.js'
             }
         },
+        uglify: {
+            build: {
+                src: 'js/MapEditor.js',
+                dest: 'build/MapEditor.min.js'
+            }
+        },
         less: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',

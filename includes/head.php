@@ -14,13 +14,13 @@
 <script src="js/libs/trianglify.js"></script>
 <script src="js/libs/modernizr.custom.js"></script>
 <script src="js/libs/photoswipe/photoswipe.js"></script>
-<script src="js/libs/photoswipe/photoswipe-ui-default.js"></script>
-<script src="js/MapEditor.js"></script>
+<script src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
+<script src="build/MapEditor.min.js"></script>
 
 <!-- Node module libs -->
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
 
 <!-- martins-web angular -->
 <script src="build/martins-web.min.js"></script>
