@@ -50,6 +50,9 @@ module.exports = function(grunt) {
                 files: [{
                     src: 'css/init.less',
                     dest: 'build/default.css'
+                }, {
+                    src: 'css/initSmall.less',
+                    dest: 'build/small.css'
                 }]
             },
         }
