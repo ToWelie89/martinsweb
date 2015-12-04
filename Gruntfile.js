@@ -3,6 +3,21 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'js/angular/**/*.js',
+                dest: 'build/<%= pkg.name %>.min.js'
+            }
+        },
+        uglify: {
+            build: {
+                src: 'js/MapEditor.js',
+                dest: 'build/MapEditor.min.js'
+            }
+        },
         replace: {
             dist: {
                 options: {
@@ -25,21 +40,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'js/angular/**/*.js',
-                dest: 'build/<%= pkg.name %>.min.js'
-            }
-        },
-        uglify: {
-            build: {
-                src: 'js/MapEditor.js',
-                dest: 'build/MapEditor.min.js'
-            }
-        },
         less: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
@@ -55,6 +55,23 @@ module.exports = function(grunt) {
                     dest: 'build/small.css'
                 }]
             },
+        },
+        filerev: {
+            options: {
+                algorithm: 'md5',
+                length: 8
+            },
+            images: {
+                src: 'img/**/*.{jpg,jpeg,gif,png,webp}'
+            }
+        },
+        filerev_replace: {
+            options: {
+                assets_root: 'img/'
+            },
+            compiled_assets: {
+                src: 'build/*.{css,js}'
+            }
         }
     });
 
@@ -65,7 +82,11 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-replace');
 
+    grunt.loadNpmTasks('grunt-filerev');
+
+    grunt.loadNpmTasks('grunt-filerev-replace');
+
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less', 'replace']);
+    grunt.registerTask('default', ['uglify', 'filerev', 'less', 'filerev_replace', 'replace']);
 
 };
