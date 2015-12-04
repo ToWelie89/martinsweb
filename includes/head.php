@@ -9,8 +9,12 @@
 </style>
 
 <!-- CSS libs -->
-<link rel="stylesheet" type="text/css" href="js/libs/photoswipe/photoswipe.css">
-<link rel="stylesheet" type="text/css" href="js/libs/photoswipe/default-skin/default-skin.css">
+<style>
+    @@photoSwipeCss
+</style>
+<style>
+    @@photoSwipeDefaultSkinCss
+</style>
 
 <!-- Local libs -->
 <script src="js/libs/trianglify.js"></script>
@@ -50,7 +54,20 @@
 		    });
 		    $(".mainBg").html(pattern.canvas());
 		}
-      }
+    }
+</script>
+
+<script>
+    /* Lazy load css */
+    /*var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'style.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);*/
 </script>
 
 <!--

@@ -9,6 +9,12 @@ module.exports = function(grunt) {
                     patterns: [{
                         match: 'defaultCss',
                         replacement: '<%= grunt.file.read("build/default.css") %>'
+                    }, {
+                        match: 'photoSwipeCss',
+                        replacement: '<%= grunt.file.read("js/libs/photoswipe/photoswipe.css") %>'
+                    }, {
+                        match: 'photoSwipeDefaultSkinCss',
+                        replacement: '<%= grunt.file.read("js/libs/photoswipe/default-skin/default-skin.css") %>'
                     }]
                 },
                 files: [{
