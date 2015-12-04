@@ -4,7 +4,10 @@
 <meta charset="utf-8"/>
 
 <!-- Main CSS -->
-<link rel="stylesheet" type="text/css" href="build/default.css">
+<!-- <link rel="stylesheet" type="text/css" href="build/default.css"> -->
+<style>
+    @@defaultCss
+</style>
 
 <!-- CSS libs -->
 <link rel="stylesheet" type="text/css" href="js/libs/photoswipe/photoswipe.css">

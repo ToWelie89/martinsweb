@@ -3,6 +3,22 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        replace: {
+            dist: {
+                options: {
+                    patterns: [{
+                        match: 'defaultCss',
+                        replacement: '<%= grunt.file.read("build/default.css") %>'
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['includes/head.php'],
+                    dest: 'includes/build/'
+                }]
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -38,7 +54,9 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-less');
 
+    grunt.loadNpmTasks('grunt-replace');
+
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less']);
+    grunt.registerTask('default', ['uglify', 'less', 'replace']);
 
 };
