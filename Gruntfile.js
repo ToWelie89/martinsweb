@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,18 +7,31 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'js/angular/**/*.js',
-                dest: 'build/<%= pkg.name %>.min.js'
-            }
-        },
-        uglify: {
-            build: {
-                src: 'js/MapEditor.js',
-                dest: 'build/MapEditor.min.js'
+                files: [{
+                    src: 'js/angular/**/*.js',
+                    dest: 'build/<%= pkg.name %>.min.js'
+                }, {
+                    src: 'js/MapEditor.js',
+                    dest: 'build/MapEditor.min.js'
+                }]
             }
         },
         replace: {
-            dist: {
+            imgPathInCss: {
+                options: {
+                    patterns: [{
+                        match: 'imgFolder',
+                        replacement: '../img/build'
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['build/default.css', 'build/small.css'],
+                    dest: 'build'
+                }]
+            },
+            inline: {
                 options: {
                     patterns: [{
                         match: 'defaultCss',
@@ -62,31 +74,60 @@ module.exports = function(grunt) {
                 length: 8
             },
             images: {
-                src: 'img/**/*.{jpg,jpeg,gif,png,webp}'
+                src: 'img/**/*.{jpg,jpeg,gif,png,webp}',
+                dest: 'img/build'
             }
         },
         filerev_replace: {
             options: {
-                assets_root: 'img/'
+                assets_root: './img/build'
             },
             compiled_assets: {
-                src: 'build/*.{css,js}'
+                src: ['build/MapEditor.min.js',
+                    'build/martins-web.min.js',
+                    'build/default.css',
+                    'build/small.css',
+                    'includes/build/*'
+                ]
             }
-        }
+        },
+        clean: {
+            img: ['img/build/*', 'includes/build/*', 'build/*']
+        },
+        copy: {
+            main: {
+                files: [{
+                    src: 'includes/topBar.php',
+                    dest: 'includes/build/topBar.php'
+                }, {
+                    src: 'includes/projects/*',
+                    expand: true,
+                    flatten: true,
+                    dest: 'includes/build/'
+                }],
+            },
+        },
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
     grunt.loadNpmTasks('grunt-contrib-less');
-
     grunt.loadNpmTasks('grunt-replace');
-
     grunt.loadNpmTasks('grunt-filerev');
-
     grunt.loadNpmTasks('grunt-filerev-replace');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'filerev', 'less', 'filerev_replace', 'replace']);
+    grunt.registerTask('default', [
+        'clean', // Clean previous build files
+        'copy', // Copy markup files that need to be adjusted to build folder
+        'uglify', // Minify and uglify css and put it in build folder
+        'filerev', // Create versioned images in img/build
+        'less', // Compile CSS files and put them in build folder
+        'replace:imgPathInCss', // Edit image paths in compiled CSS-files to match the newly generated images
+        'filerev_replace', // Change image filenames to the newly generated ones
+        'replace:inline' // Inline all css in head
+    ]);
 
 };

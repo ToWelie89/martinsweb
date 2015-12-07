@@ -8,7 +8,7 @@
 
             <div class="mainBg"></div>
             <p id="sizeIndicator"></p>
-            <?php include("includes/topBar.php"); ?>
+            <?php include("includes/build/topBar.php"); ?>
             <div id="main">
                 <?php include("includes/menu.php"); ?>
                 <div id="contentBar">
