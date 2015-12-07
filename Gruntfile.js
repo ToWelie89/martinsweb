@@ -87,12 +87,13 @@ module.exports = function(grunt) {
                     'build/martins-web.min.js',
                     'build/default.css',
                     'build/small.css',
-                    'includes/build/*'
+                    'includes/build/*',
+                    'views/build/*'
                 ]
             }
         },
         clean: {
-            img: ['img/build/*', 'includes/build/*', 'build/*']
+            img: ['img/build/*', 'includes/build/*', 'build/*', 'views/build/*']
         },
         copy: {
             main: {
@@ -104,7 +105,13 @@ module.exports = function(grunt) {
                     expand: true,
                     flatten: true,
                     dest: 'includes/build/'
-                }],
+                }, {
+                    src: 'views/art.php',
+                    dest: 'views/build/art.php'
+                }, {
+                    src: 'views/bio.php',
+                    dest: 'views/build/bio.php'
+                }]
             },
         },
     });

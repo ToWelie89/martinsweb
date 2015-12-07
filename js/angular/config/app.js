@@ -21,7 +21,7 @@
 				})
 				.when('/bio', {
 					controller: 'bioController',
-					templateUrl: 'views/bio.php'
+					templateUrl: 'views/build/bio.php'
 				})
 				.when('/404', {
 					templateUrl: 'views/404.html'
@@ -42,7 +42,7 @@
 				})
 				.when('/art', {
 					controller: 'artController',
-					templateUrl: 'views/art.php'
+					templateUrl: 'views/build/art.php'
 				})
 				.when('/videos', {
 					templateUrl: 'views/videos.html'
