@@ -69,25 +69,13 @@ module.exports = function(grunt) {
             },
         },
         filerev: {
-            img: {
-                options: {
-                    algorithm: 'md5',
-                    length: 8
-                },
-                images: {
-                    src: 'img/**/*.{jpg,jpeg,gif,png,webp}',
-                    dest: 'img/build'
-                }
+            options: {
+                algorithm: 'md5',
+                length: 8
             },
-            jsCss: {
-                options: {
-                    algorithm: 'md5',
-                    length: 8
-                },
-                images: {
-                    src: 'build/*.{css,js}',
-                    dest: 'img/build'
-                }
+            images: {
+                src: 'img/**/*.{jpg,jpeg,gif,png,webp}',
+                dest: 'img/build'
             }
         },
         filerev_replace: {
@@ -143,7 +131,7 @@ module.exports = function(grunt) {
         'clean', // Clean previous build files
         'copy', // Copy markup files that need to be adjusted to build folder
         'uglify', // Minify and uglify css and put it in build folder
-        'filerev:img', // Create versioned images in img/build
+        'filerev', // Create versioned images in img/build
         'less', // Compile CSS files and put them in build folder
         'replace:imgPathInCss', // Edit image paths in compiled CSS-files to match the newly generated images
         'filerev_replace', // Change image filenames to the newly generated ones
