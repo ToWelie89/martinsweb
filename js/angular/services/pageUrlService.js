@@ -28,7 +28,6 @@
         }
 
         return {
-            getPageName: getPageName,
             getCurrentMainPage: getCurrentMainPage
         };
     }];

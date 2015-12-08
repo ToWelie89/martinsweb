@@ -22,6 +22,12 @@
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="build/MapEditor.min.js"></script>
+<script async src="js/libs/snowstorm-min.js"></script>
+
+<script>
+  snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+  snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+</script>
 
 <!-- Node module libs -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>

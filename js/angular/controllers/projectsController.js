@@ -6,62 +6,62 @@
 
         var projects = [{
             'id': 'starapp',
-            'img': '../img/build//starapp.png',
+            'img': '../img/build/starapp.png',
             'name': 'Star Manager',
             'description': 'A Starcraft 2 app for Windows 8/RT'
         }, {
             'id': 'portfolio',
-            'img': '../img/build//portfolio.png',
+            'img': '../img/build/portfolio.png',
             'name': 'Portfolio',
             'description': 'My portfolio and personal website'
         }, {
             'id': 'sti',
-            'img': '../img/build//sti.png',
+            'img': '../img/build/sti.png',
             'name': 'sti-starcraft',
             'description': 'A Starcraft 2 community'
         }, {
             'id': 'exjobb',
-            'img': '../img/build//exjobb.png',
+            'img': '../img/build/exjobb.png',
             'name': 'Bachelors thesis',
             'description': 'My Bachelors Thesis from my time at Chalmers'
         }, {
             'id': 'instaanalytics',
-            'img': '../img/build//instaanalytics.png',
+            'img': '../img/build/instaanalytics.png',
             'name': 'Instagram Analyzer',
             'description': 'An app used for analyzing an Instagram account'
         }, {
             'id': 'wcc',
-            'img': '../img/build//wcc.png',
+            'img': '../img/build/wcc.png',
             'name': 'World Cup Calculator',
             'description': 'A calculator used to simulate potential World cup 2014 results'
         }, {
             'id': 'snake',
-            'img': '../img/build//snake.png',
+            'img': '../img/build/snake.png',
             'name': 'GyroSnake',
             'description': 'A Snake game for Android devices'
         }, {
             'id': 'flappyDoge',
-            'img': '../img/build//flappyDoge.png',
+            'img': '../img/build/flappyDoge.png',
             'name': 'FlappyDoge',
             'description': 'My version of the popular game Flappy Bird'
         }, {
             'id': 'mkp',
-            'img': '../img/build//mkp.png',
+            'img': '../img/build/mkp.png',
             'name': 'Mobile Keyring',
             'description': 'A technology used for generating temporary passwords'
         }, {
             'id': 'arduinorobot',
-            'img': '../img/build//arduinoRobot.png',
+            'img': '../img/build/arduinoRobot.png',
             'name': 'Arduino Robot',
             'description': 'A robot built with the Arduino microcontroller unit'
         }, {
             'id': 'wh40k',
-            'img': '../img/build//wh40k.png',
+            'img': '../img/build/wh40k.png',
             'name': 'Warhammer 40k Simulator',
             'description': 'A game engine based on the popular boardgame Warhammer 40k'
         }, {
             'id': 'flickrEditor',
-            'img': '../img/build//flickrEditor.png',
+            'img': '../img/build/flickrEditor.png',
             'name': 'Flickr Editor',
             'description': 'A simple image editor based on Flickrs API'
         }];
