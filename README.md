@@ -1,8 +1,35 @@
 martins-web
 ==========
 
-This is my portfolio website which can be found at martinsonesson.se
+## Introduction
 
-I will host all source-code in this public repository for anyone who is interested in seeing how it is built. Do note though that this website is under construction and will be changed continously.
+This is my portfolio/personal site. I am hosting this site myself on a Raspberry Pi I have configured to work as a webserver. See martinsonesson.se
 
-The website itself is hosted on my own private server, which is a modified RaspberryPi.
+I will host all public files in this repository for anyone who may be interested in how its built.
+
+Technologies used:
+
++ Angular
++ jQuery
++ less
++ Grunt
++ Photoswipe
+
+For more technical documentation please see the wiki.
+
+## How to run locally
+
+1. Clone the repo
+2. Run
+
+```
+npm install
+```
+
+3. Run
+
+```
+grunt
+```
+
+TADA!
