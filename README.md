@@ -19,14 +19,14 @@ For more technical documentation please see the wiki.
 
 ## How to run locally
 
-1. Clone the repo
-2. Run
+- Clone the repo
+- Run
 
 ```
 npm install
 ```
 
-3. Run
+- Run
 
 ```
 grunt
