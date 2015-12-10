@@ -2,11 +2,11 @@
     <div id="socialMediaIconsContainer">
         <span id="previewTitle"></span>
         <div id="linksInnerContainer">
-            <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="../../img/build/LinkedIn.png"></a>
-            <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="../../img/build/GitHub.png"></a>
-            <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="../../img/build/Twitter.png"></a>
-            <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank" displayText="Stack overflow"><img alt="Stack overflow" src="../../img/build/stackoverflow.png"></a>
-            <a href="http://www.instagram.com/martin.sonesson" target="_blank" displayText="Instagram"><img alt="Instagram" src="../../img/build/Instagram.png"></a>
+            <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="../../assets/build/LinkedIn.png"></a>
+            <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="../../assets/build/GitHub.png"></a>
+            <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="../../assets/build/Twitter.png"></a>
+            <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank" displayText="Stack overflow"><img alt="Stack overflow" src="../../assets/build/stackoverflow.png"></a>
+            <a href="http://www.instagram.com/martin.sonesson" target="_blank" displayText="Instagram"><img alt="Instagram" src="../../assets/build/Instagram.png"></a>
         </div>
     </div>
     <div class="mainContentItem marginTopLarge" style="width: 100%;">

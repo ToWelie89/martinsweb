@@ -9,33 +9,19 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     src: 'js/angular/**/*.js',
-                    dest: 'build/<%= pkg.name %>.min.js'
+                    dest: 'assets/build/<%= pkg.name %>.min.js'
                 }, {
                     src: 'js/MapEditor.js',
-                    dest: 'build/MapEditor.min.js'
+                    dest: 'assets/build/MapEditor.min.js'
                 }]
             }
         },
         replace: {
-            imgPathInCss: {
-                options: {
-                    patterns: [{
-                        match: 'imgFolder',
-                        replacement: '../img/build'
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: ['build/default.css', 'build/small.css'],
-                    dest: 'build'
-                }]
-            },
             inline: {
                 options: {
                     patterns: [{
                         match: 'defaultCss',
-                        replacement: '<%= grunt.file.read("build/default.css") %>'
+                        replacement: '<%= grunt.file.read("assets/build/default.css") %>'
                     }, {
                         match: 'photoSwipeCss',
                         replacement: '<%= grunt.file.read("js/libs/photoswipe/photoswipe.css") %>'
@@ -45,10 +31,8 @@ module.exports = function(grunt) {
                     }]
                 },
                 files: [{
-                    expand: true,
-                    flatten: true,
-                    src: ['includes/head.php'],
-                    dest: 'includes/build/'
+                    src: ['includes/build/head.php'],
+                    dest: 'includes/build/head.php'
                 }]
             }
         },
@@ -61,10 +45,10 @@ module.exports = function(grunt) {
             all: {
                 files: [{
                     src: 'css/init.less',
-                    dest: 'build/default.css'
+                    dest: 'assets/build/default.css'
                 }, {
                     src: 'css/initSmall.less',
-                    dest: 'build/small.css'
+                    dest: 'assets/build/small.css'
                 }]
             },
         },
@@ -74,27 +58,28 @@ module.exports = function(grunt) {
                 length: 8
             },
             images: {
-                src: 'img/**/*.{jpg,jpeg,gif,png,webp}',
-                dest: 'img/build'
+                src: 'assets/build/**/*.{jpg,jpeg,gif,png,webp}'
+            },
+            js: {
+                src: ['assets/build/martins-web.min.js', 'assets/build/MapEditor.min.js']
             }
         },
         filerev_replace: {
             options: {
-                assets_root: './img/build'
+                assets_root: './'
             },
             compiled_assets: {
                 src: [
-                    'build/MapEditor.min.js',
-                    'build/martins-web.min.js',
-                    'build/default.css',
-                    'build/small.css',
+                    'assets/build/*.js',
+                    'assets/build/default.css',
+                    'assets/build/small.css',
                     'includes/build/*',
                     'views/build/*'
                 ]
             }
         },
         clean: {
-            img: ['img/build/*', 'includes/build/*', 'build/*', 'views/build/*']
+            img: ['includes/build/*', 'views/build/*', 'assets/build/*']
         },
         copy: {
             main: {
@@ -112,6 +97,14 @@ module.exports = function(grunt) {
                 }, {
                     src: 'views/bio.php',
                     dest: 'views/build/bio.php'
+                }, {
+                    src: 'assets/img/*',
+                    dest: 'assets/build/',
+                    expand: true,
+                    flatten: true
+                }, {
+                    src: 'includes/head.php',
+                    dest: 'includes/build/head.php'
                 }]
             },
         },
@@ -133,7 +126,6 @@ module.exports = function(grunt) {
         'uglify', // Minify and uglify css and put it in build folder
         'filerev', // Create versioned images in img/build
         'less', // Compile CSS files and put them in build folder
-        'replace:imgPathInCss', // Edit image paths in compiled CSS-files to match the newly generated images
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline' // Inline all css in head
     ]);

@@ -9,7 +9,7 @@
 		</div>
 		<div class="tableRow">
 			<div class="tableRowCell projectsInfoFirstColumn">
-				<img src="../../img/build/snake.png" class="projectsInfoPicture">
+				<img src="../../assets/build/snake.png" class="projectsInfoPicture">
 			</div>
 			<div class="tableRowCell projectsInfoSecondColumn">
 				<p class="bodyText paddingBottom">

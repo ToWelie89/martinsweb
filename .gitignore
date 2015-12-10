@@ -1,8 +1,7 @@
 /img/psd
 /pi
 /node_modules
-/build
 /model/secret.php
-/img/build
 /includes/build
 /views/build
+/assets/build

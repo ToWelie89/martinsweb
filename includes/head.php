@@ -21,12 +21,12 @@
 <script async src="js/libs/trianglify.js"></script>
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
-<script async src="build/MapEditor.min.js"></script>
+<script async src="/assets/build/MapEditor.min.js"></script>
 <script async src="js/libs/snowstorm-min.js"></script>
 
 <script>
-  snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
-  snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+  //snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+  //snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
 </script>
 
 <!-- Node module libs -->
@@ -35,7 +35,7 @@
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 
 <!-- martins-web angular -->
-<script src="build/martins-web.min.js"></script>
+<script src="/assets/build/martins-web.min.js"></script>
 
 <script>
     window.onload = function() {
@@ -63,16 +63,16 @@
 </script>
 
 <script>
-    /* Lazy load css */
-    var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'build/small.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cb);
-    else window.addEventListener('load', cb);
+  /* Lazy load css */
+  var cb = function() {
+    var l = document.createElement('link'); l.rel = 'stylesheet';
+    l.href = 'assets/build/small.css';
+    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
 </script>
 
 <!--

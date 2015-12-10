@@ -5,9 +5,9 @@
         	<span id="martin">martin</span><span id="sonesson">sonesson</span><span id="se">.se</span>
         </h1>
         <div id="socialMedia">
-        	<a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="../../img/build/LinkedIn_circle.png"></a>
-        	<a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="../../img/build/GitHub_circle.png"></a>
-        	<a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="../../img/build/Twitter_circle.png"></a>
+        	<a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="../../assets/build/LinkedIn_circle.png"></a>
+        	<a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="../../assets/build/GitHub_circle.png"></a>
+        	<a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="../../assets/build/Twitter_circle.png"></a>
         </div>
     </div>
 </div>
