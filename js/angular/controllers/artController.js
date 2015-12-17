@@ -92,7 +92,7 @@
 
             // define options (if needed)
             var options = {
-                // history & focus options are disabled on CodePen        
+                // history & focus options are disabled on CodePen
                 history: false,
                 focus: false,
                 index: artItem.index,

@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var mainController = ['$scope', '$location', 'pageUrlService', function($scope, $location, pageUrlService) {
+    var mainController = ['$scope', function($scope) {
 
     }];
 
