@@ -22,17 +22,20 @@
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="/assets/build/MapEditor.min.js"></script>
-<script async src="js/libs/snowstorm-min.js"></script>
+<!-- <script async src="js/libs/snowstorm-min.js"></script> -->
 
 <script>
-    //snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
-    //snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    /*
+    snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+    snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    */
 </script>
 
 <!-- Node module libs -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
 
 <!-- martins-web angular -->
 <script src="/assets/build/martins-web.min.js"></script>

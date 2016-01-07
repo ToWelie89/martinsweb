@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('martinsWeb', ['ngRoute']);
+	var app = angular.module('martinsWeb', ['ngRoute', 'ngSanitize']);
 
 	app.constant('config', {
 		useMocks: false
@@ -38,7 +38,12 @@
 					templateUrl: 'views/flappyDoge.html'
 				})
 				.when('/blog', {
+					controller: 'blogController',
 					templateUrl: 'views/blog.html'
+				})
+				.when('/blogPost', {
+					controller: 'blogPostController',
+					templateUrl: 'views/blogPost.html'
 				})
 				.when('/art', {
 					controller: 'artController',

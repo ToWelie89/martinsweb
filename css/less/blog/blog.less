@@ -1,0 +1,64 @@
+@textBackground: rgba(255,255,255,.85);
+
+p.blogTitle {
+    color: @linkColor;
+    font-family: ProxiBold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+
+    span {
+        padding: 5px;
+        padding-right: 10px;
+        background: @textBackground;
+    }
+}
+
+p.blogFooterInfo {
+    font-family: ProxiRegular;
+    font-size: 0.7em;
+    margin-top: 5px;
+
+    span {
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: @textBackground;
+    }
+}
+
+div.blogPostContainer {
+    height: 150px;
+    width: 100%;
+    background-position: center center !important;
+    background-size: 100% !important;
+    display: table;
+
+    div.blogPostInnerContainer {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    p span p {
+        padding: 10px;
+        background: @textBackground
+    }
+
+    &:first-child {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        p span, p span p {
+            background: rgba(255,255,255,1);
+        }
+    }
+}

@@ -129,5 +129,4 @@ module.exports = function(grunt) {
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline' // Inline all css in head
     ]);
-
 };

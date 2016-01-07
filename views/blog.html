@@ -1,9 +1,21 @@
-<div class="centeringBox">
+<div class="mainContentItem mainPadding" data-ng-show="!loading">
+    <div data-ng-show="!loading" data-ng-repeat="post in posts">
+        <div class="blogPostContainer" style="background: url({{post.post_thumbnail.URL}})" data-ng-click="goToPost(post.ID)">
+            <div class="blogPostInnerContainer">
+                <p class="blogTitle"><span data-ng-bind="post.title"></span></p>
+                <p><span data-ng-bind-html="post.excerpt"></span></p>
+                <p class="blogFooterInfo"><span>Date written: {{post.modified}}</span><!-- <span><a href="{{post.guid}}" target="_blank">WordPress link</a></span> --></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="centeringBox marginTop" data-ng-show="loading">
     <div class="centeringInnerBox">
         <p class="standardText">
-        	Blog
-        	<br>
-        	Coming soon
+            <div data-ng-include src="'includes/loadBox.html'"></div>
         </p>
     </div>
 </div>
+
+<!-- href="#blogPost?id={{post.ID}}" -->
