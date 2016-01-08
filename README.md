@@ -17,7 +17,7 @@ Technologie & stuff used:
 + Instagram API
 + Wordpress API
 
-For more technical documentation please see (the wiki)[https://github.com/ToWelie89/martinsweb/wiki].
+For more technical documentation please see [the wiki](https://github.com/ToWelie89/martinsweb/wiki).
 
 ## How to run locally
 
