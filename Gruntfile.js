@@ -28,6 +28,12 @@ module.exports = function(grunt) {
                     }, {
                         match: 'photoSwipeDefaultSkinCss',
                         replacement: '<%= grunt.file.read("js/libs/photoswipe/default-skin/default-skin.css") %>'
+                    }, {
+                        match: 'syntaxHighlighterCss',
+                        replacement: '<%= grunt.file.read("css/cssLibs/shCore.css") %>'
+                    }, {
+                        match: 'syntaxHighlighterThemeCss',
+                        replacement: '<%= grunt.file.read("css/cssLibs/shThemeDefault.css") %>'
                     }]
                 },
                 files: [{

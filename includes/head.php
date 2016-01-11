@@ -16,8 +16,18 @@
 <style>
     @@photoSwipeDefaultSkinCss
 </style>
+<style rel="stylesheet" type="text/css">
+    @@syntaxHighlighterCss
+</style>
+<style rel="stylesheet" type="text/css">
+    @@syntaxHighlighterThemeCss
+</style>
 
 <!-- Local libs -->
+<script type="text/javascript" src="js/libs/shCore.js"></script>
+<script type="text/javascript" src="js/libs/shBrushBash.js"></script>
+<script type="text/javascript" src="js/libs/shBrushXml.js"></script>
+
 <script async src="js/libs/trianglify.js"></script>
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
