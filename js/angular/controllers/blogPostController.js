@@ -33,9 +33,6 @@
                     SyntaxHighlighter.highlight();
                 }, 100);
             });
-            $scope.$watch('loading', function() {
-                SyntaxHighlighter.highlight();
-            });
         }
 
         function init() {

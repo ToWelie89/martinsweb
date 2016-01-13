@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                         replacement: '<%= grunt.file.read("css/cssLibs/shCore.css") %>'
                     }, {
                         match: 'syntaxHighlighterThemeCss',
-                        replacement: '<%= grunt.file.read("css/cssLibs/shThemeDefault.css") %>'
+                        replacement: '<%= grunt.file.read("css/cssLibs/shThemeMidnight.css") %>'
                     }]
                 },
                 files: [{
