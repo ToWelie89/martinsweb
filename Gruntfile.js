@@ -120,8 +120,17 @@ module.exports = function(grunt) {
                     'assets/build/*-min.js'
                 ]
             },
-            src: ['js/angular/**/*.js'],
-        }
+            src: ['js/angular/**/*.js', 'js/MapEditor.js'],
+        },
+        watch: {
+            scripts: {
+                files: ['js/angular/**/*.js'],
+                tasks: ['default'],
+                options: {
+                    spawn: false,
+                },
+            },
+        },
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -133,6 +142,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
     grunt.registerTask('default', [
