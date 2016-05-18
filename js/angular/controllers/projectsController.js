@@ -2,7 +2,7 @@
     var app = angular.module('martinsWeb');
 
     var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', 'config', function($scope, $log, $http, mediaQueryService, config) {
-        $scope.projects;
+        $scope.projects = [];
 
         var projects = [{
             'id': 'starapp',
@@ -68,9 +68,8 @@
 
         function clickOutsideHandler(e) {
             var container = $('#projectInfoInner');
-            if (!container.is(e.target) // if the target of the click isn't the container...
-                && container.has(e.target).length === 0) // ... nor a descendant of the container
-            {
+            // if the target of the click isn't the container... nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
                 $('#projectInfo').fadeOut(300);
                 $('#projectsMenu').animate({
                     opacity: '1.0'
@@ -90,7 +89,7 @@
                 $('#backLink').click(backLinkClickHandler);
                 $(document).mouseup(clickOutsideHandler);
             });
-        }
+        };
 
         function backLinkClickHandler() {
             $('#projectInfo').fadeOut(300);
@@ -110,7 +109,7 @@
             } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.SMALL) {
                 return (index % 2 === 0);
             }
-        }
+        };
 
         function init() {
             $scope.projects = projects;
@@ -124,7 +123,7 @@
         function shuffle(o) {
             for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
             return o;
-        };
+        }
 
         init();
     }];

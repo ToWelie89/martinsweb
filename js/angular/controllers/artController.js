@@ -29,26 +29,26 @@
             } else {
                 $log.debug($scope.art);
 
-                for (var i = 0; i < $scope.art.length; i++) {
-                    if (!$scope.art[i].video) {
+                for (var j = 0; j < $scope.art.length; j++) {
+                    if (!$scope.art[j].video) {
                         items.push({
-                            src: $scope.art[i].bigImage.url,
-                            w: $scope.art[i].bigImage.width,
-                            h: $scope.art[i].bigImage.height,
-                            index: $scope.art[i].index
+                            src: $scope.art[j].bigImage.url,
+                            w: $scope.art[j].bigImage.width,
+                            h: $scope.art[j].bigImage.height,
+                            index: $scope.art[j].index
                         });
                     } else {
                         items.push({
-                            html: '<div class="videoSlide"><video width="640" height="640" id="videoPlayer' + $scope.art[i].index + '" controls><source src="' +
-                                $scope.art[i].video.url + '" type="video/mp4" /></video></div>',
-                            index: $scope.art[i].index
+                            html: '<div class="videoSlide"><video width="640" height="640" id="videoPlayer' + $scope.art[j].index + '" controls><source src="' +
+                                $scope.art[j].video.url + '" type="video/mp4" /></video></div>',
+                            index: $scope.art[j].index
                         });
                     }
                 }
 
                 $scope.loading = false;
             }
-        };
+        }
 
         function getAllArtFromInstagram() {
             var promise = instagramService.getMediaByTag('martinsonesson');
@@ -63,7 +63,7 @@
             };
 
             return promise.then(successCallback, errorCallback);
-        };
+        }
 
         function getNextPage(nextMaxId) {
             var promise = instagramService.getMediaByTagWithMaxId('martinsonesson', nextMaxId);
@@ -78,14 +78,14 @@
             };
 
             return promise.then(successCallback, errorCallback);
-        };
+        }
 
         function getJsondata(response) {
             var encodedResponse = JSON.parse(response);
-            var encodedResponse = JSON.parse(encodedResponse);
+            encodedResponse = JSON.parse(encodedResponse);
 
             return encodedResponse;
-        };
+        }
 
         function openPhotoSwipe(artItem) {
             var pswpElement = document.querySelectorAll('.pswp')[0];
@@ -103,11 +103,11 @@
 
             var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
             gallery.init();
-        };
+        }
 
         function init() {
             getAllArtFromInstagram();
-        };
+        }
 
         init();
     }];

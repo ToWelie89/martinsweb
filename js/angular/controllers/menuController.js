@@ -3,7 +3,7 @@
 
     var menuController = ['$scope', '$location', 'pageUrlService', '$http', '$log', function($scope, $location, pageUrlService, $http, $log) {
         var slideTime = 350;
-        $scope.menu;
+        $scope.menu = {};
 
         function init() {
             $http.get('json/menu.json').success(function(data) {

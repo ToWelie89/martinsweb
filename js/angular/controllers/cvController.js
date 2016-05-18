@@ -3,7 +3,7 @@
 
     var cvController = ['$scope', '$log', '$http', function($scope, $log, $http) {
 
-        $scope.techCompetence;
+        $scope.techCompetence = {};
 
         function readMoreLinkClickHandler() {
             var id = $(this).attr("for");

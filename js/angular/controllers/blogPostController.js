@@ -5,8 +5,8 @@
 
         var blogId;
 
-        $scope.loading;
-        $scope.post;
+        $scope.loading = true;
+        $scope.post = {};
 
         function getBlogPost(id) {
             var promise = wordpressService.getPostById(id, 'martinsonesson');

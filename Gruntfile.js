@@ -114,6 +114,14 @@ module.exports = function(grunt) {
                 }]
             },
         },
+        jshint: {
+            options: {
+                ignores: [
+                    'assets/build/*-min.js'
+                ]
+            },
+            src: ['js/angular/**/*.js'],
+        }
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -124,6 +132,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // Default task(s).
     grunt.registerTask('default', [

@@ -7,7 +7,7 @@
             SMALL: "SMALL",
             MEDIUM: "MEDIUM",
             LARGE: "LARGE"
-        }
+        };
 
         function getCurrentMediaQuery() {
             if (window.matchMedia("(min-width: 0em)").matches && window.matchMedia("(max-width: 47.99em)").matches) {

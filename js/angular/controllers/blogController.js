@@ -4,11 +4,11 @@
     var blogController = ['$scope', '$log', '$location', 'wordpressService', function($scope, $log, $location, wordpressService) {
 
         $scope.posts = [];
-        $scope.loading;
+        $scope.loading = true;
 
         $scope.goToPost = function(id) {
             $location.path('/blogPost').search({id: id});
-        }
+        };
 
         function formatPosts() {
             angular.forEach($scope.posts, function(post) {
