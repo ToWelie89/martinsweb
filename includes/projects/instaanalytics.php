@@ -19,7 +19,7 @@
                     <a class="button" href="https://github.com/ToWelie89/InstagramAnalytics" target="_blank">
                         <p text="Code"></p>
                     </a>
-                    <a class="button" href="http://martinsonesson.se/pi/instaanalytics/" target="_blank">
+                    <a class="button" href="http://martinsonesson.se/instagramanalytics/" target="_blank">
                         <p text="Demo"></p>
                     </a>
                 </div>
