@@ -10,10 +10,10 @@
             link: function(scope, elem, attr) {
                 scope.goToTop = function() {
                     document.getElementById('topBar').scrollIntoView();
-                }
+                };
             }
-        }
-    }
+        };
+    };
 
     app.directive('scrollToTop', scrollToTopDirective);
 }());
