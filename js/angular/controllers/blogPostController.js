@@ -14,7 +14,6 @@
             var successCallback = function(response) {
                 $log.debug(response.data);
                 $scope.post = response.data;
-
                 $scope.loading = false;
             };
 
@@ -31,7 +30,10 @@
                 $log.debug('post changed');
                 setTimeout(function() {
                     SyntaxHighlighter.highlight();
-                }, 100);
+                    /*setTimeout(function() {
+                        $("div[id^='high']").css('overflow-x', 'auto');
+                    }, 2000);*/
+                }, 200);
             });
         }
 

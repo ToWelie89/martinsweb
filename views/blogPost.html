@@ -16,17 +16,18 @@
         Author: {{post.author.first_name}} {{post.author.last_name}}
     </span>
 </div>
-<div class="mainPadding data-ng-show="!loading"">
-    <div class="mainContentItem" style="width: 100%;">
-        <div class="blogContent" data-ng-bind-html="post.content">
-        </div>
-    </div>
-</div>
 
 <div class="centeringBox marginTop" data-ng-show="loading">
     <div class="centeringInnerBox">
         <p class="standardText">
             <div data-ng-include src="'includes/loadBox.html'"></div>
         </p>
+    </div>
+</div>
+
+<div class="mainPadding data-ng-show="!loading"">
+    <div class="mainContentItem" style="width: 100%;">
+        <div class="blogContent" data-ng-bind-html="post.content">
+        </div>
     </div>
 </div>
