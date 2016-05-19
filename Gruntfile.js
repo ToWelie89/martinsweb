@@ -118,9 +118,10 @@ module.exports = function(grunt) {
             options: {
                 ignores: [
                     'assets/build/*-min.js'
-                ]
+                ],
+                jshintrc : '.jshintrc'
             },
-            src: ['js/angular/**/*.js', 'js/MapEditor.js'],
+            src: ['js/angular/**/*.js'/*, 'js/MapEditor.js'*/],
         },
         watch: {
             scripts: {
@@ -131,6 +132,12 @@ module.exports = function(grunt) {
                 },
             },
         },
+        jsonlint: {
+            src: [
+                'json/*.json',
+                'package.json'
+            ]
+        }
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -143,8 +150,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-jsonlint');
 
-    // Default task(s).
+    // Default task for building
     grunt.registerTask('default', [
         'clean', // Clean previous build files
         'copy', // Copy markup files that need to be adjusted to build folder
@@ -153,5 +161,9 @@ module.exports = function(grunt) {
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline' // Inline all css in head
+    ]);
+    grunt.registerTask('test', [
+        'jshint', // Test JS files for syntax errors
+        'jsonlint' // JSON LINT, test json files for syntax errors
     ]);
 };
