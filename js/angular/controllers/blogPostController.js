@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     var blogPostController = ['$scope', '$log', 'wordpressService', 'pageUrlService', function($scope, $log, wordpressService, pageUrlService) {
 
@@ -27,12 +27,9 @@
 
         function setWatch() {
             $scope.$watch('post', function() {
-                $log.debug('post changed');
+                $log.debug('Blog post changed');
                 setTimeout(function() {
                     SyntaxHighlighter.highlight();
-                    /*setTimeout(function() {
-                        $("div[id^='high']").css('overflow-x', 'auto');
-                    }, 2000);*/
                 }, 200);
             });
         }
@@ -53,5 +50,5 @@
         init();
     }];
 
-    app.controller("blogPostController", blogPostController);
+    app.controller('blogPostController', blogPostController);
 }());
