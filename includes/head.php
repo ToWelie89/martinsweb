@@ -23,6 +23,8 @@
     @@syntaxHighlighterThemeCss
 </style>
 
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
 <!-- Local libs -->
 <script type="text/javascript" src="js/libs/shCore.js"></script>
 <script type="text/javascript" src="js/libs/shBrushBash.js"></script>

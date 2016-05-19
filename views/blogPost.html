@@ -1,20 +1,23 @@
 <div class="blogPostInformation" style="background: url({{post.featured_image}});" data-ng-show="!loading">
     <h1 data-ng-bind="post.title" class="blogPostTitle"></h1>
-    <span>
+    <span class="hideOnlyForSmall">
         <a href="{{post.URL}}" target="_blank">Read on WordPress</a>
     </span>
-    <span>
+    <span class="hideOnlyForSmall">
         |
     </span>
-    <span>
+    <span class="hideOnlyForSmall">
         Written on {{post.modified.substring(0,10)}}
     </span>
-    <span>
+    <span class="hideOnlyForSmall">
         |
     </span>
-    <span>
+    <span class="hideOnlyForSmall">
         Author: {{post.author.first_name}} {{post.author.last_name}}
     </span>
+</div>
+<div class="showOnlyForSmall paddingAll paddingBottom--double blogDescriptionSmall">
+    <a href="{{post.URL}}" target="_blank">Read on WordPress</a> | Written on {{post.modified.substring(0,10)}} | Author: {{post.author.first_name}} {{post.author.last_name}}
 </div>
 
 <div class="centeringBox marginTop" data-ng-show="loading">
@@ -28,6 +31,9 @@
 <div class="mainPadding data-ng-show="!loading"">
     <div class="mainContentItem" style="width: 100%;">
         <div class="blogContent" data-ng-bind-html="post.content">
+        </div>
+        <div class="centerAlign boldText paddingTop--double">
+            <div scroll-to-top></div>
         </div>
     </div>
 </div>

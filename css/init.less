@@ -13,7 +13,7 @@
 @import "less/spinnerBox/spinnerBox";
 @import "less/blog/blog";
 
-@media only screen and (min-width: 0em) and (max-width: @lt-medium) {
+@media only screen and (min-width: 0em) and (max-width: @lt-medium) { // SMALL
     @import "less/default/default-small";
     @import "less/mainContent/mainContent-small";
     @import "less/topBar/topBar-small";
@@ -21,12 +21,12 @@
     @import "less/mainMenuLinks/mainMenuLinks-small";
     @import "less/blog/blog-small";
 }
-@media only screen and (min-width: @medium) and (max-width: @lt-large) {
+@media only screen and (min-width: @medium) and (max-width: @lt-large) { // MEDIUM
     @import "less/default/default-medium";
     @import "less/mainContent/mainContent-medium";
     @import "less/topBar/topBar-medium";
     @import "less/startPageTypography/startPageTypography-medium";
 }
-@media only screen and (min-width: @large) {
-
+@media only screen and (min-width: @large) { // LARGE
+    @import "less/default/default-large";
 }

@@ -1,29 +1,63 @@
 /* This is the standard stylings, used for large */
 @containerWidth: 1280px;
 
+/***************************
+  MARGINS AND PADDINGS
+***************************/
+
 .marginLeft {
   margin-left: 10px;
+}
+.marginLeft--double {
+  margin-left: 20px;
 }
 .marginRight {
   margin-right: 10px;
 }
+.marginRight--double {
+  margin-right: 20px;
+}
 .marginBottom {
   margin-bottom: 10px;
+}
+.marginBottom--double {
+  margin-bottom: 20px;
 }
 .marginTop {
   margin-top: 10px;
 }
+.marginTop--double {
+  margin-top: 20px;
+}
 .paddingLeft {
   padding-left: 10px;
+}
+.paddingLeft--double {
+  padding-left: 20px;
 }
 .paddingRight {
   padding-right: 10px;
 }
+.paddingRight--double {
+  padding-right: 20px;
+}
 .paddingBottom {
   padding-bottom: 10px;
 }
+.paddingBottom--double {
+  padding-bottom: 20px;
+}
 .paddingTop {
   padding-top: 10px;
+}
+.paddingTop--double {
+  padding-top: 20px;
+}
+.paddingAll {
+    .paddingTop;
+    .paddingBottom;
+    .paddingLeft;
+    .paddingRight;
 }
 .floatLeft {
     float: left;
@@ -34,6 +68,16 @@
 .clearLeft {
     clear: left;
 }
+.centerAlign {
+    text-align: center;
+}
+.boldText {
+    font-weight: bold;
+}
+
+/***************************
+  CSS RESET
+***************************/
 
 * {
     padding: 0px;
@@ -52,6 +96,18 @@ body{
     overflow-x: hidden;
 }
 
+/***************************
+  SHOW / HIDE FOR BREAKPOINTS
+***************************/
+
+.showOnlyForSmall {
+    display: none;
+}
+.hideOnlyForSmall {
+    display: block;
+}
+
+// Background element used for the polygon background generation
 .mainBg {
     width: 100%;
     height: 100%;
