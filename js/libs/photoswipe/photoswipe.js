@@ -18,9 +18,9 @@
 		/**
 		 *
 		 * Set of generic functions used by gallery.
-		 * 
+		 *
 		 * You're free to modify anything here as long as functionality is kept.
-		 * 
+		 *
 		 */
 		var framework = {
 			features: null,
@@ -127,16 +127,16 @@
 			},
 
 			/**
-			 * 
+			 *
 			 * @return {object}
-			 * 
+			 *
 			 * {
 			 *  raf : request animation frame function
 			 *  caf : cancel animation frame function
 			 *  transfrom : transform property key (with vendor), or null if not supported
 			 *  oldIE : IE8 or below
 			 * }
-			 * 
+			 *
 			 */
 			detectFeatures: function() {
 				if (framework.features) {
@@ -168,7 +168,7 @@
 
 					// Detect if device is iPhone or iPod and if it's older than iOS 8
 					// http://stackoverflow.com/a/14223920
-					// 
+					//
 					// This detection is made because of buggy top/bottom toolbars
 					// that don't trigger window.resize event.
 					// For more info refer to _isFixedPosition variable in core.js
@@ -858,7 +858,7 @@
 					click: _onGlobalClick
 				};
 
-				// disable show/hide effects on old browsers that don't support CSS animations or transforms, 
+				// disable show/hide effects on old browsers that don't support CSS animations or transforms,
 				// old IOS, Android and Opera mobile. Blackberry seems to work fine, even older models.
 				var oldPhone = _features.isOldIOSPhone || _features.isOldAndroid || _features.isMobileOpera;
 				if (!_features.animationName || !_features.transform || oldPhone) {
@@ -937,8 +937,8 @@
 					_itemHolders[0].el.style.display = _itemHolders[2].el.style.display = 'block';
 
 					if (_options.focus) {
-						// focus causes layout, 
-						// which causes lag during the animation, 
+						// focus causes layout,
+						// which causes lag during the animation,
 						// that's why we delay it untill the initial zoom transition ends
 						template.focus();
 					}
@@ -957,12 +957,12 @@
 				if (!_isFixedPosition) {
 
 					// On all versions of iOS lower than 8.0, we check size of viewport every second.
-					// 
-					// This is done to detect when Safari top & bottom bars appear, 
-					// as this action doesn't trigger any events (like resize). 
-					// 
+					//
+					// This is done to detect when Safari top & bottom bars appear,
+					// as this action doesn't trigger any events (like resize).
+					//
 					// On iOS8 they fixed this.
-					// 
+					//
 					// 10 Nov 2014: iOS 7 usage ~40%. iOS 8 usage 56%.
 
 					_updateSizeInterval = setInterval(function() {
@@ -988,11 +988,7 @@
 
 				_showOrHide(self.currItem, null, true, self.destroy);
 
-				if (self.currItem.html) {
-					var video = document.getElementById('videoPlayer' + self.currItem.index);
-					video.currentTime = 0;
-					video.pause();
-				}
+				self.stopVideo();
 			},
 
 			// destroys the gallery (unbinds events, cleans up intervals and timeouts to avoid memory leaks)
@@ -1024,8 +1020,8 @@
 
 			/**
 			 * Pan image to position
-			 * @param {Number} x     
-			 * @param {Number} y     
+			 * @param {Number} x
+			 * @param {Number} y
 			 * @param {Boolean} force Will ignore bounds if set to true.
 			 */
 			panTo: function(x, y, force) {
@@ -1057,6 +1053,7 @@
 
 
 			goTo: function(index) {
+				self.stopVideo();
 
 				index = _getLoopedId(index);
 
@@ -1080,6 +1077,21 @@
 			},
 			prev: function() {
 				self.goTo(_currentItemIndex - 1);
+			},
+
+			stopVideo: function() {
+				if (self.currItem.html) {
+					var video = document.getElementById('videoPlayer' + self.currItem.index);
+					video.currentTime = 0;
+					video.pause();
+				}
+			},
+
+			startVideo: function() {
+				var video = document.getElementById('videoPlayer' + self.currItem.index);
+				if (video) {
+					video.play();
+				}
 			},
 
 			// update current zoom/pan objects
@@ -1348,7 +1360,7 @@
 		/*>>gestures*/
 		/**
 		 * Mouse/touch/pointer event handlers.
-		 * 
+		 *
 		 * separated from @core.js for readability
 		 */
 
@@ -1535,7 +1547,7 @@
 				// calculate fdistance over the bounds and friction
 				if (newOffset > _currPanBounds.min[axis] || newOffset < _currPanBounds.max[axis]) {
 					panFriction = _options.panEndFriction;
-					// Linear increasing of friction, so at 1/4 of viewport it's at max value. 
+					// Linear increasing of friction, so at 1/4 of viewport it's at max value.
 					// Looks not as nice as was expected. Left for history.
 					// panFriction = (1 - (_panOffset[axis] + delta[axis] + panBounds.min[axis]) / (_viewportSize[axis] / 4) );
 				} else {
@@ -1644,7 +1656,7 @@
 
 				// Allow dragging only via left mouse button.
 				// As this handler is not added in IE8 - we ignore e.which
-				// 
+				//
 				// http://www.quirksmode.org/js/events_properties.html
 				// https://developer.mozilla.org/en-US/docs/Web/API/event.button
 				if (e.type === 'mousedown' && e.button > 0) {
@@ -1793,7 +1805,7 @@
 					}
 				}
 			},
-			// 
+			//
 			_renderMovement = function() {
 
 				if (!_currentPoints) {
@@ -1905,7 +1917,7 @@
 					if (_isFirstMove) {
 						_isFirstMove = false;
 
-						// subtract drag distance that was used during the detection direction  
+						// subtract drag distance that was used during the detection direction
 
 						if (Math.abs(delta.x) >= DIRECTION_CHECK_OFFSET) {
 							delta.x -= _currentPoints[0].x - _startPoint.x;
@@ -1966,7 +1978,7 @@
 						return;
 					}
 
-					// on Android (v4.1, 4.2, 4.3 & possibly older) 
+					// on Android (v4.1, 4.2, 4.3 & possibly older)
 					// ghost mousedown/up event isn't preventable via e.preventDefault,
 					// which causes fake mousedown event
 					// so we block mousedown/up for 600ms
@@ -1998,7 +2010,7 @@
 						} else {
 							var MSPOINTER_TYPES = {
 								4: 'mouse', // event.MSPOINTER_TYPE_MOUSE
-								2: 'touch', // event.MSPOINTER_TYPE_TOUCH 
+								2: 'touch', // event.MSPOINTER_TYPE_TOUCH
 								3: 'pen' // event.MSPOINTER_TYPE_PEN
 							};
 							releasePoint.type = MSPOINTER_TYPES[e.pointerType];
@@ -2128,8 +2140,9 @@
 				}
 
 
-				// main scroll 
+				// main scroll
 				if ((_mainScrollShifted || _mainScrollAnimating) && numPoints === 0) {
+					self.stopVideo();
 					var itemChanged = _finishSwipeMainScrollGesture(gestureType, _releaseAnimData);
 					if (itemChanged) {
 						return;
@@ -2142,7 +2155,7 @@
 					return;
 				}
 
-				// Complete simple zoom gesture (reset zoom level if it's out of the bounds)  
+				// Complete simple zoom gesture (reset zoom level if it's out of the bounds)
 				if (gestureType !== 'swipe') {
 					_completeZoomGesture();
 					return;
@@ -2321,7 +2334,7 @@
 					var totalShiftDist = _currPoint.x - _startPoint.x,
 						isFastLastFlick = _releaseAnimData.lastFlickDist.x < 10;
 
-					// if container is shifted for more than MIN_SWIPE_DISTANCE, 
+					// if container is shifted for more than MIN_SWIPE_DISTANCE,
 					// and last flick gesture was in right direction
 					if (totalShiftDist > MIN_SWIPE_DISTANCE &&
 						(isFastLastFlick || _releaseAnimData.lastFlickOffset.x > 20)) {
@@ -2526,7 +2539,7 @@
 		 * If you're not planning to use transition for gallery at all,
 		 * you may set options hideAnimationDuration and showAnimationDuration to 0,
 		 * and just delete startAnimation function.
-		 * 
+		 *
 		 */
 
 
@@ -2638,8 +2651,8 @@
 						if (!out) {
 
 							// "in" animation always uses CSS transitions (instead of rAF).
-							// CSS transition work faster here, 
-							// as developer may also want to animate other things, 
+							// CSS transition work faster here,
+							// as developer may also want to animate other things,
 							// like ui on top of sliding area, which can be animated just via CSS
 
 							_currZoomLevel = item.initialZoomLevel;
@@ -2706,7 +2719,7 @@
 		/**
 		 *
 		 * Controller manages gallery items, their dimensions, and their content.
-		 * 
+		 *
 		 */
 
 		var _items,
@@ -3031,13 +3044,13 @@
 				},
 
 				allowProgressiveImg: function() {
-					// 1. Progressive image loading isn't working on webkit/blink 
+					// 1. Progressive image loading isn't working on webkit/blink
 					//    when hw-acceleration (e.g. translateZ) is applied to IMG element.
 					//    That's why in PhotoSwipe parent element gets zoom transform, not image itself.
-					//    
+					//
 					// 2. Progressive image loading sometimes blinks in webkit/blink when applying animation to parent element.
 					//    That's why it's disabled on touch devices (mainly because of swipe transition)
-					//    
+					//
 					// 3. Progressive image loading sometimes doesn't work in IE (up to 11).
 
 					// Don't allow progressive loading on non-large touch devices
@@ -3199,9 +3212,8 @@
 					holder.el.innerHTML = '';
 					holder.el.appendChild(baseDiv);
 
-					if (item.html) {
-						var video = document.getElementById('videoPlayer' + item.index);
-						video.play();
+					if (self.currItem.html) {
+						self.startVideo();
 					}
 				},
 
@@ -3222,7 +3234,7 @@
 		 * tap.js:
 		 *
 		 * Displatches tap and double-tap events.
-		 * 
+		 *
 		 */
 
 		var tapTimer,
@@ -3308,7 +3320,7 @@
 		 * - Manages "dragging", "zoomed-in", "zoom-out" classes.
 		 *   (which are used for cursors and zoom icon)
 		 * - Adds toggleDesktopZoom function.
-		 * 
+		 *
 		 */
 
 		var _wheelDelta;
@@ -3483,12 +3495,12 @@
 		 * history.js:
 		 *
 		 * - Back button to close gallery.
-		 * 
+		 *
 		 * - Unique URL for each slide: example.com/&pid=1&gid=3
 		 *   (where PID is picture index, and GID and gallery index)
-		 *   
+		 *
 		 * - Switch URL when slides change.
-		 * 
+		 *
 		 */
 
 
@@ -3739,7 +3751,7 @@
 				},
 				updateURL: function() {
 
-					// Delay the update of URL, to avoid lag during transition, 
+					// Delay the update of URL, to avoid lag during transition,
 					// and to not to trigger actions like "refresh page sound" or "blinking favicon" to often
 
 					_cleanHistoryTimeouts();

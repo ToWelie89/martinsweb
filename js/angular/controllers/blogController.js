@@ -12,7 +12,7 @@
 
         function formatPosts() {
             angular.forEach($scope.posts, function(post) {
-                post.excerpt = post.excerpt.substring(0, 150).replace('[&hellip;]', ' . . . . . . ');
+                post.excerpt = post.excerpt.substring(0, 150) + ' . . . . . . ';
                 post.modified = post.modified.substring(0, 10);
             });
 

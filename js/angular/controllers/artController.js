@@ -39,7 +39,7 @@
                         });
                     } else {
                         items.push({
-                            html: '<div class="videoSlide"><video width="640" height="640" id="videoPlayer' + $scope.art[j].index + '" controls><source src="' +
+                            html: '<div class="videoSlide"><video width="100%" height="100%" id="videoPlayer' + $scope.art[j].index + '" controls><source src="' +
                                 $scope.art[j].video.url + '" type="video/mp4" /></video></div>',
                             index: $scope.art[j].index
                         });
