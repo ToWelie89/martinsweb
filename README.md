@@ -35,3 +35,11 @@ grunt
 ```
 
 TADA!
+
+## More Grunt jobs
+
+You can jshint the code by running
+
+```
+grunt jshint
+```
