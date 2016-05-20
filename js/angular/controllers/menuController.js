@@ -29,7 +29,7 @@
 
             if (submenuElement.length > 0) {
                 var displayStyle = submenuElement.css("display");
-                if (displayStyle == "none") {
+                if (displayStyle === "none") {
                     submenuElement.slideDown(slideTime);
                 } else {
                     submenuElement.slideUp(slideTime);

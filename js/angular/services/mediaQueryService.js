@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var mediaQueryService = ['$log', function(log) {
+    var mediaQueryService = [function() {
 
         var breakPoints = {
             SMALL: "SMALL",

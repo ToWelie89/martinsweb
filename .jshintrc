@@ -97,6 +97,7 @@
 
         "SyntaxHighlighter": false,
         "PhotoSwipeUI_Default": false,
-        "PhotoSwipe": false
+        "PhotoSwipe": false,
+        "MapEditor": false
     }        // additional predefined global variables
 }

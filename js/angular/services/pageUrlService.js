@@ -20,7 +20,7 @@
                 return page;
             } else if (page === 'bio' || page === 'cv') {
                 return 'profile';
-            } else if (page === 'blog' || page === 'art' || page === 'videos' || page === 'photos') {
+            } else if (page === 'blogPost' || page === 'blog' || page === 'art' || page === 'videos' || page === 'photos') {
                 return 'misc';
             } else {
                 return 'NONE';

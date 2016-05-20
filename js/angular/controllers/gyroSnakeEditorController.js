@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module("martinsWeb");
 
-    var gyroSnakeEditorController = ['$scope', function($scope) {
+    var gyroSnakeEditorController = [function() {
 
         function init() {
             MapEditor('mapeditor');
