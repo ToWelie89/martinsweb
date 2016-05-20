@@ -272,8 +272,15 @@ div#contentBar{
 
 .videoSlide {
     width: 100%;
-    max-width: 640px;
-    color: #FFF;
-    margin: 120px auto 0;
+    height: 100%;
     text-align: center;
+    display: table;
+    .videoSlideInner {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    video {
+        max-width: 100%;
+    }
 }
