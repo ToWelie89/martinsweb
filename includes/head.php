@@ -29,6 +29,9 @@
 <script type="text/javascript" src="js/libs/shCore.js"></script>
 <script type="text/javascript" src="js/libs/shBrushBash.js"></script>
 <script type="text/javascript" src="js/libs/shBrushXml.js"></script>
+<script type="text/javascript" src="js/libs/shBrushPhp.js"></script>
+<script type="text/javascript" src="js/libs/shBrushCss.js"></script>
+<script type="text/javascript" src="js/libs/shBrushJScript.js"></script>
 
 <script async src="js/libs/trianglify.js"></script>
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
