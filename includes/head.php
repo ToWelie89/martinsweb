@@ -3,6 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8"/>
 <meta http-equiv="Cache-control" content="public">
+<meta name="description" content="Portfolio and personal website of webdeveloper, programmer and software engineer Martin Sonesson">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript,Martin,Sonesson,art,blog,tech,photos,videos,cv,biography,bio,projects,android,angular,java,c#">
+<meta name="author" content="Martin Sonesson">
 
 <!-- Main CSS -->
 <style>
