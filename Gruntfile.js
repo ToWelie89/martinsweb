@@ -137,6 +137,18 @@ module.exports = function(grunt) {
                 'json/*.json',
                 'package.json'
             ]
+        },
+        jsdoc: {
+            dist: {
+                src: [
+                    'js/jsdoc.md',
+                    'js/angular/**/*.js'
+                ],
+                options: {
+                    destination: 'docs',
+                    recurse: true
+                }
+            }
         }
     });
 
@@ -151,6 +163,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jsonlint');
+    grunt.loadNpmTasks('grunt-jsdoc');
 
     // Default task for building
     grunt.registerTask('default', [
