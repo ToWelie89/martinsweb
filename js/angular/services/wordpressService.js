@@ -12,7 +12,7 @@
     var wordpressService = ['$q', '$log', '$http', function($q, log, $http) {
 
         /**
-         * @function services.PageUrlService#getPosts
+         * @function services.WordpressService#getPosts
          * @description Get Wordpress blog posts by given blog-id
          * @param {String} blogName - The Wordpress name.
          * @return {obj} Blog posts
@@ -31,7 +31,7 @@
         };
 
         /**
-         * @function services.PageUrlService#getPostById
+         * @function services.WordpressService#getPostById
          * @description Get a single Wordpress blog post by blogname and blogpost id
          * @param {String} id - Id of the blog post.
          * @param {String} blogName - The Wordpress name.
