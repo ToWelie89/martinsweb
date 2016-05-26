@@ -19,6 +19,8 @@ Technologies & stuff used:
 
 For more technical documentation please see [the wiki](https://github.com/ToWelie89/martinsweb/wiki).
 
+For code documentation please see [the jsdoc](http://www.martinsonesson.se/docs).
+
 ## How to run locally
 
 - Clone the repo
