@@ -1,4 +1,52 @@
 /**
+ * AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.
+ * @external "Angular"
+ * @see {@link https://docs.angularjs.org/guide|Angular documentation}
+ */
+
+ /**
+ * Angular Route, module that provides routing and deeplinking services and directives for angular apps.
+ * @external "Angular route"
+ * @see {@link https://docs.angularjs.org/api/ngRoute|Angular route documentation}
+ */
+
+ /**
+ * Angular Sanitize, module that provides functionality to sanitize HTML.
+ * @external "Angular sanitize"
+ * @see {@link https://docs.angularjs.org/api/ngSanitize/|Angular sanitize documentation}
+ */
+
+ /**
+ * Photoswipe javascript library used for the {@link http://www.martinsonesson.se/#art|art section}
+ * @external "Photoswipe"
+ * @see {@link http://photoswipe.com/|Photoswipe website}
+ */
+
+/**
+ * Google Analytics is a freemium web analytics service offered by Google that tracks and reports website traffic.
+ * @external "Google Analytics"
+ * @see {@link https://www.google.com/analytics|Google analytics}
+ */
+
+ /**
+ * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+ * @external "jQuery"
+ * @see {@link http://api.jquery.com/|jQuery}
+ */
+
+ /**
+ * Algorithmically generated triangle art, used for polygon pattern background
+ * @external "Trianglify"
+ * @see {@link http://qrohlf.com/trianglify/|Trianglify}
+ */
+
+ /**
+ * SyntaxHighlighter is a fully functional self-contained code syntax highlighter developed in JavaScript
+ * @external "SyntaxHighlighter"
+ * @see {@link http://alexgorbatchev.com/SyntaxHighlighter/|SyntaxHighlighter}
+ */
+
+/**
  * @namespace attributes
  * @description Attributes that can be expected from back end.
  */
