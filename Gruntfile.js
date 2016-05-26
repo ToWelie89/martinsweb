@@ -119,9 +119,9 @@ module.exports = function(grunt) {
                 ignores: [
                     'assets/build/*-min.js'
                 ],
-                jshintrc : '.jshintrc'
+                jshintrc: '.jshintrc'
             },
-            src: ['js/angular/**/*.js'/*, 'js/MapEditor.js'*/],
+            src: ['js/angular/**/*.js' /*, 'js/MapEditor.js'*/ ],
         },
         watch: {
             scripts: {
@@ -131,6 +131,13 @@ module.exports = function(grunt) {
                     spawn: false,
                 },
             },
+            jsdocTemplate: {
+                files: ['jsdocTemplate/**/*.js', 'jsdocTemplate/**/*.tmpl', 'jsdocTemplate/**/*.css', 'js/jsdoc.md', 'js/angular/jsdoc-global-definitions.js'],
+                tasks: ['jsdoc'],
+                options: {
+                    spawn: false,
+                },
+            }
         },
         jsonlint: {
             src: [
@@ -146,7 +153,8 @@ module.exports = function(grunt) {
                 ],
                 options: {
                     destination: 'docs',
-                    recurse: true
+                    recurse: true,
+                    template: './jsdocTemplate'
                 }
             }
         }
@@ -173,7 +181,8 @@ module.exports = function(grunt) {
         'filerev', // Create versioned images in img/build
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
-        'replace:inline' // Inline all css in head
+        'replace:inline', // Inline all css in head
+        'jsdoc'
     ]);
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors

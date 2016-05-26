@@ -1,15 +1,37 @@
 (function() {
     var app = angular.module("martinsWeb");
 
+    /**
+     * @constructor BlogController
+     * @memberof controllers
+     * @description Controller for logic in the blog section
+     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     * @param {$location} $location - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$location}
+     * @param {services.WordpressService} wordpressService - Service for handling calls to Wordpress for fetching blog data
+     */
     var blogController = ['$scope', '$log', '$location', 'wordpressService', function($scope, $log, $location, wordpressService) {
 
+        // Public variables
         $scope.posts = [];
         $scope.loading = true;
 
-        $scope.goToPost = function(id) {
+        // Public functions
+        $scope.goToPost = goToPost;
+
+        /**
+         * @function controllers.BlogController#goToPost
+         * @description Function for opening a blogpost by a given ID
+         * @param {Obj} id The id for which blog post to redirect to
+         */
+        function goToPost(id) {
             $location.path('/blogPost').search({id: id});
         };
 
+        /**
+         * @function controllers.BlogController#formatPosts
+         * @description Function for formating blog posts by modifying data in the model
+         */
         function formatPosts() {
             angular.forEach($scope.posts, function(post) {
                 post.excerpt = post.excerpt.substring(0, 150) + ' . . . . . . ';
@@ -19,6 +41,10 @@
             $scope.loading = false;
         }
 
+        /**
+         * @function controllers.BlogController#init
+         * @description Initilization function
+         */
         function init() {
             $scope.loading = true;
 

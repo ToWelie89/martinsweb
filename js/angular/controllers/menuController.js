@@ -1,10 +1,32 @@
 (function() {
     var app = angular.module("martinsWeb");
 
+    /**
+     * @constructor MenuController
+     * @memberof controllers
+     * @description Controller for menu
+     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
+     * @param {$location} $location - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$location}
+     * @param {services.PageUrlService} pageUrlService - Service for reading GET-parameters from the URL.
+     * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     */
     var menuController = ['$scope', '$location', 'pageUrlService', '$http', '$log', function($scope, $location, pageUrlService, $http, $log) {
+
+        // Private variables
         var slideTime = 350;
+
+        // Public variables
         $scope.menu = {};
 
+        // Public function
+        $scope.mainMenuClickEvent = mainMenuClickEvent;
+        $scope.currentPage = currentPage;
+
+        /**
+         * @function controllers.MenuController#init
+         * @description Initilization function
+         */
         function init() {
             $http.get('json/menu.json').success(function(data) {
                 $scope.menu = data;
@@ -12,11 +34,16 @@
             });
 
             setTimeout(function() {
-                $scope.mainMenuClickEvent(null);
+                mainMenuClickEvent(null);
             }, 200);
         }
 
-        $scope.mainMenuClickEvent = function(id) {
+        /**
+         * @function controllers.MenuController#mainMenuClickEvent
+         * @description Function for the event when user clicks a main menu item. Hides/shows the correct submenu
+         * @param {Obj} id The id for the clicked menu item
+         */
+        function mainMenuClickEvent(id) {
             if (id === pageUrlService.getCurrentMainPage() || !id) {
                 $(".subMenuBar").slideUp(slideTime);
                 $(".subMenuBar[for='" + pageUrlService.getCurrentMainPage() + "']").slideDown(slideTime);
@@ -41,7 +68,12 @@
             }
         };
 
-        $scope.currentPage = function() {
+        /**
+         * @function controllers.MenuController#currentPage
+         * @description Function for getting the current main page
+         * @returns {string} The current main page
+         */
+        function currentPage() {
             return pageUrlService.getCurrentMainPage();
         };
 

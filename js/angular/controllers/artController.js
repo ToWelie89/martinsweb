@@ -1,16 +1,31 @@
 (function() {
     var app = angular.module('martinsWeb');
 
+    /**
+     * @constructor ArtController
+     * @memberof controllers
+     * @description Controller for handling presentation logic in art gallery section
+     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     * @param {services.InstagramService} instagramService - Service for handling calls to Instagram API
+     */
     var artController = ['$scope', '$log', 'instagramService', function($scope, $log, instagramService) {
 
+        // Public variables
         $scope.art = [];
         $scope.loading = true;
-
-        var items = [];
 
         // Public methods
         $scope.openPhotoSwipe = openPhotoSwipe;
 
+        // Private variables
+        var items = [];
+
+        /**
+         * @function controllers.ArtController#addToFlow
+         * @description Function that takes a response from Instagram and parses the items and setups Photoswipe
+         * @param {Obj} response Response object from Instagram API
+         */
         function addToFlow(response) {
             for (var i = 0; i < response.data.length; i++) {
                 $scope.art.push({
@@ -23,7 +38,7 @@
                     index: $scope.art.length
                 });
             }
-
+            // If pagination.next_url or pagination.next_max_tag_id exists then there are more objects to be fetched on the next page, another call must be made
             if (response.pagination.next_url && response.pagination.next_max_tag_id) {
                 getNextPage(response.pagination.next_max_tag_id);
             } else {
@@ -50,6 +65,10 @@
             }
         }
 
+        /**
+         * @function controllers.ArtController#getAllArtFromInstagram
+         * @description Function that makes a call to Instagram API to fetch data for user
+         */
         function getAllArtFromInstagram() {
             var promise = instagramService.getMediaByTag('martinsonesson');
 
@@ -65,6 +84,11 @@
             return promise.then(successCallback, errorCallback);
         }
 
+        /**
+         * @function controllers.ArtController#getNextPage
+         * @description Function that makes a call to Instagram API to fetch data for user with a given nextMaxId that acts as an index
+         * @param {string} nextMaxId Index of items to fetch
+         */
         function getNextPage(nextMaxId) {
             var promise = instagramService.getMediaByTagWithMaxId('martinsonesson', nextMaxId);
 
@@ -80,6 +104,12 @@
             return promise.then(successCallback, errorCallback);
         }
 
+        /**
+         * @function controllers.ArtController#getJsondata
+         * @description Function that encodes response to JSON
+         * @param {Obj} response Response object from Instagram API
+         * @returns {object} The JSON response
+         */
         function getJsondata(response) {
             var encodedResponse = JSON.parse(response);
             encodedResponse = JSON.parse(encodedResponse);
@@ -87,6 +117,11 @@
             return encodedResponse;
         }
 
+        /**
+         * @function controllers.ArtController#openPhotoSwipe
+         * @description Function that opens a specific item in Photoswipe
+         * @param {Obj} artItem The art item, video or image
+         */
         function openPhotoSwipe(artItem) {
             var pswpElement = document.querySelectorAll('.pswp')[0];
 
@@ -105,6 +140,10 @@
             gallery.init();
         }
 
+        /**
+         * @function controllers.ArtController#init
+         * @description Initialization Function
+         */
         function init() {
             getAllArtFromInstagram();
         }

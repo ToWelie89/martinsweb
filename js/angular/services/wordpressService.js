@@ -1,8 +1,22 @@
 (function() {
     var app = angular.module("martinsWeb");
 
+    /**
+     * @constructor WordpressService
+     * @memberof services
+     * @description Service used for fetching data from Wordpress API
+     * @param {$q} $q - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$q}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
+     */
     var wordpressService = ['$q', '$log', '$http', function($q, log, $http) {
 
+        /**
+         * @function services.PageUrlService#getPosts
+         * @description Get Wordpress blog posts by given blog-id
+         * @param {String} blogName - The Wordpress name.
+         * @return {obj} Blog posts
+         */
         var getPosts = function(blogName) {
             return $http({
                 url: 'https://public-api.wordpress.com/rest/v1.1/sites/' + blogName + '.wordpress.com/posts/',
@@ -16,6 +30,13 @@
             });
         };
 
+        /**
+         * @function services.PageUrlService#getPostById
+         * @description Get a single Wordpress blog post by blogname and blogpost id
+         * @param {String} id - Id of the blog post.
+         * @param {String} blogName - The Wordpress name.
+         * @return {obj} Blog post
+         */
         var getPostById = function(id, blogName) {
             return $http({
                 url: 'https://public-api.wordpress.com/rest/v1.1/sites/' + blogName + '.wordpress.com/posts/' + id,

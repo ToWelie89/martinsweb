@@ -1,9 +1,22 @@
 (function() {
     var app = angular.module('martinsWeb');
 
+    /**
+     * @constructor ProjectsController
+     * @memberof controllers
+     * @description Controller for the projects page
+     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
+     * @param {services.MediaQueryService} mediaQueryService - Service handling media query breakpoints
+     * @param {config} config - Global configuration
+     */
     var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', 'config', function($scope, $log, $http, mediaQueryService, config) {
+
+        // Public variables
         $scope.projects = [];
 
+        // Private variables
         var projects = [{
             'id': 'starapp',
             'img': '../../assets/build/starapp.png',
@@ -66,6 +79,15 @@
             'description': 'A simple image editor based on Flickrs API'
         }];
 
+        // Public functions
+        $scope.projectsLinkClickHandler = projectsLinkClickHandler;
+        $scope.clearLeft = clearLeft;
+
+        /**
+         * @function controllers.ProjectsController#clickOutsideHandler
+         * @description Function for the event when user clicks outside of a the modal element
+         * @param {Obj} e The element
+         */
         function clickOutsideHandler(e) {
             var container = $('#projectInfoInner');
             // if the target of the click isn't the container... nor a descendant of the container
@@ -80,7 +102,12 @@
             }
         }
 
-        $scope.projectsLinkClickHandler = function(id) {
+        /**
+         * @function controllers.ProjectsController#projectsLinkClickHandler
+         * @description Function for the event when user clicks a project thumbnail, opens up project modal and loads data
+         * @param {string} id The id of the project
+         */
+        function projectsLinkClickHandler(id) {
             $('#projectInfo div').load('./includes/build/' + id + '.php', function() {
                 $('#projectsMenu').animate({
                     opacity: '0.5'
@@ -91,6 +118,10 @@
             });
         };
 
+        /**
+         * @function controllers.ProjectsController#backLinkClickHandler
+         * @description Function for the event when user clicks the back button, closes modal
+         */
         function backLinkClickHandler() {
             $('#projectInfo').fadeOut(300);
             $('#projectsMenu').animate({
@@ -101,7 +132,13 @@
             $(document).unbind();
         }
 
-        $scope.clearLeft = function(index) {
+        /**
+         * @function controllers.ProjectsController#clearLeft
+         * @description Function for returning a clear-left css value depending on current index
+         * @param {number} id The index of the object
+         * @returns {boolean} Returns true or false depending on the index
+         */
+        function clearLeft(index) {
             if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.LARGE) {
                 return (index % 4 === 0);
             } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.MEDIUM) {
@@ -111,6 +148,10 @@
             }
         };
 
+        /**
+         * @function controllers.ProjectsController#init
+         * @description Initlization function
+         */
         function init() {
             $scope.projects = projects;
             $log.debug($scope.projects);

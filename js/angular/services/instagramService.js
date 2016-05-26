@@ -1,7 +1,22 @@
 (function() {
     var app = angular.module("martinsWeb");
 
+    /**
+     * @constructor InstagramService
+     * @memberof services
+     * @description Instagram layer
+     * @param {$q} $q - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$q}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+     * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
+     */
     var instagramService = ['$q', '$log', '$http', function($q, log, $http) {
+
+        /**
+         * @function services.InstagramService#getInitialSelfFlow
+         * @description Gets recent flow for user by id
+         * @param {String} userId - The id of the user
+         * @return {obj} Recent flow of posts by user
+         */
         var getInitialSelfFlow = function(userId) {
             return $http({
                 url: './model/instagramService.php',
@@ -21,6 +36,13 @@
             });
         };
 
+        /**
+         * @function services.InstagramService#getSelfFlowWithMaxId
+         * @description Gets flow for user by id starting with given maxId as index
+         * @param {String} userId - The id of the user
+         * @param {String} maxId - Max id
+         * @return {obj} Recent flow of posts by user starting with specified index
+         */
         var getSelfFlowWithMaxId = function(userId, maxId) {
             return $http({
                 url: './model/instagramService.php',
@@ -41,6 +63,12 @@
             });
         };
 
+        /**
+         * @function services.InstagramService#searchForUser
+         * @description Search for instagram user
+         * @param {String} query - Searchword
+         * @return {Array} List of users matching the query
+         */
         var searchForUser = function(query) {
             return $http({
                 url: './model/instagramService.php',
@@ -61,6 +89,12 @@
             });
         };
 
+        /**
+         * @function services.InstagramService#getMediaByTag
+         * @description Get media (images and videos) by given hashtag
+         * @param {String} tag - The hashtag
+         * @return {obj} Response object containing posts with the given hashtag
+         */
         var getMediaByTag = function(tag) {
             return $http({
                 url: './model/instagramService.php',
@@ -81,6 +115,13 @@
             });
         };
 
+        /**
+         * @function services.InstagramService#getMediaByTagWithMaxId
+         * @description Get media (images and videos) by given hashtag starting with specified index
+         * @param {String} maxId - Starting index
+         * @param {String} tag - The hashtag
+         * @return {obj} Response object containing posts with the given hashtag with given starting index
+         */
         var getMediaByTagWithMaxId = function(tag, maxId) {
             return $http({
                 url: './model/instagramService.php',
@@ -102,6 +143,12 @@
             });
         };
 
+        /**
+         * @function services.InstagramService#getUserInformation
+         * @description Get information about an Instagram user
+         * @param {String} userId - The id of the user
+         * @return {obj} Response object containing user information
+         */
         var getUserInformation = function(userId) {
             return $http({
                 url: './model/instagramService.php',
