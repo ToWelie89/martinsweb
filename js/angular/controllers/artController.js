@@ -21,14 +21,20 @@
         // Private variables
         var items = [];
 
-
+        /**
+         * @function controllers.ArtController#formatArt
+         * @description Function reads the data and generates list used for view and photoswipe
+         * @param {Obj} response The data containing all art information
+         */
         function formatArt(response) {
             for (var i = 0; i < response.length; i++) {
                 $scope.art.push({
                     thumbnail: response[i].thumbnail,
                     bigImage: response[i].bigImage,
                     video: (response[i].video ? response[i].video : null),
-                    index: $scope.art.length
+                    index: $scope.art.length,
+                    width: response[i].width,
+                    height: response[i].height,
                 });
             }
 
@@ -38,8 +44,8 @@
                 if (!$scope.art[j].video) {
                     items.push({
                         src: $scope.art[j].bigImage,
-                        w: 640,
-                        h: 640,
+                        w: $scope.art[j].width,
+                        h: $scope.art[j].height,
                         index: $scope.art[j].index
                     });
                 } else {
