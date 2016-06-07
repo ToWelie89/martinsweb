@@ -52,4 +52,4 @@ This will jshint the js-files and jsonlint json-files.
 grunt jsdoc
 ```
 
-Generate jsdoc
+Generate jsdoc, will be generated into the folder ./docs
