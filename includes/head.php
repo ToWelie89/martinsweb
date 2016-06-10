@@ -7,6 +7,13 @@
 <meta name="keywords" content="HTML,CSS,XML,JavaScript,Martin,Sonesson,art,blog,tech,photos,videos,cv,biography,bio,projects,android,angular,java,c#">
 <meta name="author" content="Martin Sonesson">
 
+<style rel="stylesheet" type="text/css">
+    @@bootStrap
+</style>
+<style rel="stylesheet" type="text/css">
+    @@bootStrapTheme
+</style>
+
 <!-- Main CSS -->
 <style>
     @@defaultCss
@@ -39,6 +46,7 @@
 <script async src="js/libs/trianglify.js"></script>
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
+<script async src="js/libs/bootstrap.js"></script>
 <script async src="/assets/build/MapEditor.min.js"></script>
 <!-- <script async src="js/libs/snowstorm-min.js"></script> This is only for xmas ;) -->
 

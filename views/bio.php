@@ -9,16 +9,6 @@
             <a href="http://www.instagram.com/martin.sonesson" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
             <a href="http://towelie89.deviantart.com/" target="_blank"><i class="fa fa-deviantart fa-3x" aria-hidden="true"></i></a>
             <a href="https://www.twitch.tv/towelie89/profile/highlights" target="_blank"><i class="fa fa-twitch fa-3x" aria-hidden="true"></i></a>
-
-
-
-
-            <!--
-            <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank" displayText="LinkedIn"><img alt="LinkedIn" src="../../assets/build/LinkedIn.png"></a>
-            <a href="http://www.github.com/ToWelie89" target="_blank" displayText="GitHub"><img alt="GitHub" src="../../assets/build/GitHub.png"></a>
-            <a href="https://twitter.com/Martin_Sonesson" target="_blank" displayText="Twitter"><img alt="Twitter" src="../../assets/build/Twitter.png"></a>
-            <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank" displayText="Stack overflow"><img alt="Stack overflow" src="../../assets/build/stackoverflow.png"></a>
-            <a href="http://www.instagram.com/martin.sonesson" target="_blank" displayText="Instagram"><img alt="Instagram" src="../../assets/build/Instagram.png"></a>-->
         </div>
     </div>
     <div class="mainContentItem marginTopLarge" style="width: 100%;">
@@ -28,7 +18,7 @@
                      <img width="250" src="../../assets/build/bioAvatar.jpg" style="border-radius:30px; margin:0 auto;">
                 </div>
             </div>
-            <div class="table center">
+            <div class="table center" style="padding-left: 40px;">
                 <div class="tableRow">
                      <span class="tableRowCell">
                         <p class="rowKeySpan">
