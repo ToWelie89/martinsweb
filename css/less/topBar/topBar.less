@@ -1,5 +1,5 @@
 div#topBar{
-    background: @topBarBackground;
+    background: @niceBlue;
     border-bottom: 2px solid gainsboro;
 
     div#topBarInnerContainer{
@@ -31,21 +31,21 @@ div#topBar{
             width: (@containerWidth / 2);
         }
 
+        @socialMediaLinkColor:       #1DA1F2;
+        @socialMediaLinkColorHover:  lighten(@socialMediaLinkColor, 20%);
+
         #socialMedia {
             vertical-align: middle;
             text-align: right;
             padding-right: 50px;
 
             a {
-                padding-right: 5px;
-                img {
-                    filter: url(../../filters.svg#grayscale); /* Firefox 3.5+ */
-                    filter: gray; /* IE6-9 */
-                    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-                    transition: filter 0.5s, -webkit-filter 0.5s;
+                i {
+                    margin-right: 10px;
+                    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.66);
+                    color: @socialMediaLinkColor;
                     &:hover {
-                        filter: none;
-                        -webkit-filter: grayscale(0);
+                        color: @socialMediaLinkColorHover;
                     }
                 }
             }

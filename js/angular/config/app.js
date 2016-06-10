@@ -20,7 +20,6 @@
 					templateUrl: 'views/cv.html'
 				})
 				.when('/bio', {
-					controller: 'bioController',
 					templateUrl: 'views/build/bio.php'
 				})
 				.when('/404', {

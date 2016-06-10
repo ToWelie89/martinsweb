@@ -182,25 +182,28 @@
 
 		.pdfDownloadInnerContainer {
 			display: table-cell;
-			background: @pdfImage;
-			background-repeat: no-repeat;
-			background-color: transparent;
-			background-position: 90% 0;
 			vertical-align: middle;
 
 			&:hover {
-				p {
+				p, i {
 					color: @lighterBlack;
 				}
 			}
 
 			p {
+				float: left;
 				padding: 20px;
 				font-family: 'ProxiBold';
 				font-size: 2.6em;
 				color: white;
 				text-shadow: 0px 2px 1px black;
 				text-transform: uppercase;
+			}
+			i {
+				color: white;
+				float: right;
+				padding-right: 20px;
+				height: 70px;
 			}
 		}
 	}

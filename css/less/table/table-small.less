@@ -1,0 +1,54 @@
+.cvContainer {
+    padding: 0;
+}
+
+.cvTable {
+    // Extend from .table
+    .table;
+    width: 100%;
+    height: 100%;
+
+    .columnContainer {
+        height: 100%;
+        width: 100%;
+        display: table;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    #leftColumn .table .tableRow .tableRowCell,
+    #rightColumn .table .tableRow .tableRowCell
+    {
+        padding: 15px;
+    }
+
+    .tableRow {
+        .tableRowCell {
+            display: block;
+            padding: 0px;
+            /* JOB EXPERIENCE & EDUCATION */
+            &:first-child {
+                width: 100%;
+                .table {
+                    width: 100%;
+                    .tableRow {
+                        .tableRowCell {
+                            display: table-cell;
+                            /* LEFT */
+                            &:first-child {
+                                width: 100%;
+                            }
+                            /* RIGHT */
+                            &:last-child {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            /* TECHNICAL EXPERIENCE */
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+}

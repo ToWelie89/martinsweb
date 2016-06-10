@@ -4,7 +4,13 @@
         "name": "C#",
         "grade": 5
     }, {
+        "name": "Javascript",
+        "grade": 5
+    }, {
         "name": "Java",
+        "grade": 4
+    }, {
+        "name": "php",
         "grade": 4
     }, {
         "name": "C",
@@ -22,38 +28,44 @@
         "name": "CSS3",
         "grade": 5
     }, {
-        "name": "Javascript",
-        "grade": 5
-    }, {
-        "name": "jQuery",
+        "name": "less",
         "grade": 4
-    }, {
-        "name": "AngularJS",
-        "grade": 4
-    }, {
-        "name": "requirejs",
-        "grade": 3
-    }, {
-        "name": "php",
-        "grade": 4
-    }, {
-        "name": "JSP",
-        "grade": 2
-    }, {
-        "name": "lessc",
-        "grade": 3
     }, {
         "name": "Magnolia",
         "grade": 5
     }, {
         "name": "Grunt",
+        "grade": 4
+    }, {
+        "name": "Bower",
         "grade": 3
     }, {
-        "name": "NodeJS",
+        "name": "Node",
         "grade": 3
     }, {
         "name": "Freemarker",
         "grade": 4
+    }, {
+        "name": "JSP",
+        "grade": 2
+    }]
+}, {
+    "name": "JS frameworks",
+    "competences": [{
+        "name": "jQuery",
+        "grade": 4
+    }, {
+        "name": "Angular",
+        "grade": 4
+    }, {
+        "name": "requirejs",
+        "grade": 3
+    }, {
+        "name": "Photoswipe",
+        "grade": 3
+    }, {
+        "name": "Chart.js",
+        "grade": 3
     }]
 }, {
     "name": "Databases",
@@ -98,13 +110,25 @@
         "grade": 2
     }]
 }, {
-    "name": "Miscellaneous",
+    "name": "OS",
     "competences": [{
         "name": "Linux/Ubuntu",
-        "grade": 4
+        "grade": 5
     }, {
+        "name": "Windows",
+        "grade": 5
+    }]
+}, {
+    "name": "Miscellaneous",
+    "competences": [{
         "name": "Jira",
         "grade": 4
+    }, {
+        "name": "Mockito",
+        "grade": 4
+    }, {
+        "name": "Jenkins",
+        "grade": 3
     }, {
         "name": "Photoshop",
         "grade": 4
@@ -116,6 +140,9 @@
         "grade": 3
     }, {
         "name": "Apache",
+        "grade": 3
+    }, {
+        "name": "MS Office",
         "grade": 3
     }]
 }]
