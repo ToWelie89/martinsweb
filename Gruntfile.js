@@ -34,12 +34,6 @@ module.exports = function(grunt) {
                     }, {
                         match: 'syntaxHighlighterThemeCss',
                         replacement: '<%= grunt.file.read("css/cssLibs/shThemeMidnight.css") %>'
-                    }, {
-                        match: 'bootStrap',
-                        replacement: '<%= grunt.file.read("css/cssLibs/bootstrap.min.css") %>'
-                    }, {
-                        match: 'bootStrapTheme',
-                        replacement: '<%= grunt.file.read("css/cssLibs/bootstrap-theme.min.css") %>'
                     }]
                 },
                 files: [{

@@ -6,19 +6,18 @@
 <meta name="description" content="Portfolio and personal website of webdeveloper, programmer and software engineer Martin Sonesson">
 <meta name="keywords" content="HTML,CSS,XML,JavaScript,Martin,Sonesson,art,blog,tech,photos,videos,cv,biography,bio,projects,android,angular,java,c#">
 <meta name="author" content="Martin Sonesson">
+<meta name="theme-color" content="#457bc3">
 
-<style rel="stylesheet" type="text/css">
-    @@bootStrap
-</style>
-<style rel="stylesheet" type="text/css">
-    @@bootStrapTheme
-</style>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/cssLibs/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/cssLibs/bootstrap.min.css">
+<!-- Font awesome -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <!-- Main CSS -->
 <style>
     @@defaultCss
 </style>
-
 <!-- CSS libs -->
 <style>
     @@photoSwipeCss
@@ -32,8 +31,6 @@
 <style rel="stylesheet" type="text/css">
     @@syntaxHighlighterThemeCss
 </style>
-
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <!-- Local libs -->
 <script type="text/javascript" src="js/libs/shCore.js"></script>
@@ -62,6 +59,8 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+<script src="js/libs/masonry.js"></script>
 
 <!-- martins-web angular -->
 <script src="/assets/build/martins-web.min.js"></script>

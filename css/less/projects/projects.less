@@ -1,0 +1,69 @@
+@projectBorderColor: #a7b7ff;
+@projectBorderColorHover: lighten(@projectBorderColor, 10%);
+
+.grid-item {
+    width: 20%;
+    padding: 10px;
+        a {
+            outline: none;
+            position:relative;
+            display: inline-block;
+            background: black;
+            padding: 0;
+            border: 3px solid @projectBorderColor;
+            border-radius: 25px;
+            transition: border 0.4s;
+            &:hover {
+                border: 3px solid @projectBorderColorHover;
+            }
+
+            &:after, &:before {
+                position: absolute;
+                opacity: 0;
+                transition: all 0.4s;
+                -webkit-transition: all 0.4s;
+            }
+
+            &:after {
+                content: '\A';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            &:before {
+                content: attr(data-content);
+                width: 100%;
+                z-index: 1;
+                bottom: 0;
+                padding: 15px 10px;
+                text-align: center;
+                background: @niceBlue;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                font-size: 1.2em;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: white;
+                font-family: ProxiBold;
+            }
+
+            &:hover {
+                &:after, &:before {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+            }
+        }
+}
+.grid-item--width2 {
+    width: 40%;
+}

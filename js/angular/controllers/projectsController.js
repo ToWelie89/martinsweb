@@ -21,132 +21,81 @@
             'id': 'starapp',
             'img': '../../assets/build/starapp.png',
             'name': 'Star Manager',
-            'description': 'A Starcraft 2 app for Windows 8/RT'
+            'description': 'A Starcraft 2 app for Windows 8/RT',
+            'highlightProject': false
         }, {
             'id': 'portfolio',
             'img': '../../assets/build/portfolio.png',
             'name': 'Portfolio',
-            'description': 'My portfolio and personal website'
+            'description': 'My portfolio and personal website',
+            'highlightProject': true
         }, {
             'id': 'sti',
             'img': '../../assets/build/sti.png',
-            'name': 'sti-starcraft',
-            'description': 'A Starcraft 2 community'
-        }, {
-            'id': 'exjobb',
-            'img': '../../assets/build/exjobb.png',
-            'name': 'Bachelors thesis',
-            'description': 'My Bachelors Thesis from my time at Chalmers'
+            'name': 'STI-Starcraft',
+            'description': 'A Starcraft 2 community',
+            'highlightProject': false
         }, {
             'id': 'instaanalytics',
             'img': '../../assets/build/instaanalytics.png',
             'name': 'Instagram Analyzer',
-            'description': 'An app used for analyzing an Instagram account'
+            'description': 'An app used for analyzing an Instagram account',
+            'highlightProject': false
+        }, {
+            'id': 'exjobb',
+            'img': '../../assets/build/exjobb.png',
+            'name': 'Bachelors thesis',
+            'description': 'My Bachelors Thesis from my time at Chalmers',
+            'highlightProject': true
         }, {
             'id': 'wcc',
             'img': '../../assets/build/wcc.png',
             'name': 'World Cup Calculator',
-            'description': 'A calculator used to simulate potential World cup 2014 results'
+            'description': 'A calculator used to simulate potential World cup 2014 results',
+            'highlightProject': false
         }, {
             'id': 'snake',
             'img': '../../assets/build/snake.png',
             'name': 'GyroSnake',
-            'description': 'A Snake game for Android devices'
+            'description': 'A Snake game for Android devices',
+            'highlightProject': true
         }, {
-            'id': 'flappyDoge',
-            'img': '../../assets/build/flappyDoge.png',
-            'name': 'FlappyDoge',
-            'description': 'My version of the popular game Flappy Bird'
+            'id': 'boxByDoris',
+            'img': '../../assets/build/boxByDoris.png',
+            'name': 'Box By Doris',
+            'description': 'A simple image editor based on Flickrs API',
+            'highlightProject': false
         }, {
             'id': 'mkp',
             'img': '../../assets/build/mkp.png',
             'name': 'Mobile Keyring',
-            'description': 'A technology used for generating temporary passwords'
+            'description': 'A technology used for generating temporary passwords',
+            'highlightProject': false
         }, {
             'id': 'arduinorobot',
             'img': '../../assets/build/arduinoRobot.png',
             'name': 'Arduino Robot',
-            'description': 'A robot built with the Arduino microcontroller unit'
+            'description': 'A robot built with the Arduino microcontroller unit',
+            'highlightProject': true
         }, {
             'id': 'wh40k',
             'img': '../../assets/build/wh40k.png',
-            'name': 'Warhammer 40k Simulator',
-            'description': 'A game engine based on the popular boardgame Warhammer 40k'
+            'name': 'WH40k Simulator',
+            'description': 'A game engine based on the popular boardgame Warhammer 40k',
+            'highlightProject': false
+        }, {
+            'id': 'flappyDoge',
+            'img': '../../assets/build/flappyDoge.png',
+            'name': 'FlappyDoge',
+            'description': 'My version of the popular game Flappy Bird',
+            'highlightProject': false
         }, {
             'id': 'flickrEditor',
             'img': '../../assets/build/flickrEditor.png',
             'name': 'Flickr Editor',
-            'description': 'A simple image editor based on Flickrs API'
+            'description': 'A simple image editor based on Flickrs API',
+            'highlightProject': false
         }];
-
-        // Public functions
-        $scope.projectsLinkClickHandler = projectsLinkClickHandler;
-        $scope.clearLeft = clearLeft;
-
-        /**
-         * @function controllers.ProjectsController#clickOutsideHandler
-         * @description Function for the event when user clicks outside of a the modal element
-         * @param {Obj} e The element
-         */
-        function clickOutsideHandler(e) {
-            var container = $('#projectInfoInner');
-            // if the target of the click isn't the container... nor a descendant of the container
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $('#projectInfo').fadeOut(300);
-                $('#projectsMenu').animate({
-                    opacity: '1.0'
-                }, 300, function() {
-                    $('#projectInfo div').html('');
-                });
-                $(document).unbind();
-            }
-        }
-
-        /**
-         * @function controllers.ProjectsController#projectsLinkClickHandler
-         * @description Function for the event when user clicks a project thumbnail, opens up project modal and loads data
-         * @param {string} id The id of the project
-         */
-        function projectsLinkClickHandler(id) {
-            $('#projectInfo div').load('./includes/build/' + id + '.php', function() {
-                $('#projectsMenu').animate({
-                    opacity: '0.5'
-                }, 300);
-                $('#projectInfo').fadeIn(300);
-                $('#backLink').click(backLinkClickHandler);
-                $(document).mouseup(clickOutsideHandler);
-            });
-        };
-
-        /**
-         * @function controllers.ProjectsController#backLinkClickHandler
-         * @description Function for the event when user clicks the back button, closes modal
-         */
-        function backLinkClickHandler() {
-            $('#projectInfo').fadeOut(300);
-            $('#projectsMenu').animate({
-                opacity: '1.0'
-            }, 300, function() {
-                $('#projectInfo div').html('');
-            });
-            $(document).unbind();
-        }
-
-        /**
-         * @function controllers.ProjectsController#clearLeft
-         * @description Function for returning a clear-left css value depending on current index
-         * @param {number} id The index of the object
-         * @returns {boolean} Returns true or false depending on the index
-         */
-        function clearLeft(index) {
-            if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.LARGE) {
-                return (index % 4 === 0);
-            } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.MEDIUM) {
-                return (index % 3 === 0);
-            } else if (mediaQueryService.getCurrentMediaQuery() === mediaQueryService.breakPoints.SMALL) {
-                return (index % 2 === 0);
-            }
-        };
 
         /**
          * @function controllers.ProjectsController#init
@@ -154,17 +103,32 @@
          */
         function init() {
             $scope.projects = projects;
+            //shuffle($scope.projects);
             $log.debug($scope.projects);
 
-            $('#backLink').click(backLinkClickHandler);
-
             console.log(config);
+
+            setTimeout(function() {
+                $('.grid').masonry({
+                    itemSelector: '.grid-item'
+                });
+
+                $('.grid-item a').hover(function() {
+                    $('.grid-item a').not(this).find('img').stop(false, false);
+                    $('.grid-item a').not(this).find('img').fadeTo(400, 0.2);
+                }, function() {
+                    $('.grid-item a').not(this).find('img').stop(false, false);
+                    $('.grid-item a').not(this).find('img').fadeTo(400, 1);
+                });
+            }, 300);
+
+
         }
 
-        /*function shuffle(o) {
+        function shuffle(o) {
             for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
             return o;
-        }*/
+        }
 
         init();
     }];
