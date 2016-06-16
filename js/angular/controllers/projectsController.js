@@ -8,16 +8,13 @@
      * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
      * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
      * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
-     * @param {services.MediaQueryService} mediaQueryService - Service handling media query breakpoints
      * @param {config} config - Global configuration
+     * @param {$timeout} $timeout - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$timeout}
      */
-    var projectsController = ['$scope', '$log', '$http', 'mediaQueryService', 'config', function($scope, $log, $http, mediaQueryService, config) {
-
-        // Public variables
-        $scope.projects = [];
+    var projectsController = ['$scope', '$log', '$http', 'config', '$timeout', function($scope, $log, $http, config, $timeout) {
 
         // Private variables
-        var projects = [{
+        $scope.projects = [{
             'id': 'starapp',
             'img': '../../assets/build/starapp.png',
             'name': 'Star Manager',
@@ -102,17 +99,13 @@
          * @description Initlization function
          */
         function init() {
-            $scope.projects = projects;
             //shuffle($scope.projects);
             $log.debug($scope.projects);
-
             console.log(config);
-
-            setTimeout(function() {
+            $timeout(function(){
                 $('.grid').masonry({
                     itemSelector: '.grid-item'
                 });
-
                 $('.grid-item a').hover(function() {
                     $('.grid-item a').not(this).find('img').stop(false, false);
                     $('.grid-item a').not(this).find('img').fadeTo(400, 0.2);
@@ -120,9 +113,7 @@
                     $('.grid-item a').not(this).find('img').stop(false, false);
                     $('.grid-item a').not(this).find('img').fadeTo(400, 1);
                 });
-            }, 300);
-
-
+            }, 10);
         }
 
         function shuffle(o) {
