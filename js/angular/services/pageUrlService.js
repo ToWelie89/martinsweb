@@ -70,7 +70,8 @@
 
         return {
             getCurrentMainPage: getCurrentMainPage,
-            getParameterValueByKey: getParameterValueByKey
+            getParameterValueByKey: getParameterValueByKey,
+            getPageName: getPageName
         };
     }];
 

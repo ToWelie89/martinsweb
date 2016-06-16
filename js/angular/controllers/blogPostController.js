@@ -60,7 +60,6 @@
          */
         function init() {
             $scope.loading = true;
-
             setWatch();
 
             blogId = pageUrlService.getParameterValueByKey('id');

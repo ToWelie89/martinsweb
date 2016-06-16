@@ -99,6 +99,7 @@
          * @description Initlization function
          */
         function init() {
+            $(".bootstrapCss").removeAttr("disabled");
             //shuffle($scope.projects);
             $log.debug($scope.projects);
             console.log(config);

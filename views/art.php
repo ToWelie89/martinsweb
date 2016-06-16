@@ -1,4 +1,4 @@
-<div class="centeringBox marginTop">
+<div class="centeringBox paddingTop">
     <div class="centeringInnerBox">
         <p class="standardText">
             <div data-ng-include src="'includes/loadBox.html'" data-ng-show="loading"></div>

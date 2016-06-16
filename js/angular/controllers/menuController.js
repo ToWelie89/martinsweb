@@ -22,6 +22,7 @@
         // Public function
         $scope.mainMenuClickEvent = mainMenuClickEvent;
         $scope.currentPage = currentPage;
+        $scope.getPageName = getPageName;
 
         /**
          * @function controllers.MenuController#init
@@ -67,6 +68,10 @@
                 }
             }
         };
+
+        function getPageName() {
+            return pageUrlService.getPageName();
+        }
 
         /**
          * @function controllers.MenuController#currentPage
