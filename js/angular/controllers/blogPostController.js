@@ -50,6 +50,15 @@
                 $log.debug('Blog post changed');
                 setTimeout(function() {
                     SyntaxHighlighter.highlight();
+                    //$('div[id^="high"]').css('overflow-x', 'scroll');
+                    $('div[id^="high"]').on(
+                        {
+                            'touchstart': function(){
+                                $(this).css('overflow-x', 'scroll');
+                                $(this).find('.line').css('white-space', 'pre');
+                            }
+                        }
+                    );
                 }, 200);
             });
         }

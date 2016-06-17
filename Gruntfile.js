@@ -101,6 +101,9 @@ module.exports = function(grunt) {
                     src: 'views/art.php',
                     dest: 'views/build/art.php'
                 }, {
+                    src: 'views/projects.html',
+                    dest: 'views/build/projects.html'
+                }, {
                     src: 'views/bio.php',
                     dest: 'views/build/bio.php'
                 }, {

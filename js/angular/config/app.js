@@ -27,7 +27,7 @@
 				})
 				.when('/projects', {
 					controller: 'projectsController',
-					templateUrl: 'views/projects.html'
+					templateUrl: 'views/build/projects.html'
 				})
 				.when('/gyroSnakeEditor', {
 					controller: 'gyroSnakeEditorController',
