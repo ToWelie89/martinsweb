@@ -20,18 +20,6 @@
         function init() {
             $log.debug($scope.projects);
             console.log(config);
-            $timeout(function(){
-                $('.grid').masonry({
-                    itemSelector: '.grid-item'
-                });
-                $('.grid-item a').hover(function() {
-                    $('.grid-item a').not(this).find('img').stop(false, false);
-                    $('.grid-item a').not(this).find('img').fadeTo(400, 0.2);
-                }, function() {
-                    $('.grid-item a').not(this).find('img').stop(false, false);
-                    $('.grid-item a').not(this).find('img').fadeTo(400, 1);
-                });
-            }, 200);
         }
 
         function shuffle(o) {

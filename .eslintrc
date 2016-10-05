@@ -1,0 +1,102 @@
+{
+    "plugins": [
+        "angular",
+        "json"
+    ],
+
+    "extends": "google",
+
+    "env": {
+        "browser": true,
+        "es6": false,
+        "jquery": true,
+        "node": true,
+    },
+
+    "globals": {
+    },
+
+    //"parser": "babel-eslint",
+
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+
+    "rules": {
+        "indent": [2, 4, {"VariableDeclarator": 1}],
+        "max-len": "off",
+        "max-nested-callbacks": "off",
+        "no-negated-condition": "warn",
+        "padded-blocks": "off",
+        "valid-jsdoc": [0, {
+            "prefer": {
+                "return": "returns"
+            },
+            "requireReturn": false
+        }],
+
+        "arrow-body-style": "warn",
+        "arrow-parens": "warn",
+        "arrow-spacing": "warn",
+        "constructor-super": "warn",
+        "generator-star-spacing": "warn",
+        "no-class-assign": "warn",
+        "no-confusing-arrow": ["warn", {"allowParens": true}],
+        "no-const-assign": "warn",
+        "no-dupe-class-members": "warn",
+        "no-new-symbol": "warn",
+        "no-restricted-imports": "warn",
+        "no-this-before-super": "warn",
+        "no-useless-constructor": "warn",
+        "no-var": "warn",
+        "object-shorthand": "warn",
+        "prefer-arrow-callback": "warn",
+        "prefer-const": "warn",
+        "prefer-reflect": "off",
+        "prefer-rest-params": "warn",
+        "prefer-spread": "warn",
+        "prefer-template": "warn",
+        "require-yield": "warn",
+        "template-curly-spacing": "warn",
+        "yield-star-spacing": "warn",
+
+        "no-unused-vars": "warn",
+        "new-cap": "warn",
+        //"babel/new-cap": "warn",
+        //"babel/object-shorthand": "warn",
+
+        "fp/no-class": "error",
+        "fp/no-delete": "warn",
+        "fp/no-events": "off",
+        "fp/no-let": "off",
+        "fp/no-loops": "warn",
+        "fp/no-mutating-assign": "error",
+        "fp/no-mutation": "off",
+        "fp/no-nil": "off",
+        "fp/no-this": "off",
+        "fp/no-throw": "off",
+        "fp/no-unused-expression": "off",
+
+        "jasmine/named-spy": "warn",
+        "jasmine/no-focused-tests": "error",
+        "jasmine/no-disabled-tests": "warn",
+        "jasmine/no-suite-dupes": "warn",
+        "jasmine/no-spec-dupes": "warn",
+        "jasmine/missing-expect": "warn",
+        "jasmine/no-suite-callback-args": "error",
+        "jasmine/valid-expect": "warn",
+        "jasmine/no-assign-spyon": "warn",
+
+        "protractor/missing-perform": "error",
+        "protractor/no-browser-pause": "error",
+        "protractor/missing-wait-message": "off",
+        "protractor/no-browser-sleep": "off",
+        "protractor/no-by-xpath": "off",
+        "protractor/no-describe-selectors": "off",
+        "protractor/no-angular-classes": "off",
+        "protractor/use-angular-locators": "off",
+        "protractor/use-simple-repeaters": "off",
+        "protractor/by-css-shortcut": "off"
+    }
+}

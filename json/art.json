@@ -1,4 +1,12 @@
 [{
+    "bigImage": "/artwork/53.jpg",
+    "thumbnail": "/artwork/53_thumb.jpg",
+    "width": 640,
+    "height": 640
+}, {
+    "thumbnail": "/artwork/54_thumb.jpg",
+    "video": "/artwork/54.mp4"
+}, {
     "bigImage": "/artwork/1.jpg",
     "thumbnail": "/artwork/1_thumb.jpg",
     "width": 1080,

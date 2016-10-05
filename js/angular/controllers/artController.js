@@ -46,13 +46,15 @@
                         src: $scope.art[j].bigImage,
                         w: $scope.art[j].width,
                         h: $scope.art[j].height,
-                        index: $scope.art[j].index
+                        index: $scope.art[j].index,
+                        title: 'Slide right or left to change item. Slide down or up to close current item.'
                     });
                 } else {
                     items.push({
                         html: '<div class="videoSlide"><div class="videoSlideInner"><video id="videoPlayer' + $scope.art[j].index + '" controls><source src="' +
                             $scope.art[j].video + '" type="video/mp4" /></video></div></div>',
-                        index: $scope.art[j].index
+                        index: $scope.art[j].index,
+                        title: 'Slide right or left to change item. Slide down or up to close current item.'
                     });
                 }
             }

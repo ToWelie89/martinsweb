@@ -1,7 +1,15 @@
-.grid-item, .grid-item--width2 {
-    a {
-        &:after, &:before {
-            opacity: 1;
-        }
+.grid-item {
+    width: 25%;
+    &:nth-child(4n) {
+        clear: right;
+    }
+    &:nth-child(4n+1) {
+        clear: left;
+    }
+    &:nth-child(5n) {
+        clear: none;
+    }
+    &:nth-child(5n+1) {
+        clear: none;
     }
 }
