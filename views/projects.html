@@ -1,5 +1,9 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
+        <a href="" data-content="ECMA6 Risk" data-toggle="modal" data-target="#riskModal" style="background: url(../../assets/build/ecmaRisk.png)">
+        </a>
+    </div>
+    <div class="grid-item">
         <a href="" data-content="Star Manager" data-toggle="modal" data-target="#starappModal" style="background: url(../../assets/build/starapp.png)">
         </a>
     </div>
@@ -48,7 +52,32 @@
         </a>
     </div>
 </div>
-
+<!-- Risk modal -->
+<div id="riskModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+                <h4 class="modal-title">
+                    EMCA6 Risk
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    TO DO
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a class="button floatRight" href="https://github.com/ToWelie89/ECMA6Risk" target="_blank">
+                    <p text="Code"></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Star Manager modal -->
 <div id="starappModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -469,20 +498,6 @@
                     easiest game to learn for a newcomer. Hence I figured it would be a nice idea to build an engine that uses the exact same rules,
                     takes into account all relevant factors and calculates an outcome for a given situation. The application is coded in C#. This
                     project is under development.
-                </p>
-                <p class="marginTop">
-                    The solution consisted of an Android application that the user uses to generate temporary passwords for a given website. The passwords can
-                    be a one time use password with a specific time limit but it could also have a defined number of usages and/or any given time limit. In
-                    order to use the app together with a specific website the website obviously has to support the functionality, something that can be fixed quite
-                    easily by an admin on the server side. We used prototype websites with normal login functionality to test the technology out.
-                    First time it is used with a specific website it has to be connected with the application using an authentication key that can
-                    be inputted via a QR code. After the connection is made the app can thereafter be used to generate temporary keys for login without having
-                    any stored information regarding the real password of the user.
-                </p>
-                <p class="marginTop">
-                    The application also needed a pin code to unlock in case the cellphone would get stolen. As an extra precaution though we also developed a PC
-                    application in Java that could be synced with the web application. The PC application could then in turn disable usage of the app to
-                    generate passwords for given websites.
                 </p>
             </div>
             <div class="modal-footer">

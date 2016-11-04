@@ -61,16 +61,6 @@ div.blogPostContainer {
         width: 50%;
     }
 
-    &:first-child {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-
-    &:last-child {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
     &:hover {
         .blogPostInnerContainer {
             .blogTitle, .excerpt {
@@ -82,6 +72,13 @@ div.blogPostContainer {
 }
 
 .blogContent {
+    ul {
+        padding-left: 20px;
+        li {
+            padding-bottom: 10px;
+        }
+    }
+
     div[id^='high'] {
         overflow-x: hidden;
         padding-top: 10px;
