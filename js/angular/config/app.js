@@ -49,7 +49,8 @@
 					templateUrl: 'views/build/art.php'
 				})
 				.when('/videos', {
-					templateUrl: 'views/videos.html'
+					controller: 'videosController',
+					templateUrl: 'views/build/videos.html'
 				})
 				.when('/photos', {
 					templateUrl: 'views/photos.html'

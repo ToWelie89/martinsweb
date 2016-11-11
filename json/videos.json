@@ -4,66 +4,111 @@
         "videos": [{
             "name": "Orc drawing timelapse",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=krux_3u6Bbs"
+            "oldurl": "https://www.youtube.com/embed/krux_3u6Bbs",
+            "url": "http://youtubeinmp4.com/redirect.php?video=krux_3u6Bbs&r=jgwODMINxeAHbb7WAADV2CN9lOpdpfya0gx%2BBHL1mAI%3D&hd=1",
+            "thumbnail": "https://img.youtube.com/vi/krux_3u6Bbs/mqdefault.jpg",
+            "index": 1
         }, {
             "name": "Winter owl - Photoshop & tablet drawing",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=DBbjYklsN_s"
+            "oldurl": "https://www.youtube.com/watch?v=DBbjYklsN_s",
+            "url": "http://youtubeinmp4.com/redirect.php?video=DBbjYklsN_s&r=jVRboTlhuX2B9QjZqwNAyCl5HrEYhYUYXnF384EHleA%3D&hd=1",
+            "thumbnail": "https://img.youtube.com/vi/DBbjYklsN_s/mqdefault.jpg",
+            "index": 2
         }, {
             "name": "Lizard - Speed drawing",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=7x2UNZJR6CE"
+            "oldurl": "https://www.youtube.com/watch?v=7x2UNZJR6CE",
+            "url": "http://youtubeinmp4.com/redirect.php?video=7x2UNZJR6CE&r=%2Fr83qXacqRFowjshiVJrO6mJhM5Xq9%2BqmL5%2Fi8fwIg8%3D&hd=1",
+            "thumbnail": "https://img.youtube.com/vi/7x2UNZJR6CE/mqdefault.jpg",
+            "index": 3
         }, {
             "name": "Lizard monster drawing",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=BZlBThdalQk"
+            "url": "http://youtubeinmp4.com/redirect.php?video=BZlBThdalQk&r=qAM1PeNzai7X%2FhvevsAGfp1jxktQc7URG34%2B2zG70U0%3D&hd=1",
+            "oldurl": "https://www.youtube.com/watch?v=BZlBThdalQk",
+            "thumbnail": "https://img.youtube.com/vi/BZlBThdalQk/mqdefault.jpg",
+            "index": 4
         }, {
             "name": "Tiger speed drawing",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=3tXxkPJKhaY"
+            "url": "http://youtubeinmp4.com/redirect.php?video=3tXxkPJKhaY&r=JCzKEkTa3pOb%2B1fm7V7JaDTtRu0XCokd%2B22afwCYHP8%3D&hd=1",
+            "oldurl": "https://www.youtube.com/watch?v=3tXxkPJKhaY",
+            "thumbnail": "https://img.youtube.com/vi/3tXxkPJKhaY/mqdefault.jpg",
+            "index": 5
         }]
     }, {
         "name": "Gaming",
         "videos": [{
             "name": "Fifa 15 2v2 - LOL moments",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=FtmTcA0xq8M"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=FtmTcA0xq8M",
+            "thumbnail": "https://img.youtube.com/vi/FtmTcA0xq8M/mqdefault.jpg",
+            "index": 1
         }, {
             "name": "Fifa 15 - 2v2 - BubonicBrain & T0Weli3 - Best goals",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=XkxLlN35xs8"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=XkxLlN35xs8",
+            "thumbnail": "https://img.youtube.com/vi/XkxLlN35xs8/mqdefault.jpg",
+            "index": 2
         }, {
             "name": "ToWelie - Battlefield 4 montage",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=HScxsJkpf_8"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=HScxsJkpf_8",
+            "thumbnail": "https://img.youtube.com/vi/HScxsJkpf_8/mqdefault.jpg",
+            "index": 3
         }, {
             "name": "ToWelieSTI ladder highlights - StarCraft 2 - Part 3",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=_ofEb2kekYI"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=_ofEb2kekYI",
+            "thumbnail": "https://img.youtube.com/vi/_ofEb2kekYI/mqdefault.jpg",
+            "index": 4
         }, {
             "name": "ToWelieSTI ladder highlights - StarCraft 2 - Part 2",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=L27_NCeNaQ8"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=L27_NCeNaQ8",
+            "thumbnail": "https://img.youtube.com/vi/L27_NCeNaQ8/mqdefault.jpg",
+            "index": 5
         }, {
             "name": "ToWelieSTI ladder highlights - StarCraft 2 - Part 1",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=yQMLZaJYBvI"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=yQMLZaJYBvI",
+            "thumbnail": "https://img.youtube.com/vi/yQMLZaJYBvI/mqdefault.jpg",
+            "index": 6
         }, {
             "name": "Call of Duty: Modern Warfare 2 - TGF Frag montage",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=Bm1-emdG6dA"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=Bm1-emdG6dA",
+            "thumbnail": "https://img.youtube.com/vi/Bm1-emdG6dA/mqdefault.jpg",
+            "index": 7
         }, {
             "name": "Call of Duty: Modern Warfare 2 - Sniping Skillz - [TGF]",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=j0shh6_YY2g"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=j0shh6_YY2g",
+            "thumbnail": "https://img.youtube.com/vi/j0shh6_YY2g/mqdefault.jpg",
+            "index": 8
         }, {
             "name": "ToWelieSTI ladder highlights - StarCraft 2 - Part 2",
             "description": "",
-            "url": "https://www.youtube.com/watch?v=L27_NCeNaQ8"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=L27_NCeNaQ8",
+            "thumbnail": "https://img.youtube.com/vi/L27_NCeNaQ8/mqdefault.jpg",
+            "index": 9
         }, {
             "name": "MFWA - Karazhan encounters",
             "description": "A very old WoW-video I made with some footage from our guild MFWA raiding Karazhan back in the Burning Crusade days.",
-            "url": "https://www.youtube.com/watch?v=VfiP9KyfjmU"
+            "url": "",
+            "oldurl": "https://www.youtube.com/watch?v=VfiP9KyfjmU",
+            "thumbnail": "https://img.youtube.com/vi/VfiP9KyfjmU/mqdefault.jpg",
+            "index": 10
         }]
     }]
 }
