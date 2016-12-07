@@ -1,19 +1,16 @@
-<div class="centeringBox paddingTop">
+<!-- <div class="centeringBox paddingTop">
     <div class="centeringInnerBox">
-        <p class="standardText">
-            <div data-ng-include src="'includes/loadBox.html'" data-ng-show="loading"></div>
-            <div data-ng-show="!loading">
-                <div data-ng-repeat="videoCategory in videos">
-                    <h1 data-ng-bind="videoCategory.name"></h1>
+        <div data-ng-repeat="videoCategory in videos" id="video-gallery">
+            <div class="video-gallery">
+                <h1 data-ng-bind="videoCategory.name"></h1>
+                <a href="{{video.url}}" data-poster="{{video.thumbnail}}"  data-ng-repeat="video in videoCategory.videos">
                     <img class="artGalleryImg"
                          src="../../assets/build/play_icon.png"
-                         width="150"
-                         height="150"
                          style="background-image: url({{video.thumbnail}}); background-size: cover;"
-                         data-ng-click="openPhotoSwipe(video, videoCategory)"
-                         data-ng-repeat="video in videoCategory.videos"/>
-                </div>
+                         width="150"
+                         height="150">
+                </a>
             </div>
-        </p>
+        </div>
     </div>
-</div>
+</div> -->
