@@ -14,6 +14,7 @@
 <!-- Font awesome -->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
+<!-- Light gallery -->
 <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/dist/css/lightgallery.min.css" />
 <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/dist/css/lg-transitions.min.css" />
 
@@ -46,31 +47,33 @@
 <script async src="js/libs/trianglify.js"></script>
 <script async src="js/libs/photoswipe/photoswipe.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
-<script async src="js/libs/bootstrap.js"></script>
 <script async src="/assets/build/MapEditor.min.js"></script>
 <script async src="js/libs/snowstorm-min.js"></script>
 
+<script>
+    /*
+    snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+    snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    */
+</script>
+
 <!-- Node module libs -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script async src="js/libs/bootstrap.js"></script>
 <!-- <script src="node_modules/jquery-mobile/dist/jquery.mobile.min.js"></script> -->
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
 
+<!-- light gallery -->
 <script src="node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
-
-<!-- lightgallery plugins -->
+<script src="node_modules/lg-video/dist/lg-video.min.js"></script>
 <script src="node_modules/lg-thumbnail/dist/lg-thumbnail.min.js"></script>
 <script src="node_modules/lg-fullscreen/dist/lg-fullscreen.min.js"></script>
-
-<script src="node_modules/lg-video/dist/lg-video.min.js"></script>
 <script src="node_modules/lg-autoplay/dist/lg-autoplay.min.js"></script>
 <script src="node_modules/lg-zoom/dist/lg-zoom.min.js"></script>
-<script src="node_modules/lg-hash/lg-hash.min.js"></script>
+<script src="node_modules/lg-hash/dist/lg-hash.min.js"></script>
 <script src="node_modules/lg-pager/dist/lg-pager.min.js"></script>
-
-<script src="js/libs/masonry.js"></script>
 
 <!-- martins-web angular -->
 <script src="/assets/build/martins-web.min.js"></script>
@@ -85,18 +88,18 @@
             cell_size: 120,
             x_colors: ['#000000', '#2e3192','#ffffff'],
             y_colors: ['#ffffff', '#1b1464','#000000']
-	    });
-	    $(".mainBg").html(pattern.canvas());
-	    $(".mainBg canvas").attr("id", "canvasBg");
+      });
+      $(".mainBg").html(pattern.canvas());
+      $(".mainBg canvas").attr("id", "canvasBg");
 
-		//$(window).resize(resizeCanvas);
-		function resizeCanvas() {
+    //$(window).resize(resizeCanvas);
+    function resizeCanvas() {
             var pattern = Trianglify({
                 width: window.innerWidth,
                 height: window.innerHeight
-    	    });
-    	    $(".mainBg").html(pattern.canvas());
-		}
+          });
+          $(".mainBg").html(pattern.canvas());
+    }
     }
 </script>
 
@@ -136,7 +139,6 @@
 
   ga('create', 'UA-68930281-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 <title>

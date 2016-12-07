@@ -2,38 +2,39 @@
     "categories": [{
         "name": "Drawing",
         "videos": [{
+            "name": "Deer drawing timelapse",
+            "description": "",
+            "url": "http://www.youtube.com/watch?v=DFK_SgbwNVs",
+            "thumbnail": "https://img.youtube.com/vi/DFK_SgbwNVs/mqdefault.jpg",
+            "index": 1
+        }, {
             "name": "Orc drawing timelapse",
             "description": "",
-            "oldurl": "https://www.youtube.com/embed/krux_3u6Bbs",
-            "url": "http://youtubeinmp4.com/redirect.php?video=krux_3u6Bbs&r=jgwODMINxeAHbb7WAADV2CN9lOpdpfya0gx%2BBHL1mAI%3D&hd=1",
+            "url": "http://www.youtube.com/watch?v=krux_3u6Bbs",
             "thumbnail": "https://img.youtube.com/vi/krux_3u6Bbs/mqdefault.jpg",
             "index": 1
         }, {
             "name": "Winter owl - Photoshop & tablet drawing",
             "description": "",
-            "oldurl": "https://www.youtube.com/watch?v=DBbjYklsN_s",
-            "url": "http://youtubeinmp4.com/redirect.php?video=DBbjYklsN_s&r=jVRboTlhuX2B9QjZqwNAyCl5HrEYhYUYXnF384EHleA%3D&hd=1",
+            "url": "http://www.youtube.com/watch?v=DBbjYklsN_s",
             "thumbnail": "https://img.youtube.com/vi/DBbjYklsN_s/mqdefault.jpg",
             "index": 2
         }, {
             "name": "Lizard - Speed drawing",
             "description": "",
-            "oldurl": "https://www.youtube.com/watch?v=7x2UNZJR6CE",
-            "url": "http://youtubeinmp4.com/redirect.php?video=7x2UNZJR6CE&r=%2Fr83qXacqRFowjshiVJrO6mJhM5Xq9%2BqmL5%2Fi8fwIg8%3D&hd=1",
+            "url": "https://www.youtube.com/watch?v=7x2UNZJR6CE",
             "thumbnail": "https://img.youtube.com/vi/7x2UNZJR6CE/mqdefault.jpg",
             "index": 3
         }, {
             "name": "Lizard monster drawing",
             "description": "",
-            "url": "http://youtubeinmp4.com/redirect.php?video=BZlBThdalQk&r=qAM1PeNzai7X%2FhvevsAGfp1jxktQc7URG34%2B2zG70U0%3D&hd=1",
-            "oldurl": "https://www.youtube.com/watch?v=BZlBThdalQk",
+            "url": "https://www.youtube.com/watch?v=BZlBThdalQk",
             "thumbnail": "https://img.youtube.com/vi/BZlBThdalQk/mqdefault.jpg",
             "index": 4
         }, {
             "name": "Tiger speed drawing",
             "description": "",
-            "url": "http://youtubeinmp4.com/redirect.php?video=3tXxkPJKhaY&r=JCzKEkTa3pOb%2B1fm7V7JaDTtRu0XCokd%2B22afwCYHP8%3D&hd=1",
-            "oldurl": "https://www.youtube.com/watch?v=3tXxkPJKhaY",
+            "url": "https://www.youtube.com/watch?v=3tXxkPJKhaY",
             "thumbnail": "https://img.youtube.com/vi/3tXxkPJKhaY/mqdefault.jpg",
             "index": 5
         }]

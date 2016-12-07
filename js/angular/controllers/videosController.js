@@ -21,14 +21,10 @@
          * @description Initialization Function
          */
         function init() {
-            /* $http.get('json/videos.json').success(function(data) {
-                $scope.videos = data;
-            });
-
             $(".video-gallery").lightGallery({
-                autoplay: true,
-                share: false
-            })*/
+                thumbnail: true,
+                selector: ".video"
+            });
         }
 
         init();
