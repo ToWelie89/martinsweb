@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor MainController
@@ -12,5 +12,5 @@
         });
     }];
 
-    app.controller("mainController", mainController);
+    app.controller('mainController', mainController);
 }());

@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor BlogController
@@ -35,12 +35,12 @@
         function formatPosts() {
             angular.forEach($scope.posts, function(post) {
                 post.excerpt = post.excerpt.substring(0, 150);
-                post.excerpt = post.excerpt.replace(/^\s+|\s+$/g,"");
+                post.excerpt = post.excerpt.replace(/^\s+|\s+$/g, '');
 
                 // Get the text content of the excerpt, strip html tags like <p>
-                var div = document.createElement("div");
+                var div = document.createElement('div');
                 div.innerHTML = post.excerpt;
-                post.excerpt = div.textContent || div.innerText || "";
+                post.excerpt = div.textContent || div.innerText || '';
 
                 post.excerpt += '&#8230;';
                 post.modified = post.modified.substring(0, 10);
@@ -75,5 +75,5 @@
         init();
     }];
 
-    app.controller("blogController", blogController);
+    app.controller('blogController', blogController);
 }());

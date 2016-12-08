@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor PageUrlService
@@ -17,9 +17,9 @@
          */
         function getPageName() {
             var page = $location.path();
-            page = page.replace(".html", "");
-            page = page.replace(".php", "");
-            page = page.replace("/", "");
+            page = page.replace('.html', '');
+            page = page.replace('.php', '');
+            page = page.replace('/', '');
             if (page === '') {
                 page = 'start';
             }

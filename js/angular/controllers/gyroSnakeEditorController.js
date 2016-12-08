@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor GyroSnakeEditorController
@@ -19,5 +19,5 @@
         init();
     }];
 
-    app.controller("gyroSnakeEditorController", gyroSnakeEditorController);
+    app.controller('gyroSnakeEditorController', gyroSnakeEditorController);
 }());

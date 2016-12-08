@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor InstagramService
@@ -20,7 +20,7 @@
         var getInitialSelfFlow = function(userId) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
                     userId: userId
                 }),
@@ -46,7 +46,7 @@
         var getSelfFlowWithMaxId = function(userId, maxId) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
                     maxId: maxId,
                     userId: userId
@@ -72,9 +72,9 @@
         var searchForUser = function(query) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
-                    action: "search",
+                    action: 'search',
                     query: query
                 }),
                 headers: {
@@ -98,9 +98,9 @@
         var getMediaByTag = function(tag) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
-                    action: "getMediaByTag",
+                    action: 'getMediaByTag',
                     tag: tag
                 }),
                 headers: {
@@ -125,9 +125,9 @@
         var getMediaByTagWithMaxId = function(tag, maxId) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
-                    action: "getMediaByTagWithMaxId",
+                    action: 'getMediaByTagWithMaxId',
                     tag: tag,
                     maxId: maxId
                 }),
@@ -152,9 +152,9 @@
         var getUserInformation = function(userId) {
             return $http({
                 url: './model/instagramService.php',
-                method: "POST",
+                method: 'POST',
                 data: $.param({
-                    action: "getUserInformation",
+                    action: 'getUserInformation',
                     userId: userId
                 }),
                 headers: {

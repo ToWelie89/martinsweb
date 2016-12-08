@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor CvController
@@ -28,5 +28,5 @@
         init();
     }];
 
-    app.controller("cvController", cvController);
+    app.controller('cvController', cvController);
 }());

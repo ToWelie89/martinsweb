@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor WordpressService
@@ -20,7 +20,7 @@
         var getPosts = function(blogName) {
             return $http({
                 url: 'https://public-api.wordpress.com/rest/v1.1/sites/' + blogName + '.wordpress.com/posts/',
-                method: "GET"
+                method: 'GET'
             }).
             success(function(data, status, headers, config) {
                 return data;
@@ -40,7 +40,7 @@
         var getPostById = function(id, blogName) {
             return $http({
                 url: 'https://public-api.wordpress.com/rest/v1.1/sites/' + blogName + '.wordpress.com/posts/' + id,
-                method: "GET"
+                method: 'GET'
             }).
             success(function(data, status, headers, config) {
                 return data;

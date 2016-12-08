@@ -163,6 +163,17 @@ module.exports = function(grunt) {
                     template: './jsdocTemplate'
                 }
             }
+        },
+        notify: {
+            watch: {
+                options: {
+                    title: 'Grunt watch', // optional
+                    message: 'Build complete' // required
+                }
+            }
+        },
+        eslint: {
+            target: 'js/angular/**/*.js'
         }
     });
 
@@ -178,6 +189,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-jsdoc');
+    grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-eslint');
 
     // Default task for building
     grunt.registerTask('default', [
@@ -188,7 +201,9 @@ module.exports = function(grunt) {
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline', // Inline all css in head
-        'jsdoc'
+        'jsdoc',
+        'eslint',
+        'notify'
     ]);
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors

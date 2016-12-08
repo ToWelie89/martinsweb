@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module("martinsWeb");
+    var app = angular.module('martinsWeb');
 
     /**
      * @constructor MenuController
@@ -46,22 +46,22 @@
          */
         function mainMenuClickEvent(id) {
             if (id === pageUrlService.getCurrentMainPage() || !id) {
-                $(".subMenuBar").slideUp(slideTime);
-                $(".subMenuBar[for='" + pageUrlService.getCurrentMainPage() + "']").slideDown(slideTime);
+                $('.subMenuBar').slideUp(slideTime);
+                $('.subMenuBar[for="' + pageUrlService.getCurrentMainPage() + '"]').slideDown(slideTime);
                 return;
             }
 
-            $(".subMenuBar").slideUp(slideTime);
+            $('.subMenuBar').slideUp(slideTime);
 
-            var submenuElement = $(".subMenuBar[for='" + id + "']");
+            var submenuElement = $('.subMenuBar[for="' + id + '"]');
 
             if (submenuElement.length > 0) {
-                var displayStyle = submenuElement.css("display");
-                if (displayStyle === "none") {
+                var displayStyle = submenuElement.css('display');
+                if (displayStyle === 'none') {
                     submenuElement.slideDown(slideTime);
                 } else {
                     submenuElement.slideUp(slideTime);
-                    var selectedSubmenuElement = $(".subMenuBar[for='" + pageUrlService.getCurrentMainPage() + "']");
+                    var selectedSubmenuElement = $('.subMenuBar[for="' + pageUrlService.getCurrentMainPage() + '"]');
                     if (selectedSubmenuElement.length > 0) {
                         selectedSubmenuElement.slideDown(slideTime);
                     }
@@ -69,6 +69,11 @@
             }
         };
 
+        /**
+         * @function controllers.MenuController#getPageName
+         * @description Function for getting the current page name
+         * @returns {string} The current page name
+         */
         function getPageName() {
             return pageUrlService.getPageName();
         }
@@ -85,5 +90,5 @@
         init();
     }];
 
-    app.controller("menuController", menuController);
+    app.controller('menuController', menuController);
 }());

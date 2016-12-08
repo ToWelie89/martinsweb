@@ -34,7 +34,7 @@
                     video: (response[i].video ? response[i].video : null),
                     index: $scope.art.length,
                     width: response[i].width,
-                    height: response[i].height,
+                    height: response[i].height
                 });
             }
 
