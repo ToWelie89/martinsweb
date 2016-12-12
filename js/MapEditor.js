@@ -10,7 +10,7 @@
  * can be null or not set.
  * @param onlyMap set to true if only the map part of the editor will be show.
  */
-function MapEditor(divID, loadXML, notAllowEdit, onlyMap) {
+function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 
 	var allow_edit = true;
 

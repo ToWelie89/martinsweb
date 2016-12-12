@@ -13,7 +13,7 @@
          * @description Initilization function
          */
         function init() {
-            MapEditor('mapeditor');
+            mapEditor('mapeditor');
         }
 
         init();

@@ -201,9 +201,9 @@ module.exports = function(grunt) {
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline', // Inline all css in head
-        'jsdoc',
-        'eslint',
-        'notify'
+        'jsdoc', // Generate Javascript doc
+        'eslint', // ES-lint test
+        'notify' // Notify that build is complete
     ]);
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors
