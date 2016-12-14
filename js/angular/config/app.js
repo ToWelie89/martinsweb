@@ -9,6 +9,7 @@
         function($routeProvider, $locationProvider, $logProvider) {
             $routeProvider
                 .when('/', {
+                    controller: 'startController',
                     templateUrl: 'views/index.html'
                 })
                 .when('/projects', {
