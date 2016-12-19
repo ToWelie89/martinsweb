@@ -202,11 +202,11 @@ module.exports = function(grunt) {
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline', // Inline all css in head
         'jsdoc', // Generate Javascript doc
-        'eslint', // ES-lint test
         'notify' // Notify that build is complete
     ]);
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors
-        'jsonlint' // JSON LINT, test json files for syntax errors
+        'jsonlint', // JSON LINT, test json files for syntax errors
+	'eslint'
     ]);
 };
