@@ -1,4 +1,9 @@
 [{
+    "bigImage": "/artwork/54.png",
+    "thumbnail": "/artwork/54_thumb.png",
+    "width": 635,
+    "height": 901
+}, {
     "bigImage": "/artwork/53.jpg",
     "thumbnail": "/artwork/53_thumb.jpg",
     "width": 640,
