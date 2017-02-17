@@ -18,12 +18,15 @@
         position:relative;
         background: black;
         padding: 0;
-        border: 3px solid @projectBorderColor;
-        border-radius: 25px;
         width: 100%;
         height: 200px;
         background-size: cover !important;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+        transition: all 0.7s;
+        -webkit-transition: all 0.7s;
+
         &:hover {
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
             &:before {
                 background: @hoverColor;
             }
@@ -46,25 +49,17 @@
             content: attr(data-content);
             width: 100%;
             z-index: 1;
-            bottom: 0;
+            bottom: -1px;
             padding: 15px 10px;
             text-align: center;
             background: @niceBlue;
             box-sizing: border-box;
             -moz-box-sizing: border-box;
             font-size: 1.2em;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
             color: white;
             font-family: ProxiBold;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+            transition: all 0.7s;
+            -webkit-transition: all 0.7s;
         }
     }
 }
