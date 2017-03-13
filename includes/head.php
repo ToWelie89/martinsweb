@@ -45,7 +45,7 @@
 <script type="text/javascript" src="js/libs/shBrushJScript.js"></script>
 
 <script async src="js/libs/trianglify.js"></script>
-<script async src="js/libs/photoswipe/photoswipe.js"></script>
+<script async src="assets/build/photoswipe.min.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="/assets/build/MapEditor.min.js"></script>
 <!-- <script async src="js/libs/snowstorm-min.js"></script> -->

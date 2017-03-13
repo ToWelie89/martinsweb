@@ -13,6 +13,9 @@ module.exports = function(grunt) {
                 }, {
                     src: 'js/MapEditor.js',
                     dest: 'assets/build/MapEditor.min.js'
+                }, {
+                    src: 'js/libs/photoswipe/photoswipe.js',
+                    dest: 'assets/build/photoswipe.min.js'
                 }]
             }
         },
