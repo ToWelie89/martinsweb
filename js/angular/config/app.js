@@ -16,6 +16,10 @@
                     controller: 'projectsController',
                     templateUrl: 'views/projects.html'
                 })
+                .when('/projects/:projectName', {
+                    controller: 'projectsController',
+                    templateUrl: 'views/build/projects.html'
+                })
                 .when('/cv', {
                     controller: 'cvController',
                     templateUrl: 'views/cv.html'

@@ -11,7 +11,10 @@
      * @param {config} config - Global configuration
      * @param {$timeout} $timeout - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$timeout}
      */
-    var projectsController = ['$scope', '$log', '$http', 'config', '$timeout', function($scope, $log, $http, config, $timeout) {
+    var projectsController = ['$scope', '$log', '$http', 'config', '$timeout', '$routeParams', '$location', '$window', function($scope, $log, $http, config, $timeout, $routeParams, $location, $window) {
+
+        $scope.openProject = openProject;
+        $scope.closeProject = closeProject;
 
         /**
          * @function controllers.ProjectsController#init
@@ -19,7 +22,40 @@
          */
         function init() {
             $log.debug($scope.projects);
-            console.log(config);
+
+            setTimeout(function() {
+                $('.modal').each(function() {
+                    $(this).on('hidden.bs.modal', function (e) {
+                        $window.location.assign('/#projects');
+                    });
+                })
+                if ($routeParams.projectName) {
+                    $('#' + $routeParams.projectName + 'Modal').modal('toggle');
+                }
+            }, 100);
+        }
+
+        /**
+         * @function controllers.ProjectsController#openProject
+         * @param {String} The project name
+         * @description Opens a modal for the project
+         */
+        function openProject(projectName) {
+            $location.path('projects/' + projectName);
+        }
+
+        /**
+         * @function controllers.ProjectsController#closeProject
+         * @param {String} The project name
+         * @description Closes a modal for the project
+         */
+        function closeProject(projectName) {
+            $('#' + projectName + 'Modal').modal('toggle');
+            $('.modal-backdrop').css('opacity', 0);
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+
+            $location.path('projects/');
         }
 
         /**

@@ -1,58 +1,58 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
-        <a href="" data-content="ECMA6 Risk" data-toggle="modal" data-target="#riskModal" style="background: url(../../assets/build/ecmaRisk.png)">
+        <a href="" data-content="ECMA6 Risk" data-ng-click="openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Star Manager" data-toggle="modal" data-target="#starappModal" style="background: url(../../assets/build/starapp.png)">
+        <a href="" data-content="Star Manager" data-ng-click="openProject('starapp')" style="background: url(../../assets/build/starapp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Portfolio" data-toggle="modal" data-target="#portfolioModal" style="background: url(../../assets/build/portfolio.png)">
+        <a href="" data-content="Portfolio" data-ng-click="openProject('portfolio')" style="background: url(../../assets/build/portfolio.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="STI-Starcraft" data-toggle="modal" data-target="#stiModal" style="background: url(../../assets/build/sti.png)">
+        <a href="" data-content="STI-Starcraft" data-ng-click="openProject('sti')" style="background: url(../../assets/build/sti.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Gyro Snake" data-toggle="modal" data-target="#snakeModal" style="background: url(../../assets/build/snake.png)">
+        <a href="" data-content="Gyro Snake" data-ng-click="openProject('snake')" style="background: url(../../assets/build/snake.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Instagram Analyzer" data-toggle="modal" data-target="#instaanalyticsModal" style="background: url(../../assets/build/instaanalytics.png)">
+        <a href="" data-content="Instagram Analyzer" data-ng-click="openProject('instaanalytics')" style="background: url(../../assets/build/instaanalytics.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Bachelors thesis" data-toggle="modal" data-target="#exjobbModal" style="background: url(../../assets/build/exjobb.png)">
+        <a href="" data-content="Bachelors thesis" data-ng-click="openProject('exjobb')" style="background: url(../../assets/build/exjobb.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="World Cup Calculator" data-toggle="modal" data-target="#wccModal" style="background: url(../../assets/build/wcc.png)">
+        <a href="" data-content="World Cup Calculator" data-ng-click="openProject('wcc')" style="background: url(../../assets/build/wcc.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Box By Doris" data-toggle="modal" data-target="#boxByDorisModal" style="background: url(../../assets/build/boxByDoris.png)">
+        <a href="" data-content="Box By Doris" data-ng-click="openProject('boxByDoris')" style="background: url(../../assets/build/boxByDoris.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Mobile Keyring" data-toggle="modal" data-target="#mkpModal" style="background: url(../../assets/build/mkp.png)">
+        <a href="" data-content="Mobile Keyring" data-ng-click="openProject('mkp')" style="background: url(../../assets/build/mkp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Arduino Robot" data-toggle="modal" data-target="#arduinorobotModal" style="background: url(../../assets/build/arduinoRobot.png)">
+        <a href="" data-content="Arduino Robot" data-ng-click="openProject('arduinoRobot')" style="background: url(../../assets/build/arduinoRobot.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="WH40k Simulator" data-toggle="modal" data-target="#wh40kModal" style="background: url(../../assets/build/wh40k.png)">
+        <a href="" data-content="WH40k Simulator" data-ng-click="openProject('wh40k')" style="background: url(../../assets/build/wh40k.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="FlappyDoge" data-toggle="modal" data-target="#flappyDogeModal" style="background: url(../../assets/build/flappyDoge.png)">
+        <a href="" data-content="FlappyDoge" data-ng-click="openProject('flappyDoge')" style="background: url(../../assets/build/flappyDoge.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Flickr Editor" data-toggle="modal" data-target="#flickrEditorModal" style="background: url(../../assets/build/flickrEditor.png)">
+        <a href="" data-content="Flickr Editor" data-ng-click="openProject('flickrEditor')" style="background: url(../../assets/build/flickrEditor.png)">
         </a>
     </div>
 </div>
@@ -62,7 +62,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('risk')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -88,7 +88,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('starapp')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -125,7 +125,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('portfolio')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -174,7 +174,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('wcc')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -212,7 +212,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('sti')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -248,7 +248,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('instaanalytics')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -282,7 +282,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('exjobb')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -321,7 +321,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('snake')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -379,7 +379,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('boxByDoris')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -411,7 +411,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('mkp')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -453,7 +453,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('arduinorobot')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -488,7 +488,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('wh40k')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -521,7 +521,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('flappyDoge')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
@@ -552,7 +552,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" class="close" data-ng-click="closeProject('flickrEditor')">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <h4 class="modal-title">
