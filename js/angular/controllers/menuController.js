@@ -67,7 +67,7 @@
                     }
                 }
             }
-        };
+        }
 
         /**
          * @function controllers.MenuController#getPageName
@@ -85,7 +85,7 @@
          */
         function currentPage() {
             return pageUrlService.getCurrentMainPage();
-        };
+        }
 
         init();
     }];

@@ -1,4 +1,5 @@
-@import "lessSettings";
+@import "less/lessSettings";
+@import "less/variables";
 
 /**********************************************************/
 /**************************DESIGN**************************/
@@ -14,6 +15,11 @@
 @import "less/blog/blog";
 @import "less/modal/modal";
 @import "less/projects/projects";
+@import "less/artGallery/artGallery";
+@import "less/videoGallery/videoGallery";
+@import "less/table/table";
+@import "less/subMenuLinks/subMenuLinks";
+@import "less/buttons/buttons";
 
 @media only screen and (min-width: 0em) and (max-width: @lt-medium) { // SMALL
     @import "less/default/default-small";
@@ -23,6 +29,8 @@
     @import "less/mainMenuLinks/mainMenuLinks-small";
     @import "less/blog/blog-small";
     @import "less/projects/projects-small";
+    @import "less/subMenuLinks/subMenuLinks-small";
+    @import "less/table/table-small";
 }
 @media only screen and (min-width: @medium) and (max-width: @lt-large) { // MEDIUM
     @import "less/default/default-medium";
@@ -31,6 +39,7 @@
     @import "less/startPageTypography/startPageTypography-medium";
     @import "less/blog/blog-medium";
     @import "less/projects/projects-medium";
+    @import "less/table/table-medium";
 }
 @media only screen and (min-width: @large) { // LARGE
     @import "less/default/default-large";

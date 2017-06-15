@@ -5,13 +5,14 @@
      * @constructor ProjectsController
      * @memberof controllers
      * @description Controller for the projects page
-     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
-     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
-     * @param {$http} $http - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$http}
-     * @param {config} config - Global configuration
-     * @param {$timeout} $timeout - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$timeout}
+     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/type/$rootScope.Scope}
+     * @param {$log} $log - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$log}
+     * @param {$timeout} $timeout - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$timeout}
+     * @param {$routeParams} $routeParams - See {@link https://code.angularjs.org/1.3.15/docs/api/ngRoute/service/$routeParams}
+     * @param {$location} $location - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$location}
+     * @param {$window} $window - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$timeout}
      */
-    var projectsController = ['$scope', '$log', '$http', 'config', '$timeout', '$routeParams', '$location', '$window', function($scope, $log, $http, config, $timeout, $routeParams, $location, $window) {
+    var projectsController = ['$scope', '$log', '$timeout', '$routeParams', '$location', '$window', function($scope, $log, $timeout, $routeParams, $location, $window) {
 
         $scope.openProject = openProject;
         $scope.closeProject = closeProject;
@@ -23,12 +24,12 @@
         function init() {
             $log.debug($scope.projects);
 
-            setTimeout(function() {
+            $timeout(function() {
                 $('.modal').each(function() {
                     $(this).on('hidden.bs.modal', function (e) {
                         $window.location.assign('/#projects');
                     });
-                })
+                });
                 if ($routeParams.projectName) {
                     $('#' + $routeParams.projectName + 'Modal').modal('toggle');
                 }

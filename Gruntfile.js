@@ -55,9 +55,6 @@ module.exports = function(grunt) {
                 files: [{
                     src: 'css/init.less',
                     dest: 'assets/build/default.css'
-                }, {
-                    src: 'css/initSmall.less',
-                    dest: 'assets/build/small.css'
                 }]
             },
         },
@@ -93,9 +90,6 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [{
-                    src: 'includes/topBar.php',
-                    dest: 'includes/build/topBar.php'
-                }, {
                     src: 'includes/projects/*',
                     expand: true,
                     flatten: true,
@@ -210,6 +204,6 @@ module.exports = function(grunt) {
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors
         'jsonlint', // JSON LINT, test json files for syntax errors
-	'eslint'
+        'eslint'
     ]);
 };
