@@ -12,10 +12,24 @@
      * @param {$location} $location - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$location}
      * @param {$window} $window - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$timeout}
      */
-    var projectsController = ['$scope', '$log', '$timeout', '$routeParams', '$location', '$window', function($scope, $log, $timeout, $routeParams, $location, $window) {
+    var projectsController = ['$scope', '$log', '$timeout', '$routeParams', '$location', '$window', 'githubService', function($scope, $log, $timeout, $routeParams, $location, $window, githubService) {
 
         $scope.openProject = openProject;
         $scope.closeProject = closeProject;
+
+        var gitHubRepoNames = {
+            risk: 'ECMA6Risk',
+            starapp: 'StarApp',
+            portfolio: 'martinsweb',
+            snake: 'GyroSnake',
+            instaanalytics: 'InstagramAnalytics',
+            wcc: 'WorldCup2014Simulator',
+            wh40k: 'Warhammer-40k-Unit-Simulator',
+            flappyDoge: 'FlappyDoge'
+        };
+        var gitHubUserName = 'ToWelie89';
+        var db = {};
+        var dependenciesToLookFor = {};
 
         /**
          * @function controllers.ProjectsController#init
@@ -24,16 +38,52 @@
         function init() {
             $log.debug($scope.projects);
 
+            reset();
+            setEvents();
+
             $timeout(function() {
-                $('.modal').each(function() {
-                    $(this).on('hidden.bs.modal', function (e) {
-                        $window.location.assign('/#projects');
-                    });
-                });
+                setEvents();
                 if ($routeParams.projectName) {
-                    $('#' + $routeParams.projectName + 'Modal').modal('toggle');
+                    initProject($routeParams.projectName);
                 }
             }, 100);
+        }
+
+        function initProject(project) {
+            $('#' + project + 'Modal').modal('toggle');
+            var url = 'https://api.github.com/repos/' + gitHubUserName + '/' + gitHubRepoNames[project] + '/contents';
+            githubService.getGithubApiResponseByURL(url)
+                .then(function(response) {
+                    $log.debug(response);
+                });
+        }
+
+        function setEvents() {
+            $('.modal').each(function() {
+                $(this).on('hidden.bs.modal', function (e) {
+                    $window.location.assign('/#projects');
+                });
+            });
+        }
+
+        function reset() {
+            db = {
+                js: 0,
+                html: 0,
+                php: 0,
+                css: 0,
+                less: 0,
+                ts: 0,
+                xml: 0,
+                json: 0
+            };
+            dependenciesToLookFor = {
+                grunt: false,
+                angular: false,
+                webpack: false,
+                babel: false,
+                karma: false
+            };
         }
 
         /**
