@@ -1,26 +1,26 @@
-<div class="blogPostInformation" style="background: url({{post.featured_image}});" data-ng-show="!loading">
-    <h1 data-ng-bind="post.title" class="blogPostTitle"></h1>
+<div class="blogPostInformation" style="background: url({{controller.post.featured_image}});" data-ng-show="!controller.loading">
+    <h1 data-ng-bind="controller.post.title" class="blogPostTitle"></h1>
     <span class="hideOnlyForSmall">
-        <a href="{{post.URL}}" target="_blank">Read on WordPress</a>
+        <a href="{{controller.post.URL}}" target="_blank">Read on WordPress</a>
     </span>
     <span class="hideOnlyForSmall">
         |
     </span>
     <span class="hideOnlyForSmall">
-        Written on {{post.modified.substring(0,10)}}
+        Written on {{controller.post.modified.substring(0,10)}}
     </span>
     <span class="hideOnlyForSmall">
         |
     </span>
     <span class="hideOnlyForSmall">
-        Author: {{post.author.first_name}} {{post.author.last_name}}
+        Author: {{controller.post.author.first_name}} {{controller.post.author.last_name}}
     </span>
 </div>
 <div class="showOnlyForSmall paddingAll paddingBottom--double blogDescriptionSmall">
-    <a href="{{post.URL}}" target="_blank">Read on WordPress</a> | Written on {{post.modified.substring(0,10)}} | Author: {{post.author.first_name}} {{post.author.last_name}}
+    <a href="{{post.URL}}" target="_blank">Read on WordPress</a> | Written on {{controller.post.modified.substring(0,10)}} | Author: {{controller.post.author.first_name}} {{controller.post.author.last_name}}
 </div>
 
-<div class="centeringBox marginTop" data-ng-show="loading">
+<div class="centeringBox marginTop" data-ng-show="controller.loading">
     <div class="centeringInnerBox">
         <p class="standardText">
             <div data-ng-include src="'includes/loadBox.html'"></div>
@@ -28,11 +28,11 @@
     </div>
 </div>
 
-<div class="mainPadding data-ng-show="!loading"">
+<div class="mainPadding data-ng-show="!controller.loading"">
     <div class="mainContentItem" style="width: 100%;">
-        <div class="blogContent" data-ng-bind-html="post.content">
+        <div class="blogContent" data-ng-bind-html="controller.post.content">
         </div>
-        <div class="centerAlign boldText paddingTop--double" data-ng-hide="loading">
+        <div class="centerAlign boldText paddingTop--double" data-ng-hide="controller.loading">
             <div scroll-to-top></div>
         </div>
     </div>

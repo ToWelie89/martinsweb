@@ -7,6 +7,9 @@
         "name": "Javascript",
         "grade": 5
     }, {
+        "name": "ES2015 JS",
+        "grade": 4
+    }, {
         "name": "Java",
         "grade": 4
     }, {

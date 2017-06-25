@@ -1,86 +1,68 @@
-(function() {
-    var app = angular.module('martinsWeb');
+export default class BlogPostController {
+    constructor($scope, $log, wordpressService, pageUrlService) {
+        this.vm = this;
 
-    /**
-     * @constructor BlogPostController
-     * @memberof controllers
-     * @description Controller for logic in the blog post section
-     * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
-     * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
-     * @param {services.WordpressService} wordpressService - Service for handling calls to Wordpress for fetching blog data
-     * @param {services.PageUrlService} pageUrlService - Service for reading GET-parameters from the URL
-     */
-    var blogPostController = ['$scope', '$log', 'wordpressService', 'pageUrlService', function($scope, $log, wordpressService, pageUrlService) {
+        this.pageUrlService = pageUrlService;
+        this.wordpressService = wordpressService;
+        this.$log = $log;
+        this.$scope = $scope;
 
         // Private variables
-        var blogId;
+        this.blogId;
 
         // Public variables
-        $scope.loading = true;
-        $scope.post = {};
+        this.vm.loading = true;
+        this.vm.post = {};
 
-        /**
-         * @function controllers.BlogPostController#getBlogPost
-         * @description Function for getting a blog post from Wordpress by given id
-         * @param {Obj} id The id for the blog post
-         */
-        function getBlogPost(id) {
-            var promise = wordpressService.getPostById(id, 'martinsonesson');
+        this.vm.loading = true;
+        this.setWatch();
 
-            var successCallback = function(response) {
-                $log.debug(response.data);
-                $scope.post = response.data;
-                $scope.loading = false;
-            };
-
-            var errorCallback = function() {
-                $log.error('getBlogPost exception');
-                $scope.loading = false;
-            };
-
-            return promise.then(successCallback, errorCallback);
+        this.blogId = this.pageUrlService.getParameterValueByKey('id');
+        if (this.blogId) {
+            this.getBlogPost(this.blogId);
+        } else {
+            this.vm.loading = false;
         }
+    }
 
-        /**
-         * @function controllers.BlogPostController#setWatch
-         * @description Function for setting watchers
-         */
-        function setWatch() {
-            $scope.$watch('post', function() {
-                $log.debug('Blog post changed');
-                setTimeout(function() {
-                    SyntaxHighlighter.highlight();
-                    // $('div[id^="high"]').css('overflow-x', 'scroll');
-                    $('div[id^="high"]').on(
-                        {
-                            'touchstart': function() {
-                                $(this).css('overflow-x', 'scroll');
-                                $(this).find('.line').css('white-space', 'pre');
-                            }
-                        }
-                    );
-                }, 200);
+    /**
+     * @function controllers.BlogPostController#getBlogPost
+     * @description Function for getting a blog post from Wordpress by given id
+     * @param {Obj} id The id for the blog post
+     */
+    getBlogPost(id) {
+        this.wordpressService.getPostById(id, 'martinsonesson')
+            .then(response => {
+                this.$log.debug(response.data);
+                this.vm.post = response.data;
+            })
+            .catch(err => {
+                this.$log.error('getBlogPost exception');
+            })
+            .finally(() => {
+                this.vm.loading = false;
             });
-        }
+    }
 
-        /**
-         * @function controllers.BlogPostController#init
-         * @description Initilization function
-         */
-        function init() {
-            $scope.loading = true;
-            setWatch();
-
-            blogId = pageUrlService.getParameterValueByKey('id');
-            if (blogId) {
-                getBlogPost(blogId);
-            } else {
-                $scope.loading = false;
-            }
-        }
-
-        init();
-    }];
-
-    app.controller('blogPostController', blogPostController);
-}());
+    /**
+     * @function controllers.BlogPostController#setWatch
+     * @description Function for setting watchers
+     */
+    setWatch() {
+        this.$scope.$watch('post', () => {
+            this.$log.debug('Blog post changed');
+            setTimeout(() => {
+                SyntaxHighlighter.highlight();
+                // $('div[id^="high"]').css('overflow-x', 'scroll');
+                $('div[id^="high"]').on(
+                    {
+                        'touchstart': () => {
+                            $(this).css('overflow-x', 'scroll');
+                            $(this).find('.line').css('white-space', 'pre');
+                        }
+                    }
+                );
+            }, 500);
+        });
+    }
+}

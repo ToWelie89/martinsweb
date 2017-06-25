@@ -63,6 +63,7 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="node_modules/chart.js/dist/Chart.min.js"></script>
 
 <!-- light gallery -->
 <script src="node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
@@ -75,7 +76,7 @@
 <script src="node_modules/lg-pager/dist/lg-pager.min.js"></script>
 
 <!-- martins-web angular -->
-<script src="/assets/build/martins-web.min.js"></script>
+<script src="/assets/build/app.bundle.js"></script>
 
 <script>
     window.onload = function() {

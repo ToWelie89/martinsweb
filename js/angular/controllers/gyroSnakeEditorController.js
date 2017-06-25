@@ -1,23 +1,14 @@
-(function() {
-    var app = angular.module('martinsWeb');
-
+/**
+ * @constructor GyroSnakeEditorController
+ * @memberof controllers
+ * @description Controller Gyro Snake Editor page
+ */
+export default class GyroSnakeEditorController {
     /**
-     * @constructor GyroSnakeEditorController
-     * @memberof controllers
-     * @description Controller Gyro Snake Editor page
+     * @function controllers.GyroSnakeEditorController#constructor
+     * @description Initilization function
      */
-    var gyroSnakeEditorController = [function() {
-
-        /**
-         * @function controllers.GyroSnakeEditorController#init
-         * @description Initilization function
-         */
-        function init() {
-            mapEditor('mapeditor');
-        }
-
-        init();
-    }];
-
-    app.controller('gyroSnakeEditorController', gyroSnakeEditorController);
-}());
+    constructor() {
+        mapEditor('mapeditor');
+    }
+}

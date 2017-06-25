@@ -1,3 +1,28 @@
+<!-- Annevo modal -->
+<div id="annevoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+                <h4 class="modal-title">
+                    Annevo
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <i>
+                        <strong>Technologies and skills:</strong> Javascript, Angular, Grunt, Webpack, Confluence, Karma, CSS3, HTML5, Jira, Gerrit, Git
+                    </i>
+                </p>
+                <p class="marginTop">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Knowit modal -->
 <div id="knowitModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -14,7 +39,7 @@
             <div class="modal-body">
                 <p>
                     <i>
-                        <strong>Technologies and skills:</strong> Javascript, requrie, Angular, Grunt, jQuery, Sonar, Confluence, Karma, Java, Maven, Karaf, Jenkins, CSS3, HTML5, Jira, Ubuntu
+                        <strong>Technologies and skills:</strong> Javascript, requrie, Angular, Grunt, jQuery, Sonar, Confluence, Karma, Java, Maven, Karaf, Jenkins, CSS3, HTML5, Jira, Ubuntu, Git, Mercurial
                     </i>
                 </p>
                 <p class="marginTop">
@@ -47,13 +72,6 @@
                 </p>
                 </p>
             </div>
-            <!--
-            <div class="modal-footer">
-                <a class="button floatRight">
-                    <p text="Code"></p>
-                </a>
-            </div>
-            -->
         </div>
     </div>
 </div>
@@ -106,7 +124,9 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <p></p>
+                <p class="marginBottom">
+                    Courses taken:
+                </p>
                 <ul>
                     <li>
                         <p><strong>LSP300:</strong> Introduktion</p>
@@ -203,6 +223,20 @@
                                         <li class="paddingBottom">
                                             <p>
                                                 <span class="jobTitle">
+                                                    <a href="http://www.knowit.se" target="_blank">Annevo AB</a>, IT-consultant
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="paddingBottom noDisc">
+                                            <p>
+                                                <span class="fakeLink readMoreLink" data-toggle="modal" data-target="#annevoModal">
+                                                    Read more >>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="paddingBottom">
+                                            <p>
+                                                <span class="jobTitle">
                                                     <a href="http://www.knowit.se" target="_blank">Knowit AB</a>, IT-consultant
                                                 </span>
                                             </p>
@@ -213,11 +247,6 @@
                                                     Read more >>
                                                 </span>
                                             </p>
-                                            <div class="showMoreBox" id="knowit">
-                                                <p>
-                                                    (write a better description later)
-                                                </p>
-                                            </div>
                                         </li>
                                         <li class="paddingBottom">
                                             <p>
@@ -232,13 +261,6 @@
                                                     Read more >>
                                                 </span>
                                             </p>
-                                            <div class="showMoreBox" id="cochlear">
-                                                <p>
-                                                    This was my first job as a software developer after my education at Chalmers. I worked at Cochlear Ltd, a company that develops
-                                                    hearing aid devices. My main area of work was on the frontend side of a Windows application coded in C# using the framework Windows
-                                                    Forms. (write a better description later)
-                                                </p>
-                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -307,7 +329,7 @@
                             <div class="tableRow">
                                 <div class="tableRowCell">
                                     <h4>Technical competence</h4>
-                                    <ul class="marginLeft paddingTop paddingLeft" data-ng-repeat="tech in techCompetence">
+                                    <ul class="marginLeft paddingTop paddingLeft" data-ng-repeat="tech in controller.techCompetence">
                                         <li class="paddingTop paddingBottom">
                                             <p><b data-ng-bind="tech.name"></b></p>
                                             <ul class="marginLeft" style="list-style-type: none;" data-ng-repeat="competence in tech.competences">

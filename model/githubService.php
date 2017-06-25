@@ -3,14 +3,14 @@
 
 	$opts = [
         'http' => [
-                'method' => 'GET',
-                'header' => [
-                        'User-Agent: PHP'
-                ]
+            'method' => 'GET',
+            'header' => [
+                'User-Agent: PHP'
+            ]
         ]
-];
+    ];
 
-$context = stream_context_create($opts);
+    $context = stream_context_create($opts);
 
     if (isset($_POST["url"]))
     {
@@ -23,7 +23,6 @@ $context = stream_context_create($opts);
         }
 
         $resp = file_get_contents($url, false, $context);
-        $encodedResp = json_encode($resp);
-        echo $encodedResp;
+        echo $resp;
     }
 ?>

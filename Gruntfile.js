@@ -8,15 +8,26 @@ module.exports = function(grunt) {
             },
             build: {
                 files: [{
-                    src: 'js/angular/**/*.js',
-                    dest: 'assets/build/<%= pkg.name %>.min.js'
-                }, {
                     src: 'js/MapEditor.js',
                     dest: 'assets/build/MapEditor.min.js'
                 }, {
                     src: 'js/libs/photoswipe/photoswipe.js',
                     dest: 'assets/build/photoswipe.min.js'
                 }]
+            }
+        },
+        browserify: {
+            files: {
+                src: [
+                    'js/app.js'
+                ],
+                dest: 'assets/build/app.bundle.js'
+            },
+            options: {
+                transform: [['babelify', { presets: "es2015" }]],
+                browserifyOptions: {
+                    debug: true
+                }
             }
         },
         replace: {
@@ -67,7 +78,7 @@ module.exports = function(grunt) {
                 src: 'assets/build/**/*.{jpg,jpeg,gif,png,webp}'
             },
             js: {
-                src: ['assets/build/martins-web.min.js', 'assets/build/MapEditor.min.js']
+                src: ['assets/build/app.bundle.js', 'assets/build/MapEditor.min.js']
             }
         },
         filerev_replace: {
@@ -85,7 +96,8 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            img: ['includes/build/*', 'views/build/*', 'assets/build/*']
+            all: ['includes/build/*', 'views/build/*', 'assets/build/*'],
+            css: ['assets/build/default.css']
         },
         copy: {
             main: {
@@ -115,7 +127,7 @@ module.exports = function(grunt) {
                     src: 'includes/head.php',
                     dest: 'includes/build/head.php'
                 }]
-            },
+            }
         },
         jshint: {
             options: {
@@ -188,18 +200,25 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jsdoc');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-eslint');
+    grunt.loadNpmTasks('grunt-browserify');
 
     // Default task for building
     grunt.registerTask('default', [
         'clean', // Clean previous build files
         'copy', // Copy markup files that need to be adjusted to build folder
         'uglify', // Minify and uglify css and put it in build folder
+        'browserify', // Use browserify to transpile ES6 source code with babel
         'filerev', // Create versioned images in img/build
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline', // Inline all css in head
         'jsdoc', // Generate Javascript doc
         'notify' // Notify that build is complete
+    ]);
+    grunt.registerTask('buildcss', [
+        'clean:css', // Clean previous css file
+        'less', // Compile CSS files and put them in build folder
+        'filerev_replace' // Change image filenames to the newly generated ones
     ]);
     grunt.registerTask('test', [
         'jshint', // Test JS files for syntax errors

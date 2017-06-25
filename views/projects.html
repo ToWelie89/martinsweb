@@ -1,576 +1,581 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
-        <a href="" data-content="ECMA6 Risk" data-ng-click="openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
+        <a href="" data-content="ECMA6 Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Star Manager" data-ng-click="openProject('starapp')" style="background: url(../../assets/build/starapp.png)">
+        <a href="" data-content="Star Manager" data-ng-click="controller.openProject('starapp')" style="background: url(../../assets/build/starapp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Portfolio" data-ng-click="openProject('portfolio')" style="background: url(../../assets/build/portfolio.png)">
+        <a href="" data-content="Portfolio" data-ng-click="controller.openProject('portfolio')" style="background: url(../../assets/build/portfolio.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="STI-Starcraft" data-ng-click="openProject('sti')" style="background: url(../../assets/build/sti.png)">
+        <a href="" data-content="STI-Starcraft" data-ng-click="controller.openProject('sti')" style="background: url(../../assets/build/sti.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Gyro Snake" data-ng-click="openProject('snake')" style="background: url(../../assets/build/snake.png)">
+        <a href="" data-content="Gyro Snake" data-ng-click="controller.openProject('snake')" style="background: url(../../assets/build/snake.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Instagram Analyzer" data-ng-click="openProject('instaanalytics')" style="background: url(../../assets/build/instaanalytics.png)">
+        <a href="" data-content="Instagram Analyzer" data-ng-click="controller.openProject('instaanalytics')" style="background: url(../../assets/build/instaanalytics.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Bachelors thesis" data-ng-click="openProject('exjobb')" style="background: url(../../assets/build/exjobb.png)">
+        <a href="" data-content="Bachelors thesis" data-ng-click="controller.openProject('exjobb')" style="background: url(../../assets/build/exjobb.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="World Cup Calculator" data-ng-click="openProject('wcc')" style="background: url(../../assets/build/wcc.png)">
+        <a href="" data-content="World Cup Calculator" data-ng-click="controller.openProject('wcc')" style="background: url(../../assets/build/wcc.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Box By Doris" data-ng-click="openProject('boxByDoris')" style="background: url(../../assets/build/boxByDoris.png)">
+        <a href="" data-content="Box By Doris" data-ng-click="controller.openProject('boxByDoris')" style="background: url(../../assets/build/boxByDoris.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Mobile Keyring" data-ng-click="openProject('mkp')" style="background: url(../../assets/build/mkp.png)">
+        <a href="" data-content="Mobile Keyring" data-ng-click="controller.openProject('mkp')" style="background: url(../../assets/build/mkp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Arduino Robot" data-ng-click="openProject('arduinoRobot')" style="background: url(../../assets/build/arduinoRobot.png)">
+        <a href="" data-content="Arduino Robot" data-ng-click="controller.openProject('arduinoRobot')" style="background: url(../../assets/build/arduinoRobot.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="WH40k Simulator" data-ng-click="openProject('wh40k')" style="background: url(../../assets/build/wh40k.png)">
+        <a href="" data-content="WH40k Simulator" data-ng-click="controller.openProject('wh40k')" style="background: url(../../assets/build/wh40k.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="FlappyDoge" data-ng-click="openProject('flappyDoge')" style="background: url(../../assets/build/flappyDoge.png)">
+        <a href="" data-content="FlappyDoge" data-ng-click="controller.openProject('flappyDoge')" style="background: url(../../assets/build/flappyDoge.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Flickr Editor" data-ng-click="openProject('flickrEditor')" style="background: url(../../assets/build/flickrEditor.png)">
+        <a href="" data-content="Flickr Editor" data-ng-click="controller.openProject('flickrEditor')" style="background: url(../../assets/build/flickrEditor.png)">
         </a>
     </div>
 </div>
-<!-- Risk modal -->
-<div id="riskModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('risk')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    EMCA6 Risk
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    TO DO
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://github.com/ToWelie89/ECMA6Risk" target="_blank">
-                    <p text="Code"></p>
-                </a>
+<div class="projects">
+    <!-- Risk modal -->
+    <div id="riskModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('risk')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        EMCA6 Risk
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        TO DO
+                    </p>
+                    <p>
+                        <canvas id="riskChart" width="400" height="400"></canvas>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/ECMA6Risk" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Star Manager modal -->
-<div id="starappModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('starapp')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Star Manager
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to
-                    Starcraft 2 account and it then loads information about the player using
-                    <a href="http://blizzard.github.io/api-sc2-docs/" target="_blank">Blizzards official SC2 API</a>. The purpose of the application is to let
-                    users track their progress and view statistics regarding their progress in the game.
-                </p>
-                <p class="marginTop">
-                    The app supports the metro grid layout in Windows 8/RT, it can be added as a tile in start screen where it displays the current progress
-                    which updates automatically.
-                </p>
-                <p class="marginTop">
-                    The application is written purely with standard web technologies, HTML5, CSS3 and Javascript. Libraries like jQuery and linq are also used.
-                    I version the code on my Github account which you can view by clicking the code-button below.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://www.microsoft.com/en-US/store/apps/Star-Manager/9WZDNCRDWZ3X" target="_blank">
-                    <p text="Download"></p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Portfolio modal -->
-<div id="portfolioModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('portfolio')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Portfolio
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is the very site you're on right now, my personal website and portfolio. I began working on a
-                    first portfolio that can still be found on <a href="http://www.martins-web.com" target="_blank">martins-web.com</a>
-                    but I only got a design down and then scrapped the project. I wasn't satisfied with some aspects of the design and
-                    I also wanted to host the site myself whereas this one is hosted via one.com. In august 2014 I began working on
-                    this new portfolio.
-                </p>
-                <p class="marginTop">
-                    This site uses modern webdesign technologies. jQuery is used a lot but also other frameworks such as Angular
-                    and requirejs for handling MV*-patterns on the clientside, for structuring scripts and handling module loading.
-                    I also work with less to easier structure CSS stylings. The complete source code is versioned via Github which
-                    you can view below by clicking the Code-button. I develop on my local machine using WAMP-server and whenever
-                    a certain part feels complete I push it to Github and then pull it from the server for easy and fast deployment.
-                </p>
-                <p class="marginTop">
-                    The server itself is a Raspberry Pi that I manage myself. It runs Raspbian OS, NodeJS, Apache, php, SSH-client
-                    and other useful tools for making it into a fully capable webserver. It is plugged into my router which is
-                    configured to forward HTTP and SSH ports to the Raspberry Pi. I also have cronjobs in place to handle backup
-                    of data and updating the DynDNS pointer for my domain operator..
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://github.com/ToWelie89/martinsweb" target="_blank">
-                    <p text="Code"></p>
-                </a>
-                <a class="button floatRight" href="http://www.martinsonesson.se/docs" target="_blank">
-                    <p text="JsDoc"></p>
-                </a>
-                <a class="button floatRight" href="https://github.com/ToWelie89/martinsweb/wiki" target="_blank">
-                    <p text="Wiki"></p>
-                </a>
+    <!-- Star Manager modal -->
+    <div id="starappModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('starapp')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Star Manager
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to
+                        Starcraft 2 account and it then loads information about the player using
+                        <a href="http://blizzard.github.io/api-sc2-docs/" target="_blank">Blizzards official SC2 API</a>. The purpose of the application is to let
+                        users track their progress and view statistics regarding their progress in the game.
+                    </p>
+                    <p class="marginTop">
+                        The app supports the metro grid layout in Windows 8/RT, it can be added as a tile in start screen where it displays the current progress
+                        which updates automatically.
+                    </p>
+                    <p class="marginTop">
+                        The application is written purely with standard web technologies, HTML5, CSS3 and Javascript. Libraries like jQuery and linq are also used.
+                        I version the code on my Github account which you can view by clicking the code-button below.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://www.microsoft.com/en-US/store/apps/Star-Manager/9WZDNCRDWZ3X" target="_blank">
+                        <p text="Download"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- WCC modal -->
-<div id="wccModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('wcc')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    World Cup Calculator
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a web application I created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
-                    tournament to see how it could all turn out. The simulators I found while googling only took into account if a match ends in a win, draw
-                    or loss. None of them took into account the goal difference which can play a major difference in the group stage, so therefore I created
-                    this application. In my app you can enter an exact result for each match to simulate different outcomes.
-                </p>
-                <p class="marginTop">
-                    After the user has filled out a result for every single match the user is given a code, which is basically all the results compressed,
-                    that can then be shared with others, for instance via Facebook, to show how they think the tournament would end up. All the logic is
-                    written in Javascript and I use the libraries jQuery and requirejs. If I ever make a new version of this web app I will use Angular as it
-                    would greatly simplify the code. Feel free to try it out below or look at the soruce code.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://github.com/ToWelie89/WC2014Calculator" target="_blank">
-                    <p text="Code"></p>
-                </a>
-                <a class="button floatRight" href="http://www.martinsonesson.se/pi/WC2014Calculator/index.php" target="_blank">
-                    <p text="Demo"></p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- STI modal -->
-<div id="stiModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('sti')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    sti-starcraft
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a website and a community that I founded together with a friend in 2010, a third friend also joined the project later on.
-                    It was a community targeted for people who played the RTS-game Starcraft 2. The idea came up when we discussed organizing a
-                    tournament for other likeminded people. The idea evolved into a community where players could registrate, sign up for tournaments,
-                    take part in discussions and other activities. The tournaments was then in turn organized by the three of us. We successfully hosted
-                    two major tournaments with 16 and 32 participating players as well as other minor events. After that we stopped working on the site
-                    due to lack of interest and time.
-                </p>
-                <p class="marginTop">
-                    I coded pretty much the entire site myself, from frontend to backend. I was new to php and MySQL so to me it was a good project to start
-                    learning these technologies. I didn't follow any tutorials and didn't use any premade components as I wanted to do everything from
-                    scratch, like our message forum, PM system, mail forms, login, instant chat, tournament signup functionality, time scheduling service etc.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="http://www.sti-starcraft.org/index.php" target="_blank">
-                    <p text="Demo"></p>
-                </a>
+    <!-- Portfolio modal -->
+    <div id="portfolioModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('portfolio')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Portfolio
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is the very site you're on right now, my personal website and portfolio. I began working on a
+                        first portfolio that can still be found on <a href="http://www.martins-web.com" target="_blank">martins-web.com</a>
+                        but I only got a design down and then scrapped the project. I wasn't satisfied with some aspects of the design and
+                        I also wanted to host the site myself whereas this one is hosted via one.com. In august 2014 I began working on
+                        this new portfolio.
+                    </p>
+                    <p class="marginTop">
+                        This site uses modern webdesign technologies. jQuery is used a lot but also other frameworks such as Angular
+                        and requirejs for handling MV*-patterns on the clientside, for structuring scripts and handling module loading.
+                        I also work with less to easier structure CSS stylings. The complete source code is versioned via Github which
+                        you can view below by clicking the Code-button. I develop on my local machine using WAMP-server and whenever
+                        a certain part feels complete I push it to Github and then pull it from the server for easy and fast deployment.
+                    </p>
+                    <p class="marginTop">
+                        The server itself is a Raspberry Pi that I manage myself. It runs Raspbian OS, NodeJS, Apache, php, SSH-client
+                        and other useful tools for making it into a fully capable webserver. It is plugged into my router which is
+                        configured to forward HTTP and SSH ports to the Raspberry Pi. I also have cronjobs in place to handle backup
+                        of data and updating the DynDNS pointer for my domain operator..
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/martinsweb" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="http://www.martinsonesson.se/docs" target="_blank">
+                        <p text="JsDoc"></p>
+                    </a>
+                    <a class="button floatRight" href="https://github.com/ToWelie89/martinsweb/wiki" target="_blank">
+                        <p text="Wiki"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Insta analyzer modal -->
-<div id="instaanalyticsModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('instaanalytics')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Instagram Analyzer
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
-                </p>
-                <p class="marginTop">
-                    <strong>
-                        Unfortunately Instagram decided to change their API so that now only the last 20 images/videos for a user can be fetched, which pretty much made this application useless. Thanks Instagram!
-                    </strong>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="http://martinsonesson.se/instagramanalytics/" target="_blank">
-                    <p text="Demo"></p>
-                </a>
-                <a class="button floatRight" href="https://github.com/ToWelie89/instagramanalytics" target="_blank">
-                    <p text="Code"></p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Bachelor thesis modal -->
-<div id="exjobbModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('exjobb')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Bachelor Thesis
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is my bachelors thesis I did at my time at Chalmers together with another student. The work was carried out at the company ESAB, a company
-                    that develops robotic welding systems used in industrial settings. These systems were composed of a robotic welding arm, a voltage outage,
-                    a controller unit etc. Their problems was that they lacked an efficient way to analyze the data traffic between components, something that
-                    can be very crucial when searching for the source of various problems in the field.
-                </p>
-                <p class="marginTop">
-                    These systems communicated via CAN nodes or via Ethernet, using different protocols. We ultimately ended up creating two different solutions,
-                    one for each type of communication. For Ethernet we created a dissector, a plugin, for the popular open source software Wireshark, used for
-                    sniffing network traffic. Our plugin could interpret packets between the components based on ESAB's memory model so that the user can
-                    easily see exceptions and shifting flags. For CAN traffics we developed an application in C# that communicated via an Ixxat CAN-to-USB
-                    adapter and could thus read data in realtime, print graphs etc.
-                </p>
-                <p class="marginTop">
-                    For more information the entire report can be downloaded below.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="documents/BachelorsThesisReport.pdf" target="_blank" download="BachelorsThesisReport.pdf">
-                    <p text="Report"></p>
-                </a>
+    <!-- WCC modal -->
+    <div id="wccModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('wcc')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        World Cup Calculator
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a web application I created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
+                        tournament to see how it could all turn out. The simulators I found while googling only took into account if a match ends in a win, draw
+                        or loss. None of them took into account the goal difference which can play a major difference in the group stage, so therefore I created
+                        this application. In my app you can enter an exact result for each match to simulate different outcomes.
+                    </p>
+                    <p class="marginTop">
+                        After the user has filled out a result for every single match the user is given a code, which is basically all the results compressed,
+                        that can then be shared with others, for instance via Facebook, to show how they think the tournament would end up. All the logic is
+                        written in Javascript and I use the libraries jQuery and requirejs. If I ever make a new version of this web app I will use Angular as it
+                        would greatly simplify the code. Feel free to try it out below or look at the soruce code.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/WC2014Calculator" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="http://www.martinsonesson.se/pi/WC2014Calculator/index.php" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- GyroSnake modal -->
-<div id="snakeModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('snake')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    GyroSnake
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
-                    project together with three other students. It is essentially a Android-version of the classic game Snake. The biggest difference
-                    is that in our game the user uses the motion sensor of the phone to maneuver the snake, the snake can be steered in any angle and not
-                    just 90 degree angles like in traditional snake games.
-                </p>
-                <p class="marginTop">
-                    Another difference is that the game has different maps with different attributes.
-                    The speed of the snake, the pace at which it grows and obstacles are map specific. The attributes of the map is determined by an
-                    XML-document for each map, because of this creating new maps is fairly easy. We also developed a website where users can create
-                    their own maps in a Javascript editor, upload it to a database and browse other usermade maps.
-                </p>
-                <p class="marginTop">
-                    Some time later I decided to continue developing the app myself. I fixed some bugs that occured since the app was not updated with
-                    the latest version of Android and I also added some new features like a global highscore database, improved graphics, more maps,
-                    sound effects and music etc.
-                </p>
-                <p class="marginTop">
-                    Below you can view the report that was a part of the course as well as the map editor and two different versions of the app itself.
-                    The 1.0 version is the one that was developed with the three other students at Chalmers, the 1.1 version is the updated version
-                    that I continued to develop afterwards. The app has to be installed manually using a file browser on your phone, you also need to
-                    set your phone to allow apps from unknown sources.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="documents/GyroSnakeReport.pdf" target="_blank" download="GyroSnakeReport.pdf">
-                    <p text="Report"></p>
-                </a>
-                <a class="button floatRight" href="https://github.com/ToWelie89/GyroSnake" target="_blank">
-                    <p text="Code"></p>
-                </a>
-                <a class="button floatRight" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
-                    <p text="v1.0 APK"></p>
-                </a>
-                <a class="button floatRight" href="miscFiles/GyroSnake.apk" target="_blank" download="GyroSnake.apk">
-                    <p text="v1.1 APK"></p>
-                </a>
-                <a class="button floatRight" href="/#/gyroSnakeEditor" target="_blank">
-                    <p text="Map editor"></p>
-                </a>
+    <!-- STI modal -->
+    <div id="stiModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('sti')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        sti-starcraft
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a website and a community that I founded together with a friend in 2010, a third friend also joined the project later on.
+                        It was a community targeted for people who played the RTS-game Starcraft 2. The idea came up when we discussed organizing a
+                        tournament for other likeminded people. The idea evolved into a community where players could registrate, sign up for tournaments,
+                        take part in discussions and other activities. The tournaments was then in turn organized by the three of us. We successfully hosted
+                        two major tournaments with 16 and 32 participating players as well as other minor events. After that we stopped working on the site
+                        due to lack of interest and time.
+                    </p>
+                    <p class="marginTop">
+                        I coded pretty much the entire site myself, from frontend to backend. I was new to php and MySQL so to me it was a good project to start
+                        learning these technologies. I didn't follow any tutorials and didn't use any premade components as I wanted to do everything from
+                        scratch, like our message forum, PM system, mail forms, login, instant chat, tournament signup functionality, time scheduling service etc.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="http://www.sti-starcraft.org/index.php" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Box By Doris modal -->
-<div id="boxByDorisModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('boxByDoris')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Box By Doris
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a project that I helped developing as a side project. It's a website for dog lovers where you can sign up and pay for a subscription
-                    to recieve a package on a regular basis with goodies for your dog, such as treats and accessories.
-                </p>
-                <p class="marginTop">
-                    The website is hosted using the platform <a href="http://www.subbly.co/">Subbly</a>. On Subbly you can register to get a subscription business
-                    website with a complete transaction platform using <a href="https://stripe.com/se">Stripe</a>. I helped out with the frontend development which
-                    mostly consisted of design fixes.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="http://boxbydoris.se/" target="_blank">
-                    <p text="Demo"></p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- MKP modal -->
-<div id="mkpModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('mkp')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Mobile Keyring
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Mobile Keyring was a project I worked on together with four other students during my time at Chalmers. The project revolved around developing
-                    a good way to allow people to log into websites without having to enter ones real password. A secure form of login that could be used
-                    in insecure settings, for instance if you are using a public computer and are worried about the existance of keyloggers.
-                </p>
-                <p class="marginTop">
-                    The solution consisted of an Android application that the user uses to generate temporary passwords for a given website. The passwords can
-                    be a one time use password with a specific time limit but it could also have a defined number of usages and/or any given time limit. In
-                    order to use the app together with a specific website the website obviously has to support the functionality, something that can be fixed quite
-                    easily by an admin on the server side. We used prototype websites with normal login functionality to test the technology out.
-                    First time it is used with a specific website it has to be connected with the application using an authentication key that can
-                    be inputted via a QR code. After the connection is made the app can thereafter be used to generate temporary keys for login without having
-                    any stored information regarding the real password of the user.
-                </p>
-                <p class="marginTop">
-                    The application also needed a pin code to unlock in case the cellphone would get stolen. As an extra precaution though we also developed a PC
-                    application in Java that could be synced with the web application. The PC application could then in turn disable usage of the app to
-                    generate passwords for given websites.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
-                    <p text="Report"></p>
-                </a>
+    <!-- Insta analyzer modal -->
+    <div id="instaanalyticsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('instaanalytics')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Instagram Analyzer
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
+                    </p>
+                    <p class="marginTop">
+                        <strong>
+                            Unfortunately Instagram decided to change their API so that now only the last 20 images/videos for a user can be fetched, which pretty much made this application useless. Thanks Instagram!
+                        </strong>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="http://martinsonesson.se/instagramanalytics/" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                    <a class="button floatRight" href="https://github.com/ToWelie89/instagramanalytics" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Arduino Robot modal -->
-<div id="arduinoRobotModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('arduinoRobot')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Arduino Robot
-                </h4>
+    <!-- Bachelor thesis modal -->
+    <div id="exjobbModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('exjobb')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Bachelor Thesis
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is my bachelors thesis I did at my time at Chalmers together with another student. The work was carried out at the company ESAB, a company
+                        that develops robotic welding systems used in industrial settings. These systems were composed of a robotic welding arm, a voltage outage,
+                        a controller unit etc. Their problems was that they lacked an efficient way to analyze the data traffic between components, something that
+                        can be very crucial when searching for the source of various problems in the field.
+                    </p>
+                    <p class="marginTop">
+                        These systems communicated via CAN nodes or via Ethernet, using different protocols. We ultimately ended up creating two different solutions,
+                        one for each type of communication. For Ethernet we created a dissector, a plugin, for the popular open source software Wireshark, used for
+                        sniffing network traffic. Our plugin could interpret packets between the components based on ESAB's memory model so that the user can
+                        easily see exceptions and shifting flags. For CAN traffics we developed an application in C# that communicated via an Ixxat CAN-to-USB
+                        adapter and could thus read data in realtime, print graphs etc.
+                    </p>
+                    <p class="marginTop">
+                        For more information the entire report can be downloaded below.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="documents/BachelorsThesisReport.pdf" target="_blank" download="BachelorsThesisReport.pdf">
+                        <p text="Report"></p>
+                    </a>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>
-                    This is currently a project under production. I am building a robot using a Arduino Uno Rev3 microprocessor. The robot has the
-                    form of a RC car. The Arduino card is connected to two DC motors, a ultrasonic detection component is used to detect if there are
-                    obstacles in front of the robot. Some logic is coded in C that handles the behaviour of the robot where it tries to run around
-                    without hitting anything.
-                </p>
-                <p class="marginTop">
-                    I will upload the code and some more information about this project when it is complete.
-                </p>
+        </div>
+    </div>
+    <!-- GyroSnake modal -->
+    <div id="snakeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('snake')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        GyroSnake
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
+                        project together with three other students. It is essentially a Android-version of the classic game Snake. The biggest difference
+                        is that in our game the user uses the motion sensor of the phone to maneuver the snake, the snake can be steered in any angle and not
+                        just 90 degree angles like in traditional snake games.
+                    </p>
+                    <p class="marginTop">
+                        Another difference is that the game has different maps with different attributes.
+                        The speed of the snake, the pace at which it grows and obstacles are map specific. The attributes of the map is determined by an
+                        XML-document for each map, because of this creating new maps is fairly easy. We also developed a website where users can create
+                        their own maps in a Javascript editor, upload it to a database and browse other usermade maps.
+                    </p>
+                    <p class="marginTop">
+                        Some time later I decided to continue developing the app myself. I fixed some bugs that occured since the app was not updated with
+                        the latest version of Android and I also added some new features like a global highscore database, improved graphics, more maps,
+                        sound effects and music etc.
+                    </p>
+                    <p class="marginTop">
+                        Below you can view the report that was a part of the course as well as the map editor and two different versions of the app itself.
+                        The 1.0 version is the one that was developed with the three other students at Chalmers, the 1.1 version is the updated version
+                        that I continued to develop afterwards. The app has to be installed manually using a file browser on your phone, you also need to
+                        set your phone to allow apps from unknown sources.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="documents/GyroSnakeReport.pdf" target="_blank" download="GyroSnakeReport.pdf">
+                        <p text="Report"></p>
+                    </a>
+                    <a class="button floatRight" href="https://github.com/ToWelie89/GyroSnake" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
+                        <p text="v1.0 APK"></p>
+                    </a>
+                    <a class="button floatRight" href="miscFiles/GyroSnake.apk" target="_blank" download="GyroSnake.apk">
+                        <p text="v1.1 APK"></p>
+                    </a>
+                    <a class="button floatRight" href="/#/gyroSnakeEditor" target="_blank">
+                        <p text="Map editor"></p>
+                    </a>
+                </div>
             </div>
-            <div class="modal-footer">
-                <a class="button disabled floatRight">
+        </div>
+    </div>
+    <!-- Box By Doris modal -->
+    <div id="boxByDorisModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('boxByDoris')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Box By Doris
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a project that I helped developing as a side project. It's a website for dog lovers where you can sign up and pay for a subscription
+                        to recieve a package on a regular basis with goodies for your dog, such as treats and accessories.
+                    </p>
+                    <p class="marginTop">
+                        The website is hosted using the platform <a href="http://www.subbly.co/">Subbly</a>. On Subbly you can register to get a subscription business
+                        website with a complete transaction platform using <a href="https://stripe.com/se">Stripe</a>. I helped out with the frontend development which
+                        mostly consisted of design fixes.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="http://boxbydoris.se/" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MKP modal -->
+    <div id="mkpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('mkp')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Mobile Keyring
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Mobile Keyring was a project I worked on together with four other students during my time at Chalmers. The project revolved around developing
+                        a good way to allow people to log into websites without having to enter ones real password. A secure form of login that could be used
+                        in insecure settings, for instance if you are using a public computer and are worried about the existance of keyloggers.
+                    </p>
+                    <p class="marginTop">
+                        The solution consisted of an Android application that the user uses to generate temporary passwords for a given website. The passwords can
+                        be a one time use password with a specific time limit but it could also have a defined number of usages and/or any given time limit. In
+                        order to use the app together with a specific website the website obviously has to support the functionality, something that can be fixed quite
+                        easily by an admin on the server side. We used prototype websites with normal login functionality to test the technology out.
+                        First time it is used with a specific website it has to be connected with the application using an authentication key that can
+                        be inputted via a QR code. After the connection is made the app can thereafter be used to generate temporary keys for login without having
+                        any stored information regarding the real password of the user.
+                    </p>
+                    <p class="marginTop">
+                        The application also needed a pin code to unlock in case the cellphone would get stolen. As an extra precaution though we also developed a PC
+                        application in Java that could be synced with the web application. The PC application could then in turn disable usage of the app to
+                        generate passwords for given websites.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="documents/MobileKeyringReport.pdf" target="_blank" download="MobileKeyringReport.pdf">
+                        <p text="Report"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Arduino Robot modal -->
+    <div id="arduinoRobotModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('arduinoRobot')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Arduino Robot
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is currently a project under production. I am building a robot using a Arduino Uno Rev3 microprocessor. The robot has the
+                        form of a RC car. The Arduino card is connected to two DC motors, a ultrasonic detection component is used to detect if there are
+                        obstacles in front of the robot. Some logic is coded in C that handles the behaviour of the robot where it tries to run around
+                        without hitting anything.
+                    </p>
+                    <p class="marginTop">
+                        I will upload the code and some more information about this project when it is complete.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button disabled floatRight">
+                            <p text="Code"></p>
+                        </a>
+                        <a class="button disabled floatRight">
+                            <p text="Report"></p>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- wh40k modal -->
+    <div id="wh40kModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('wh40k')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Warhammer 40k Simulator
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a game engine I am currently developing that is meant to simulate the rules and game logic of the classic miniature
+                        board game Warhammer 40k. Since the game is fairly complex and has a lot of different rules to keep track of it is not the
+                        easiest game to learn for a newcomer. Hence I figured it would be a nice idea to build an engine that uses the exact same rules,
+                        takes into account all relevant factors and calculates an outcome for a given situation. The application is coded in C#. This
+                        project is under development.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/Warhammer-40k-Unit-Simulator" target="_blank">
                         <p text="Code"></p>
                     </a>
                     <a class="button disabled floatRight">
-                        <p text="Report"></p>
+                        <p text="Demo"></p>
                     </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- wh40k modal -->
-<div id="wh40kModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('wh40k')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Warhammer 40k Simulator
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a game engine I am currently developing that is meant to simulate the rules and game logic of the classic miniature
-                    board game Warhammer 40k. Since the game is fairly complex and has a lot of different rules to keep track of it is not the
-                    easiest game to learn for a newcomer. Hence I figured it would be a nice idea to build an engine that uses the exact same rules,
-                    takes into account all relevant factors and calculates an outcome for a given situation. The application is coded in C#. This
-                    project is under development.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://github.com/ToWelie89/Warhammer-40k-Unit-Simulator" target="_blank">
-                    <p text="Code"></p>
-                </a>
-                <a class="button disabled floatRight">
-                    <p text="Demo"></p>
-                </a>
+    <!-- flappyDoge modal -->
+    <div id="flappyDogeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('flappyDoge')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        FlappyDoge
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that
+                        of Flappy Bird. It is written in Javascript and I use the phaser framework, a good framework for creating games in Javascript. Thanks
+                        to Phaser the source code for the game itself is extremly minimalistic. Feel free to check it out!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/FlappyDoge" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="#/flappyDoge" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- flappyDoge modal -->
-<div id="flappyDogeModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('flappyDoge')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    FlappyDoge
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that
-                    of Flappy Bird. It is written in Javascript and I use the phaser framework, a good framework for creating games in Javascript. Thanks
-                    to Phaser the source code for the game itself is extremly minimalistic. Feel free to check it out!
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="https://github.com/ToWelie89/FlappyDoge" target="_blank">
-                    <p text="Code"></p>
-                </a>
-                <a class="button floatRight" href="#/flappyDoge" target="_blank">
-                    <p text="Demo"></p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- flickrEditor modal -->
-<div id="flickrEditorModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-ng-click="closeProject('flickrEditor')">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                </button>
-                <h4 class="modal-title">
-                    Flickr Editor
-                </h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    This is a small web app I made as an assignment for a course around 3 years ago. The assignment was to create a web application that
-                    somehow used Flickr's API and the rest was up to me. I decided to create an editor where a user can search for photos via Flickr,
-                    select a picture and then edit it in the DOM using Javascript. In the assignment I was supposed to write the javascript code in native
-                    so therefore there's no framework or library used.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a class="button floatRight" href="http://martinsonesson.se/pi/flickr-editor/" target="_blank">
-                    <p text="Demo"></p>
-                </a>
+    <!-- flickrEditor modal -->
+    <div id="flickrEditorModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('flickrEditor')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Flickr Editor
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This is a small web app I made as an assignment for a course around 3 years ago. The assignment was to create a web application that
+                        somehow used Flickr's API and the rest was up to me. I decided to create an editor where a user can search for photos via Flickr,
+                        select a picture and then edit it in the DOM using Javascript. In the assignment I was supposed to write the javascript code in native
+                        so therefore there's no framework or library used.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="http://martinsonesson.se/pi/flickr-editor/" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

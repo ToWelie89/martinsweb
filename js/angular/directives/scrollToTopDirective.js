@@ -1,23 +1,18 @@
-(function() {
-    var app = angular.module('martinsWeb');
+/**
+ * @constructor ScrollToTopDirective
+ * @memberof    directives
+ * @description Directive for generating a "go to top" element
+ */
+export default class ScrollToTopDirective {
+    constructor() {
+        this.restrict = 'A';
+        this.template = '<p class="fakeLink" data-ng-click="goToTop()"><i class="fa fa-angle-up" aria-hidden="true"></i> Back to top <i class="fa fa-angle-up" aria-hidden="true"></i></p>';
+        this.scope = {};
+    }
 
-    /**
-     * @constructor ScrollToTopDirective
-     * @memberof    directives
-     * @description Directive for generating a "go to top" element
-     */
-    var scrollToTopDirective = function() {
-        return {
-            restrict: 'A',
-            template: '<p class="fakeLink" data-ng-click="goToTop()"><i class="fa fa-angle-up" aria-hidden="true"></i> Back to top <i class="fa fa-angle-up" aria-hidden="true"></i></p>',
-            scope: true,
-            link: function(scope, elem, attr) {
-                scope.goToTop = function() {
-                    document.getElementById('topBar').scrollIntoView();
-                };
-            }
+    link(scope, elem, attr) {
+        scope.goToTop = () => {
+            document.getElementById('topBar').scrollIntoView();
         };
-    };
-
-    app.directive('scrollToTop', scrollToTopDirective);
-}());
+    }
+}
