@@ -36,11 +36,6 @@ export default class ProjectsController {
         this.gitHubUserName = 'ToWelie89';
         this.db = {};
         this.dependenciesToLookFor = {};
-        this.folderBlackList = [
-            'cssLibs',
-            'node_modules',
-            'bower_components'
-        ];
 
         this.reset();
         this.setEvents();
@@ -83,6 +78,19 @@ export default class ProjectsController {
         }
     }
 
+    folderIsBlacklisted(dirName) {
+        const folderBlackList = [
+            'cssLibs',
+            'node_modules',
+            'bower_components',
+            'bin',
+            'obj',
+            'packages'
+        ];
+
+        return (folderBlackList.includes(dirName) || dirName.includes('ReSharper_'));
+    }
+
     handleContents(data) {
         data.forEach(d => {
             if (d.type === 'file') {
@@ -91,7 +99,7 @@ export default class ProjectsController {
                 if (this.db[fileExtension] !== undefined) {
                     this.db[fileExtension] = this.db[fileExtension] + d.size;
                 }
-            } else if (d.type === 'dir' && !this.folderBlackList.includes(d.name)) {
+            } else if (d.type === 'dir' && !folderIsBlacklisted(d.name)) {
                 this.depth++;
                 this.githubService.getGithubApiResponseByURL(d.url)
                     .then(resp => {
@@ -160,14 +168,19 @@ export default class ProjectsController {
             less: 0,
             ts: 0,
             xml: 0,
-            json: 0
+            json: 0,
+            scss: 0,
+            cs: 0
         };
         this.dependenciesToLookFor = {
             grunt: false,
             angular: false,
             webpack: false,
             babel: false,
-            karma: false
+            karma: false,
+            react: false,
+            jquery: false,
+            bootstrap: false
         };
         this.currentOpenProject = '';
     }
