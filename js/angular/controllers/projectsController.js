@@ -55,12 +55,14 @@ export default class ProjectsController {
 
     initProject(project) {
         this.reset();
-        $('#' + project + 'Modal').modal('toggle');
-        if (this.gitHubRepoNames[project]) {
-            var url = 'https://api.github.com/repos/' + this.gitHubUserName + '/' + this.gitHubRepoNames[project] + '/contents';
+        this.currentOpenProject = project;
+        $('#' + this.currentOpenProject + 'Modal').modal('toggle');
+        if (this.gitHubRepoNames[this.currentOpenProject]) {
+            var url = 'https://api.github.com/repos/' + this.gitHubUserName + '/' + this.gitHubRepoNames[this.currentOpenProject] + '/contents';
             this.githubService.getGithubApiResponseByURL(url)
                 .then(response => {
                     console.log(response.data);
+                    this.depth = 0;
                     this.handleContents(response.data);
 
                     if (response.data.find(f => f.name === 'package.json')) {
@@ -77,48 +79,6 @@ export default class ProjectsController {
                                 });
                         }
                     }
-
-                    const totalSizeSum = Object.values(this.db).reduce((a, b) => a + b, 0);
-                    this.newDb = {};
-                    Object.keys(this.db).forEach(key => {
-                        if (this.db[key] > 0) {
-                            this.newDb[key] = Math.round((this.db[key] / totalSizeSum) * 100);
-                        }
-                    });
-
-                    console.log(this.newDb);
-                    console.log(this.dependenciesToLookFor);
-
-                    var ctx = document.getElementById(`${project}Chart`).getContext('2d');
-                    var chart = new Chart(ctx, {
-                        type: 'pie',
-                        data: {
-                            labels: Object.keys(this.newDb),
-                            datasets: [{
-                                label: "My First dataset",
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                data: Object.values(this.newDb),
-                            }]
-                        },
-
-                        // Configuration options go here
-                        options: {}
-                    });
                 });
         }
     }
@@ -132,12 +92,55 @@ export default class ProjectsController {
                     this.db[fileExtension] = this.db[fileExtension] + d.size;
                 }
             } else if (d.type === 'dir' && !this.folderBlackList.includes(d.name)) {
+                this.depth++;
                 this.githubService.getGithubApiResponseByURL(d.url)
                     .then(resp => {
                         this.handleContents(resp.data);
                     });
             }
         });
+        this.depth--;
+        if (this.depth === 0) {
+            const totalSizeSum = Object.values(this.db).reduce((a, b) => a + b, 0);
+            this.newDb = {};
+            Object.keys(this.db).forEach(key => {
+                if (this.db[key] > 0) {
+                    this.newDb[key] = Math.round((this.db[key] / totalSizeSum) * 100);
+                }
+            });
+
+            console.log(this.newDb);
+            console.log(this.dependenciesToLookFor);
+
+            var ctx = document.getElementById(`${this.currentOpenProject}Chart`).getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(this.newDb),
+                    datasets: [{
+                        label: "My First dataset",
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        data: Object.values(this.newDb),
+                    }]
+                },
+                options: {}
+            });
+        }
     }
 
     setEvents() {
@@ -166,6 +169,7 @@ export default class ProjectsController {
             babel: false,
             karma: false
         };
+        this.currentOpenProject = '';
     }
 
     /**
