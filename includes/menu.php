@@ -15,7 +15,7 @@
     </div>
     <div id="subMenuContainer">
         <div class="subMenuBar" for="{{ menuItem.name }}" data-ng-repeat="menuItem in controller.menu" data-ng-if="menuItem.submenu">
-            <div data-ng-repeat="submenuItem in menuItem.submenu" class="link subMenuLink" id="{{ submenuItem.name }}" data-ng-class="{'lol': controller.getPageName() == submenuItem.name}">
+            <div data-ng-repeat="submenuItem in menuItem.submenu" class="link subMenuLink" id="{{ submenuItem.name }}" data-ng-class="{'selected': controller.isSelected(submenuItem.name)}">
                 <a href="{{ submenuItem.href }}" data-ng-bind="submenuItem.name.toUpperCase()"></a>
             </div>
         </div>

@@ -8,6 +8,7 @@
  * @param {$routeParams} $routeParams - See {@link https://code.angularjs.org/1.3.15/docs/api/ngRoute/service/$routeParams}
  * @param {$location} $location - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$location}
  * @param {$window} $window - See {@link https://code.angularjs.org/1.3.15/docs/api/ng/service/$timeout}
+ * @param {services.GithubService} githubService - Service for fetch data from Github API
  */
 export default class ProjectsController {
     constructor($scope, $log, $timeout, $routeParams, $location, $window, githubService) {
@@ -34,8 +35,6 @@ export default class ProjectsController {
             flappyDoge: 'FlappyDoge'
         };
         this.gitHubUserName = 'ToWelie89';
-        this.db = {};
-        this.dependenciesToLookFor = {};
 
         this.reset();
         this.setEvents();
@@ -48,6 +47,41 @@ export default class ProjectsController {
         }, 100);
     }
 
+    /**
+     * @function controllers.MenuController#reset
+     * @description Reset data used for repository stats
+     */
+    reset() {
+        this.db = {
+            js: 0,
+            html: 0,
+            php: 0,
+            css: 0,
+            less: 0,
+            ts: 0,
+            xml: 0,
+            json: 0,
+            scss: 0,
+            cs: 0
+        };
+        this.dependenciesToLookFor = {
+            grunt: false,
+            angular: false,
+            webpack: false,
+            babel: false,
+            karma: false,
+            react: false,
+            jquery: false,
+            bootstrap: false
+        };
+        this.currentOpenProject = '';
+    }
+
+    /**
+     * @function controllers.MenuController#initProject
+     * @param {Obj} project The project to initialize
+     * @description Function for initializing a chosen project which includes gathering data of the project repo
+     */
     initProject(project) {
         this.reset();
         this.currentOpenProject = project;
@@ -78,6 +112,11 @@ export default class ProjectsController {
         }
     }
 
+    /**
+     * @function controllers.MenuController#folderIsBlacklisted
+     * @param {String} dirName Name of the folder
+     * @description Function for determining if the specified folder is in the blacklist of folders to ignore
+     */
     folderIsBlacklisted(dirName) {
         const folderBlackList = [
             'cssLibs',
@@ -91,6 +130,11 @@ export default class ProjectsController {
         return (folderBlackList.includes(dirName) || dirName.includes('ReSharper_'));
     }
 
+    /**
+     * @function controllers.MenuController#handleContents
+     * @param {Obj} data The content data to process
+     * @description Recursive function used to traverse all folders of a repo and get the contents and build up the stats used for graphs
+     */
     handleContents(data) {
         data.forEach(d => {
             if (d.type === 'file') {
@@ -151,6 +195,10 @@ export default class ProjectsController {
         }
     }
 
+    /**
+     * @function controllers.MenuController#setEvents
+     * @description Set listener for the hide event of the modals
+     */
     setEvents() {
         $('.modal').each(function() {
             $(this).on('hide.bs.modal', e => {
@@ -159,31 +207,7 @@ export default class ProjectsController {
         });
     }
 
-    reset() {
-        this.db = {
-            js: 0,
-            html: 0,
-            php: 0,
-            css: 0,
-            less: 0,
-            ts: 0,
-            xml: 0,
-            json: 0,
-            scss: 0,
-            cs: 0
-        };
-        this.dependenciesToLookFor = {
-            grunt: false,
-            angular: false,
-            webpack: false,
-            babel: false,
-            karma: false,
-            react: false,
-            jquery: false,
-            bootstrap: false
-        };
-        this.currentOpenProject = '';
-    }
+
 
     /**
      * @function controllers.ProjectsController#openProject

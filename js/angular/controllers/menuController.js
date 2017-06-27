@@ -1,10 +1,16 @@
+/*
+    IMPORTS
+*/
+
+import {MENU} from './../../configFiles/menu';
+
 /**
  * @constructor MenuController
  * @memberof controllers
  * @description Controller for menu
  * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
  * @param {services.PageUrlService} pageUrlService - Service for reading GET-parameters from the URL.
- * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+ * @param {$timeout} $timeout - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$timeout}
  */
 export default class MenuController {
     constructor($scope, pageUrlService, $timeout) {
@@ -20,14 +26,15 @@ export default class MenuController {
         this.vm.currentPage = this.currentPage;
         this.vm.getPageName = this.getPageName;
         this.vm.init = this.init;
+        this.vm.isSelected = this.isSelected;
 
-        fetch('json/menu.json')
-        .then(resp => resp.json())
-        .then(res => {
-            this.vm.menu = res;
-        });
+        this.vm.menu = MENU;
     }
 
+    /**
+     * @function controllers.MenuController#init
+     * @description Initialization function
+     */
     init() {
         this.$timeout(() => {
             this.mainMenuClickEvent(null);
@@ -64,12 +71,19 @@ export default class MenuController {
     }
 
     /**
-     * @function controllers.MenuController#getPageName
-     * @description Function for getting the current page name
-     * @returns {string} The current page name
+     * @function controllers.MenuController#isSelected
+     * @description Function for determining if a specified submenu item is currently selected
+     * @returns {boolean} True if the current sub menu item is selected, otherwise false
      */
-    getPageName() {
-        return this.pageUrlService.getPageName();
+    isSelected(submenuItemName) {
+        const pageName = this.pageUrlService.getPageName();
+        if (pageName === submenuItemName) {
+            return true;
+        } else if (pageName.includes(`${submenuItemName}/`)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**

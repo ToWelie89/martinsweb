@@ -56,7 +56,7 @@ app.config(['$routeProvider', '$locationProvider', '$logProvider',
         $routeProvider
             .when('/', {
                 controller: 'startController',
-                templateUrl: 'views/index.html'
+                templateUrl: 'views/build/index.html'
             })
             .when('/cv', {
                 controller: 'cvController',
@@ -91,7 +91,7 @@ app.config(['$routeProvider', '$locationProvider', '$logProvider',
                 controllerAs: 'controller',
                 templateUrl: 'views/blog.html'
             })
-            .when('/blogPost', {
+            .when('/blog/:blogName', {
                 controller: 'blogPostController',
                 controllerAs: 'controller',
                 templateUrl: 'views/blogPost.html'

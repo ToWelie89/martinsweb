@@ -1,4 +1,4 @@
-[{
+const TECH_COMPETENCE = [{
     "name": "Languages",
     "competences": [{
         "name": "C#",
@@ -151,4 +151,6 @@
         "name": "MS Office",
         "grade": 3
     }]
-}]
+}];
+
+export {TECH_COMPETENCE};

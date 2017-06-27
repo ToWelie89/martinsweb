@@ -1,3 +1,9 @@
+/*
+    IMPORTS
+*/
+
+import {BLOG_POSTS} from './../../configFiles/blogPosts';
+
 /**
  * @constructor BlogController
  * @memberof controllers
@@ -40,7 +46,8 @@ export default class BlogController {
      * @param {Obj} id The id for which blog post to redirect to
      */
     goToPost(id) {
-        this.$location.path('/blogPost').search({id: id});
+        const blogPost = BLOG_POSTS.find(blogPost => blogPost.id === id);
+        this.$location.path(`/blog/${blogPost.name}`);
     };
 
     /**
@@ -48,7 +55,7 @@ export default class BlogController {
      * @description Function for formating blog posts by modifying data in the model
      */
     formatPosts() {
-        angular.forEach(this.vm.posts, function(post) {
+        this.vm.posts.forEach(post => {
             post.excerpt = post.excerpt.substring(0, 150);
             post.excerpt = post.excerpt.replace(/^\s+|\s+$/g, '');
 

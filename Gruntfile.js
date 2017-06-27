@@ -48,11 +48,17 @@ module.exports = function(grunt) {
                     }, {
                         match: 'syntaxHighlighterThemeCss',
                         replacement: '<%= grunt.file.read("css/cssLibs/shThemeMidnight.css") %>'
+                    }, {
+                        match: 'signatureSvg',
+                        replacement: '<%= grunt.file.read("signatur.svg") %>'
                     }]
                 },
                 files: [{
                     src: ['includes/build/head.php'],
                     dest: 'includes/build/head.php'
+                }, {
+                    src: ['views/index.html'],
+                    dest: 'views/build/index.html'
                 }]
             }
         },
@@ -147,7 +153,7 @@ module.exports = function(grunt) {
                 },
             },
             jsdocTemplate: {
-                files: ['jsdocTemplate/**/*.js', 'jsdocTemplate/**/*.tmpl', 'jsdocTemplate/**/*.css', 'js/jsdoc.md', 'js/angular/jsdoc-global-definitions.js'],
+                files: ['jsdocTemplate/**/*.js', 'jsdocTemplate/**/*.tmpl', 'jsdocTemplate/**/*.css', 'js/jsdoc.md', 'js/jsdoc-global-definitions.js'],
                 tasks: ['jsdoc'],
                 options: {
                     spawn: false,
@@ -156,7 +162,6 @@ module.exports = function(grunt) {
         },
         jsonlint: {
             src: [
-                'json/*.json',
                 'package.json'
             ]
         },

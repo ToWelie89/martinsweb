@@ -1,4 +1,4 @@
-[{
+const MENU = [{
     "name": "start",
     "href": "/#/"
 }, {
@@ -28,4 +28,6 @@
         "name": "photos",
         "href": "#photos"
     }]
-}]
+}];
+
+export {MENU};

@@ -1,3 +1,9 @@
+/*
+    IMPORTS
+*/
+
+import {TECH_COMPETENCE} from './../../configFiles/techCompetence';
+
 /**
  * @constructor CvController
  * @memberof controllers
@@ -12,15 +18,10 @@ export default class CvController {
      */
     constructor($scope, $log) {
         this.vm = this;
-        this.vm.techCompetence = {};
 
         this.$log = $log;
 
-        fetch('json/techCompetence.json')
-        .then(resp => resp.json())
-        .then(data => {
-            this.vm.techCompetence = data;
-            this.$log.debug(this.vm.techCompetence);
-        });
+        this.vm.techCompetence = TECH_COMPETENCE;
+        this.$log.debug(this.vm.techCompetence);
     }
 }

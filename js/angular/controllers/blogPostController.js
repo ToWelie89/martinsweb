@@ -1,8 +1,22 @@
+/*
+    IMPORTS
+*/
+
+import {BLOG_POSTS} from './../../configFiles/blogPosts';
+
+/**
+ * @constructor BlogPostController
+ * @memberof controllers
+ * @description Controller for logic the blog post page
+ * @param {$scope} $scope - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/type/$rootScope.Scope}
+ * @param {$log} $log - See {@link https://code.angularjs.org/1.2.26/docs/api/ng/service/$log}
+ * @param {services.WordpressService} wordpressService - Service for handling calls to Wordpress for fetching blog data
+ */
 export default class BlogPostController {
-    constructor($scope, $log, wordpressService, pageUrlService) {
+    constructor($scope, $log, wordpressService, $routeParams) {
         this.vm = this;
 
-        this.pageUrlService = pageUrlService;
+        this.$routeParams = $routeParams;
         this.wordpressService = wordpressService;
         this.$log = $log;
         this.$scope = $scope;
@@ -17,9 +31,13 @@ export default class BlogPostController {
         this.vm.loading = true;
         this.setWatch();
 
-        this.blogId = this.pageUrlService.getParameterValueByKey('id');
-        if (this.blogId) {
-            this.getBlogPost(this.blogId);
+        if (this.$routeParams.blogName) {
+            if (typeof this.$routeParams.blogName === 'string') {
+                const blogPost = BLOG_POSTS.find(b => b.name === this.$routeParams.blogName);
+                this.getBlogPost(blogPost.id);
+            } else if (typeof this.$routeParams.blogName === 'number') {
+                this.getBlogPost(this.blogId);
+            }
         } else {
             this.vm.loading = false;
         }
