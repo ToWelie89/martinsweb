@@ -1,3 +1,9 @@
+/*
+    IMPORTS
+*/
+
+import {getColorAsHex} from './../../helpers/colorGenerator';
+
 /**
  * @constructor ProjectsController
  * @memberof controllers
@@ -86,29 +92,53 @@ export default class ProjectsController {
         this.reset();
         this.currentOpenProject = project;
         $('#' + this.currentOpenProject + 'Modal').modal('toggle');
+
+        const localStorageData = JSON.parse(localStorage.getItem(`${this.currentOpenProject}StorageData`));
+
+        if (localStorageData && !this.localStorageDataIsOlderThanOneDay(localStorageData)) {
+            this.db = localStorageData.db;
+            this.dependenciesToLookFor = localStorageData.dependenciesToLookFor;
+            this.initializeStatistics();
+        } else {
+            this.getDataForRepoFromGithub();
+        }
+    }
+
+    localStorageDataIsOlderThanOneDay(localStorageData) {
+        const timeStamp = localStorageData.timeStamp;
+        return ((timeStamp * 1000 * 60 * 60 * 24) < Date.now());
+    }
+
+    getDataForRepoFromGithub() {
         if (this.gitHubRepoNames[this.currentOpenProject]) {
             var url = 'https://api.github.com/repos/' + this.gitHubUserName + '/' + this.gitHubRepoNames[this.currentOpenProject] + '/contents';
             this.githubService.getGithubApiResponseByURL(url)
-                .then(response => {
-                    console.log(response.data);
-                    this.depth = 0;
-                    this.handleContents(response.data);
+            .then(response => {
+                console.log(response.data);
+                this.depth = 0;
+                this.getDependencies(response);
+                this.handleContents(response.data);
+            });
+        }
+    }
 
-                    if (response.data.find(f => f.name === 'package.json')) {
-                        const packageJson = response.data.find(f => f.name === 'package.json');
-                        if (packageJson) {
-                            this.githubService.getGithubApiResponseByURL(packageJson.download_url)
-                                .then(resp => {
-                                    const dependencies = Object.keys(resp.data.devDependencies);
-                                    Object.keys(this.dependenciesToLookFor).forEach(key => {
-                                        if (dependencies.find(dep => dep.includes(key))) {
-                                            this.dependenciesToLookFor[key] = true;
-                                        }
-                                    });
-                                });
-                        }
+    /**
+     * @function controllers.MenuController#getDependencies
+     * @param {String} response The response
+     * @description Function for determining which dependencies are used for the project
+     */
+    getDependencies(response) {
+        const packageJson = response.data.find(f => f.name === 'package.json');
+        if (packageJson) {
+            this.githubService.getGithubApiResponseByURL(packageJson.download_url)
+            .then(resp => {
+                const dependencies = Object.keys(resp.data.devDependencies);
+                Object.keys(this.dependenciesToLookFor).forEach(key => {
+                    if (dependencies.find(dep => dep.includes(key))) {
+                        this.dependenciesToLookFor[key] = true;
                     }
                 });
+            });
         }
     }
 
@@ -143,7 +173,7 @@ export default class ProjectsController {
                 if (this.db[fileExtension] !== undefined) {
                     this.db[fileExtension] = this.db[fileExtension] + d.size;
                 }
-            } else if (d.type === 'dir' && !folderIsBlacklisted(d.name)) {
+            } else if (d.type === 'dir' && !this.folderIsBlacklisted(d.name)) {
                 this.depth++;
                 this.githubService.getGithubApiResponseByURL(d.url)
                     .then(resp => {
@@ -153,18 +183,43 @@ export default class ProjectsController {
         });
         this.depth--;
         if (this.depth === 0) {
-            const totalSizeSum = Object.values(this.db).reduce((a, b) => a + b, 0);
-            this.newDb = {};
-            Object.keys(this.db).forEach(key => {
-                if (this.db[key] > 0) {
-                    this.newDb[key] = Math.round((this.db[key] / totalSizeSum) * 100);
-                }
-            });
+            // Recursion is done
+            this.initializeStatistics();
+            // Save data to localstorage
+            const data = {
+                db: this.newDb,
+                dependenciesToLookFor: this.dependenciesToLookFor,
+                timeStamp: Date.now()
+            }
 
-            console.log(this.newDb);
-            console.log(this.dependenciesToLookFor);
+            localStorage.setItem(`${this.currentOpenProject}StorageData`, JSON.stringify(data));
+        }
+    }
 
-            var ctx = document.getElementById(`${this.currentOpenProject}Chart`).getContext('2d');
+    initializeStatistics() {
+        const totalSizeSum = Object.values(this.db).reduce((a, b) => a + b, 0);
+        this.newDb = {};
+        Object.keys(this.db).forEach(key => {
+            if (this.db[key] > 0) {
+                this.newDb[key] = Math.round((this.db[key] / totalSizeSum) * 100);
+            }
+        });
+
+        console.log(this.newDb);
+        console.log(this.dependenciesToLookFor);
+
+        this.vm.dbArray = Object.keys(this.newDb).map(x => {
+            return {
+                key: x,
+                value: this.newDb[x]
+            };
+        });
+        this.vm.dependenciesToShow = Object.keys(this.dependenciesToLookFor).filter(x => this.dependenciesToLookFor[x]);
+
+        /*
+        var div = document.getElementById(`${this.currentOpenProject}Chart`);
+        if (div) {
+            var ctx = chart.getContext('2d');
             var chart = new Chart(ctx, {
                 type: 'pie',
                 data: {
@@ -192,7 +247,7 @@ export default class ProjectsController {
                 },
                 options: {}
             });
-        }
+        }*/
     }
 
     /**
@@ -206,8 +261,6 @@ export default class ProjectsController {
             });
         });
     }
-
-
 
     /**
      * @function controllers.ProjectsController#openProject
