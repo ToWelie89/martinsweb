@@ -27,6 +27,8 @@ export default class ProjectsController {
         this.$window = $window;
         this.$location = $location;
 
+        this.vm.loading = false;
+
         this.vm.openProject = this.openProject;
         this.vm.closeProject = this.closeProject;
 
@@ -41,6 +43,17 @@ export default class ProjectsController {
             flappyDoge: 'FlappyDoge'
         };
         this.gitHubUserName = 'ToWelie89';
+        this.dependenciesToLookForInPackage = [
+            'grunt',
+            'angular',
+            'webpack', //missing icon
+            'grunt',
+            'babel', // missing icon
+            'karma', // missing icon
+            'react',
+            'jquery',
+            'bootstrap'
+        ];
 
         this.reset();
         this.setEvents();
@@ -68,18 +81,11 @@ export default class ProjectsController {
             xml: 0,
             json: 0,
             scss: 0,
-            cs: 0
+            cs: 0,
+            java: 0,
+            svg: 0
         };
-        this.dependenciesToLookFor = {
-            grunt: false,
-            angular: false,
-            webpack: false,
-            babel: false,
-            karma: false,
-            react: false,
-            jquery: false,
-            bootstrap: false
-        };
+        this.vm.usedDependencies = [];
         this.currentOpenProject = '';
     }
 
@@ -89,6 +95,7 @@ export default class ProjectsController {
      * @description Function for initializing a chosen project which includes gathering data of the project repo
      */
     initProject(project) {
+        this.vm.loading = true;
         this.reset();
         this.currentOpenProject = project;
         $('#' + this.currentOpenProject + 'Modal').modal('toggle');
@@ -97,8 +104,9 @@ export default class ProjectsController {
 
         if (localStorageData && !this.localStorageDataIsOlderThanOneDay(localStorageData)) {
             this.db = localStorageData.db;
-            this.dependenciesToLookFor = localStorageData.dependenciesToLookFor;
+            this.vm.usedDependencies = localStorageData.usedDependencies;
             this.initializeStatistics();
+            this.vm.loading = false;
         } else {
             this.getDataForRepoFromGithub();
         }
@@ -116,26 +124,33 @@ export default class ProjectsController {
             .then(response => {
                 console.log(response.data);
                 this.depth = 0;
-                this.getDependencies(response);
+                // If one of these files exists in root folder then we can assume project is versioned with Git
+                if (response.data.find(f => f.name === '.gitignore' || f.name === '.gitAttributes' || f.name === '.gitModules')) {
+                    this.vm.usedDependencies.push('git');
+                }
+                this.getDependenciesFromPackage(response);
                 this.handleContents(response.data);
             });
         }
     }
 
     /**
-     * @function controllers.MenuController#getDependencies
+     * @function controllers.MenuController#getDependenciesFromPackage
      * @param {String} response The response
      * @description Function for determining which dependencies are used for the project
      */
-    getDependencies(response) {
+    getDependenciesFromPackage(response) {
         const packageJson = response.data.find(f => f.name === 'package.json');
         if (packageJson) {
+            // Package.json exists, therefore project uses npm
+            this.vm.usedDependencies.push('npm');
             this.githubService.getGithubApiResponseByURL(packageJson.download_url)
             .then(resp => {
                 const dependencies = Object.keys(resp.data.devDependencies);
-                Object.keys(this.dependenciesToLookFor).forEach(key => {
-                    if (dependencies.find(dep => dep.includes(key))) {
-                        this.dependenciesToLookFor[key] = true;
+
+                this.dependenciesToLookForInPackage.forEach(d => {
+                    if (dependencies.find(dep => dep.includes(d))) {
+                        this.vm.usedDependencies.push(dep);
                     }
                 });
             });
@@ -186,13 +201,27 @@ export default class ProjectsController {
             // Recursion is done
             this.initializeStatistics();
             // Save data to localstorage
+
+            if (this.newDb['js']) { this.vm.usedDependencies.push('javascript'); }
+            if (this.newDb['java']) { this.vm.usedDependencies.push('java'); }
+            if (this.newDb['cs']) { this.vm.usedDependencies.push('csharp'); }
+            if (this.newDb['css']) { this.vm.usedDependencies.push('css'); }
+            if (this.newDb['html']) { this.vm.usedDependencies.push('html'); }
+            if (this.newDb['scss']) { this.vm.usedDependencies.push('sass'); }
+            if (this.newDb['less']) { this.vm.usedDependencies.push('less'); } // Missing icon
+            if (this.newDb['sh']) { this.vm.usedDependencies.push('shell'); }
+            if (this.newDb['py']) { this.vm.usedDependencies.push('python'); }
+            if (this.newDb['php']) { this.vm.usedDependencies.push('php'); }
+
             const data = {
                 db: this.newDb,
-                dependenciesToLookFor: this.dependenciesToLookFor,
+                usedDependencies: this.vm.usedDependencies,
                 timeStamp: Date.now()
             }
 
             localStorage.setItem(`${this.currentOpenProject}StorageData`, JSON.stringify(data));
+
+            this.vm.loading = false;
         }
     }
 
@@ -206,7 +235,7 @@ export default class ProjectsController {
         });
 
         console.log(this.newDb);
-        console.log(this.dependenciesToLookFor);
+        console.log(this.vm.usedDependencies);
 
         this.vm.dbArray = Object.keys(this.newDb).map(x => {
             return {
@@ -214,40 +243,6 @@ export default class ProjectsController {
                 value: this.newDb[x]
             };
         });
-        this.vm.dependenciesToShow = Object.keys(this.dependenciesToLookFor).filter(x => this.dependenciesToLookFor[x]);
-
-        /*
-        var div = document.getElementById(`${this.currentOpenProject}Chart`);
-        if (div) {
-            var ctx = chart.getContext('2d');
-            var chart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: Object.keys(this.newDb),
-                    datasets: [{
-                        label: "My First dataset",
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        data: Object.values(this.newDb),
-                    }]
-                },
-                options: {}
-            });
-        }*/
     }
 
     /**

@@ -9,10 +9,11 @@
 <meta name="theme-color" content="#457bc3">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/cssLibs/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/cssLibs/bootstrap.min.css">
+<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!-- Font awesome -->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/cssLibs/font-mfizz.css">
 
 <!-- Light gallery -->
 <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/dist/css/lightgallery.min.css" />
@@ -58,12 +59,13 @@
 
 <!-- Node module libs -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script async src="js/libs/bootstrap.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- <script src="node_modules/jquery-mobile/dist/jquery.mobile.min.js"></script> -->
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-<script src="node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
 <!-- light gallery -->
 <script src="node_modules/lightgallery/dist/js/lightgallery.min.js"></script>

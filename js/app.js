@@ -20,11 +20,13 @@ import WordpressService from './angular/services/wordpressService';
 
 import ScrollToTopDirective from './angular/directives/scrollToTopDirective';
 
+import {CapitalizeFirstLetter} from './angular/filters/capitalizeFirstLetter';
+
 /*
-* DECLARE ANGULAR CONTROLLERS AND
+* DECLARE ANGULAR CONTROLLERS, SERVICES, DIRECTIVES AND FILTERS
 */
 
-const app = angular.module('martinsWeb', ['ngRoute', 'ngSanitize']);
+const app = angular.module('martinsWeb', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
 /* CONTROLLERS */
 app.controller('artController', ArtController);
 app.controller('blogController', BlogController);
@@ -43,6 +45,8 @@ app.service('pageUrlService', PageUrlService);
 app.service('wordpressService', WordpressService);
 /* DIRECTIVES */
 app.directive('scrollToTop', () => new ScrollToTopDirective());
+/* FILTERS */
+app.filter('capitalizeFirstLetter', CapitalizeFirstLetter);
 
 /*
 * CONFIG
