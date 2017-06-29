@@ -48,7 +48,6 @@ export default class ProjectsController {
             'grunt',
             'angular',
             'webpack', //missing icon
-            'grunt',
             'babel', // missing icon
             'karma', // missing icon
             'react',
