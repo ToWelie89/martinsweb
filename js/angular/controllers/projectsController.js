@@ -31,6 +31,7 @@ export default class ProjectsController {
 
         this.vm.openProject = this.openProject;
         this.vm.closeProject = this.closeProject;
+        this.vm.getClassForDep = this.getClassForDep;
 
         this.gitHubRepoNames = {
             risk: 'ECMA6Risk',
@@ -146,11 +147,15 @@ export default class ProjectsController {
             this.vm.usedDependencies.push('npm');
             this.githubService.getGithubApiResponseByURL(packageJson.download_url)
             .then(resp => {
-                const dependencies = Object.keys(resp.data.devDependencies);
+                const dependencies = Object.keys(resp.data.devDependencies).concat(Object.keys(resp.data.dependencies));
 
                 this.dependenciesToLookForInPackage.forEach(d => {
-                    if (dependencies.find(dep => dep.includes(d))) {
-                        this.vm.usedDependencies.push(dep);
+                    const foundDep = dependencies.find(dep => {
+                        return dep.includes(d);
+                    });
+
+                    if (foundDep) {
+                        this.vm.usedDependencies.push(d);
                     }
                 });
             });
@@ -212,6 +217,7 @@ export default class ProjectsController {
             if (this.newDb['sh']) { this.vm.usedDependencies.push('shell'); }
             if (this.newDb['py']) { this.vm.usedDependencies.push('python'); }
             if (this.newDb['php']) { this.vm.usedDependencies.push('php'); }
+            if (this.newDb['svg']) { this.vm.usedDependencies.push('svg'); }
 
             const data = {
                 db: this.newDb,
@@ -237,12 +243,22 @@ export default class ProjectsController {
         console.log(this.newDb);
         console.log(this.vm.usedDependencies);
 
+        // Convert to array of objects
         this.vm.dbArray = Object.keys(this.newDb).map(x => {
             return {
                 key: x,
                 value: this.newDb[x]
             };
         });
+        // Sort to show most frequent first
+        this.vm.dbArray.sort((a, b) => {
+            return b.value - a.value;
+        });
+        // Fix to account for rounding errors where total % would sometime be 99% or 101%
+        const totalPercentageSum = this.vm.dbArray.map(x => x.value).reduce((a, b) => a + b, 0);
+        if (totalPercentageSum !== 100) {
+            this.vm.dbArray[0].value + (100 - totalPercentageSum);
+        }
     }
 
     /**
@@ -278,6 +294,45 @@ export default class ProjectsController {
         $('.modal-backdrop').remove();
 
         this.$location.path('projects/');
+    }
+
+    getClassForDep(dep) {
+        switch (dep) {
+            case 'angular':
+                return 'icon-angular';
+            case 'bootstrap':
+                return 'icon-bootstrap';
+            case 'grunt':
+                return 'icon-grunt';
+            case 'jquery':
+                return 'icon-jquery';
+            case 'react':
+                return 'icon-react';
+            case 'npm':
+                return 'icon-npm';
+            case 'git':
+                return 'icon-git';
+            case 'javascript':
+                return 'icon-javascript-alt';
+            case 'java':
+                return 'icon-java-bold';
+            case 'csharp':
+                return 'icon-csharp';
+            case 'css':
+                return 'icon-css3-alt';
+            case 'html':
+                return 'icon-html5-alt';
+            case 'sass':
+                return 'icon-sass';
+            case 'shell':
+                return 'icon-shell';
+            case 'python':
+                return 'icon-python';
+            case 'php':
+                return 'icon-php';
+            case 'svg':
+                return 'icon-svg';
+        }
     }
 
     /**

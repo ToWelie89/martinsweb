@@ -76,102 +76,10 @@
                     <div data-ng-hide="controller.loading" data-ng-cloak>
                         <div class="marginBottom dependenciesList">
                             <span data-ng-repeat="dep in controller.usedDependencies">
-                                <i
-                                data-tooltip-placement="top"
+                                <i data-tooltip-placement="top"
                                 uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-angular"
-                                style="color: #dd1b16"
-                                data-ng-if="dep === 'angular'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-bootstrap"
-                                style="color: #5f4687"
-                                data-ng-if="dep === 'bootstrap'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-grunt"
-                                style="color: #fba919"
-                                data-ng-if="dep === 'grunt'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-jquery"
-                                style="color: #78cff5"
-                                data-ng-if="dep === 'jquery'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-react"
-                                style="color: #61dafb"
-                                data-ng-if="dep === 'react'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-npm"
-                                style="color: #cb3837"
-                                data-ng-if="dep === 'npm'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-git"
-                                style="color: #f54d27"
-                                data-ng-if="dep === 'git'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-javascript-alt"
-                                style="color: #f0db4f"
-                                data-ng-if="dep === 'javascript'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-java-bold"
-                                style="color: #457a9b"
-                                data-ng-if="dep === 'java'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-csharp"
-                                style="color: #672179"
-                                data-ng-if="dep === 'csharp'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-css3-alt"
-                                style="color: #008fd4"
-                                data-ng-if="dep === 'css'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-html5-alt"
-                                style="color: #e44d26"
-                                data-ng-if="dep === 'html'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-sass"
-                                style="color: #cf649a"
-                                data-ng-if="dep === 'sass'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-shell"
-                                style="color: black"
-                                data-ng-if="dep === 'shell'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-python"
-                                style="color: #f8c63d"
-                                data-ng-if="dep === 'python'"></i>
-                                <i
-                                data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
-                                class="icon-php"
-                                style="color: black"
-                                data-ng-if="dep === 'php'"></i>
+                                class="{{controller.getClassForDep(dep)}}"
+                                data-tech-color="{{tech.key}}"></i>
                             </span>
                         </div>
                         <div class="projectBarChart">
