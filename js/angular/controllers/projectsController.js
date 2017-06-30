@@ -114,7 +114,8 @@ export default class ProjectsController {
 
     localStorageDataIsOlderThanOneDay(localStorageData) {
         const timeStamp = localStorageData.timeStamp;
-        return ((timeStamp * 1000 * 60 * 60 * 24) < Date.now());
+        const diff = Date.now() - timeStamp;
+        return (diff > (1000 * 60 * 60 * 24));
     }
 
     getDataForRepoFromGithub() {
