@@ -17,16 +17,26 @@ module.exports = function(grunt) {
             }
         },
         browserify: {
-            files: {
-                src: [
-                    'js/app.js'
-                ],
-                dest: 'assets/build/app.bundle.js'
+            build: {
+                files: {
+                    'assets/build/app.bundle.js': 'js/app.js'
+                },
+                options: {
+                    transform: [['babelify', { presets: "es2015" }]],
+                    browserifyOptions: {
+                        debug: true
+                    }
+                }
             },
-            options: {
-                transform: [['babelify', { presets: "es2015" }]],
-                browserifyOptions: {
-                    debug: true
+            test: {
+                files: {
+                    'assets/build/testApp.bundle.js': 'js/test/test.js'
+                },
+                options: {
+                    transform: [['babelify', { presets: "es2015" }]],
+                    browserifyOptions: {
+                        debug: true
+                    }
                 }
             }
         },
@@ -103,7 +113,8 @@ module.exports = function(grunt) {
         },
         clean: {
             all: ['includes/build/*', 'views/build/*', 'assets/build/*'],
-            css: ['assets/build/default.css']
+            css: ['assets/build/default.css'],
+            test: ['assets/build/testApp.bundle.js']
         },
         copy: {
             main: {
@@ -188,6 +199,11 @@ module.exports = function(grunt) {
         },
         eslint: {
             target: 'js/angular/**/*.js'
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
         }
     });
 
@@ -206,13 +222,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default task for building
     grunt.registerTask('default', [
-        'clean', // Clean previous build files
+        'clean:all', // Clean previous build files
         'copy', // Copy markup files that need to be adjusted to build folder
         'uglify', // Minify and uglify css and put it in build folder
-        'browserify', // Use browserify to transpile ES6 source code with babel
+        'browserify:build', // Use browserify to transpile ES6 source code with babel
         'filerev', // Create versioned images in img/build
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
@@ -226,8 +243,11 @@ module.exports = function(grunt) {
         'filerev_replace' // Change image filenames to the newly generated ones
     ]);
     grunt.registerTask('test', [
-        'jshint', // Test JS files for syntax errors
+        'clean:test', // Clean previous build files
+        'browserify:test', // Use browserify to transpile ES6 source code with babel
+        // 'jshint', // Test JS files for syntax errors
         'jsonlint', // JSON LINT, test json files for syntax errors
-        'eslint'
+        'eslint',
+        'karma' // Run karma tests
     ]);
 };

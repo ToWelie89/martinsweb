@@ -15,13 +15,7 @@
         "mapEditor"
     },
 
-    "parserOptions": {
-        "ecmaVersion": 5,
-        "sourceType": "script",
-        "ecmaFeatures": {
-            "modules": true
-        }
-    },
+    "parser": "babel-eslint",
 
     "rules": {
         "comma-dangle": ["error", "never"],
@@ -65,12 +59,12 @@
         "no-unused-vars": "warn",
         "new-cap": "warn",
 
-        "fp/no-class": "error",
-        "fp/no-delete": "warn",
+        // "fp/no-class": "error",
+        // "fp/no-delete": "warn",
         "fp/no-events": "off",
         "fp/no-let": "off",
         "fp/no-loops": "off",
-        "fp/no-mutating-assign": "error",
+        // "fp/no-mutating-assign": "error",
         "fp/no-mutation": "off",
         "fp/no-nil": "off",
         "fp/no-this": "off",
