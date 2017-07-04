@@ -18,14 +18,14 @@
                      <img width="250" src="../../assets/build/bioAvatar.jpg" style="border-radius:30px; margin:0 auto;">
                 </div>
             </div>
-            <div class="table center" style="padding-left: 40px;">
+            <div class="table center">
                 <div class="tableRow">
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowKeySpan">
                             Age
                         </p>
                      </span>
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowValueSpan">
                             <?php
                                 $birthdate = new DateTime("1989-09-06");
@@ -38,12 +38,12 @@
                      </span>
                 </div>
                 <div class="tableRow">
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowKeySpan">
                             Location
                         </p>
                      </span>
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowValueSpan">
                             <a href="https://www.google.se/maps/place/G%C3%B6teborg/@57.7019548,11.8936825,11z/" target="_blank">
                                 Gothenburg, Sweden
@@ -52,14 +52,14 @@
                      </span>
                 </div>
                 <div class="tableRow">
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowKeySpan">
                             Current employment
                         </p>
                      </span>
-                     <span class="tableRowCell">
+                     <span class="tableRowCell tableRowCell--col-sm-6">
                         <p class="rowValueSpan">
-                            IT-consultant, Knowit
+                            IT-consultant, Annevo AB
                         </p>
                      </span>
                 </div>
