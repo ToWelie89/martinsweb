@@ -257,7 +257,7 @@ export default class ProjectsController {
         // Fix to account for rounding errors where total % would sometime be 99% or 101%
         const totalPercentageSum = this.vm.dbArray.map(x => x.value).reduce((a, b) => a + b, 0);
         if (totalPercentageSum !== 100) {
-            this.vm.dbArray[0].value + (100 - totalPercentageSum);
+            this.vm.dbArray[0].value += (100 - totalPercentageSum);
         }
     }
 
