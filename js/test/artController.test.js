@@ -1,6 +1,8 @@
 import {ART} from './../configFiles/art';
 import ArtController from './../angular/controllers/artController';
 
+console.log('UNIT TESTS FOR artController.js');
+
 describe('artController tests', () => {
     let artController;
 
