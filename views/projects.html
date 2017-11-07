@@ -73,30 +73,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-hide="controller.loading" data-ng-cloak>
-                        <div class="marginBottom dependenciesList">
-                            <span data-ng-repeat="dep in controller.usedDependencies">
-                                <i data-tooltip-placement="top"
-                                uib-tooltip="{{dep | formatCorrectNameForTech}}"
-                                class="{{controller.getClassForDep(dep)}}"
-                                data-tech-color="{{dep}}"></i>
-                            </span>
-                        </div>
-                        <div class="projectBarChart">
-                            <div data-ng-repeat="tech in controller.dbArray"
-                                 class="projectBarChart__item"
-                                 style="width: {{tech.value}}%;"
-                                 data-tech-color="{{tech.key}}"
-                                 data-tooltip-placement="bottom"
-                                 uib-tooltip="{{tech.key}} usage amount is {{tech.value}}%"
-                                 >
-                                 <span class="projectBarChart__item__span"
-                                       data-ng-bind="tech.key"
-                                       data-ng-class="{'projectBarChart__item__span--hidden': tech.value < 5}">
-                                 </span>
-                            </div>
-                        </div>
-                    </div>
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <div class="marginTop--double">
                         <p>
@@ -185,6 +162,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to
                         Starcraft 2 account and it then loads information about the player using
@@ -222,6 +203,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is the very site you're on right now, my personal website and portfolio. I began working on a
                         first portfolio that can still be found on <a href="http://www.martins-web.com" target="_blank">martins-web.com</a>
@@ -271,6 +256,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a web application I created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
                         tournament to see how it could all turn out. The simulators I found while googling only took into account if a match ends in a win, draw
@@ -345,6 +334,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
                     </p>
@@ -418,6 +411,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
                         project together with three other students. It is essentially a Android-version of the classic game Snake. The biggest difference
@@ -585,6 +582,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a game engine I am currently developing that is meant to simulate the rules and game logic of the classic miniature
                         board game Warhammer 40k. Since the game is fairly complex and has a lot of different rules to keep track of it is not the
@@ -618,6 +619,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
                     <p>
                         This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that
                         of Flappy Bird. It is written in Javascript and I use the phaser framework, a good framework for creating games in Javascript. Thanks

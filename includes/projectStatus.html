@@ -1,0 +1,24 @@
+<div data-ng-hide="controller.loading" data-ng-cloak>
+    <div class="marginBottom dependenciesList">
+        <span data-ng-repeat="dep in controller.usedDependencies">
+            <i data-tooltip-placement="top"
+            uib-tooltip="{{dep | formatCorrectNameForTech}}"
+            class="{{controller.getClassForDep(dep)}}"
+            data-tech-color="{{dep}}"></i>
+        </span>
+    </div>
+    <div class="projectBarChart">
+        <div data-ng-repeat="tech in controller.dbArray"
+             class="projectBarChart__item"
+             style="width: {{tech.value}}%;"
+             data-tech-color="{{tech.key}}"
+             data-tooltip-placement="bottom"
+             uib-tooltip="{{tech.key}} usage amount is {{tech.value}}%"
+             >
+             <span class="projectBarChart__item__span"
+                   data-ng-bind="tech.key"
+                   data-ng-class="{'projectBarChart__item__span--hidden': tech.value < 5}">
+             </span>
+        </div>
+    </div>
+</div>
