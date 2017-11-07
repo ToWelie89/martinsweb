@@ -147,7 +147,8 @@ export default class ProjectsController {
             this.vm.usedDependencies.push('npm');
             this.githubService.getGithubApiResponseByURL(packageJson.download_url)
             .then(resp => {
-                const dependencies = Object.keys(resp.data.devDependencies).concat(Object.keys(resp.data.dependencies));
+                const dependencies = Object.keys(resp.data.devDependencies ? resp.data.devDependencies : {})
+                                     .concat(Object.keys(resp.data.dependencies ? resp.data.dependencies : {}));
 
                 this.dependenciesToLookForInPackage.forEach(d => {
                     const foundDep = dependencies.find(dep => {

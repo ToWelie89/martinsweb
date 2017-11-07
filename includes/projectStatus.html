@@ -1,6 +1,6 @@
 <div data-ng-hide="controller.loading" data-ng-cloak>
     <div class="marginBottom dependenciesList">
-        <span data-ng-repeat="dep in controller.usedDependencies">
+        <span data-ng-repeat="dep in controller.usedDependencies track by $index">
             <i data-tooltip-placement="top"
             uib-tooltip="{{dep | formatCorrectNameForTech}}"
             class="{{controller.getClassForDep(dep)}}"
