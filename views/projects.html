@@ -1,6 +1,6 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
-        <a href="" data-content="ECMA6 Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
+        <a href="" data-content="Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
         </a>
     </div>
     <div class="grid-item">
@@ -67,7 +67,7 @@
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
                     <h4 class="modal-title">
-                        EMCA6 Risk
+                        Risk
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -77,7 +77,7 @@
                         <div class="marginBottom dependenciesList">
                             <span data-ng-repeat="dep in controller.usedDependencies">
                                 <i data-tooltip-placement="top"
-                                uib-tooltip="{{dep | capitalizeFirstLetter}}"
+                                uib-tooltip="{{dep | formatCorrectNameForTech}}"
                                 class="{{controller.getClassForDep(dep)}}"
                                 data-tech-color="{{dep}}"></i>
                             </span>
@@ -101,12 +101,62 @@
                     <div class="marginTop--double">
                         <p>
                             This is a web based game I've made of the classic board game Risk. The game is built using modern web technologies. The Javascript code
-                            is written using ECMA6 syntax, Babel and Browserify is used for transpiling the code. Grunt is used as a build tool, Angular for MVC
-                            functionality, Bootstrap CSS and Karma for unit testing.
+                            is written using the modern ES2015 syntax. Babel and Browserify is used for transpiling the code. Grunt is used as a build tool, Angular for MVC
+                            functionality, Bootstrap CSS and Karma for unit testing. The JS-library three.js is also used for 3D animations which is currently used
+                            for animating a dice roll, credit to <a href="http://www.teall.info/" target="_blank">tealyatina</a>.
                         </p>
                         <p class="marginTop">
-                            The game is currently in progress. I plan on making an AI so that you can play against the computer but for the moment there is no AI
-                            so you can only play against other people in hotseat mode.
+                            I started working on the project initially because I wanted to learn and get used to
+                            the new features introduced in Javascript ES2015, so I have tried to use these as much as possible, things like classes, arrow functions,
+                            const- and let-variables, imports, generators, the new native Promise-function, template literals, new Map datatype and plenty of new Array and
+                            Object functions. It was a bit tricky at first using Angular together with ES2015 import and export syntax but I think I managed to find a nice
+                            solution.
+                        </p>
+                        <p class="marginTop">
+                            The game is supposed to be played in a browser, preferably on a computer with a decently large screen as the UI doesn't fit on a mobile
+                            device. Right now only human vs human on the same device play is available, but I have plans to add AI opponents and maybe even multiplayer.
+                        </p>
+                        <p class="marginTop">
+                            <strong>
+                                Available features:
+                            </strong>
+                            <ul>
+                                <li>
+                                    Fully working Risk game engine that works according to the real rules of the classic board game.
+                                </li>
+                                <li>
+                                    Audio and voice support. Game music, sound effects and a talking robotic presenter voice.
+                                </li>
+                                <li>
+                                    Full support for Karma unit testing.
+                                </li>
+                                <li>
+                                    Scalable codebase that can be reused to also implement other versions of Risk, which I have future plans for.
+                                </li>
+                            </ul>
+                        </p>
+                        <p class="marginTop">
+                            <strong>
+                                Future features:
+                            </strong>
+                            <ul>
+                                <li>
+                                    <strong>AI.</strong> This is what I am currently working on. The challenge is to make the AI as smart as possible, as playing versus a stupid
+                                    AI that make illogical move would not be very challenging or fun. At the moment the game only supports play between humans
+                                    on the same device which makes the game very limited, which is why I really want to prioritize the AI development.
+                                </li>
+                                <li>
+                                    More game modes.
+                                </li>
+                                <li>
+                                    Adding more versions of the Risk game with other maps and factions. For instance for the actual board game there are tons of versions
+                                    like a Game of Thrones version, Lord of the Rings version, Napeleonic wars version etc.
+                                </li>
+                                <li>
+                                    <strong>Multiplayer.</strong> This feature would the game even more enticing. I'd prefer a peer-to-peer solution and I am thinking
+                                    about maybe using WebRTC. This is not something I have started working on yet though.
+                                </li>
+                            </ul>
                         </p>
                     </div>
                 </div>

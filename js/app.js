@@ -21,6 +21,7 @@ import WordpressService from './angular/services/wordpressService';
 import ScrollToTopDirective from './angular/directives/scrollToTopDirective';
 
 import {CapitalizeFirstLetter} from './angular/filters/capitalizeFirstLetter';
+import {FormatCorrectNameForTech} from './angular/filters/formatCorrectNameForTech';
 
 /*
 * DECLARE ANGULAR CONTROLLERS, SERVICES, DIRECTIVES AND FILTERS
@@ -47,6 +48,7 @@ app.service('wordpressService', WordpressService);
 app.directive('scrollToTop', () => new ScrollToTopDirective());
 /* FILTERS */
 app.filter('capitalizeFirstLetter', CapitalizeFirstLetter);
+app.filter('formatCorrectNameForTech', FormatCorrectNameForTech);
 
 /*
 * CONFIG
