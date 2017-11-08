@@ -14,6 +14,7 @@
              data-tech-color="{{tech.key}}"
              data-tooltip-placement="bottom"
              uib-tooltip="{{tech.key}} usage amount is {{tech.value}}%"
+             data-ng-if="tech.value > 0"
              >
              <span class="projectBarChart__item__span"
                    data-ng-bind="tech.key"
