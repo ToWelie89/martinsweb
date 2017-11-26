@@ -12,6 +12,9 @@ const BLOG_POSTS = [
     }, {
         name: 'speed-up-your-website',
         id: 126
+    }, {
+        name: 'promise-chains-with-delays-and-pauses',
+        id: 142
     }
 ];
 
