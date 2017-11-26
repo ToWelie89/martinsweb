@@ -34,7 +34,7 @@ export default class PageUrlService {
         var page = this.getPageName();
         if (page === 'start' || page === 'profile' || page === 'projects' || page === 'misc') {
             return page;
-        } else if (page.includes('projects/')) {
+        } else if (page.includes('projects/') || page === 'flappyDoge' || page === 'gyroSnakeEditor') {
             return 'projects';
         } else if (page === 'bio' || page === 'cv') {
             return 'profile';

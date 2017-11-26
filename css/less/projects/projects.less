@@ -124,8 +124,15 @@
                 background-color: darken(@htmlColor, 10%);
             }
         }
-        &[data-tech-color='css'], &[data-tech-color='less'], &[data-tech-color='scss'] {
-            @cssColor: #D17F5D;
+        &[data-tech-color='less'], &[data-tech-color='scss'] {
+            @lessColor: #D17F5D;
+            background-color: @lessColor;
+            &:hover {
+                background-color: darken(@lessColor, 10%);
+            }
+        }
+        &[data-tech-color='css'] {
+            @cssColor: #d15dc9;
             background-color: @cssColor;
             &:hover {
                 background-color: darken(@cssColor, 10%);
