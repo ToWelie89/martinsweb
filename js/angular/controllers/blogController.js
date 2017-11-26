@@ -47,7 +47,11 @@ export default class BlogController {
      */
     goToPost(id) {
         const blogPost = BLOG_POSTS.find(blogPost => blogPost.id === id);
-        this.$location.path(`/blog/${blogPost.name}`);
+        if (blogPost) {
+            this.$location.path(`/blog/${blogPost.name}`);
+        } else {
+            this.$location.path(`/blog/${id}`);
+        }
     };
 
     /**

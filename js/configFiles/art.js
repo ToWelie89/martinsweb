@@ -49,11 +49,6 @@ const ART = [{
         "width": 1047,
         "height": 1047
     }, {
-        "bigImage": "/artwork/9.jpg",
-        "thumbnail": "/artwork/9_thumb.jpg",
-        "width": 948,
-        "height": 948
-    }, {
         "bigImage": "/artwork/10.jpg",
         "thumbnail": "/artwork/10_thumb.jpg",
         "width": 800,
@@ -114,11 +109,6 @@ const ART = [{
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/22.jpg",
-        "thumbnail": "/artwork/22_thumb.jpg",
-        "width": 640,
-        "height": 640
-    }, {
         "bigImage": "/artwork/23.jpg",
         "thumbnail": "/artwork/23_thumb.jpg",
         "width": 640,
@@ -165,11 +155,6 @@ const ART = [{
     }, {
         "bigImage": "/artwork/32.jpg",
         "thumbnail": "/artwork/32_thumb.jpg",
-        "width": 640,
-        "height": 640
-    }, {
-        "bigImage": "/artwork/33.jpg",
-        "thumbnail": "/artwork/33_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
@@ -224,11 +209,6 @@ const ART = [{
     }, {
         "bigImage": "/artwork/44.jpg",
         "thumbnail": "/artwork/44_thumb.jpg",
-        "width": 640,
-        "height": 640
-    }, {
-        "bigImage": "/artwork/45.jpg",
-        "thumbnail": "/artwork/45_thumb.jpg",
         "width": 640,
         "height": 640
     }, {

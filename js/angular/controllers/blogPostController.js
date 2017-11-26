@@ -3,6 +3,7 @@
 */
 
 import {BLOG_POSTS} from './../../configFiles/blogPosts';
+import {isNumeric} from './../../helpers/helpers'
 
 /**
  * @constructor BlogPostController
@@ -32,11 +33,11 @@ export default class BlogPostController {
         this.setWatch();
 
         if (this.$routeParams.blogName) {
-            if (typeof this.$routeParams.blogName === 'string') {
+            if (isNumeric(this.$routeParams.blogName)) {
+                this.getBlogPost(this.$routeParams.blogName);
+            } else {
                 const blogPost = BLOG_POSTS.find(b => b.name === this.$routeParams.blogName);
                 this.getBlogPost(blogPost.id);
-            } else if (typeof this.$routeParams.blogName === 'number') {
-                this.getBlogPost(this.blogId);
             }
         } else {
             this.vm.loading = false;

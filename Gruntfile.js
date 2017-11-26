@@ -157,7 +157,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['js/angular/**/*.js', 'css/**/*.less', 'includes/**/*.php', 'includes/**/*.html', 'views/*.php', 'views/*.html'],
+                files: ['js/**/*.js', 'css/**/*.less', 'includes/**/*.php', 'includes/**/*.html', 'views/*.php', 'views/*.html', 'index.php'],
                 tasks: ['default'],
                 options: {
                     spawn: false,
@@ -204,6 +204,25 @@ module.exports = function(grunt) {
             unit: {
                 configFile: 'karma.conf.js'
             }
+        },
+        bump: {
+            options: {
+                files: ['package.json'],
+                updateConfigs: [],
+                commit: true,
+                commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'],
+                createTag: true,
+                tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',
+                push: true,
+                pushTo: 'origin',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                globalReplace: false,
+                prereleaseName: false,
+                metadata: '',
+                regExp: false
+            }
         }
     });
 
@@ -223,6 +242,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-bump');
 
     // Default task for building
     grunt.registerTask('default', [
