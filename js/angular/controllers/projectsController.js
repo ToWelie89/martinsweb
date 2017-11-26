@@ -175,7 +175,8 @@ export default class ProjectsController {
             'bower_components',
             'bin',
             'obj',
-            'packages'
+            'packages',
+            'fonts'
         ];
 
         return (folderBlackList.includes(dirName) || dirName.includes('ReSharper_'));
