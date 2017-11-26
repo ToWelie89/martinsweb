@@ -13,55 +13,63 @@
     </div>
     <div class="mainContentItem marginTopLarge" style="width: 100%;">
         <div style="float: left; width: 100%; text-align: center;">
-            <div class="table center paddingBottom marginBottom">
-                <div class="tableRow">
-                     <img width="250" src="../../assets/build/bioAvatar.jpg" style="border-radius:30px; margin:0 auto;">
-                </div>
-            </div>
             <div class="table center">
                 <div class="tableRow">
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowKeySpan">
-                            Age
-                        </p>
-                     </span>
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowValueSpan">
-                            <?php
-                                $birthdate = new DateTime("1989-09-06");
-                                $today     = new DateTime();
-                                $interval  = $today->diff($birthdate);
-                                $age       = $interval->format('%y');
-                                echo $age;
-                            ?>
-                        </p>
-                     </span>
-                </div>
-                <div class="tableRow">
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowKeySpan">
-                            Location
-                        </p>
-                     </span>
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowValueSpan">
-                            <a href="https://www.google.se/maps/place/G%C3%B6teborg/@57.7019548,11.8936825,11z/" target="_blank">
-                                Gothenburg, Sweden
-                            </a>
-                        </p>
-                     </span>
-                </div>
-                <div class="tableRow">
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowKeySpan">
-                            Current employment
-                        </p>
-                     </span>
-                     <span class="tableRowCell tableRowCell--col-sm-6">
-                        <p class="rowValueSpan">
-                            IT-consultant, Annevo AB
-                        </p>
-                     </span>
+
+                    <span class="tableRowCell center">
+                       <div class="profileAvatar">
+                       </div>
+                    </span>
+
+                    <span class="tableRowCell">
+                         <div class="table center" style="background-color: transparent;">
+                             <div class="tableRow">
+                                 <span class="tableRowCell">
+                                     <p class="rowKeySpan" style="text-align: left;">
+                                         Age
+                                     </p>
+                                 </span>
+                                 <span class="tableRowCell">
+                                     <p class="rowValueSpan">
+                                         <?php
+                                             $birthdate = new DateTime("1989-09-06");
+                                             $today     = new DateTime();
+                                             $interval  = $today->diff($birthdate);
+                                             $age       = $interval->format('%y');
+                                             echo $age;
+                                         ?>
+                                     </p>
+                                 </span>
+                             </div>
+                             <div class="tableRow">
+                                  <span class="tableRowCell">
+                                     <p class="rowKeySpan" style="text-align: left;">
+                                         Location
+                                     </p>
+                                  </span>
+                                  <span class="tableRowCell">
+                                     <p class="rowValueSpan">
+                                         <a href="https://www.google.se/maps/place/G%C3%B6teborg/@57.7019548,11.8936825,11z/" target="_blank">
+                                             Gothenburg, Sweden
+                                         </a>
+                                     </p>
+                                  </span>
+                             </div>
+                             <div class="tableRow">
+                                  <span class="tableRowCell">
+                                     <p class="rowKeySpan" style="text-align: left;">
+                                         Current employment
+                                     </p>
+                                  </span>
+                                  <span class="tableRowCell">
+                                     <p class="rowValueSpan">
+                                         IT-consultant, <a href="http://annevo.com/" target="_blank">Annevo AB</a>
+                                     </p>
+                                  </span>
+                             </div>
+                        </div>
+
+                    </span>
                 </div>
            </div>
            <div class="mainContentItem" style="text-align: center; padding: 20px 40px 20px 40px;">

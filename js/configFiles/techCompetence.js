@@ -8,7 +8,7 @@ const TECH_COMPETENCE = [{
         "grade": 5
     }, {
         "name": "ES2015 JS",
-        "grade": 4
+        "grade": 5
     }, {
         "name": "Java",
         "grade": 4
@@ -59,10 +59,10 @@ const TECH_COMPETENCE = [{
     "name": "JS frameworks",
     "competences": [{
         "name": "jQuery",
-        "grade": 4
+        "grade": 5
     }, {
         "name": "Angular",
-        "grade": 4
+        "grade": 5
     }, {
         "name": "requirejs",
         "grade": 3
@@ -97,7 +97,7 @@ const TECH_COMPETENCE = [{
 }, {
     "name": "Development environments",
     "competences": [{
-        "name": "VS2013",
+        "name": "VS2015",
         "grade": 5
     }, {
         "name": "Eclipse",

@@ -1,6 +1,6 @@
 <div class="mainContentItem full" data-ng-show="!controller.loading">
     <div data-ng-show="!controller.loading" data-ng-repeat="post in controller.posts">
-        <div class="blogPostContainer" style="background: url({{post.post_thumbnail.URL}})" data-ng-click="controller.goToPost(post.ID)">
+        <div class="blogPostContainer" style="background-image: url({{post.post_thumbnail.URL}})" data-ng-click="controller.goToPost(post.ID)">
             <div class="blogPostInnerContainer">
                 <div class="blogTitle"><span data-ng-bind="post.title"></span></div>
                 <div class="excerpt"><span class="hideOnlyForSmall" data-ng-bind-html="post.excerpt"></span></div>
