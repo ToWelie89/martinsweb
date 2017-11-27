@@ -15,11 +15,13 @@ export function FormatCorrectNameForTech() {
         svg: 'SVG',
         java: 'Java',
         csharp: 'C#',
+        cs: 'C#',
         css: 'CSS',
         sass: 'sass',
         shell: 'Shell',
         python: 'Python',
-        php: 'php'
+        php: 'php',
+        xml: 'XML'
     };
 
     return (input) => {

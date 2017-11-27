@@ -17,7 +17,7 @@
              data-ng-if="tech.value > 0"
              >
              <span class="projectBarChart__item__span"
-                   data-ng-bind="tech.key"
+                   data-ng-bind="tech.key | formatCorrectNameForTech"
                    data-ng-class="{'projectBarChart__item__span--hidden': tech.value < 5}">
              </span>
         </div>
