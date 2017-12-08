@@ -3,6 +3,7 @@
 */
 
 import {getColorAsHex} from './../../helpers/colorGenerator';
+import {removeDuplicates} from './../../helpers/helpers';
 
 /**
  * @constructor ProjectsController
@@ -105,6 +106,7 @@ export default class ProjectsController {
         if (localStorageData && !this.localStorageDataIsOlderThanOneDay(localStorageData)) {
             this.db = localStorageData.db;
             this.vm.usedDependencies = localStorageData.usedDependencies;
+            this.vm.usedDependencies = removeDuplicates(this.vm.usedDependencies);
             this.initializeStatistics();
             this.vm.loading = false;
         } else {
@@ -223,7 +225,7 @@ export default class ProjectsController {
 
             const data = {
                 db: this.newDb,
-                usedDependencies: this.vm.usedDependencies,
+                usedDependencies: removeDuplicates(this.vm.usedDependencies),
                 timeStamp: Date.now()
             }
 
@@ -334,6 +336,8 @@ export default class ProjectsController {
             return 'icon-php';
         case 'svg':
             return 'icon-svg';
+        case 'less':
+            return 'fab fa-less';
         }
     }
 

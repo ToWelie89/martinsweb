@@ -1,10 +1,11 @@
 <div data-ng-hide="controller.loading" data-ng-cloak>
     <div class="marginBottom dependenciesList">
         <span data-ng-repeat="dep in controller.usedDependencies track by $index">
-            <i data-tooltip-placement="top"
+            <span data-tooltip-placement="top"
             uib-tooltip="{{dep | formatCorrectNameForTech}}"
-            class="{{controller.getClassForDep(dep)}}"
-            data-tech-color="{{dep}}"></i>
+            data-tech-color="{{dep}}">
+                <i class="{{controller.getClassForDep(dep)}}"></i>
+            </span>
         </span>
     </div>
     <div class="projectBarChart">

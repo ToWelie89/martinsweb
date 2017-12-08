@@ -98,6 +98,10 @@
 	#rightColumn .table .tableRow .tableRowCell
 	{
 		padding: 35px;
+
+		&:last-child {
+			padding-bottom: 0px;
+		}
 	}
 
 	#rightColumn
@@ -180,35 +184,40 @@
 	}
 
 	.pdfDownloadOuterContainer {
-		display: table;
 		height: 122px;
 		background-color: #ea4c3a;
 		width: 100%;
 
 		.pdfDownloadInnerContainer {
-			display: table-cell;
-			vertical-align: middle;
+			display: table;
+			height: 100%;
+			width: 100%;
 
 			&:hover {
-				p, i {
+				span, svg {
 					color: @lighterBlack;
 				}
 			}
 
-			p {
-				float: left;
+			span {
 				padding: 20px;
 				font-family: 'ProxiBold';
 				font-size: 2.6em;
 				color: white;
 				text-shadow: 0px 2px 1px black;
 				text-transform: uppercase;
+				display: table-cell;
+				vertical-align: middle;
 			}
-			i {
-				color: white;
-				float: right;
-				padding-right: 20px;
-				padding-top: 15px;
+			div {
+				display: table-cell;
+				vertical-align: middle;
+				height: 100%;
+				svg {
+					color: white;
+					float: right;
+					padding-right: 20px;
+				}
 			}
 		}
 	}

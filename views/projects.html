@@ -75,6 +75,29 @@
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
+
+                    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 300px;">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active" style="height: 300px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Chicago_skyline%2C_viewed_from_John_Hancock_Center.jpg/500px-Chicago_skyline%2C_viewed_from_John_Hancock_Center.jpg" alt="Chicago" style="width:100%;">
+                            </div>
+                            <div class="item" style="height: 300px;">
+                                <img src="https://media.timeout.com/images/103444978/image.jpg" alt="New york" style="width:100%;">
+                            </div>
+                        </div>
+                        <a class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div> -->
+
                     <div class="marginTop--double">
                         <p>
                             This is a web based game I've made of the classic board game Risk. The game is built using modern web technologies. The Javascript code
@@ -99,16 +122,20 @@
                             </strong>
                             <ul>
                                 <li>
-                                    Fully working Risk game engine that works according to the real rules of the classic board game.
+                                    <strong>Game engine</strong> Fully working Risk game engine that works according to the real rules of the classic board game.
                                 </li>
                                 <li>
-                                    Audio and voice support. Game music, sound effects and a talking robotic presenter voice.
+                                    <strong>AI</strong> I have made an AI that you can play against. The AI is programmed to account for many different factors
+                                    when making decisions. I am continuously implementing improvements to the AI.
                                 </li>
                                 <li>
-                                    Full support for Karma unit testing.
+                                    <strong>Audio and voice support</strong> Game music, sound effects and a talking robotic presenter voice.
                                 </li>
                                 <li>
-                                    Scalable codebase that can be reused to also implement other versions of Risk, which I have future plans for.
+                                    <strong>Unit testing</strong> Full support for Karma unit testing.
+                                </li>
+                                <li>
+                                    <strong>Scalability</strong> Scalable codebase that can be reused to also implement other versions of Risk, which I have future plans for.
                                 </li>
                             </ul>
                         </p>
@@ -117,11 +144,6 @@
                                 Future features:
                             </strong>
                             <ul>
-                                <li>
-                                    <strong>AI.</strong> This is what I am currently working on. The challenge is to make the AI as smart as possible, as playing versus a stupid
-                                    AI that make illogical move would not be very challenging or fun. At the moment the game only supports play between humans
-                                    on the same device which makes the game very limited, which is why I really want to prioritize the AI development.
-                                </li>
                                 <li>
                                     More game modes.
                                 </li>
@@ -338,7 +360,7 @@
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
-                    <p>
+                    <p class="marginTop--double">
                         This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
                     </p>
                     <p class="marginTop">

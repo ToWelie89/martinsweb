@@ -202,11 +202,6 @@ const ART = [{
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/43.jpg",
-        "thumbnail": "/artwork/43_thumb.jpg",
-        "width": 640,
-        "height": 640
-    }, {
         "bigImage": "/artwork/44.jpg",
         "thumbnail": "/artwork/44_thumb.jpg",
         "width": 640,

@@ -12,7 +12,6 @@
 <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!-- Font awesome -->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/cssLibs/font-mfizz.css">
 
 <!-- Light gallery -->
@@ -50,6 +49,7 @@
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="/assets/build/MapEditor.min.js"></script>
 <script async src="js/libs/snowstorm-min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 
 <!-- Node module libs -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>

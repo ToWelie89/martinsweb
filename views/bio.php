@@ -2,26 +2,26 @@
     <div id="socialMediaIconsContainer">
         <span id="previewTitle"></span>
         <div id="linksInnerContainer">
-            <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-            <a href="http://www.github.com/ToWelie89" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/Martin_Sonesson" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-            <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank"><i class="fa fa-stack-overflow fa-3x" aria-hidden="true"></i></a>
-            <a href="http://www.instagram.com/martin.sonesson" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-            <a href="http://towelie89.deviantart.com/" target="_blank"><i class="fa fa-deviantart fa-3x" aria-hidden="true"></i></a>
-            <a href="https://www.twitch.tv/towelie89/profile/highlights" target="_blank"><i class="fa fa-twitch fa-3x" aria-hidden="true"></i></a>
+            <a href="http://se.linkedin.com/pub/martin-sonesson/47/b65/200" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a href="http://www.github.com/ToWelie89" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://twitter.com/Martin_Sonesson" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+            <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank"><i class="fab fa-stack-overflow fa-3x"></i></a>
+            <a href="http://www.instagram.com/martin.sonesson" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="http://towelie89.deviantart.com/" target="_blank"><i class="fab fa-deviantart fa-3x"></i></a>
+            <a href="https://www.twitch.tv/towelie89/profile/highlights" target="_blank"><i class="fab fa-twitch fa-3x"></i></a>
         </div>
     </div>
-    <div class="mainContentItem marginTopLarge" style="width: 100%;">
+    <div class="mainContentItem marginTopLarge" id="bioContent" style="width: 100%;">
         <div style="float: left; width: 100%; text-align: center;">
             <div class="table center">
                 <div class="tableRow">
 
-                    <span class="tableRowCell center">
+                    <span class="tableRowCell center" id="avatarCell">
                        <div class="profileAvatar">
                        </div>
                     </span>
 
-                    <span class="tableRowCell">
+                    <span class="tableRowCell" id="informationCell">
                          <div class="table center" style="background-color: transparent;">
                              <div class="tableRow">
                                  <span class="tableRowCell">
