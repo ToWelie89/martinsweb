@@ -3,7 +3,7 @@
     <head>
         <?php include("includes/build/head.php"); ?>
     </head>
-    <body ng-app="martinsWeb" data-ng-controller="mainController">
+    <body ng-app="martinsWeb" data-ng-controller="mainController as main">
         <?php include("includes/photoswipe.php"); ?>
 
         <div class="mainBg"></div>
