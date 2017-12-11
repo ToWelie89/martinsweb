@@ -9,17 +9,17 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     src: 'js/MapEditor.js',
-                    dest: 'assets/build/MapEditor.min.js'
+                    dest: 'build/MapEditor.min.js'
                 }, {
                     src: 'js/libs/photoswipe/photoswipe.js',
-                    dest: 'assets/build/photoswipe.min.js'
+                    dest: 'build/photoswipe.min.js'
                 }]
             }
         },
         browserify: {
             build: {
                 files: {
-                    'assets/build/app.bundle.js': 'js/app.js'
+                    'build/app.bundle.js': 'js/app.js'
                 },
                 options: {
                     transform: [['babelify', { presets: "es2015" }]],
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             test: {
                 files: {
-                    'assets/build/testApp.bundle.js': 'js/test/test.js'
+                    'build/testApp.bundle.js': 'js/test/test.js'
                 },
                 options: {
                     transform: [['babelify', { presets: "es2015" }]],
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 options: {
                     patterns: [{
                         match: 'defaultCss',
-                        replacement: '<%= grunt.file.read("assets/build/default.css") %>'
+                        replacement: '<%= grunt.file.read("build/default.css") %>'
                     }, {
                         match: 'photoSwipeCss',
                         replacement: '<%= grunt.file.read("js/libs/photoswipe/photoswipe.css") %>'
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
             all: {
                 files: [{
                     src: 'css/init.less',
-                    dest: 'assets/build/default.css'
+                    dest: 'build/default.css'
                 }]
             },
         },
@@ -91,10 +91,10 @@ module.exports = function(grunt) {
                 length: 8
             },
             images: {
-                src: 'assets/build/**/*.{jpg,jpeg,gif,png,webp}'
+                src: 'build/**/*.{jpg,jpeg,gif,png,webp,svg,ico}'
             },
             js: {
-                src: ['assets/build/app.bundle.js', 'assets/build/MapEditor.min.js']
+                src: ['build/app.bundle.js', 'build/MapEditor.min.js']
             }
         },
         filerev_replace: {
@@ -103,16 +103,16 @@ module.exports = function(grunt) {
             },
             compiled_assets: {
                 src: [
-                    'assets/build/*.js',
-                    'assets/build/default.css',
-                    'assets/build/small.css',
+                    'build/*.js',
+                    'build/default.css',
+                    'build/small.css',
                     'includes/build/*',
                     'views/build/*'
                 ]
             }
         },
         clean: {
-            all: ['includes/build/*', 'views/build/*', 'assets/build/*'],
+            all: ['includes/build/*', 'views/build/*', 'build/*'],
             css: ['assets/build/default.css'],
             test: ['assets/build/testApp.bundle.js']
         },
@@ -136,13 +136,16 @@ module.exports = function(grunt) {
                     src: 'views/bio.php',
                     dest: 'views/build/bio.php'
                 }, {
-                    src: 'assets/img/*',
-                    dest: 'assets/build/',
+                    src: 'assets/**/*',
+                    dest: 'build/',
                     expand: true,
-                    flatten: true
+                    flatten: false
                 }, {
                     src: 'includes/head.php',
                     dest: 'includes/build/head.php'
+                }, {
+                    src: 'includes/projectStatus.html',
+                    dest: 'includes/build/projectStatus.html'
                 }]
             }
         },

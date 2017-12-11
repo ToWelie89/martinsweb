@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="assets/img/icon.ico">
+<link rel="shortcut icon" href="/build/assets/icon.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8"/>
@@ -45,9 +45,9 @@
 <script type="text/javascript" src="js/libs/shBrushJScript.js"></script>
 
 <script async src="js/libs/trianglify.js"></script>
-<script async src="assets/build/photoswipe.min.js"></script>
+<script async src="/build/photoswipe.min.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
-<script async src="/assets/build/MapEditor.min.js"></script>
+<script async src="/build/MapEditor.min.js"></script>
 <script async src="js/libs/snowstorm-min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 
@@ -71,7 +71,7 @@
 <script src="node_modules/lg-pager/dist/lg-pager.min.js"></script>
 
 <!-- martins-web angular -->
-<script src="/assets/build/app.bundle.js"></script>
+<script src="/build/app.bundle.js"></script>
 
 <script>
     window.onload = function() {

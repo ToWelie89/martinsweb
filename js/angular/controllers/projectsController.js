@@ -49,8 +49,8 @@ export default class ProjectsController {
             'grunt',
             'angular',
             'webpack', //missing icon
-            'babel', // missing icon
-            'karma', // missing icon
+            'babel',
+            'karma',
             'react',
             'jquery',
             'bootstrap'
@@ -100,6 +100,17 @@ export default class ProjectsController {
         this.reset();
         this.currentOpenProject = project;
         $('#' + this.currentOpenProject + 'Modal').modal('toggle');
+
+        $('.carousel-control.left').click(function() {
+          $('.projectCarousel').carousel('prev');
+        });
+        $('.carousel-control.right').click(function() {
+          $('.projectCarousel').carousel('next');
+        });
+
+        $('.carousel-indicators li').on('click', function() {
+            $('.projectCarousel').carousel($(this).index());
+        });
 
         const localStorageData = JSON.parse(localStorage.getItem(`${this.currentOpenProject}StorageData`));
 
@@ -223,9 +234,11 @@ export default class ProjectsController {
             if (this.newDb['php']) { this.vm.usedDependencies.push('php'); }
             if (this.newDb['svg']) { this.vm.usedDependencies.push('svg'); }
 
+            this.vm.usedDependencies = removeDuplicates(this.vm.usedDependencies);
+
             const data = {
                 db: this.newDb,
-                usedDependencies: removeDuplicates(this.vm.usedDependencies),
+                usedDependencies: this.vm.usedDependencies,
                 timeStamp: Date.now()
             }
 

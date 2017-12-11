@@ -1,244 +1,244 @@
 const ART = [{
-        "bigImage": "/artwork/54.png",
-        "thumbnail": "/artwork/54_thumb.png",
+        "bigImage": "/build/assets/artwork/54.png",
+        "thumbnail": "/build/assets/artwork/54_thumb.png",
         "width": 635,
         "height": 901
     }, {
-        "bigImage": "/artwork/53.jpg",
-        "thumbnail": "/artwork/53_thumb.jpg",
+        "bigImage": "/build/assets/artwork/53.jpg",
+        "thumbnail": "/build/assets/artwork/53_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "thumbnail": "/artwork/54_thumb.jpg",
-        "video": "/artwork/54.mp4"
+        "thumbnail": "/build/assets/artwork/54_thumb.jpg",
+        "video": "/build/assets/artwork/54.mp4"
     }, {
-        "bigImage": "/artwork/1.jpg",
-        "thumbnail": "/artwork/1_thumb.jpg",
+        "bigImage": "/build/assets/artwork/1.jpg",
+        "thumbnail": "/build/assets/artwork/1_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/2.jpg",
-        "thumbnail": "/artwork/2_thumb.jpg",
-        "video": "/artwork/2.mp4"
+        "bigImage": "/build/assets/artwork/2.jpg",
+        "thumbnail": "/build/assets/artwork/2_thumb.jpg",
+        "video": "/build/assets/artwork/2.mp4"
     }, {
-        "bigImage": "/artwork/3.jpg",
-        "thumbnail": "/artwork/3_thumb.jpg",
-        "video": "/artwork/3.mp4"
+        "bigImage": "/build/assets/artwork/3.jpg",
+        "thumbnail": "/build/assets/artwork/3_thumb.jpg",
+        "video": "/build/assets/artwork/3.mp4"
     }, {
-        "bigImage": "/artwork/4.jpg",
-        "thumbnail": "/artwork/4_thumb.jpg",
+        "bigImage": "/build/assets/artwork/4.jpg",
+        "thumbnail": "/build/assets/artwork/4_thumb.jpg",
         "width": 684,
         "height": 684
     }, {
-        "bigImage": "/artwork/5.jpg",
-        "thumbnail": "/artwork/5_thumb.jpg",
+        "bigImage": "/build/assets/artwork/5.jpg",
+        "thumbnail": "/build/assets/artwork/5_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/6.jpg",
-        "thumbnail": "/artwork/6_thumb.jpg",
-        "video": "/artwork/6.mp4"
+        "bigImage": "/build/assets/artwork/6.jpg",
+        "thumbnail": "/build/assets/artwork/6_thumb.jpg",
+        "video": "/build/assets/artwork/6.mp4"
     }, {
-        "bigImage": "/artwork/7.jpg",
-        "thumbnail": "/artwork/7_thumb.jpg",
+        "bigImage": "/build/assets/artwork/7.jpg",
+        "thumbnail": "/build/assets/artwork/7_thumb.jpg",
         "width": 1076,
         "height": 1076
     }, {
-        "bigImage": "/artwork/8.jpg",
-        "thumbnail": "/artwork/8_thumb.jpg",
+        "bigImage": "/build/assets/artwork/8.jpg",
+        "thumbnail": "/build/assets/artwork/8_thumb.jpg",
         "width": 1047,
         "height": 1047
     }, {
-        "bigImage": "/artwork/10.jpg",
-        "thumbnail": "/artwork/10_thumb.jpg",
+        "bigImage": "/build/assets/artwork/10.jpg",
+        "thumbnail": "/build/assets/artwork/10_thumb.jpg",
         "width": 800,
         "height": 800
     }, {
-        "bigImage": "/artwork/11.jpg",
-        "thumbnail": "/artwork/11_thumb.jpg",
+        "bigImage": "/build/assets/artwork/11.jpg",
+        "thumbnail": "/build/assets/artwork/11_thumb.jpg",
         "width": 820,
         "height": 820
     }, {
-        "bigImage": "/artwork/12.jpg",
-        "thumbnail": "/artwork/12_thumb.jpg",
+        "bigImage": "/build/assets/artwork/12.jpg",
+        "thumbnail": "/build/assets/artwork/12_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/13.jpg",
-        "thumbnail": "/artwork/13_thumb.jpg",
+        "bigImage": "/build/assets/artwork/13.jpg",
+        "thumbnail": "/build/assets/artwork/13_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/14.jpg",
-        "thumbnail": "/artwork/14_thumb.jpg",
+        "bigImage": "/build/assets/artwork/14.jpg",
+        "thumbnail": "/build/assets/artwork/14_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/15.jpg",
-        "thumbnail": "/artwork/15_thumb.jpg",
+        "bigImage": "/build/assets/artwork/15.jpg",
+        "thumbnail": "/build/assets/artwork/15_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/16.jpg",
-        "thumbnail": "/artwork/16_thumb.jpg",
+        "bigImage": "/build/assets/artwork/16.jpg",
+        "thumbnail": "/build/assets/artwork/16_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/17.jpg",
-        "thumbnail": "/artwork/17_thumb.jpg",
+        "bigImage": "/build/assets/artwork/17.jpg",
+        "thumbnail": "/build/assets/artwork/17_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/18.jpg",
-        "thumbnail": "/artwork/18_thumb.jpg",
+        "bigImage": "/build/assets/artwork/18.jpg",
+        "thumbnail": "/build/assets/artwork/18_thumb.jpg",
         "width": 1080,
         "height": 1080
     }, {
-        "bigImage": "/artwork/19.jpg",
-        "thumbnail": "/artwork/19_thumb.jpg",
+        "bigImage": "/build/assets/artwork/19.jpg",
+        "thumbnail": "/build/assets/artwork/19_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/20.jpg",
-        "thumbnail": "/artwork/20_thumb.jpg",
+        "bigImage": "/build/assets/artwork/20.jpg",
+        "thumbnail": "/build/assets/artwork/20_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/21.jpg",
-        "thumbnail": "/artwork/21_thumb.jpg",
+        "bigImage": "/build/assets/artwork/21.jpg",
+        "thumbnail": "/build/assets/artwork/21_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/23.jpg",
-        "thumbnail": "/artwork/23_thumb.jpg",
+        "bigImage": "/build/assets/artwork/23.jpg",
+        "thumbnail": "/build/assets/artwork/23_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/24.jpg",
-        "thumbnail": "/artwork/24_thumb.jpg",
+        "bigImage": "/build/assets/artwork/24.jpg",
+        "thumbnail": "/build/assets/artwork/24_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/25.jpg",
-        "thumbnail": "/artwork/25_thumb.jpg",
+        "bigImage": "/build/assets/artwork/25.jpg",
+        "thumbnail": "/build/assets/artwork/25_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/26.jpg",
-        "thumbnail": "/artwork/26_thumb.jpg",
+        "bigImage": "/build/assets/artwork/26.jpg",
+        "thumbnail": "/build/assets/artwork/26_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/27.jpg",
-        "thumbnail": "/artwork/27_thumb.jpg",
+        "bigImage": "/build/assets/artwork/27.jpg",
+        "thumbnail": "/build/assets/artwork/27_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/28.jpg",
-        "thumbnail": "/artwork/28_thumb.jpg",
+        "bigImage": "/build/assets/artwork/28.jpg",
+        "thumbnail": "/build/assets/artwork/28_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/29.jpg",
-        "thumbnail": "/artwork/29_thumb.jpg",
-        "video": "/artwork/29.mp4"
+        "bigImage": "/build/assets/artwork/29.jpg",
+        "thumbnail": "/build/assets/artwork/29_thumb.jpg",
+        "video": "/build/assets/artwork/29.mp4"
     }, {
-        "bigImage": "/artwork/30.jpg",
-        "thumbnail": "/artwork/30_thumb.jpg",
+        "bigImage": "/build/assets/artwork/30.jpg",
+        "thumbnail": "/build/assets/artwork/30_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/31.jpg",
-        "thumbnail": "/artwork/31_thumb.jpg",
+        "bigImage": "/build/assets/artwork/31.jpg",
+        "thumbnail": "/build/assets/artwork/31_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/32.jpg",
-        "thumbnail": "/artwork/32_thumb.jpg",
+        "bigImage": "/build/assets/artwork/32.jpg",
+        "thumbnail": "/build/assets/artwork/32_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/34.jpg",
-        "thumbnail": "/artwork/34_thumb.jpg",
+        "bigImage": "/build/assets/artwork/34.jpg",
+        "thumbnail": "/build/assets/artwork/34_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/35.jpg",
-        "thumbnail": "/artwork/35_thumb.jpg",
+        "bigImage": "/build/assets/artwork/35.jpg",
+        "thumbnail": "/build/assets/artwork/35_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/36.jpg",
-        "thumbnail": "/artwork/36_thumb.jpg",
+        "bigImage": "/build/assets/artwork/36.jpg",
+        "thumbnail": "/build/assets/artwork/36_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/37.jpg",
-        "thumbnail": "/artwork/37_thumb.jpg",
+        "bigImage": "/build/assets/artwork/37.jpg",
+        "thumbnail": "/build/assets/artwork/37_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/38.jpg",
-        "thumbnail": "/artwork/38_thumb.jpg",
+        "bigImage": "/build/assets/artwork/38.jpg",
+        "thumbnail": "/build/assets/artwork/38_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/39.jpg",
-        "thumbnail": "/artwork/39_thumb.jpg",
+        "bigImage": "/build/assets/artwork/39.jpg",
+        "thumbnail": "/build/assets/artwork/39_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/40.jpg",
-        "thumbnail": "/artwork/40_thumb.jpg",
-        "video": "/artwork/40.mp4"
+        "bigImage": "/build/assets/artwork/40.jpg",
+        "thumbnail": "/build/assets/artwork/40_thumb.jpg",
+        "video": "/build/assets/artwork/40.mp4"
     }, {
-        "bigImage": "/artwork/41.jpg",
-        "thumbnail": "/artwork/41_thumb.jpg",
+        "bigImage": "/build/assets/artwork/41.jpg",
+        "thumbnail": "/build/assets/artwork/41_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/42.jpg",
-        "thumbnail": "/artwork/42_thumb.jpg",
+        "bigImage": "/build/assets/artwork/42.jpg",
+        "thumbnail": "/build/assets/artwork/42_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/44.jpg",
-        "thumbnail": "/artwork/44_thumb.jpg",
+        "bigImage": "/build/assets/artwork/44.jpg",
+        "thumbnail": "/build/assets/artwork/44_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/46.jpg",
-        "thumbnail": "/artwork/46_thumb.jpg",
+        "bigImage": "/build/assets/artwork/46.jpg",
+        "thumbnail": "/build/assets/artwork/46_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/47.jpg",
-        "thumbnail": "/artwork/47_thumb.jpg",
+        "bigImage": "/build/assets/artwork/47.jpg",
+        "thumbnail": "/build/assets/artwork/47_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/48.jpg",
-        "thumbnail": "/artwork/48_thumb.jpg",
+        "bigImage": "/build/assets/artwork/48.jpg",
+        "thumbnail": "/build/assets/artwork/48_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/49.jpg",
-        "thumbnail": "/artwork/49_thumb.jpg",
+        "bigImage": "/build/assets/artwork/49.jpg",
+        "thumbnail": "/build/assets/artwork/49_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/50.jpg",
-        "thumbnail": "/artwork/50_thumb.jpg",
+        "bigImage": "/build/assets/artwork/50.jpg",
+        "thumbnail": "/build/assets/artwork/50_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/51.jpg",
-        "thumbnail": "/artwork/51_thumb.jpg",
+        "bigImage": "/build/assets/artwork/51.jpg",
+        "thumbnail": "/build/assets/artwork/51_thumb.jpg",
         "width": 640,
         "height": 640
     }, {
-        "bigImage": "/artwork/52.jpg",
-        "thumbnail": "/artwork/52_thumb.jpg",
+        "bigImage": "/build/assets/artwork/52.jpg",
+        "thumbnail": "/build/assets/artwork/52_thumb.jpg",
         "width": 640,
         "height": 640
     }

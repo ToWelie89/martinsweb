@@ -1,58 +1,58 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
-        <a href="" data-content="Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../assets/build/ecmaRisk.png)">
+        <a href="" data-content="Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../build/assets/ecmaRisk.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Star Manager" data-ng-click="controller.openProject('starapp')" style="background: url(../../assets/build/starapp.png)">
+        <a href="" data-content="Star Manager" data-ng-click="controller.openProject('starapp')" style="background: url(../../build/assets/starapp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Portfolio" data-ng-click="controller.openProject('portfolio')" style="background: url(../../assets/build/portfolio.png)">
+        <a href="" data-content="Portfolio" data-ng-click="controller.openProject('portfolio')" style="background: url(../../build/assets/portfolio.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="STI-Starcraft" data-ng-click="controller.openProject('sti')" style="background: url(../../assets/build/sti.png)">
+        <a href="" data-content="STI-Starcraft" data-ng-click="controller.openProject('sti')" style="background: url(../../build/assets/sti.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Gyro Snake" data-ng-click="controller.openProject('snake')" style="background: url(../../assets/build/snake.png)">
+        <a href="" data-content="Gyro Snake" data-ng-click="controller.openProject('snake')" style="background: url(../../build/assets/snake.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Instagram Analyzer" data-ng-click="controller.openProject('instaanalytics')" style="background: url(../../assets/build/instaanalytics.png)">
+        <a href="" data-content="Instagram Analyzer" data-ng-click="controller.openProject('instaanalytics')" style="background: url(../../build/assets/instaanalytics.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Bachelors thesis" data-ng-click="controller.openProject('exjobb')" style="background: url(../../assets/build/exjobb.png)">
+        <a href="" data-content="Bachelors thesis" data-ng-click="controller.openProject('exjobb')" style="background: url(../../build/assets/exjobb.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="World Cup Calculator" data-ng-click="controller.openProject('wcc')" style="background: url(../../assets/build/wcc.png)">
+        <a href="" data-content="World Cup Calculator" data-ng-click="controller.openProject('wcc')" style="background: url(../../build/assets/wcc.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Box By Doris" data-ng-click="controller.openProject('boxByDoris')" style="background: url(../../assets/build/boxByDoris.png)">
+        <a href="" data-content="Box By Doris" data-ng-click="controller.openProject('boxByDoris')" style="background: url(../../build/assets/boxByDoris.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Mobile Keyring" data-ng-click="controller.openProject('mkp')" style="background: url(../../assets/build/mkp.png)">
+        <a href="" data-content="Mobile Keyring" data-ng-click="controller.openProject('mkp')" style="background: url(../../build/assets/mkp.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Arduino Robot" data-ng-click="controller.openProject('arduinoRobot')" style="background: url(../../assets/build/arduinoRobot.png)">
+        <a href="" data-content="Arduino Robot" data-ng-click="controller.openProject('arduinoRobot')" style="background: url(../../build/assets/arduinoRobot.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="WH40k Simulator" data-ng-click="controller.openProject('wh40k')" style="background: url(../../assets/build/wh40k.png)">
+        <a href="" data-content="WH40k Simulator" data-ng-click="controller.openProject('wh40k')" style="background: url(../../build/assets/wh40k.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="FlappyDoge" data-ng-click="controller.openProject('flappyDoge')" style="background: url(../../assets/build/flappyDoge.png)">
+        <a href="" data-content="FlappyDoge" data-ng-click="controller.openProject('flappyDoge')" style="background: url(../../build/assets/flappyDoge.png)">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Flickr Editor" data-ng-click="controller.openProject('flickrEditor')" style="background: url(../../assets/build/flickrEditor.png)">
+        <a href="" data-content="Flickr Editor" data-ng-click="controller.openProject('flickrEditor')" style="background: url(../../build/assets/flickrEditor.png)">
         </a>
     </div>
 </div>
@@ -73,21 +73,32 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
-                    <!-- Description -->
-
-                    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 300px;">
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Carousel -->
+                    <div class="carousel slide projectCarousel marginTop" data-ride="carousel" style="height: 300px;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
                         </ol>
+                        <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active" style="height: 300px;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Chicago_skyline%2C_viewed_from_John_Hancock_Center.jpg/500px-Chicago_skyline%2C_viewed_from_John_Hancock_Center.jpg" alt="Chicago" style="width:100%;">
+                            <div class="item active">
+                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/1.png); background-position: center top;">
+                                </div>
                             </div>
-                            <div class="item" style="height: 300px;">
-                                <img src="https://media.timeout.com/images/103444978/image.jpg" alt="New york" style="width:100%;">
+                            <div class="item">
+                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/2.png); background-position: center bottom;">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/3.png); background-position: center top;">
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Left and right controls -->
                         <a class="left carousel-control" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
@@ -96,8 +107,8 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div> -->
-
+                    </div>
+                    <!-- Description -->
                     <div class="marginTop--double">
                         <p>
                             This is a web based game I've made of the classic board game Risk. The game is built using modern web technologies. The Javascript code
@@ -186,7 +197,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to
@@ -227,7 +238,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is the very site you're on right now, my personal website and portfolio. I began working on a
@@ -280,7 +291,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a web application I created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
@@ -358,7 +369,7 @@
                 <div class="modal-body marginTop--double">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
@@ -435,7 +446,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
@@ -606,7 +617,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a game engine I am currently developing that is meant to simulate the rules and game logic of the classic miniature
@@ -643,7 +654,7 @@
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
-                    <div data-ng-include src="'includes/projectStatus.html'" data-ng-cloak></div>
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
                         This is a small Javascript game I made in the middle of the Flappy Bird craze a while ago. The concept is pretty much identical to that

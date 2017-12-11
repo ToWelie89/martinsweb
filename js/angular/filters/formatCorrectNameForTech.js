@@ -9,6 +9,8 @@ export function FormatCorrectNameForTech() {
         karma: 'Karma',
         jquery: 'jQuery',
         bootstrap: 'Bootstrap',
+        js: 'JavaScript',
+        json: 'JSON',
         javascript: 'JavaScript',
         html: 'HTML',
         less: 'less',

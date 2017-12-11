@@ -18,9 +18,9 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	 * All public configs that can be do to the Map Editor.
 	 */
 	var scriptConfig = {
-			background: "../../assets/build/spelplan.png",
-			player: "../../assets/build/player.png",
-			obstacle: "../../assets/build/obstacle.png",
+			background: "../../build/assets/spelplan.png",
+			player: "../../build/assets/player.png",
+			obstacle: "../../build/assets/obstacle.png",
 			onMoveObstacleMessage: "Move the obstacle to the game field for place it, or out of game field to remove.",
 			maxAllowObstacle: 250,
 			maxAllowObstacleMsg: "You can not have more than 250 obstacle on the map.",
@@ -36,7 +36,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	var playerListDir = [{
 		val: "0s",
 		text: "Small Snake 0",
-		url: "../../assets/build/player0.png",
+		url: "../../build/assets/player0.png",
 		x: 34,
 		y: 14,
 		angle: 0,
@@ -46,7 +46,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "90s",
 		text: "Small Snake 90",
-		url: "../../assets/build/player90.png",
+		url: "../../build/assets/player90.png",
 		x: 14,
 		y: 34,
 		angle: 90,
@@ -56,7 +56,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "180s",
 		text: "Small Snake 180",
-		url: "../../assets/build/player180.png",
+		url: "../../build/assets/player180.png",
 		x: 34,
 		y: 14,
 		angle: 180,
@@ -66,7 +66,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "270s",
 		text: "Small Snake 270",
-		url: "../../assets/build/player270.png",
+		url: "../../build/assets/player270.png",
 		x: 14,
 		y: 34,
 		angle: 270,
@@ -76,7 +76,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "0b",
 		text: "Big Snake 0",
-		url: "../../assets/build/player0.png",
+		url: "../../build/assets/player0.png",
 		x: 72,
 		y: 29,
 		angle: 0,
@@ -86,7 +86,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "90b",
 		text: "Big Snake 90",
-		url: "../../assets/build/player90.png",
+		url: "../../build/assets/player90.png",
 		x: 29,
 		y: 72,
 		angle: 90,
@@ -96,7 +96,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "180b",
 		text: "Big Snake 180",
-		url: "../../assets/build/player180.png",
+		url: "../../build/assets/player180.png",
 		x: 60,
 		y: 30,
 		angle: 180,
@@ -106,7 +106,7 @@ function mapEditor(divID, loadXML, notAllowEdit, onlyMap) {
 	}, {
 		val: "270b",
 		text: "Big Snake 270",
-		url: "../../assets/build/player270.png",
+		url: "../../build/assets/player270.png",
 		x: 30,
 		y: 60,
 		angle: 270,
