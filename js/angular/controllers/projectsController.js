@@ -102,10 +102,10 @@ export default class ProjectsController {
         $('#' + this.currentOpenProject + 'Modal').modal('toggle');
 
         $('.carousel-control.left').click(function() {
-          $('.projectCarousel').carousel('prev');
+            $('.projectCarousel').carousel('prev');
         });
         $('.carousel-control.right').click(function() {
-          $('.projectCarousel').carousel('next');
+            $('.projectCarousel').carousel('next');
         });
 
         $('.carousel-indicators li').on('click', function() {

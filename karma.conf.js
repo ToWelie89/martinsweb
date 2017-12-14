@@ -4,7 +4,7 @@ module.exports = function(config) {
         reporters: ['spec', 'progress'],
         files: [
             'node_modules/angular/angular.js',
-            'assets/build/testApp.bundle.js'
+            'build/testApp.bundle.js'
         ],
         browsers: ['PhantomJS'],
         colors: true,

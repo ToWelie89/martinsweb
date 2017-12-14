@@ -113,8 +113,8 @@ module.exports = function(grunt) {
         },
         clean: {
             all: ['includes/build/*', 'views/build/*', 'build/*'],
-            css: ['assets/build/default.css'],
-            test: ['assets/build/testApp.bundle.js']
+            css: ['build/default.css'],
+            test: ['build/testApp.bundle.js']
         },
         copy: {
             main: {
@@ -133,9 +133,6 @@ module.exports = function(grunt) {
                     src: 'views/projects.html',
                     dest: 'views/build/projects.html'
                 }, {
-                    src: 'views/bio.php',
-                    dest: 'views/build/bio.php'
-                }, {
                     src: 'assets/**/*',
                     dest: 'build/',
                     expand: true,
@@ -152,7 +149,7 @@ module.exports = function(grunt) {
         jshint: {
             options: {
                 ignores: [
-                    'assets/build/*-min.js'
+                    'build/*-min.js'
                 ],
                 jshintrc: '.jshintrc'
             },

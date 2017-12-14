@@ -70,7 +70,7 @@ app.config(['$routeProvider', '$locationProvider', '$logProvider',
                 templateUrl: 'views/cv.html'
             })
             .when('/bio', {
-                templateUrl: 'views/build/bio.php'
+                templateUrl: 'views/bio.php'
             })
             .when('/404', {
                 templateUrl: 'views/404.html'
