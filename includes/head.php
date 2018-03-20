@@ -48,7 +48,7 @@
 <script async src="/build/photoswipe.min.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="/build/MapEditor.min.js"></script>
-<script async src="js/libs/snowstorm-min.js"></script>
+<!-- <script async src="js/libs/snowstorm-min.js"></script> -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 
 <!-- Node module libs -->

@@ -14,13 +14,14 @@ import {isNumeric} from './../../helpers/helpers'
  * @param {services.WordpressService} wordpressService - Service for handling calls to Wordpress for fetching blog data
  */
 export default class BlogPostController {
-    constructor($scope, $log, wordpressService, $routeParams) {
+    constructor($scope, $log, wordpressService, $routeParams, $sce) {
         this.vm = this;
 
         this.$routeParams = $routeParams;
         this.wordpressService = wordpressService;
         this.$log = $log;
         this.$scope = $scope;
+        this.$sce = $sce;
 
         // Private variables
         this.blogId;
@@ -54,6 +55,7 @@ export default class BlogPostController {
             .then(response => {
                 this.$log.debug(response.data);
                 this.vm.post = response.data;
+                this.vm.post.content = this.$sce.trustAsHtml(this.vm.post.content);
             })
             .catch(err => {
                 this.$log.error('getBlogPost exception');
