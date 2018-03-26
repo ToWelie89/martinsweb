@@ -15,6 +15,9 @@ const BLOG_POSTS = [
     }, {
         name: 'promise-chains-with-delays-and-pauses',
         id: 142
+    }, {
+        name: 'creating-an-ai-for-risk-board-game',
+        id: 151
     }
 ];
 
