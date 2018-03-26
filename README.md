@@ -7,15 +7,18 @@ This is my portfolio/personal site. I am hosting this site myself on a Raspberry
 
 I will host all public files in this repository for anyone who may be interested in how its built.
 
-Technologies & stuff used:
+Technologies & stuff used for this project:
 
 + AngularJS
 + jQuery
 + less
 + Grunt
++ Babel
++ Karma
 + Photoswipe
 + Instagram API
 + Wordpress API
++ Github API
 
 For more technical documentation please see [the wiki](https://github.com/ToWelie89/martinsweb/wiki).
 
