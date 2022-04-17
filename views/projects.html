@@ -782,6 +782,52 @@
                 <div class="modal-body">
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab projectTab--selected">
+                            Screenshots
+                        </div>
+                        <div class="projectTabContent">
+                            <!-- Carousel -->
+                            <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/hamsterkeyring_screenshots/1.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/hamsterkeyring_screenshots/2.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/hamsterkeyring_screenshots/3.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/hamsterkeyring_screenshots/4.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <p class="marginTop--double">
                         Mobile Keyring was a project I worked on together with four other students during my time at Chalmers. The project revolved around developing
                         a good way to allow people to log into websites without having to enter ones real password. A secure form of login that could be used
