@@ -23,7 +23,17 @@ export function FormatCorrectNameForTech() {
         shell: 'Shell',
         python: 'Python',
         php: 'php',
-        xml: 'XML'
+        xml: 'XML',
+        dotnet: '.NET',
+        visualstudio: 'Visual Studio',
+        wireshark: 'Wireshark',
+        android: 'Android',
+        svn: 'Subversion',
+        requirejs: 'RequireJS',
+        sonarqube: 'SonarQube',
+        magnolia: 'Magnolia CMS',
+        azuredevops: 'Azure Devops',
+        typescript: 'TypeScript'
     };
 
     return (input) => {

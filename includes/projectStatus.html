@@ -1,17 +1,46 @@
 <div data-ng-hide="controller.loading" data-ng-cloak>
     <div class="marginBottom dependenciesList">
         <span data-ng-repeat="dep in controller.usedDependencies track by $index">
-            <span data-tooltip-placement="top"
-            uib-tooltip="{{dep | formatCorrectNameForTech}}"
-            data-tech-color="{{dep}}">
-                <i class="{{controller.getClassForDep(dep)}}" data-ng-show="dep !== 'babel' && dep !== 'karma' && dep !== 'webpack'"></i>
+            <span data-tooltip-placement="top" data-tech-color="{{dep}}">
+                <i class="{{controller.getClassForDep(dep)}}"></i>
                 <img src="../../build/assets/svg/babellogo.svg" style="width: 30px; height: 30px; margin-top: -5px;" data-ng-show="dep === 'babel'">
                 <img src="../../build/assets/svg/karmalogo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'karma'">
                 <img src="../../build/assets/svg/webpacklogo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'webpack'">
+                <img src="../../build/assets/svg/herokulogo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'heroku'">
+                <img src="../../build/assets/svg/firebaselogo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'firebase'">
+                <img src="../../build/assets/svg/socketiologo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'socket.io'">
+                <img src="../../build/assets/svg/electronlogo.svg" style="width: 30px; height: 30px; margin-top: -7px; margin-left: 5px;" data-ng-show="dep === 'electron'">
+                <img src="../../build/assets/svg/nodejslogo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'nodejs'">
+                <img src="../../build/assets/svg/mysql.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'mysql'">
+                <img src="../../build/assets/svg/dotnet.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'dotnet'">
+                <img src="../../build/assets/svg/visualstudio.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'visualstudio'">
+                <img src="../../build/assets/svg/wireshark.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'wireshark'">
+                <img src="../../build/assets/svg/csharp.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'csharp'">
+                <img src="../../build/assets/svg/android.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'android'">
+                <img src="../../build/assets/svg/svn.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'svn'">
+                <img src="../../build/assets/svg/hexo.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'hexo'">
+                <img src="../../build/assets/svg/requirejs.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'requirejs'">
+                <img src="../../build/assets/svg/sonarqube.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'sonarqube'">
+                <img src="../../build/assets/svg/confluence.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'confluence'">
+                <img src="../../build/assets/svg/jira.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'jira'">
+                <img src="../../build/assets/svg/maven.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'maven'">
+                <img src="../../build/assets/svg/jenkins.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'jenkins'">
+                <img src="../../build/assets/svg/ubuntu.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'ubuntu'">
+                <img src="../../build/assets/svg/mercurial.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'mercurial'">
+                <img src="../../build/assets/svg/magnolia.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'magnolia'">
+                <img src="../../build/assets/svg/redux.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'redux'">
+                <img src="../../build/assets/svg/cypress.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'cypress'">
+                <img src="../../build/assets/svg/gerrit.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'gerrit'">
+                <img src="../../build/assets/svg/azuredevops.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'azuredevops'">
+                <img src="../../build/assets/svg/typescript.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'typescript'">
+                <img src="../../build/assets/svg/jest.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'jest'">
+                <img src="../../build/assets/svg/freemarker.svg" style="width: 30px; height: 30px; margin-top: -7px;" data-ng-show="dep === 'freemarker'">
+
+                <span class="dependencyTooltip">{{dep | formatCorrectNameForTech}}</span>
             </span>
         </span>
     </div>
-    <div class="projectBarChart">
+    <div class="projectBarChart" data-ng-show="controller.dbArray">
         <div data-ng-repeat="tech in controller.dbArray"
              class="projectBarChart__item"
              style="width: {{tech.value}}%;"

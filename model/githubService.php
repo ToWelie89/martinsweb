@@ -1,11 +1,13 @@
 <?php
     include("secret.php");
+    $auth = base64_encode("ToWelie89:".$accessToken);
 
 	$opts = [
         'http' => [
             'method' => 'GET',
             'header' => [
-                'User-Agent: PHP'
+                'User-Agent: PHP',
+                "Authorization: Basic $auth"
             ]
         ]
     ];

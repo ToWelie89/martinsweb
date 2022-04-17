@@ -42,7 +42,17 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -5;
+    opacity: 1;
+    transition: all 1500ms;
+    //transition: all 400ms;
+    transition-timing-function: ease-in-out;
+
+    &#mainBgBottom {
+        z-index: -5;
+    }
+    &#mainBgTop {
+        z-index: -4;
+    }
 }
 
 h1 {
@@ -108,6 +118,19 @@ div#main{
     padding-bottom: 60px;
 }
 
+#versionBox {
+    float: right;
+    margin-right: 10px;
+    background: linear-gradient(0deg, rgb(237, 237, 237) 0%, rgb(188, 188, 188) 100%);
+    border: 5px solid #628cc3;
+    border-top: none;
+    padding: 5px 19px;
+    filter: brightness(80%);
+    color: rgb(0, 0, 0, 65%);
+    font-size: 12px;
+    user-select: none; /* Standard */
+}
+
 .fb-like {
     float: right;
     padding-top: 18px;
@@ -122,12 +145,12 @@ div#main{
     background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
     margin: auto;
     width: 1200px;
     border-left: 2px solid gainsboro;
     border-right: 2px solid gainsboro;
     padding-left: 10px;
+    user-select: none; /* Standard */
 }
 
 #subMenuContainer{
@@ -153,6 +176,12 @@ div#contentBar{
             height: 100%;
             vertical-align: middle;
             text-align: center;
+
+            .signature {
+                svg {
+                    padding: 50px;
+                }
+            }
         }
     }
 }

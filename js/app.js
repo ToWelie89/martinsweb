@@ -3,6 +3,7 @@
 */
 
 import ArtController from './angular/controllers/artController';
+import ThreeDPrintController from './angular/controllers/3dPrintController';
 import BlogController from './angular/controllers/blogController';
 import BlogPostController from './angular/controllers/blogPostController';
 import CvController from './angular/controllers/cvController';
@@ -19,6 +20,7 @@ import PageUrlService from './angular/services/pageUrlService';
 import WordpressService from './angular/services/wordpressService';
 
 import ScrollToTopDirective from './angular/directives/scrollToTopDirective';
+import ProjectStatusDirective from './angular/directives/projectStatusDirective';
 
 import {CapitalizeFirstLetter} from './angular/filters/capitalizeFirstLetter';
 import {FormatCorrectNameForTech} from './angular/filters/formatCorrectNameForTech';
@@ -39,6 +41,7 @@ app.controller('menuController', MenuController);
 app.controller('projectsController', ProjectsController);
 app.controller('startController', StartController);
 app.controller('videosController', VideosController);
+app.controller('threeDPrintController', ThreeDPrintController);
 /* SERVICES */
 app.service('githubService', GithubService);
 app.service('instagramService', InstagramService);
@@ -46,6 +49,7 @@ app.service('pageUrlService', PageUrlService);
 app.service('wordpressService', WordpressService);
 /* DIRECTIVES */
 app.directive('scrollToTop', () => new ScrollToTopDirective());
+app.directive('projectStatusDirective', () => new ProjectStatusDirective());
 /* FILTERS */
 app.filter('capitalizeFirstLetter', CapitalizeFirstLetter);
 app.filter('formatCorrectNameForTech', FormatCorrectNameForTech);
@@ -111,8 +115,10 @@ app.config(['$routeProvider', '$locationProvider', '$logProvider',
                 controller: 'videosController',
                 templateUrl: 'views/build/videos.html'
             })
-            .when('/photos', {
-                templateUrl: 'views/photos.html'
+            .when('/3dprints', {
+                controller: 'threeDPrintController',
+                controllerAs: 'controller',
+                templateUrl: 'views/build/3dprints.html'
             })
             .otherwise({
                 templateUrl: 'views/404.html'

@@ -25,8 +25,8 @@ const MENU = [{
         "name": "videos",
         "href": "#videos"
     }, {
-        "name": "photos",
-        "href": "#photos"
+        "name": "3d prints",
+        "href": "#3dprints"
     }]
 }];
 

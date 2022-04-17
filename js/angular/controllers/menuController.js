@@ -77,7 +77,7 @@ export default class MenuController {
      */
     isSelected(submenuItemName) {
         const pageName = this.pageUrlService.getPageName();
-        if (pageName === submenuItemName) {
+        if (pageName === submenuItemName || pageName === submenuItemName.replace(' ', '')) {
             return true;
         } else if (pageName.includes(`${submenuItemName}/`)) {
             return true;

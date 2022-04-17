@@ -1,14 +1,14 @@
 const TECH_COMPETENCE = [{
     "name": "Languages",
     "competences": [{
-        "name": "C#",
-        "grade": 5
-    }, {
         "name": "Javascript",
         "grade": 5
     }, {
         "name": "ES2015 JS",
         "grade": 5
+    }, {
+        "name": "C#",
+        "grade": 4
     }, {
         "name": "Java",
         "grade": 4
@@ -18,9 +18,6 @@ const TECH_COMPETENCE = [{
     }, {
         "name": "C",
         "grade": 2
-    }, {
-        "name": "Python",
-        "grade": 1
     }]
 }, {
     "name": "Web development",
@@ -30,6 +27,18 @@ const TECH_COMPETENCE = [{
     }, {
         "name": "CSS3",
         "grade": 5
+    }, {
+        "name": "NodeJS",
+        "grade": 4
+    }, {
+        "name": "jQuery",
+        "grade": 5
+    }, {
+        "name": "Angular",
+        "grade": 5
+    }, {
+        "name": "Vue.js",
+        "grade": 4
     }, {
         "name": "Bootstrap",
         "grade": 4
@@ -46,32 +55,8 @@ const TECH_COMPETENCE = [{
         "name": "Bower",
         "grade": 3
     }, {
-        "name": "Node",
-        "grade": 3
-    }, {
         "name": "Freemarker",
         "grade": 4
-    }, {
-        "name": "JSP",
-        "grade": 2
-    }]
-}, {
-    "name": "JS frameworks",
-    "competences": [{
-        "name": "jQuery",
-        "grade": 5
-    }, {
-        "name": "Angular",
-        "grade": 5
-    }, {
-        "name": "requirejs",
-        "grade": 3
-    }, {
-        "name": "Photoswipe",
-        "grade": 3
-    }, {
-        "name": "Chart.js",
-        "grade": 3
     }]
 }, {
     "name": "Databases",
@@ -90,20 +75,20 @@ const TECH_COMPETENCE = [{
     }, {
         "name": "Mercurial",
         "grade": 3
-    }, {
-        "name": "SVN",
-        "grade": 2
     }]
 }, {
     "name": "Development environments",
     "competences": [{
-        "name": "VS2015",
+        "name": "Visual Studio",
         "grade": 5
     }, {
         "name": "Eclipse",
         "grade": 4
     }, {
-        "name": "Sublime",
+        "name": "IntelliJ",
+        "grade": 2
+    }, {
+        "name": "Visual Studio Code",
         "grade": 5
     }]
 }, {
@@ -113,7 +98,7 @@ const TECH_COMPETENCE = [{
         "grade": 4
     }, {
         "name": "Kanban",
-        "grade": 2
+        "grade": 3
     }]
 }, {
     "name": "OS",
@@ -122,6 +107,9 @@ const TECH_COMPETENCE = [{
         "grade": 5
     }, {
         "name": "Windows",
+        "grade": 5
+    }, {
+        "name": "MacOS",
         "grade": 5
     }]
 }, {

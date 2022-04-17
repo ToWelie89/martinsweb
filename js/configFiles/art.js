@@ -1,4 +1,10 @@
 const ART = [{
+        "thumbnail": "/build/assets/artwork/56_thumb.jpg",
+        "video": "/build/assets/artwork/56.mp4"
+    }, {
+        "thumbnail": "/build/assets/artwork/55_thumb.jpg",
+        "video": "/build/assets/artwork/55.mp4"
+    }, {
         "bigImage": "/build/assets/artwork/54.png",
         "thumbnail": "/build/assets/artwork/54_thumb.png",
         "width": 635,

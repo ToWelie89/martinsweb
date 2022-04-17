@@ -1,10 +1,10 @@
 <div class="mainContentItem full center" style="height: 100%; width: 100%; float: none; margin: 0 auto;" data-ng-cloak>
     <div class="grid-item">
-        <a href="" data-content="Risk" data-ng-click="controller.openProject('risk')" style="background: url(../../build/assets/projectThumbnails/ecmaRisk.png)">
+        <a href="" data-content="TotalRisk" data-ng-click="controller.openProject('risk')" style="background: url(../../build/assets/projectThumbnails/ecmaRisk2.png); background-position: center -15px;">
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Star Manager" data-ng-click="controller.openProject('starapp')" style="background: url(../../build/assets/projectThumbnails/starapp.png)">
+        <a href="" data-content="Star App" data-ng-click="controller.openProject('starapp')" style="background: url(../../build/assets/projectThumbnails/starapp.png)">
         </a>
     </div>
     <div class="grid-item">
@@ -16,7 +16,7 @@
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Gyro Snake" data-ng-click="controller.openProject('snake')" style="background: url(../../build/assets/projectThumbnails/snake.png)">
+        <a href="" data-content="Gyro Snake" data-ng-click="controller.openProject('snake')" style="background: url(../../build/assets/projectThumbnails/snake.png); background-position: center -60px;">
         </a>
     </div>
     <div class="grid-item">
@@ -40,13 +40,17 @@
         </a>
     </div>
     <div class="grid-item">
+        <a href="" data-content="GBG Muay Thai" data-ng-click="controller.openProject('gbgmuaythai')" style="background: url(../../build/assets/projectThumbnails/gbgmuaythai.png); background-position-x: -64px; background-position-y: -49px; background-size: 160% auto !important;">
+        </a>
+    </div>
+    <!-- <div class="grid-item">
         <a href="" data-content="Arduino Robot" data-ng-click="controller.openProject('arduinoRobot')" style="background: url(../../build/assets/projectThumbnails/arduinoRobot.png)">
         </a>
-    </div>
-    <div class="grid-item">
+    </div> -->
+    <!-- <div class="grid-item">
         <a href="" data-content="WH40k Simulator" data-ng-click="controller.openProject('wh40k')" style="background: url(../../build/assets/projectThumbnails/wh40k.png)">
         </a>
-    </div>
+    </div> -->
     <div class="grid-item">
         <a href="" data-content="FlappyDoge" data-ng-click="controller.openProject('flappyDoge')" style="background: url(../../build/assets/projectThumbnails/flappyDoge.png)">
         </a>
@@ -67,56 +71,81 @@
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
                     <h4 class="modal-title">
-                        Risk
+                        TotalRisk
                     </h4>
                 </div>
                 <div class="modal-body">
                     <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
-                    <!-- Carousel -->
-                    <div class="carousel slide projectCarousel marginTop" data-ride="carousel" style="height: 300px;">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                            <li data-target="#myCarousel" data-slide-to="4"></li>
-                        </ol>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/1.png); background-position: center top;">
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab" data-ng-click="controller.selectTab('screenshots', 'risk')" data-ng-class="{'projectTab--selected': controller.tabs['risk'].selected == 'screenshots'}">
+                            Screenshots
+                        </div>
+                        <div class="projectTab" data-ng-click="controller.selectTab('trailers', 'risk')" data-ng-class="{'projectTab--selected': controller.tabs['risk'].selected == 'trailers'}">
+                            Trailer
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['risk'].selected != 'trailers'">
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/YHkZUC0HA6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['risk'].selected != 'screenshots'">
+                            <!-- Carousel -->
+                            <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel" style="height: 400px;">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/1.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/2.png); background-position: center bottom; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/3.png); background-position: center bottom; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/4.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/5.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/6.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/7.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/2.png); background-position: center bottom;">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/3.png); background-position: center top;">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/4.png); background-position: center top;">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="itemImage" style="background-image: url(../../build/assets/risk_screenshots/5.png); background-position: center top;">
-                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                     <!-- Description -->
                     <div class="marginTop--double">
@@ -184,8 +213,14 @@
                     <a class="button floatRight" href="https://github.com/ToWelie89/ECMA6Risk" target="_blank">
                         <p text="Code"></p>
                     </a>
-                    <a class="button floatRight" href="http://www.martinsonesson.se/pi/ECMA6Risk" target="_blank">
-                        <p text="Demo"></p>
+                    <a class="button floatRight" href="http://martinsonesson.se/risk/" target="_blank">
+                        <p text="Download"></p>
+                    </a>
+                    <a class="button floatRight" href="https://www.youtube.com/watch?v=YHkZUC0HA6I" target="_blank">
+                        <p text="Trailer"></p>
+                    </a>
+                    <a class="button floatRight" href="https://martinsonesson.wordpress.com/2018/01/07/creating-an-ai-for-risk-board-game/" target="_blank">
+                        <p text="Risk AI blog post"></p>
                     </a>
                 </div>
             </div>
@@ -201,7 +236,7 @@
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
                     <h4 class="modal-title">
-                        Star Manager
+                        Star App
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -209,24 +244,69 @@
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab projectTab--selected">
+                            Screenshots
+                        </div>
+                        <div class="projectTabContent">
+                            <!-- Carousel -->
+                            <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/starapp_screenshots/1.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/starapp_screenshots/2.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <p class="marginTop--double">
-                        This is a app I created for Windows 8 and Windows RT and it's targeted towards Starcraft 2 players. The app allows the user to connect to
+                        This is a web app I created that is targeted towards Starcraft 2 players. The app allows the user to connect to
                         Starcraft 2 account and it then loads information about the player using
-                        <a href="http://blizzard.github.io/api-sc2-docs/" target="_blank">Blizzards official SC2 API</a>. The purpose of the application is to let
+                        <a href="https://develop.battle.net/documentation/starcraft-2/community-apis" target="_blank">Blizzards official SC2 API</a>. The purpose of the application is to let
                         users track their progress and view statistics regarding their progress in the game.
                     </p>
                     <p class="marginTop">
-                        The app supports the metro grid layout in Windows 8/RT, it can be added as a tile in start screen where it displays the current progress
-                        which updates automatically.
+                        Originally I created this project as a Windows 8 app. Back in Windows 8 developer could create apps that could then be used in the
+                        <a href="https://img.gadgethacks.com/img/19/42/63487130499951/0/bring-classic-start-menu-back-windows-8.w1456.jpg" target="_blank">Windows 8 tileset start menu</a>. This made it so that
+                        the tile for the app would constantly update to show it's latest status in the start menu, so that the user could keep track of his current rank or league.
+                        However, this was long ago and since then Windows do no longer support these kind of apps. Therefore I remade this project into a simple web app instead.                        
                     </p>
                     <p class="marginTop">
-                        The application is written purely with standard web technologies, HTML5, CSS3 and Javascript. Libraries like jQuery and linq are also used.
-                        I version the code on my Github account which you can view by clicking the code-button below.
+                        The application is written purely with standard web technologies, HTML5, CSS3 and Javascript. It also relies a bit on jQuery.
+                        Feel free to demo the app yourself or view the code.
                     </p>
                 </div>
                 <div class="modal-footer">
                     <a class="button floatRight" href="https://github.com/ToWelie89/StarApp" target="_blank">
                         <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="http://martinsonesson.se/pi/StarApp" target="_blank">
+                        <p text="Demo"></p>
+                    </a>
+                    <a class="button floatRight" href="http://martinsonesson.se/pi/StarApp/?regionId=2&profileId=8845720&realm=1" target="_blank">
+                        <p text="Demo with preconfigured profile"></p>
                     </a>
                 </div>
             </div>
@@ -303,8 +383,51 @@
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab projectTab--selected">
+                            Screenshots
+                        </div>
+                        <div class="projectTabContent">
+                            <!-- Carousel -->
+                            <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/wcc_screenshots/1.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/wcc_screenshots/2.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/wcc_screenshots/3.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <p class="marginTop--double">
-                        This is a web application I created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
+                        This is a web application I first created just before the World Cup in 2014. I wanted a way to simulate different outcomes in the
                         tournament to see how it could all turn out. The simulators I found while googling only took into account if a match ends in a win, draw
                         or loss. None of them took into account the goal difference which can play a major difference in the group stage, so therefore I created
                         this application. In my app you can enter an exact result for each match to simulate different outcomes.
@@ -315,13 +438,36 @@
                         written in Javascript and I use the libraries jQuery and requirejs. If I ever make a new version of this web app I will use Angular as it
                         would greatly simplify the code. Feel free to try it out below or look at the soruce code.
                     </p>
+                    <p class="marginTop">
+                        After this I have continue to develop the project whenever there's a big football tournament coming. In 2018 I made a new version time for
+                        World Cup 2018. There I spent a lot of time improving the user interface, which in the 2014 version was pretty grey and boring. In 2021 it was time
+                        for the European Championship so I made a new version for that as well. This was more difficult, because compared to the World Cup, Euro Cup has
+                        a different tournament format that is quite complex, which you is covered <a href="https://documents.uefa.com/v/u/WVKcnryVkASzztwJjPBcIw" target="_blank">here</a>.
+                        Basically in the Euro Cup, also teams that end up in third place in the group phase have a chance to advance to the knockout phase, if they are among 4 best
+                        third place teams. Where these teams are then put in the knockout table is defined via a matrix that is different depending on which groups they are originally from.
+                        The rules are quite confusing, but in the end I managed to get my calculator to follow the rules exactly. I also added a "get current results" button. When the user
+                        clicks it it will fetch the current results of the matches played and fill those in automatically. This was useful while using the calculator during the tournament,
+                        to quickly insert the latest results.
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <a class="button floatRight" href="https://github.com/ToWelie89/WC2014Calculator" target="_blank">
-                        <p text="Code"></p>
+                    <a class="button floatRight marginTop" href="https://github.com/ToWelie89/WC2014Calculator" target="_blank">
+                        <p text="Code WC 2014"></p>
                     </a>
-                    <a class="button floatRight" href="http://www.martinsonesson.se/pi/WC2014Calculator/index.php" target="_blank">
-                        <p text="Demo"></p>
+                    <a class="button floatRight marginTop" href="https://github.com/ToWelie89/WorldCup2018Simulator" target="_blank">
+                        <p text="Code WC 2018"></p>
+                    </a>
+                    <a class="button floatRight marginTop" href="https://github.com/ToWelie89/EuroCup2021Simulator" target="_blank">
+                        <p text="Code EC 2021"></p>
+                    </a>
+                    <a class="button floatRight marginTop" style="clear: left;" href="http://www.martinsonesson.se/pi/WC2014Calculator/index.php" target="_blank">
+                        <p text="Demo WC 2014"></p>
+                    </a>
+                    <a class="button floatRight marginTop" href="http://martinsonesson.se/wc2018/" target="_blank">
+                        <p text="Demo WC 2018"></p>
+                    </a>
+                    <a class="button floatRight marginTop" href="http://martinsonesson.se/ec2021/" target="_blank">
+                        <p text="Demo EC 2021"></p>
                     </a>
                 </div>
             </div>
@@ -341,7 +487,64 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <p>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab" data-ng-click="controller.selectTab('screenshots', 'sti')" data-ng-class="{'projectTab--selected': controller.tabs['sti'].selected == 'screenshots'}">
+                            Screenshots
+                        </div>
+                        <div class="projectTab" data-ng-click="controller.selectTab('trailers', 'sti')" data-ng-class="{'projectTab--selected': controller.tabs['sti'].selected == 'trailers'}">
+                            Tournament recap video
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['sti'].selected != 'screenshots'">
+                            <div class="projectTabContent">
+                                <!-- Carousel -->
+                                <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    </ol>
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/1.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/2.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/3.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/4.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['sti'].selected != 'trailers'">
+                            <iframe width="100%" height="500"  src="https://www.youtube.com/embed/2SIMLdjzTlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>                        
+                    </div>
+                    <p class="marginTop--double">
                         This is a website and a community that I founded together with a friend in 2010, a third friend also joined the project later on.
                         It was a community targeted for people who played the RTS-game Starcraft 2. The idea came up when we discussed organizing a
                         tournament for other likeminded people. The idea evolved into a community where players could registrate, sign up for tournaments,
@@ -357,7 +560,7 @@
                 </div>
                 <div class="modal-footer">
                     <a class="button floatRight" href="http://www.sti-starcraft.org/index.php" target="_blank">
-                        <p text="Demo"></p>
+                        <p text="Visit site"></p>
                     </a>
                 </div>
             </div>
@@ -415,13 +618,16 @@
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <img src="../../build/assets/exjobb.png" style="width: 100%;">
                     <p>
                         This is my bachelors thesis I did at my time at Chalmers together with another student. The work was carried out at the company ESAB, a company
                         that develops robotic welding systems used in industrial settings. These systems were composed of a robotic welding arm, a voltage outage,
                         a controller unit etc. Their problems was that they lacked an efficient way to analyze the data traffic between components, something that
                         can be very crucial when searching for the source of various problems in the field.
                     </p>
-                    <p class="marginTop">
+                    <p class="marginTop--double">
                         These systems communicated via CAN nodes or via Ethernet, using different protocols. We ultimately ended up creating two different solutions,
                         one for each type of communication. For Ethernet we created a dissector, a plugin, for the popular open source software Wireshark, used for
                         sniffing network traffic. Our plugin could interpret packets between the components based on ESAB's memory model so that the user can
@@ -458,6 +664,24 @@
                     <!-- Statistics -->
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab" data-ng-click="controller.selectTab('gamedemo', 'snake')" data-ng-class="{'projectTab--selected': controller.tabs['snake'].selected == 'gamedemo'}">
+                            Game demo
+                        </div>
+                        <div class="projectTab" data-ng-click="controller.selectTab('sitedemo', 'snake')" data-ng-class="{'projectTab--selected': controller.tabs['snake'].selected == 'sitedemo'}">
+                            Site demo
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['snake'].selected != 'gamedemo'">
+                            <video controls>
+                                <source src="../../build/assets/snakedemo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['snake'].selected != 'sitedemo'">
+                            <video controls>
+                                <source src="../../build/assets/snakesitedemo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                     <p class="marginTop--double">
                         This is a group project that I participated in during my time at Chalmers as a part of a programming course. I worked on this
                         project together with three other students. It is essentially a Android-version of the classic game Snake. The biggest difference
@@ -473,7 +697,7 @@
                     <p class="marginTop">
                         Some time later I decided to continue developing the app myself. I fixed some bugs that occured since the app was not updated with
                         the latest version of Android and I also added some new features like a global highscore database, improved graphics, more maps,
-                        sound effects and music etc.
+                        sound effects and music etc. You can also check out the leaderboard below.
                     </p>
                     <p class="marginTop">
                         Below you can view the report that was a part of the course as well as the map editor and two different versions of the app itself.
@@ -498,6 +722,9 @@
                     <a class="button floatRight" href="/#/gyroSnakeEditor" target="_blank">
                         <p text="Map editor"></p>
                     </a>
+                    <a class="button floatRight" href="http://martinsonesson.se/pi/snakescore/" target="_blank">
+                        <p text="Leaderboard"></p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -516,7 +743,9 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <p>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <p class="marginTop--double">
                         This is a project that I helped developing as a side project. It's a website for dog lovers where you can sign up and pay for a subscription
                         to recieve a package on a regular basis with goodies for your dog, such as treats and accessories.
                     </p>
@@ -551,7 +780,9 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <p>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <p class="marginTop--double">
                         Mobile Keyring was a project I worked on together with four other students during my time at Chalmers. The project revolved around developing
                         a good way to allow people to log into websites without having to enter ones real password. A secure form of login that could be used
                         in insecure settings, for instance if you are using a public computer and are worried about the existance of keyloggers.
@@ -596,7 +827,7 @@
                     <p>
                         This is currently a project under production. I am building a robot using a Arduino Uno Rev3 microprocessor. The robot has the
                         form of a RC car. The Arduino card is connected to two DC motors, a ultrasonic detection component is used to detect if there are
-                        obstacles in front of the robot. Some logic is coded in C that handles the behaviour of the robot where it tries to run around
+                            obstacles in front of the robot. Some logic is coded in C that handles the behaviour of the robot where it tries to run around
                         without hitting anything.
                     </p>
                     <p class="marginTop">
@@ -610,6 +841,83 @@
                         <a class="button disabled floatRight">
                             <p text="Report"></p>
                         </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GBG Muay Thai -->
+    <div id="gbgmuaythaiModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('gbgmuaythai')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        GBG Muay Thai
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="projectTabsContainer marginTop">
+                        <!-- Statistics -->
+                        <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                        <div class="projectTab projectTab--selected">
+                            Screenshots
+                        </div>
+                        <div class="projectTabContent">
+                            <!-- Carousel -->
+                            <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/gbgmuaythai_screenshots/1.png); background-position: center top; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/gbgmuaythai_screenshots/2.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/gbgmuaythai_screenshots/3.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="marginTop--double">
+                        In my spare time I train muay thai (also known as thaiboxing) and I was tasked with developing a website for my club, Gothenburg Muay Thai.
+                    </p>
+                    <p class="marginTop">
+                        A made this site using a framework called <a href="https://hexo.io/" target="_blank">Hexo</a>. It is a framework that allows me to quickly and easily generate
+                        a static site with a blog-type format. I used a default theme and then customized it manually to fit the design I wanted. I host it myself
+                        using <a href="https://pages.github.com/" target="_blank">Github Pages</a>.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/lionsden" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="http://www.gbgmuaythai.com" target="_blank">
+                        <p text="Visit site"></p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -700,8 +1008,10 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <p>
-                        This is a small web app I made as an assignment for a course around 3 years ago. The assignment was to create a web application that
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <p class="marginTop--double">
+                        This is a small web app I made as an assignment for a course around 10 years ago. The assignment was to create a web application that
                         somehow used Flickr's API and the rest was up to me. I decided to create an editor where a user can search for photos via Flickr,
                         select a picture and then edit it in the DOM using Javascript. In the assignment I was supposed to write the javascript code in native
                         so therefore there's no framework or library used.

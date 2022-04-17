@@ -20,8 +20,19 @@ export default class StartController {
                 length = path.getTotalLength();
                 previousStrokeLength = speed || 0;
                 speed = length < 40 ? 20 : Math.floor(length);
+
+                speed = Math.floor(speed * 0.6);
+                
                 delay += previousStrokeLength + 40;
-                results.push($(path).css('transition', 'none').attr('data-length', length).attr('data-speed', speed).attr('data-delay', delay).attr('stroke-dashoffset', length).attr('stroke-dasharray', length + ',' + length));
+                results.push(
+                    $(path)
+                        .css('transition', 'none')
+                        .attr('data-length', length)
+                        .attr('data-speed', speed)
+                        .attr('data-delay', delay)
+                        .attr('stroke-dashoffset', length)
+                        .attr('stroke-dasharray', length + ',' + length)
+                );
             }
         });
 

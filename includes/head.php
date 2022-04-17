@@ -44,7 +44,8 @@
 <script type="text/javascript" src="js/libs/shBrushCss.js"></script>
 <script type="text/javascript" src="js/libs/shBrushJScript.js"></script>
 
-<script async src="js/libs/trianglify.js"></script>
+<!-- <script async src="js/libs/trianglify.js"></script> -->
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
 <script async src="/build/photoswipe.min.js"></script>
 <script async src="js/libs/photoswipe/photoswipe-ui-default.min.js"></script>
 <script async src="/build/MapEditor.min.js"></script>
@@ -73,21 +74,7 @@
 <!-- martins-web angular -->
 <script src="/build/app.bundle.js"></script>
 
-<script>
-    window.onload = function() {
-        var pattern = Trianglify({
-            width: 3840,
-            height: 2160,
-            variance: 1,
-            seed: 'dont forget to bring a towel',
-            cell_size: 120,
-            x_colors: ['#000000', '#2e3192', '#ffffff'],
-            y_colors: ['#ffffff', '#1b1464', '#000000']
-        });
-        $('.mainBg').html(pattern.canvas());
-        $('.mainBg canvas').attr('id', 'canvasBg');
-    };
-</script>
+<script src="/js/triangAnimation.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

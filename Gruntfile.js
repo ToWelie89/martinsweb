@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                         replacement: '<%= grunt.file.read("css/cssLibs/shThemeMidnight.css") %>'
                     }, {
                         match: 'signatureSvg',
-                        replacement: '<%= grunt.file.read("signatur.svg") %>'
+                        replacement: '<%= grunt.file.read("signatur2.svg") %>'
                     }]
                 },
                 files: [{
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
                 length: 8
             },
             images: {
-                src: 'build/**/*.{jpg,jpeg,gif,png,webp,svg,ico}'
+                src: 'build/**/*.{jpg,jpeg,gif,png,webp,svg,ico,mp4}'
             },
             js: {
                 src: ['build/app.bundle.js', 'build/MapEditor.min.js']
@@ -126,6 +126,9 @@ module.exports = function(grunt) {
                 }, {
                     src: 'views/art.php',
                     dest: 'views/build/art.php'
+                }, {
+                    src: 'views/3dprints.html',
+                    dest: 'views/build/3dprints.html'
                 }, {
                     src: 'views/videos.html',
                     dest: 'views/build/videos.html'
@@ -254,7 +257,7 @@ module.exports = function(grunt) {
         'less', // Compile CSS files and put them in build folder
         'filerev_replace', // Change image filenames to the newly generated ones
         'replace:inline', // Inline all css in head
-        'jsdoc', // Generate Javascript doc
+        /* 'jsdoc', */ // Generate Javascript doc
         'notify' // Notify that build is complete
     ]);
     grunt.registerTask('buildcss', [

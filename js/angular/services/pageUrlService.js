@@ -38,7 +38,7 @@ export default class PageUrlService {
             return 'projects';
         } else if (page === 'bio' || page === 'cv') {
             return 'profile';
-        } else if (page === 'blog' || page === 'art' || page === 'videos' || page === 'photos') {
+        } else if (page === 'blog' || page === 'art' || page === 'videos' || page === 'photos' || page === '3dprints') {
             return 'misc';
         } else if (page.includes('blog/')) {
             return 'misc';

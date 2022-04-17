@@ -32,28 +32,43 @@ export default class ProjectsController {
 
         this.vm.openProject = this.openProject;
         this.vm.closeProject = this.closeProject;
+        this.vm.selectTab = this.selectTab;
         this.vm.getClassForDep = this.getClassForDep;
 
+        this.initTabs();
         this.gitHubRepoNames = {
-            risk: 'ECMA6Risk',
+            risk: 'TotalRisk',
             starapp: 'StarApp',
             portfolio: 'martinsweb',
             snake: 'GyroSnake',
             instaanalytics: 'InstagramAnalytics',
-            wcc: 'WorldCup2014Simulator',
+            wcc: 'EuroCup2021Simulator',
             wh40k: 'Warhammer-40k-Unit-Simulator',
             flappyDoge: 'FlappyDoge'
+        };
+        this.hardcodedProjectDependencies = {
+            sti: ['html', 'css', 'php', 'javascript', 'mysql', 'jquery'],
+            boxByDoris: ['html', 'css'],
+            exjobb: ['dotnet', 'csharp', 'visualstudio', 'wireshark'],
+            mkp: ['java', 'html', 'css', 'android', 'svn'],
+            flickrEditor: ['javascript', 'html', 'css'],
+            gbgmuaythai: ['javascript', 'hexo', 'html', 'css']
         };
         this.gitHubUserName = 'ToWelie89';
         this.dependenciesToLookForInPackage = [
             'grunt',
             'angular',
-            'webpack', //missing icon
+            'webpack',
             'babel',
             'karma',
             'react',
             'jquery',
-            'bootstrap'
+            'bootstrap',
+            'electron',
+            'heroku',
+            'firebase',
+            'socket.io',
+            'nodejs'
         ];
 
         this.reset();
@@ -145,6 +160,10 @@ export default class ProjectsController {
                 this.getDependenciesFromPackage(response);
                 this.handleContents(response.data);
             });
+        } else if (this.hardcodedProjectDependencies[this.currentOpenProject]) {
+            this.vm.usedDependencies = this.hardcodedProjectDependencies[this.currentOpenProject];
+
+            this.vm.loading = false;
         }
     }
 
@@ -164,9 +183,15 @@ export default class ProjectsController {
                                      .concat(Object.keys(resp.data.dependencies ? resp.data.dependencies : {}));
 
                 this.dependenciesToLookForInPackage.forEach(d => {
-                    const foundDep = dependencies.find(dep => {
+                    let foundDep = dependencies.find(dep => {
                         return dep.includes(d);
                     });
+
+                    if (!foundDep) {
+                        foundDep = resp.data.keywords.find(keyword => {
+                            return keyword.includes(d);
+                        });
+                    }
 
                     if (foundDep) {
                         this.vm.usedDependencies.push(d);
@@ -195,6 +220,15 @@ export default class ProjectsController {
         return (folderBlackList.includes(dirName) || dirName.includes('ReSharper_'));
     }
 
+    fileIsBlacklisted(fileName) {
+        const fileBlackList = [
+            'package-lock.json',
+            'package.json'
+        ];
+
+        return (fileBlackList.includes(fileName));
+    }
+
     /**
      * @function controllers.MenuController#handleContents
      * @param {Obj} data The content data to process
@@ -202,7 +236,7 @@ export default class ProjectsController {
      */
     handleContents(data) {
         data.forEach(d => {
-            if (d.type === 'file') {
+            if (d.type === 'file' && !this.fileIsBlacklisted(d.name)) {
                 var fileParts = d.name.split('.');
                 var fileExtension = fileParts[fileParts.length - 1];
                 if (this.db[fileExtension] !== undefined) {
@@ -296,7 +330,32 @@ export default class ProjectsController {
      * @description Opens a modal for the project
      */
     openProject(projectName) {
+        this.initTabs();
         this.$location.path('projects/' + projectName);
+    }
+
+    initTabs() {
+        this.tabs = {
+            risk: {
+                selected: 'screenshots'
+            },
+            snake: {
+                selected: 'gamedemo'
+            },
+            sti: {
+                selected: 'screenshots'
+            }
+        };
+    }
+
+    selectTab(tabName, projectName) {
+        if (!this.tabs[projectName]) {
+            this.tabs[projectName] = {
+                selected: tabName
+            }
+        } else {
+            this.tabs[projectName].selected = tabName;
+        }
     }
 
     /**
@@ -333,8 +392,8 @@ export default class ProjectsController {
             return 'icon-javascript-alt';
         case 'java':
             return 'icon-java-bold';
-        case 'csharp':
-            return 'icon-csharp';
+        /* case 'csharp':
+            return 'icon-csharp'; */
         case 'css':
             return 'icon-css3-alt';
         case 'html':
