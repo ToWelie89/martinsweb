@@ -44,15 +44,23 @@ export default class ProjectsController {
             instaanalytics: 'InstagramAnalytics',
             wcc: 'EuroCup2021Simulator',
             wh40k: 'Warhammer-40k-Unit-Simulator',
-            flappyDoge: 'FlappyDoge'
+            flappyDoge: 'FlappyDoge',
+            stockAnalyzer: 'StockAnalyzer',
         };
         this.hardcodedProjectDependencies = {
+            snake: ['java', 'android', 'git', 'mysql'],
+            borghild: ['javascript', 'nodejs', 'machinelearning', 'tesseract', 'tensorflow', 'opencv', 'customvision'],
+            portfolio: ['git', 'npm', 'grunt', 'angular', 'babel', 'karma', 'jquery', 'bootstrap'],
+            risk: ['git', 'npm', 'grunt', 'angular', 'babel', 'jquery', 'bootstrap', 'electron', 'heroku', 'firebase', 'socket.io', 'nodejs'],
+            valbarometern: ['git', 'npm', 'grunt', 'html', 'css', 'javascript', 'mysql', 'firebase'],
             sti: ['html', 'css', 'php', 'javascript', 'mysql', 'jquery'],
+            stockAnalyzer: ['html'],
             boxByDoris: ['html', 'css'],
             exjobb: ['dotnet', 'csharp', 'visualstudio', 'wireshark'],
             mkp: ['java', 'html', 'css', 'android', 'svn'],
+            wcc: ['git', 'npm', 'grunt', 'html', 'css', 'javascript'],
             flickrEditor: ['javascript', 'html', 'css'],
-            gbgmuaythai: ['javascript', 'hexo', 'html', 'css']
+            gbgmuaythai: ['javascript', 'hexo', 'html', 'css', 'graphql', 'express', 'mysql']
         };
         this.gitHubUserName = 'ToWelie89';
         this.dependenciesToLookForInPackage = [
@@ -147,7 +155,11 @@ export default class ProjectsController {
     }
 
     getDataForRepoFromGithub() {
-        if (this.gitHubRepoNames[this.currentOpenProject]) {
+        if (this.hardcodedProjectDependencies[this.currentOpenProject]) {
+            this.vm.usedDependencies = this.hardcodedProjectDependencies[this.currentOpenProject];
+
+            this.vm.loading = false;
+        } else if (this.gitHubRepoNames[this.currentOpenProject]) {
             var url = 'https://api.github.com/repos/' + this.gitHubUserName + '/' + this.gitHubRepoNames[this.currentOpenProject] + '/contents';
             this.githubService.getGithubApiResponseByURL(url)
             .then(response => {
@@ -160,10 +172,6 @@ export default class ProjectsController {
                 this.getDependenciesFromPackage(response);
                 this.handleContents(response.data);
             });
-        } else if (this.hardcodedProjectDependencies[this.currentOpenProject]) {
-            this.vm.usedDependencies = this.hardcodedProjectDependencies[this.currentOpenProject];
-
-            this.vm.loading = false;
         }
     }
 
@@ -336,7 +344,13 @@ export default class ProjectsController {
 
     initTabs() {
         this.tabs = {
+            valbarometern: {
+                selected: 'screenshots'
+            },
             risk: {
+                selected: 'screenshots'
+            },
+            borghild: {
                 selected: 'screenshots'
             },
             snake: {
@@ -344,7 +358,10 @@ export default class ProjectsController {
             },
             sti: {
                 selected: 'screenshots'
-            }
+            },
+            stockAnalyzer: {
+                selected: 'screenshots'
+            },
         };
     }
 

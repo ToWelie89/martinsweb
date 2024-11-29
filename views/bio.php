@@ -6,9 +6,9 @@
             <a href="http://www.github.com/ToWelie89" target="_blank"><i class="fab fa-github fa-3x"></i></a>
             <a href="https://twitter.com/Martin_Sonesson" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
             <a href="http://stackoverflow.com/users/1408603/martingo89" target="_blank"><i class="fab fa-stack-overflow fa-3x"></i></a>
-            <a href="http://www.instagram.com/martin.sonesson" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
-            <a href="http://towelie89.deviantart.com/" target="_blank"><i class="fab fa-deviantart fa-3x"></i></a>
-            <a href="https://www.twitch.tv/towelie89/profile/highlights" target="_blank"><i class="fab fa-twitch fa-3x"></i></a>
+            <!-- <a href="http://www.instagram.com/martin.sonesson" target="_blank"><i class="fab fa-instagram fa-3x"></i></a> -->
+            <!-- <a href="http://towelie89.deviantart.com/" target="_blank"><i class="fab fa-deviantart fa-3x"></i></a>
+            <a href="https://www.twitch.tv/towelie89/profile/highlights" target="_blank"><i class="fab fa-twitch fa-3x"></i></a> -->
         </div>
     </div>
     <div class="mainContentItem marginTopLarge" id="bioContent" style="width: 100%;">

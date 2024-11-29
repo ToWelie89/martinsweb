@@ -37,3 +37,30 @@
         margin-right: 5px !important;
     }
 }
+
+#threeDModelModal {
+    .modal-dialog {
+        width: 1100px;
+        .modal-content {
+            width: 1100px;
+
+            #currentTabContent {
+                text-align: center;
+                img, video {
+                    max-height: 800px;
+                }
+                #threeDModelPreview {
+                    aspect-ratio: 1.7777777777777777 !important;
+                    width: 100%;
+                    canvas {
+                        width: 100% !important;
+                        aspect-ratio: 1.7777777777777777 !important;
+                    }
+                }
+            }
+            #description {
+                font-size: 1.3em;
+            }
+        }
+    }
+}

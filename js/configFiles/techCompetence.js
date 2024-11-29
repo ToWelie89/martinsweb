@@ -34,6 +34,9 @@ const TECH_COMPETENCE = [{
         "name": "jQuery",
         "grade": 5
     }, {
+        "name": "React",
+        "grade": 4
+    }, {
         "name": "Angular",
         "grade": 5
     }, {
@@ -48,6 +51,12 @@ const TECH_COMPETENCE = [{
     }, {
         "name": "Magnolia",
         "grade": 5
+    }, {
+        "name": "Puppeteer",
+        "grade": 4
+    }, {
+        "name": "Jest",
+        "grade": 4
     }, {
         "name": "Grunt",
         "grade": 4

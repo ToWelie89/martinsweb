@@ -4,7 +4,7 @@
         </a>
     </div>
     <div class="grid-item">
-        <a href="" data-content="Star App" data-ng-click="controller.openProject('starapp')" style="background: url(../../build/assets/projectThumbnails/starapp.png)">
+        <a href="" data-content="Stock Analyzer" data-ng-click="controller.openProject('stockAnalyzer')" style="background: url(../../build/assets/projectThumbnails/stockAnalyzer.png)">
         </a>
     </div>
     <div class="grid-item">
@@ -13,6 +13,14 @@
     </div>
     <div class="grid-item">
         <a href="" data-content="STI-Starcraft" data-ng-click="controller.openProject('sti')" style="background: url(../../build/assets/projectThumbnails/sti.png)">
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="" data-content="Valbarometern" data-ng-click="controller.openProject('valbarometern')" style="background: url(../../build/assets/projectThumbnails/valbarometern.png)">
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="" data-content="Borghild (D2R bot)" data-ng-click="controller.openProject('borghild')" style="background: url(../../build/assets/projectThumbnails/borghild.png);">
         </a>
     </div>
     <div class="grid-item">
@@ -43,6 +51,10 @@
         <a href="" data-content="GBG Muay Thai" data-ng-click="controller.openProject('gbgmuaythai')" style="background: url(../../build/assets/projectThumbnails/gbgmuaythai.png); background-position-x: -64px; background-position-y: -49px; background-size: 160% auto !important;">
         </a>
     </div>
+    <div class="grid-item">
+        <a href="" data-content="Star App" data-ng-click="controller.openProject('starapp')" style="background: url(../../build/assets/projectThumbnails/starapp.png)">
+        </a>
+    </div>
     <!-- <div class="grid-item">
         <a href="" data-content="Arduino Robot" data-ng-click="controller.openProject('arduinoRobot')" style="background: url(../../build/assets/projectThumbnails/arduinoRobot.png)">
         </a>
@@ -55,12 +67,143 @@
         <a href="" data-content="FlappyDoge" data-ng-click="controller.openProject('flappyDoge')" style="background: url(../../build/assets/projectThumbnails/flappyDoge.png)">
         </a>
     </div>
-    <div class="grid-item">
+    <!-- <div class="grid-item">
         <a href="" data-content="Flickr Editor" data-ng-click="controller.openProject('flickrEditor')" style="background: url(../../build/assets/projectThumbnails/flickrEditor.png)">
         </a>
-    </div>
+    </div> -->
 </div>
 <div class="projects">
+    <!-- Valbarometern modal -->
+    <div id="valbarometernModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('valbarometern')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Valbarometern
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab" data-ng-click="controller.selectTab('screenshots', 'valbarometern')" data-ng-class="{'projectTab--selected': controller.tabs['valbarometern'].selected == 'screenshots'}">
+                            Screenshots
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['valbarometern'].selected != 'screenshots'">
+                            <!-- Carousel -->
+                            <div style="height: 500px;" class="carousel slide projectCarousel" data-ride="carousel" style="height: 500px;">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                                    <li data-target="#myCarousel" data-slide-to="8"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/1.png); background-position: center top; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/2.png); background-position: center bottom; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/3.png); background-position: center bottom; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/4.png); background-position: center top; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/5.png); background-position: center top; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/6.png); background-position: center top; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/7.png); background-position: center top; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/analytics/1.png); background-position: center center; height: 500px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/vk_screenshots/8.png); background-position: center center; height: 500px; background-size: contain; background-repeat: no-repeat;">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="marginTop--double">
+                        <p>
+                            Ahead of the 2022 Swedish elections me and my brother, Daniel Sonesson, thought it would be a cool idea to create our own election barometer. We named it "Valbarometern".
+                            It is essentially a sort of survey where the users answers a bunch of different questions regarding their opinions in different political topics, those
+                            that were considered current for the 2022 election, and the survey will then figure out which political parties you align with the most. The user also has the ability
+                            to mark certain topics as extra important, thus the scoring algorithm will take this into account. At the end of the test the user is presented with the results, and he
+                            can also see for each party exactly which topics they agree on and where they disagree.
+                        </p>
+                        <p class="marginTop">
+                            This was initially meant as a standalone project, something I considered a fun little project, but my brother Daniel managed to pitch this to Bulletin, a large online
+                            newspaper in Sweden. We entered into a collaboration with them and they agreed to host our election survey on their website. This drove a lot of traffic to our site
+                            and in the end we had over 70 000 surveys started, with 54 000 individual users completing the survey to the last step and over 2 000 people sharing their results on social media.
+                            After this we continued our collaboration with Bulletin and made another survey, where the user could pick what party they would vote for today, what party they would prefer to vote
+                            for if there was a guarantee that they would enter the parliament and which party/parties they would prefer to see in the government (regering).
+                        </p>
+                        <p class="marginTop">
+                            Because of the high user participation we gained some interesting data regarding the users voting preferences, data that Bulletin has later used as sources for articles they written.
+                            Here are some examples: <a href="https://bulletin.nu/18-000-har-testat-bulletins-valbarometer-ovantat-resultat" target="_blank">article 1</a>, <a href="https://bulletin.nu/bulletins-valbarometer-det-blir-tufft-for-s-att-bilda-en-majoritetsregering" target="_blank">article 1</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="https://valbarometern.com/" target="_blank">
+                        <p text="Valbarometern standalone site"></p>
+                    </a>
+                    <a class="button floatRight" href="https://bulletin.nu/valkompass" target="_blank">
+                        <p text="Valkompass - hosted on Bulletin"></p>
+                    </a>
+                    <a class="button floatRight" href="https://bulletin.nu/valu" target="_blank">
+                        <p text="Valundersökning - hosted on Bulletin"></p>
+                    </a>
+                    <a class="button floatRight" href="https://bulletin.nu/18-000-har-testat-bulletins-valbarometer-ovantat-resultat" target="_blank">
+                        <p text="Article 1"></p>
+                    </a>
+                    <a class="button floatRight" href="https://bulletin.nu/bulletins-valbarometer-det-blir-tufft-for-s-att-bilda-en-majoritetsregering" target="_blank">
+                        <p text="Article 2"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Risk modal -->
     <div id="riskModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -101,7 +244,6 @@
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
                                     <li data-target="#myCarousel" data-slide-to="5"></li>
                                     <li data-target="#myCarousel" data-slide-to="6"></li>
-                                    <li data-target="#myCarousel" data-slide-to="7"></li>
                                 </ol>
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
@@ -151,20 +293,22 @@
                     <div class="marginTop--double">
                         <p>
                             This is a web based game I've made of the classic board game Risk. The game is built using modern web technologies. The Javascript code
-                            is written using the modern ES2015 syntax. Babel and Browserify is used for transpiling the code. Grunt is used as a build tool, Angular for MVC
-                            functionality, Bootstrap CSS and Karma for unit testing. The JS-library three.js is also used for 3D animations which is currently used
-                            for animating a dice roll, credit to <a href="http://www.teall.info/" target="_blank">tealyatina</a>.
+                            is written using the modern ES6 syntax. Babel and Browserify is used for transpiling the code. Grunt is used as a build tool, Angular for MVC
+                            functionality, Bootstrap CSS and Karma for unit testing.
                         </p>
                         <p class="marginTop">
-                            I started working on the project initially because I wanted to learn and get used to
-                            the new features introduced in Javascript ES2015, so I have tried to use these as much as possible, things like classes, arrow functions,
-                            const- and let-variables, imports, generators, the new native Promise-function, template literals, new Map datatype and plenty of new Array and
-                            Object functions. It was a bit tricky at first using Angular together with ES2015 import and export syntax but I think I managed to find a nice
-                            solution.
+                            At first I only wanted to practice my JavaScript skills by writing a game engine for Risk using the newest JavaScript standard of ES6 which was newly released at that time, but
+                            the project quickly grew from there. I made it into a standalone application with an installer, while still using web technologies, by utilizing Electron. Using Electron I can build the application cross-platform,
+                            both for Windows and Mac, and get distributables (exe / dmg) that I can then publish on for instance GitHub. The game supports autopatching using electron-updater, so that it will automatically check
+                            for newer versions on startup and patch the game.
                         </p>
                         <p class="marginTop">
-                            The game is supposed to be played in a browser, preferably on a computer with a decently large screen as the UI doesn't fit on a mobile
-                            device. Right now only human vs human on the same device play is available, but I have plans to add AI opponents and maybe even multiplayer.
+                            At first the game only had hotseat play (ability to play against other humans on the same device) so I created an AI that you can play against even if you are alone. I performed a sort of machine learning process,
+                            where I let the AI play against another AI over and over, in a way to try to fine tune the AI, I wrote a blog post about this process that is linked below. I then decided that multiplayer would
+                            be a nice next step, so I started working on the server logic using Node, Express and Socket.IO. The live game communicates with a dedicated server which is a Heroku dyno running
+                            Node, and the server has the capabilities of handling many different simultaneous game sessions. I wanted people to have to register an account in order to play multiplayer, so I added
+                            Firebase integration in order to create login/registration functionality. I also use Firebase to store user data such as game settings. I also added a leaderboard and a skill rating algorithm (TrueSkill) used
+                            to determine players skill after a completed multiplayer match. As for the graphics it utilizes a lot of vector graphics, all of which I made myself.
                         </p>
                         <p class="marginTop">
                             <strong>
@@ -175,17 +319,20 @@
                                     <strong>Game engine</strong> Fully working Risk game engine that works according to the real rules of the classic board game.
                                 </li>
                                 <li>
+                                    <strong>Online multiplayer</strong> Create a lobby, hosted on the dedicated server, and play against other humans players online.
+                                </li>
+                                <li>
                                     <strong>AI</strong> I have made an AI that you can play against. The AI is programmed to account for many different factors
-                                    when making decisions. I am continuously implementing improvements to the AI.
+                                    when making decisions.
+                                </li>
+                                <li>
+                                    <strong>Selectable maps</strong> The game supports multiple playable maps, with 3 fully implemented maps right now and more on the way.
                                 </li>
                                 <li>
                                     <strong>Audio and voice support</strong> Game music, sound effects and a talking robotic presenter voice.
                                 </li>
                                 <li>
-                                    <strong>Unit testing</strong> Full support for Karma unit testing.
-                                </li>
-                                <li>
-                                    <strong>Scalability</strong> Scalable codebase that can be reused to also implement other versions of Risk, which I have future plans for.
+                                    <strong>Character editor</strong> The ability to create your own playable character, to be used both offline and online.
                                 </li>
                             </ul>
                         </p>
@@ -195,22 +342,20 @@
                             </strong>
                             <ul>
                                 <li>
-                                    More game modes.
+                                    More game modes
                                 </li>
                                 <li>
-                                    Adding more versions of the Risk game with other maps and factions. For instance for the actual board game there are tons of versions
-                                    like a Game of Thrones version, Lord of the Rings version, Napeleonic wars version etc.
+                                    Customizable game rules
                                 </li>
                                 <li>
-                                    <strong>Multiplayer.</strong> This feature would the game even more enticing. I'd prefer a peer-to-peer solution and I am thinking
-                                    about maybe using WebRTC. This is not something I have started working on yet though.
+                                    3D graphics
                                 </li>
                             </ul>
                         </p>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a class="button floatRight" href="https://github.com/ToWelie89/ECMA6Risk" target="_blank">
+                    <a class="button floatRight" href="https://github.com/ToWelie89/TotalRisk" target="_blank">
                         <p text="Code"></p>
                     </a>
                     <a class="button floatRight" href="http://martinsonesson.se/risk/" target="_blank">
@@ -218,6 +363,9 @@
                     </a>
                     <a class="button floatRight" href="https://www.youtube.com/watch?v=YHkZUC0HA6I" target="_blank">
                         <p text="Trailer"></p>
+                    </a>
+                    <a class="button floatRight" href="https://docs.google.com/presentation/d/17fnSiDY73Ps9BFh229Hv4HJhm_53sJR8JYzTHm4MNpg/edit?usp=sharing" target="_blank">
+                        <p text="Presentation"></p>
                     </a>
                     <a class="button floatRight" href="https://martinsonesson.wordpress.com/2018/01/07/creating-an-ai-for-risk-board-game/" target="_blank">
                         <p text="Risk AI blog post"></p>
@@ -473,6 +621,99 @@
             </div>
         </div>
     </div>
+    <!-- Stock Analyzer modal -->
+    <div id="stockAnalyzerModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('sti')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Stock Analyzer
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+
+                    <div class="projectTabsContainer marginTop">
+                        <div class="projectTab" data-ng-click="controller.selectTab('screenshots', 'sti')" data-ng-class="{'projectTab--selected': controller.tabs['sti'].selected == 'screenshots'}">
+                            Screenshots
+                        </div>
+                        <div class="projectTab" data-ng-click="controller.selectTab('trailers', 'sti')" data-ng-class="{'projectTab--selected': controller.tabs['sti'].selected == 'trailers'}">
+                            Tournament recap video
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['sti'].selected != 'screenshots'">
+                            <div class="projectTabContent">
+                                <!-- Carousel -->
+                                <div style="height: 400px;" class="carousel slide projectCarousel" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    </ol>
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/1.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/2.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/3.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="itemImage" style="background-image: url(../../build/assets/sti_screenshots/4.png); background-position: center top; height: 400px;">
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projectTabContent" data-ng-hide="controller.tabs['stockAnalyzer'].selected != 'trailers'">
+                            <iframe width="100%" height="500"  src="https://www.youtube.com/embed/dmIhMVnMOhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>                        
+                    </div>
+                    <p class="marginTop--double">
+                        This is a website and a community that I founded together with a friend in 2010, a third friend also joined the project later on.
+                        It was a community targeted for people who played the RTS-game Starcraft 2. The idea came up when we discussed organizing a
+                        tournament for other likeminded people. The idea evolved into a community where players could registrate, sign up for tournaments,
+                        take part in discussions and other activities. The tournaments was then in turn organized by the three of us. We successfully hosted
+                        two major tournaments with 16 and 32 participating players as well as other minor events. After that we stopped working on the site
+                        due to lack of interest and time.
+                    </p>
+                    <p class="marginTop">
+                        I coded pretty much the entire site myself, from frontend to backend. I was new to php and MySQL so to me it was a good project to start
+                        learning these technologies. I didn't follow any tutorials and didn't use any premade components as I wanted to do everything from
+                        scratch, like our message forum, PM system, mail forms, login, instant chat, tournament signup functionality, time scheduling service etc.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="button floatRight" href="http://www.sti-starcraft.org/index.php" target="_blank">
+                        <p text="Visit site"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- STI modal -->
     <div id="stiModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -585,11 +826,13 @@
                     <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
                     <!-- Description -->
                     <p class="marginTop--double">
-                        This is a small web application I made for analyzing an Instagram account. The presentation logic is written usting Angular and it communicates with Instagrams API for fetching data. Just write in your exact Instagram username in the box and press search, you will then get some information about the account such as most popular content, most used hashtaghs, pie charts for filters used and video/image distribution. The charts are generated using Chart.js.
+                        This is a little web app that I made, used for analyzing an Instagram account. I wanted to see metrics and data based on the feed of an Instagram user, such as most commonly used hashtags, distribution between video and image uploads, filters used, most liked content, most discussed content etc etc.
+                        This app will take an Instagram user name as an input and then look up data for that user by communicating with Instagram API. After everything is loaded it will provide the user with statistics, neatly presented with charts and pie diagrams, to the user who
+                        can get some valuable insight about the user.
                     </p>
                     <p class="marginTop">
                         <strong>
-                            Unfortunately Instagram decided to change their API so that now only the last 20 images/videos for a user can be fetched, which pretty much made this application useless. Thanks Instagram!
+                            Unfortunately the app is no longer functioning. Instagram changed their policy on the API usage and made it very exclusive so that only certain people can have full API access, which basically makes this web app unusable. But you can still view the source code.
                         </strong>
                     </p>
                 </div>
@@ -642,6 +885,51 @@
                     <a class="button floatRight" href="documents/BachelorsThesisReport.pdf" target="_blank" download="BachelorsThesisReport.pdf">
                         <p text="Report"></p>
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Borghild modal -->
+    <div id="borghildModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-ng-click="controller.closeProject('borghild')">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                    <h4 class="modal-title">
+                        Borghild (D2R bot)
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div data-ng-include src="'includes/loadBox.html'" data-ng-show="controller.loading"></div>
+                    <!-- Statistics -->
+                    <div data-ng-include src="'includes/build/projectStatus.html'" data-ng-cloak></div>
+                    <!-- Description -->
+                    <p class="marginTop--double">
+                        Coming soon
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <!-- <a class="button floatRight" href="documents/GyroSnakeReport.pdf" target="_blank" download="GyroSnakeReport.pdf">
+                        <p text="Report"></p>
+                    </a>
+                    <a class="button floatRight" href="https://github.com/ToWelie89/GyroSnake" target="_blank">
+                        <p text="Code"></p>
+                    </a>
+                    <a class="button floatRight" href="miscFiles/SnakeApp-1.0.apk" target="_blank" download="SnakeApp-1.0.apk">
+                        <p text="v1.0 APK"></p>
+                    </a>
+                    <a class="button floatRight" href="miscFiles/GyroSnake.apk" target="_blank" download="GyroSnake.apk">
+                        <p text="v1.1 APK"></p>
+                    </a>
+                    <a class="button floatRight" href="/#/gyroSnakeEditor" target="_blank">
+                        <p text="Map editor"></p>
+                    </a>
+                    <a class="button floatRight" href="http://martinsonesson.se/pi/snakescore/" target="_blank">
+                        <p text="Leaderboard"></p>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -919,6 +1207,7 @@
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
                                 </ol>
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
@@ -932,6 +1221,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="itemImage" style="background-image: url(../../build/assets/gbgmuaythai_screenshots/3.png); background-position: center center; height: 400px;">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="itemImage" style="background-image: url(../../build/assets/gbgmuaythai_screenshots/4.png); background-position: left center; height: 400px;">
                                         </div>
                                     </div>
                                 </div>
@@ -955,6 +1248,11 @@
                         A made this site using a framework called <a href="https://hexo.io/" target="_blank">Hexo</a>. It is a framework that allows me to quickly and easily generate
                         a static site with a blog-type format. I used a default theme and then customized it manually to fit the design I wanted. I host it myself
                         using <a href="https://pages.github.com/" target="_blank">Github Pages</a>.
+                    </p>
+                    <p class="marginTop">
+                        Each term the club will accept new members. To sign up you have to fill out a form. I created a MySQL database where all applications are stored. Because other
+                        club administrators want access to the data, but aren't familiar with working directly in a MySQL database, I created an admin interface where they can log in and view
+                        the database in an easy to use web interface. There they can remove/edit existing applications. The admin UI reads and writes to the MySQL database via a GraphQL layer that I also created.
                     </p>
                 </div>
                 <div class="modal-footer">

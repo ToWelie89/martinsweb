@@ -127,6 +127,9 @@ module.exports = function(grunt) {
                     src: 'views/art.php',
                     dest: 'views/build/art.php'
                 }, {
+                    src: 'views/3dmodels.html',
+                    dest: 'views/build/3dmodels.html'
+                }, {
                     src: 'views/3dprints.html',
                     dest: 'views/build/3dprints.html'
                 }, {

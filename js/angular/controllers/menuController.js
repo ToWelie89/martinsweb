@@ -19,7 +19,6 @@ export default class MenuController {
         this.$timeout = $timeout;
 
         this.slideTime = 350;
-        this.vm.menu = {};
 
         // Public function
         this.vm.mainMenuClickEvent = this.mainMenuClickEvent;

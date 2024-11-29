@@ -1,15 +1,28 @@
 <div data-ng-controller="menuController as controller" data-ng-init="controller.init()">
     <div id="menu">
-        <a class="link mainMenuLink" data-ng-repeat="menuItem in controller.menu" data-ng-if="menuItem.href"
-            data-ng-click="controller.mainMenuClickEvent(menuItem.name)" id="{{ menuItem.name }}" href="{{ menuItem.href ? menuItem.href : '' }}"
-            data-ng-class="{active: controller.currentPage() == menuItem.name}">
+
+        <span data-ng-repeat="menuItem in controller.menu">
+            <a
+                class="link mainMenuLink"
+                data-ng-if="menuItem.href"
+                data-ng-click="controller.mainMenuClickEvent(menuItem.name)"
+                id="{{ menuItem.name }}"
+                href="{{ menuItem.href ? menuItem.href : '' }}"
+                data-ng-class="{active: controller.currentPage() == menuItem.name}"
+            >
+                    <span data-hover="{{ menuItem.name.toUpperCase() }}" data-ng-bind="menuItem.name.toUpperCase()"></span>
+            </a>
+            <a
+                class="link mainMenuLink"
+                data-ng-if="!menuItem.href"
+                data-ng-click="controller.mainMenuClickEvent(menuItem.name)"
+                id="{{ menuItem.name }}"
+                data-ng-class="{active: controller.currentPage() == menuItem.name}"
+            >
                 <span data-hover="{{ menuItem.name.toUpperCase() }}" data-ng-bind="menuItem.name.toUpperCase()"></span>
-        </a>
-        <a class="link mainMenuLink" data-ng-repeat="menuItem in controller.menu" data-ng-if="!menuItem.href"
-             data-ng-click="controller.mainMenuClickEvent(menuItem.name)" id="{{ menuItem.name }}"
-             data-ng-class="{active: controller.currentPage() == menuItem.name}">
-                <span data-hover="{{ menuItem.name.toUpperCase() }}" data-ng-bind="menuItem.name.toUpperCase()"></span>
-        </a>
+            </a>
+        </span>
+
         <div class="fb-like" data-href="http://www.martinsonesson.se" data-layout="button_count" data-action="like"
         data-show-faces="false" data-share="false"></div>
     </div>

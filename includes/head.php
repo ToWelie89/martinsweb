@@ -36,6 +36,16 @@
     @@syntaxHighlighterThemeCss
 </style>
 
+<script type="importmap">
+    {
+        "imports": {
+            "three/addons/": "../node_modules/three/examples/jsm/",
+            "three/examples/jsm/": "../node_modules/three/examples/jsm/",
+            "three": "../node_modules/three/build/three.module.js"
+        }
+    }
+</script>
+
 <!-- Local libs -->
 <script type="text/javascript" src="js/libs/shCore.js"></script>
 <script type="text/javascript" src="js/libs/shBrushBash.js"></script>
@@ -72,6 +82,8 @@
 <script src="node_modules/lg-pager/dist/lg-pager.min.js"></script>
 
 <!-- martins-web angular -->
+<script src="/js/threeAnimation.js" type="module"></script>
+<script src="/js/3dModelViewer.js" type="module"></script>
 <script src="/build/app.bundle.js"></script>
 
 <script src="/js/triangAnimation.js"></script>

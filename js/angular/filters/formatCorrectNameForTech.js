@@ -23,6 +23,7 @@ export function FormatCorrectNameForTech() {
         shell: 'Shell',
         python: 'Python',
         php: 'php',
+        mysql: 'MySQL',
         xml: 'XML',
         dotnet: '.NET',
         visualstudio: 'Visual Studio',
@@ -33,7 +34,14 @@ export function FormatCorrectNameForTech() {
         sonarqube: 'SonarQube',
         magnolia: 'Magnolia CMS',
         azuredevops: 'Azure Devops',
-        typescript: 'TypeScript'
+        typescript: 'TypeScript',
+        machinelearning: 'Machine Learning',
+        nodejs: 'Node.js',
+        tensorflow: 'TensorFlow',
+        customvision: 'Custom Vision',
+        opencv: 'OpenCV',
+        graphql: 'GraphQL',
+        express: 'Express',
     };
 
     return (input) => {

@@ -4,6 +4,7 @@
 
 import ArtController from './angular/controllers/artController';
 import ThreeDPrintController from './angular/controllers/3dPrintController';
+import ThreeDModelController from './angular/controllers/3dModelController';
 import BlogController from './angular/controllers/blogController';
 import BlogPostController from './angular/controllers/blogPostController';
 import CvController from './angular/controllers/cvController';
@@ -42,6 +43,7 @@ app.controller('projectsController', ProjectsController);
 app.controller('startController', StartController);
 app.controller('videosController', VideosController);
 app.controller('threeDPrintController', ThreeDPrintController);
+app.controller('threeDModelController', ThreeDModelController);
 /* SERVICES */
 app.service('githubService', GithubService);
 app.service('instagramService', InstagramService);
@@ -114,6 +116,16 @@ app.config(['$routeProvider', '$locationProvider', '$logProvider',
             .when('/videos', {
                 controller: 'videosController',
                 templateUrl: 'views/build/videos.html'
+            })
+            .when('/3dmodels', {
+                controller: 'threeDModelController',
+                controllerAs: 'controller',
+                templateUrl: 'views/build/3dmodels.html'
+            })
+            .when('/3dmodels/:modelName', {
+                controller: 'threeDModelController',
+                controllerAs: 'controller',
+                templateUrl: 'views/build/3dmodels.html'
             })
             .when('/3dprints', {
                 controller: 'threeDPrintController',

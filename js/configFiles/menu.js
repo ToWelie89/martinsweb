@@ -14,6 +14,15 @@ const MENU = [{
     "name": "projects",
     "href": "#projects"
 }, {
+    "name": "3d",
+    "submenu": [{
+        "name": "3d prints",
+        "href": "#3dprints"
+    }, {
+        "name": "3d models",
+        "href": "#3dmodels"
+    }]
+}, {
     "name": "misc",
     "submenu": [{
         "name": "blog",
@@ -24,9 +33,6 @@ const MENU = [{
     }, {
         "name": "videos",
         "href": "#videos"
-    }, {
-        "name": "3d prints",
-        "href": "#3dprints"
     }]
 }];
 
